@@ -122,6 +122,8 @@ class OpenRouterClient:
         self.backoff_max = config.raw["openrouter"]["backoff_max_seconds"]
         self.temperature = config.temperature
         self.cost_tracker = cost_tracker or CostTracker()
+        # model id -> its `reasoning` config (see config.yaml).
+        self._reasoning = {m.id: m.reasoning for m in config.models}
 
     def chat(
         self,
@@ -135,16 +137,13 @@ class OpenRouterClient:
         Retries on 429/5xx/connection errors with exponential backoff + jitter.
         Deliberately does NOT set X-OpenRouter-Cache -- see module docstring.
         """
-        extra_body = {
-            "usage": {"include": True},  # ask OpenRouter to report cost
-            # Keep reasoning effort low: these prompts don't need deep
-            # chain-of-thought, and reasoning tokens otherwise eat max_tokens
-            # before the model reaches the visible answer (seen empirically:
-            # Gemini 2.5 Pro burned its whole budget thinking and returned a
-            # truncated, unparseable reply). No-op for models without a
-            # reasoning mode.
-            "reasoning": {"effort": "low"},
-        }
+        extra_body: dict[str, Any] = {"usage": {"include": True}}  # report cost
+        # Reasoning is configured per model -- see config.yaml. Left out
+        # entirely when a model has no entry, rather than guessing a default
+        # the endpoint might reject.
+        reasoning = self._reasoning.get(model)
+        if reasoning:
+            extra_body["reasoning"] = reasoning
         kwargs: dict[str, Any] = dict(
             model=model,
             messages=messages,
@@ -161,7 +160,16 @@ class OpenRouterClient:
                 response = self._client.chat.completions.create(**kwargs)
                 usage = extract_usage(response)
                 self.cost_tracker.record(usage)
-                text = response.choices[0].message.content or ""
+                choice = response.choices[0]
+                text = choice.message.content or ""
+                # A reasoning model can spend the whole budget thinking and
+                # return no visible content at all. That looks like a parse
+                # failure downstream, so name it here instead -- the fix is a
+                # `reasoning` setting in config.yaml, not a better regex.
+                if not text and choice.finish_reason == "length":
+                    print(f"  [empty-response] {model} hit max_tokens with no visible "
+                          f"content ({usage.get('completion_tokens')} completion tokens, "
+                          f"likely all reasoning) -- check its `reasoning` in config.yaml")
                 return text, usage, response.model_dump()
             except (RateLimitError, APIConnectionError) as exc:
                 last_exc = exc

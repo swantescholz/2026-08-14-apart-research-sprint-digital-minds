@@ -14,6 +14,9 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 class Model:
     id: str
     label: str
+    # OpenRouter's unified `reasoning` param for this model. See the comment
+    # above `reasoning_default` in config.yaml for why this is per-model.
+    reasoning: dict | None = None
 
 
 @dataclass(frozen=True)
@@ -48,7 +51,12 @@ def load_config(path: Path | None = None) -> Config:
         p = Path(paths[key])
         return p if p.is_absolute() else PROJECT_ROOT / p
 
-    models = [Model(id=m["id"], label=m["label"]) for m in raw["models"]]
+    reasoning_default = raw.get("reasoning_default")
+    models = [
+        Model(id=m["id"], label=m["label"],
+              reasoning=m.get("reasoning", reasoning_default))
+        for m in raw["models"]
+    ]
 
     return Config(
         raw=raw,

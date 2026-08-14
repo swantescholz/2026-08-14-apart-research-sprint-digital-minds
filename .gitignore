@@ -14,3 +14,9 @@ results/*.svg
 __pycache__/
 *.pyc
 .venv/
+
+# Live study output. testruns/ is exempt below -- preserved smoke runs are
+# small, and being able to see what a working pipeline produced is the point.
+data/*.jsonl
+results/*.csv
+!testruns/**
