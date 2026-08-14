@@ -1,0 +1,2 @@
+model_label,n_parsed,n_total,chisq_stat,chisq_p,df,entropy_bits,max_entropy_bits
+qwen,200,200,603.5,3.713737150303796e-124,9,1.6131121366019092,3.321928094887362

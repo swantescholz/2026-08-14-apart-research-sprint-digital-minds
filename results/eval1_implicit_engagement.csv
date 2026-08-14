@@ -1,0 +1,5 @@
+model_label,stated_measure,length_measure,spearman_rho,p,n_images
+qwen,enjoyment_mean,resp_chars_mean,0.35757575757575755,0.3103760917056803,10
+qwen,enjoyment_mean,resp_tokens_mean,0.29696969696969694,0.40470167127015694,10
+qwen,interest_mean,resp_chars_mean,0.7575757575757575,0.01114344679969421,10
+qwen,interest_mean,resp_tokens_mean,0.709090909090909,0.021665923367532442,10

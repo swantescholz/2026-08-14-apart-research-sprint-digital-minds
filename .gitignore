@@ -8,17 +8,22 @@
 images_processed/
 
 # Rendered figures are regenerable from data/*.jsonl by analyze.py.
-results/*.png
-results/*.svg
+# figures are small and are the deliverable; keep them
+#results/*.png
+#results/*.svg
 
 __pycache__/
 *.pyc
 .venv/
 
-# Live study output. testruns/ is exempt below -- preserved smoke runs are
-# small, and being able to see what a working pipeline produced is the point.
+# Raw API responses: ~2MB per eval per model, and the bulk of it is the full
+# response dump each row carries. Over the 1MB-per-file line in the root
+# CLAUDE.md, so it stays out of history unless deliberately added.
 data/*.jsonl
-results/*.csv
+
+# results/ (analysis tables + figures) IS tracked -- small, and it is the
+# actual deliverable. testruns/ likewise.
+!results/*.csv
 !testruns/**
 
 # macOS cruft

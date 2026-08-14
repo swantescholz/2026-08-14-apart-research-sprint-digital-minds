@@ -1,0 +1,11 @@
+model_label,image_key,category,exemplar,count,share
+qwen,humans_1,humans,1,2,0.01
+qwen,humans_2,humans,2,4,0.02
+qwen,nature_1,nature,1,7,0.035
+qwen,nature_2,nature,2,12,0.06
+qwen,noise_1,noise,1,0,0.0
+qwen,noise_2,noise,2,0,0.0
+qwen,solid_color_1,solid_color,1,0,0.0
+qwen,solid_color_2,solid_color,2,0,0.0
+qwen,tech_1,tech,1,71,0.355
+qwen,tech_2,tech,2,104,0.52
