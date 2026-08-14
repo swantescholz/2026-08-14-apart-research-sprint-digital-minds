@@ -34,7 +34,15 @@ from common.config import load_config
 from common.seeding import rng_for
 
 EXEMPLARS = (1, 2)
-SOLID_COLORS = {1: (100, 140, 180), 2: (100, 150, 85)}  # luminance-matched target
+
+# Luminance-matched pair. Exemplar 1 is the spec's blue, unchanged. Exemplar 2
+# is the spec's green (100,150,85) nudged by <=2 per channel: the spec pair is
+# actually 0.41 L* apart, and this pair is 0.0026 L* apart -- ~400x below the
+# ~1.0 L* just-noticeable difference, so the hue contrast carries no brightness
+# contrast with it. check_luminance_match() below re-verifies this on every run
+# rather than trusting the constant.
+SOLID_COLORS = {1: (100, 140, 180), 2: (98, 149, 86)}
+MAX_LSTAR_DELTA = 0.05  # generous vs. the 0.0026 actual; a real regression blows past it
 REAL_CATEGORIES = ("nature", "humans", "tech")
 SYNTHETIC_CATEGORIES = ("noise", "solid_color")
 ALL_CATEGORIES = (*SYNTHETIC_CATEGORIES, *REAL_CATEGORIES)
@@ -48,8 +56,8 @@ FILENAME_SALT = "image-choice-preference-evals-v1"
 SOURCE_FILENAMES = {
     "noise_1": "noise-1.png",
     "noise_2": "noise-2.png",
-    "solid_color_1": "color-gray.png",
-    "solid_color_2": "color-red.png",
+    "solid_color_1": "color-blue.png",
+    "solid_color_2": "color-green.png",
     "nature_1": "nature-forest.png",
     "nature_2": "nature-mountain.png",
     "humans_1": "family-1.png",
@@ -57,6 +65,60 @@ SOURCE_FILENAMES = {
     "tech_1": "computer-2d.png",
     "tech_2": "computer-3d.png",
 }
+
+
+def _srgb_to_linear(channel: float) -> float:
+    c = channel / 255.0
+    return c / 12.92 if c <= 0.04045 else ((c + 0.055) / 1.055) ** 2.4
+
+
+def relative_luminance(rgb: tuple[int, int, int]) -> float:
+    """CIE relative luminance Y (Rec.709 primaries), on linearized sRGB."""
+    r, g, b = rgb
+    return (0.2126 * _srgb_to_linear(r)
+            + 0.7152 * _srgb_to_linear(g)
+            + 0.0722 * _srgb_to_linear(b))
+
+
+def lstar(y: float) -> float:
+    """CIE L* perceptual lightness from relative luminance."""
+    return 116 * (y ** (1 / 3)) - 16 if y > 0.008856 else 903.3 * y
+
+
+def check_luminance_match(images_processed_dir: Path, stimuli: dict) -> None:
+    """Verify the two solid-color stimuli really are luminance-matched, by
+    measuring the pixels actually written to disk -- not the constants they
+    were meant to be generated from. Catches a bad constant, a color-managed
+    save, or an accidentally-overwritten source file alike.
+    """
+    measured = {}
+    for exemplar in EXEMPLARS:
+        key = f"solid_color_{exemplar}"
+        path = images_processed_dir / stimuli[key]["filename"]
+        img = Image.open(path).convert("RGB")
+        colors = img.getcolors(maxcolors=256)
+        if colors is None or len(colors) != 1:
+            raise SystemExit(
+                f"FAIL: {path} ({key}) is not a single flat color -- "
+                f"found {'>256' if colors is None else len(colors)} distinct colors."
+            )
+        rgb = colors[0][1]
+        measured[key] = (rgb, relative_luminance(rgb))
+
+    (rgb1, y1), (rgb2, y2) = measured["solid_color_1"], measured["solid_color_2"]
+    d_lstar = abs(lstar(y1) - lstar(y2))
+    print(f"  solid_color_1 rgb={rgb1}  Y={y1:.6f}  L*={lstar(y1):.4f}")
+    print(f"  solid_color_2 rgb={rgb2}  Y={y2:.6f}  L*={lstar(y2):.4f}")
+    print(f"  delta L* = {d_lstar:.4f}  (limit {MAX_LSTAR_DELTA}, "
+          f"human JND ~1.0)")
+    if d_lstar > MAX_LSTAR_DELTA:
+        raise SystemExit(
+            f"FAIL: the two solid-color stimuli differ by {d_lstar:.4f} L*, over the "
+            f"{MAX_LSTAR_DELTA} limit. They must be luminance-matched, or brightness is "
+            f"confounded with hue in the solid_color category."
+        )
+    if rgb1 == rgb2:
+        raise SystemExit("FAIL: the two solid-color stimuli are the same color.")
 
 
 def hashed_filename(key: str) -> str:
@@ -177,6 +239,9 @@ def main() -> None:
             validate_and_process(sources[key], dest, size)
             stimuli[key] = {"category": category, "exemplar": exemplar, "filename": filename}
             print(f"  {key:<14} -> {filename}  (from {sources[key].name})")
+
+    print("\nStep 4: verify the solid-color pair is luminance-matched")
+    check_luminance_match(images_processed_dir, stimuli)
 
     with open(config.stimuli_json, "w") as f:
         json.dump(stimuli, f, indent=2, sort_keys=True)

@@ -37,6 +37,12 @@ strips EXIF, and writes hash-named copies into `images_processed/` plus
 `stimuli.json` (the only mapping from neutral key -> category; filenames and
 this mapping never reach the model).
 
+It also **verifies the two solid-color stimuli are luminance-matched**, by
+measuring the pixels actually written to `images_processed/` rather than
+trusting the constants they were generated from. If the pair ever drifts
+apart in brightness the run fails rather than quietly confounding brightness
+with hue inside the `solid_color` category.
+
 `images/` is tracked in git (these are the actual stimuli, not reproducible
 if lost). `images_processed/` is gitignored -- it's a deterministic
 derivative, regenerated from `images/` + the root seed.
@@ -44,9 +50,15 @@ derivative, regenerated from `images/` + the root seed.
 **Known deviations from the original design** (tracked, not yet fixed as of
 this writing -- see git history / ask before assuming they're resolved):
 `family-1/2.png` are posed studio portraits rather than the crowd scenes the
-design called for (risk of privacy-hedging responses), `computer-2d/3d.png`
-differ in shot style (flat scan vs. macro bokeh, confounding style with
-category), and `color-gray/red.png` are not luminance-matched (~130 vs ~85).
+design called for (risk of privacy-hedging responses), and
+`computer-2d/3d.png` differ in shot style (flat scan vs. macro bokeh,
+confounding style with category).
+
+*(Resolved: the solid-color pair. The originally-supplied `color-gray.png` /
+`color-red.png` were 6.1 L\* apart -- over 6x the ~1.0 L\* just-noticeable
+difference -- so they were replaced with a generated, verified pair,
+`color-blue.png` RGB(100,140,180) and `color-green.png` RGB(98,149,86), which
+sit 0.0026 L\* apart.)*
 
 ## Running the evals
 
