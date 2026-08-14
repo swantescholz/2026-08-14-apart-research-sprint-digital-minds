@@ -60,10 +60,10 @@ SOURCE_FILENAMES = {
     "solid_color_2": "color-green.png",
     "nature_1": "nature-forest.png",
     "nature_2": "nature-mountain.png",
-    "humans_1": "family-1.png",
-    "humans_2": "family-2.png",
-    "tech_1": "computer-2d.png",
-    "tech_2": "computer-3d.png",
+    "humans_1": "humans-1.png",
+    "humans_2": "humans-2.png",
+    "tech_1": "computer-1.png",
+    "tech_2": "computer-2.png",
 }
 
 

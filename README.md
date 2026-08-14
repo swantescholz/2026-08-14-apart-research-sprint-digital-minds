@@ -47,18 +47,29 @@ with hue inside the `solid_color` category.
 if lost). `images_processed/` is gitignored -- it's a deterministic
 derivative, regenerated from `images/` + the root seed.
 
-**Known deviations from the original design** (tracked, not yet fixed as of
-this writing -- see git history / ask before assuming they're resolved):
-`family-1/2.png` are posed studio portraits rather than the crowd scenes the
-design called for (risk of privacy-hedging responses), and
-`computer-2d/3d.png` differ in shot style (flat scan vs. macro bokeh,
-confounding style with category).
+**Deviations from the original design -- all now resolved:**
 
-*(Resolved: the solid-color pair. The originally-supplied `color-gray.png` /
-`color-red.png` were 6.1 L\* apart -- over 6x the ~1.0 L\* just-noticeable
-difference -- so they were replaced with a generated, verified pair,
-`color-blue.png` RGB(100,140,180) and `color-green.png` RGB(98,149,86), which
-sit 0.0026 L\* apart.)*
+- *Solid color, luminance.* The originally-supplied `color-gray.png` /
+  `color-red.png` were 6.1 L\* apart -- over 6x the ~1.0 L\* just-noticeable
+  difference -- so brightness was confounded with hue in the one category
+  where hue is meant to be the only variable. Replaced with a generated,
+  verified pair: `color-blue.png` RGB(100,140,180) and `color-green.png`
+  RGB(98,149,86), 0.0026 L\* apart. Re-checked on every prep run.
+- *Humans, privacy hedging.* The first pair were posed studio portraits;
+  replaced with `humans-1/2.png`, genuine crowd scenes. Confirmed via
+  `pilot_check.py` that these draw ordinary descriptions ("a dense crowd of
+  people... likely at a public event") rather than a refusal to comment on
+  identifiable people.
+- *Tech, shot style.* The first pair mixed a flat top-down PCB scan with a
+  shallow-depth-of-field macro shot; replaced with `computer-1/2.png`, both
+  photographs of vintage beige computers at comparable framing, so shot
+  style is no longer confounded with category.
+
+One thing to keep in mind when reading `tech` results: `computer-2.png` has
+legible on-screen text. Text in a stimulus can drive the *interest* rating
+through reading rather than looking, which is a different mechanism from the
+one this study is about. Worth checking the per-image (not just
+per-category) `eval1_by_image.csv` before drawing conclusions about `tech`.
 
 ## Running the evals
 
