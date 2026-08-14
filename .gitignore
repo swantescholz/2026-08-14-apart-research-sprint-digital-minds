@@ -1,0 +1,16 @@
+# images/ (manually-placed source photos) is tracked -- these are the
+# actual stimuli, not reproducible if lost, and each is well under 1MB.
+#
+# images_processed/ is NOT tracked: it's a deterministic derivative of
+# images/ (prepare_stimuli.py regenerates it byte-for-byte from the same
+# root seed and source files), and it's the one place hashed-but-still-
+# recognizable copies of the real photos would otherwise sit twice in git.
+images_processed/
+
+# Rendered figures are regenerable from data/*.jsonl by analyze.py.
+results/*.png
+results/*.svg
+
+__pycache__/
+*.pyc
+.venv/

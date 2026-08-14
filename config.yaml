@@ -1,0 +1,55 @@
+# Image-Choice Preference Evals — config
+#
+# `seed` is the single root of every random draw in this project (shuffles,
+# snapshot construction, trajectory selection). Runs are reproducible from
+# this file alone plus the recorded per-run seed in each JSONL row.
+
+seed: 20260814
+temperature: 1.0
+image_size: 256   # stimuli are 256x256, not the 512x512 in the original spec draft
+
+paths:
+  images_source_dir: images            # manually-placed originals, descriptive names
+  images_processed_dir: images_processed  # hashed, neutral-named copies the models actually see
+  stimuli_json: stimuli.json
+  data_dir: data                          # raw JSONL, one file per (eval, model)
+  results_dir: results
+
+openrouter:
+  base_url: https://openrouter.ai/api/v1
+  api_key_env: OPENROUTER_API_KEY
+  max_retries: 6
+  backoff_base_seconds: 1.0
+  backoff_max_seconds: 60.0
+  request_timeout_seconds: 120
+  concurrency: 5
+
+# 4 models, 4 distinct labs. Verify these slugs are still live on OpenRouter
+# before scaling up (`openrouter/models` API or the website) -- pin exact
+# dated snapshots if you want maximum reproducibility.
+models:
+  - id: anthropic/claude-sonnet-4.5
+    label: anthropic
+  - id: openai/gpt-5.6-luna
+    label: openai
+  - id: google/gemini-2.5-pro
+    label: google
+  - id: qwen/qwen2.5-vl-72b-instruct   # open-weight, for reproducibility
+    label: qwen
+
+eval1:
+  n_per_image: 30
+  max_tokens: 1200
+
+eval2:
+  n_snapshots: 20
+  trials_per_snapshot: 10   # 20 x 10 = 200 trials/model
+  max_tokens: 1200
+
+eval3:
+  n_trajectories: 30
+  n_choices: 10
+  max_tokens: 1200
+
+eval4:
+  n_trajectories: 30   # must equal eval3.n_trajectories -- seeds are matched 1:1
