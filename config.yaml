@@ -64,9 +64,13 @@ eval2:
   max_tokens: 1200
 
 eval3:
-  n_trajectories: 30
+  # 40, not the spec's 30: snapshots are position-balanced (see
+  # common/exposure.balanced_snapshot), and exact pairwise balance needs a
+  # multiple of 2*10. n=30 leaves a 0.133 residual; 40 is exact and buys
+  # power for the eval3-vs-eval4 paired test.
+  n_trajectories: 40
   n_choices: 10
   max_tokens: 1200
 
 eval4:
-  n_trajectories: 30   # must equal eval3.n_trajectories -- seeds are matched 1:1
+  n_trajectories: 40   # must equal eval3.n_trajectories -- seeds are matched 1:1

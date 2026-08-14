@@ -20,3 +20,6 @@ __pycache__/
 data/*.jsonl
 results/*.csv
 !testruns/**
+
+# macOS cruft
+.DS_Store

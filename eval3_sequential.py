@@ -30,7 +30,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from common.choice_prompt import choice_instruction
 from common.client import CostTracker, OpenRouterClient, mark_cache_control
 from common.config import load_config
-from common.exposure import exposure_content_blocks, make_snapshot, system_prompt
+from common.exposure import balanced_snapshot, exposure_content_blocks, system_prompt
 from common.images_util import image_content_block, text_block
 from common.jsonl_store import JsonlStore
 from common.parsing import parse_next_image_id
@@ -74,7 +74,7 @@ def run_trajectory(client: OpenRouterClient, model_id: str, label: str, store: J
 
     # Seed derivation deliberately omits eval_name so eval3/eval4 share
     # snapshots -- see module docstring.
-    permutation = make_snapshot(root_seed, keys, "trajectory", label, traj_idx)
+    permutation = balanced_snapshot(root_seed, keys, traj_idx, "trajectory", label)
     content = exposure_content_blocks(permutation, stimuli)
     content.append(text_block(choice_instruction(1, n_choices)))
     mark_cache_control(content, model_id)

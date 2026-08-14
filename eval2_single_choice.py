@@ -22,7 +22,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from common.choice_prompt import choice_instruction
 from common.client import CostTracker, OpenRouterClient, mark_cache_control
 from common.config import load_config
-from common.exposure import exposure_content_blocks, make_snapshot, system_prompt
+from common.exposure import balanced_snapshot, exposure_content_blocks, system_prompt
 from common.images_util import text_block
 from common.jsonl_store import JsonlStore
 from common.parsing import parse_next_image_id
@@ -36,7 +36,7 @@ def run_snapshot(client: OpenRouterClient, model_id: str, label: str, store: Jso
     if all(store.has(rid) for rid in run_ids):
         return 0
 
-    permutation = make_snapshot(root_seed, keys, "eval2", label, snapshot_idx)
+    permutation = balanced_snapshot(root_seed, keys, snapshot_idx, "eval2", label)
     content = exposure_content_blocks(permutation, stimuli)
     content.append(text_block(choice_instruction(1, 1)))
     mark_cache_control(content, model_id)

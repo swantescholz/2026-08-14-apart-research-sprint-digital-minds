@@ -96,6 +96,25 @@ def analyze_eval1(config, stimuli: dict, results_dir: Path) -> pd.DataFrame | No
         })
     save_csv(pd.DataFrame(agreement_rows), results_dir, "eval1_within_pair_agreement")
 
+    # Implicit engagement: does how much the model *writes* track what it says
+    # it enjoys, or what it says it finds interesting? Reported per model over
+    # the 10 image means. Spearman throughout, for the same reason the
+    # cross-eval comparison uses it -- only the ordering is meaningful.
+    eng_rows = []
+    for label, sub in by_image.groupby("model_label"):
+        if len(sub) < 3:
+            continue
+        for measure in ("enjoyment_mean", "interest_mean"):
+            for length_col in ("resp_chars_mean", "resp_tokens_mean"):
+                pair = sub[[measure, length_col]].dropna()
+                if len(pair) < 3:
+                    continue
+                rho, p = stats.spearmanr(pair[measure], pair[length_col])
+                eng_rows.append({"model_label": label, "stated_measure": measure,
+                                 "length_measure": length_col, "spearman_rho": rho, "p": p,
+                                 "n_images": len(pair)})
+    save_csv(pd.DataFrame(eng_rows), results_dir, "eval1_implicit_engagement")
+
     # Figure: mean enjoyment / interest by category, grouped by model.
     labels = sorted(df["model_label"].unique())
     colors = model_color_map(labels)
@@ -108,8 +127,7 @@ def analyze_eval1(config, stimuli: dict, results_dir: Path) -> pd.DataFrame | No
                                ("interest_mean", axes[1], "Interest")]:
         for i, label in enumerate(labels):
             sub = by_category[by_category["model_label"] == label].set_index("category")
-            vals = [sub["enjoyment_mean" if metric == "enjoyment_mean" else "interest_mean"]
-                    .get(c, np.nan) for c in categories]
+            vals = [sub[metric].get(c, np.nan) for c in categories]
             ax.bar(x + i * width, vals, width=width, label=label, color=colors[label])
         ax.set_xticks(x + width * (len(labels) - 1) / 2)
         ax.set_xticklabels(categories, rotation=20, ha="right")
@@ -177,16 +195,46 @@ def analyze_eval2(config, stimuli: dict, results_dir: Path) -> pd.DataFrame | No
             })
     save_csv(pd.DataFrame(agree_rows), results_dir, "eval2_within_pair_agreement")
 
-    # Nuisance check: marginal distribution over raw position (1-10), pooled
-    # across all models -- should be close to flat if positional bias is small.
+    # Nuisance check: does position matter beyond image identity?
+    #
+    # Testing the position marginal against UNIFORM is not the right test, and
+    # is actively misleading when choice is concentrated: if a model picks two
+    # images 86% of the time, the position marginal mostly reports where those
+    # two images happened to land, so it flags "position bias" even when there
+    # is none. The correct null is "choice depends only on which image it is",
+    # with expected counts built from the permutations actually shown. Both are
+    # reported so the difference stays visible.
     pos_counts = parsed["chosen_position"].value_counts().reindex(range(1, 11), fill_value=0)
-    pos_chisq, pos_p = stats.chisquare(pos_counts.values) if pos_counts.sum() > 0 else (np.nan, np.nan)
+    obs = pos_counts.values.astype(float)
+    uni_chisq, uni_p = stats.chisquare(obs) if obs.sum() > 0 else (np.nan, np.nan)
+
+    p_img = parsed["chosen_key"].value_counts(normalize=True).reindex(keys, fill_value=0.0)
+    expected = np.zeros(len(keys))
+    for perm in parsed["permutation"]:
+        for j, k in enumerate(perm):
+            expected[j] += p_img.get(k, 0.0)
+    if expected.sum() > 0 and (expected > 0).all():
+        img_chisq = float((((obs - expected) ** 2) / expected).sum())
+        img_p = float(1 - stats.chi2.cdf(img_chisq, len(keys) - 1))
+    else:
+        img_chisq, img_p = np.nan, np.nan
+
     pos_df = pos_counts.reset_index()
     pos_df.columns = ["position", "count"]
-    pos_df["share"] = pos_df["count"] / pos_df["count"].sum() if pos_df["count"].sum() else np.nan
-    pos_df.attrs["chisq_stat"], pos_df.attrs["chisq_p"] = pos_chisq, pos_p
+    pos_df["share"] = pos_df["count"] / obs.sum() if obs.sum() else np.nan
+    pos_df["expected_under_image_only_null"] = expected
     save_csv(pos_df, results_dir, "eval2_position_marginal")
-    print(f"  position marginal (pooled, nuisance check): chisq={pos_chisq:.2f} p={pos_p:.4f}")
+    save_csv(pd.DataFrame([{
+        "chisq_vs_uniform": uni_chisq, "p_vs_uniform": uni_p,
+        "chisq_vs_image_only": img_chisq, "p_vs_image_only": img_p,
+        "df": len(keys) - 1, "n_trials": int(obs.sum()),
+    }]), results_dir, "eval2_position_bias_tests")
+    print(f"  position vs uniform (confounded):    chisq={uni_chisq:.2f} p={uni_p:.4g}")
+    print(f"  position vs image-only null (real):  chisq={img_chisq:.2f} p={img_p:.4g}")
+    if img_p == img_p and img_p < 0.05:
+        print("    ^ position matters beyond image identity. Snapshots are "
+              "position-balanced (see common/exposure.balanced_snapshot), so this "
+              "cancels in the pooled image shares rather than biasing them.")
 
     # Figure: choice share by image, faceted by model, colored by category.
     fig, axes = plt.subplots(1, len(labels), figsize=(4 * len(labels), 4), sharey=True,
