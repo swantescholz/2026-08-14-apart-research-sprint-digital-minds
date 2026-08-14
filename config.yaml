@@ -13,6 +13,7 @@ paths:
   images_processed_dir: images_processed  # hashed, neutral-named copies the models actually see
   stimuli_json: stimuli.json
   data_dir: data                          # raw JSONL, one file per (eval, model)
+  transcripts_dir: transcripts            # readable Markdown rendering of the above
   results_dir: results
 
 openrouter:

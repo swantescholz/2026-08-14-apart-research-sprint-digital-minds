@@ -27,6 +27,7 @@ from common.images_util import text_block
 from common.jsonl_store import JsonlStore
 from common.parsing import parse_next_image_id
 from common.stimuli import load_stimuli, ordered_keys
+from common.transcripts import write_transcript
 
 
 def run_snapshot(client: OpenRouterClient, model_id: str, label: str, store: JsonlStore,
@@ -124,6 +125,9 @@ def main() -> None:
                     print(f"  snapshot {snap_idx}: {made} trials")
 
         cost_tracker.print_summary()
+        path = write_transcript(config, stimuli, "eval2", label)
+        if path:
+            print(f"  transcript -> {path}")
 
     print("\nDone.")
     cost_tracker.print_summary()

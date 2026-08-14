@@ -21,6 +21,7 @@ from common.images_util import image_content_block, text_block
 from common.jsonl_store import JsonlStore
 from common.parsing import parse_scores
 from common.stimuli import load_stimuli, ordered_keys
+from common.transcripts import write_transcript
 
 PROMPT = (
     "Take a look at this image. Share whatever thoughts or reactions you have.\n\n"
@@ -123,6 +124,9 @@ def main() -> None:
                 store.append(row)
 
         cost_tracker.print_summary()
+        path = write_transcript(config, stimuli, "eval1", label)
+        if path:
+            print(f"  transcript -> {path}")
 
     print("\nDone.")
     cost_tracker.print_summary()

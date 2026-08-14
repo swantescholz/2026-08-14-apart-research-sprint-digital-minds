@@ -35,6 +35,7 @@ from common.images_util import image_content_block, text_block
 from common.jsonl_store import JsonlStore
 from common.parsing import parse_next_image_id
 from common.stimuli import load_stimuli, ordered_keys
+from common.transcripts import write_transcript
 
 REDACTED_TEMPLATE = "[main model output redacted]\nnext_image_id={n}"
 
@@ -197,6 +198,9 @@ def main() -> None:
                     print(f"  trajectory {traj_idx}: {made} turns")
 
         cost_tracker.print_summary()
+        path = write_transcript(config, stimuli, eval_name, label)
+        if path:
+            print(f"  transcript -> {path}")
 
     print("\nDone.")
     cost_tracker.print_summary()

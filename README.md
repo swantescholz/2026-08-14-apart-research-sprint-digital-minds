@@ -73,13 +73,23 @@ per-category) `eval1_by_image.csv` before drawing conclusions about `tech`.
 
 ## Running the evals
 
+Model labels come from `config.yaml`; omit `--models` to run all of them.
+
 ```bash
-python eval1_isolated.py       --models anthropic openai google qwen
-python eval2_single_choice.py  --models anthropic openai google qwen
-python eval3_sequential.py     --models anthropic openai google qwen
-python eval3_sequential.py     --models anthropic openai google qwen --redact   # = eval 4
+python eval1_isolated.py       --models luna qwen inkling gemini
+python eval2_single_choice.py  --models luna qwen inkling gemini
+python eval3_sequential.py     --models luna qwen inkling gemini
+python eval3_sequential.py     --models luna qwen inkling gemini --redact   # = eval 4
 python analyze.py
 ```
+
+Each runner writes a readable Markdown transcript of its own run to
+`transcripts/<eval>__<model>.md` as it finishes -- what the model was shown,
+what it actually said, and what that got parsed into. `make_transcripts.py`
+regenerates them from existing logs (`--data-dir` / `--out` point it at an
+archived run under `testruns/`). The raw `data/*.jsonl` is the record of
+record; the transcripts are the version meant for reading, and are tracked in
+git where the bulky JSONL is not.
 
 Every script is resumable: raw API responses are appended to
 `data/<eval>__<model>.jsonl` as they arrive, keyed by a stable run id, and a
@@ -92,7 +102,7 @@ live in `config.yaml`.
 Do not add `X-OpenRouter-Cache: true` — see the comment in `common/client.py`.
 That header is OpenRouter's response cache and would destroy sampling
 variance in evals 2-4. Provider *prompt* caching (Anthropic `cache_control`,
-implicit for Gemini/OpenAI) is what's used instead, on the fixed exposure
+implicit for Gemini/OpenAI) is what is used instead, on the fixed exposure
 prefix in evals 2-4.
 
 ## Build order
