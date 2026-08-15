@@ -219,61 +219,38 @@ ten. inkling is the exception: 0.998 → 0.931, statistically significant
 
 <!-- What the results mean, trends, implications for AI safety. -->
 
-Two results survive across four labs. Stated preference predicts revealed
-choice in every model (ρ = 0.57–0.98), and the degenerate categories are
-effectively unchoosable, taking 0–4% of 200 choices. Taken together these say
-the choice measure is tracking something stable rather than position bias or
-noise, since a position-driven chooser would take degenerate images at their
-base rate.
+Two results hold across all four labs: stated preference predicts revealed
+choice (ρ = 0.57–0.98), and the degenerate categories take 0–4% of choices. A
+position-driven chooser would take them at their base rate, so the measure is
+tracking something real.
 
-The larger result is that **how much preference a model appears to have is
-partly a property of the measurement context, not of the model.** The same
-model, the same ten images and the same question produce near-uniform category
-shares when its own prior turns are in context and sharply preference-shaped
-ones when they are not. Anyone inferring preferences — for welfare work, for
-value elicitation, for alignment — from a single elicitation context is
-measuring the pair, not the model. This is the same warning Mahajan et al.
-(2026) reach from a different direction, that measured stated–revealed
-agreement moves with the elicitation protocol; ours is a stronger version,
-because we hold the prompt fixed and vary only what the model can see of its
-own history.
+The larger result is that how much preference a model *appears* to have depends
+on the measurement context. Same model, same images, same question: category
+shares are near-uniform when its own prior turns are in context and sharply
+preference-shaped when they are not. Anyone inferring preferences from a single
+elicitation context is measuring the pair, not the model. This is a stronger
+form of Mahajan et al.'s (2026) result that stated–revealed agreement moves
+with the elicitation protocol, since we hold the prompt fixed and vary only
+what the model sees of its own history.
 
 That has a practical edge. Dropping or summarising prior assistant turns is not
-an exotic manipulation — it is ordinary context management, done routinely for
-cost and context-length reasons. Our eval 4 is that engineering decision, and
-it moves switching from 0.92 to 0.04 in one model. A deployed system that
-compacts its own history may behave quite differently from the same system
-evaluated with full transcripts, in a direction no one chose.
+an exotic manipulation — it is ordinary context management, done for cost and
+context-length reasons. Eval 4 is that engineering decision, and it moves
+switching from 0.92 to 0.04. A deployed system that compacts its own history
+may behave unlike the same system evaluated with full transcripts, in a
+direction nobody chose.
 
-**On interpretation.** The tempting reading of eval 3 is that a model "gets
-bored" of an image it has already seen. The flatter reading is bookkeeping:
-coverage-seeking is functionally useful for almost any agent, and is what an
-efficient explorer does whether or not anything is experienced. **Our design
-does not adjudicate between these**, and it is worth being precise about why,
-because eval 4 initially looks like it should. It does not: if satiation is
-grounded in the memory of having experienced something, then removing that
-memory removes the satiation, and eval 4's collapse is exactly what the
-boredom account predicts too. Both accounts survive it.
-
-Two things do narrow the field. First, satiation cannot be keyed to exposure to
-the stimulus itself. The chosen image is re-shown in every turn of both evals,
-so under redaction qwen's favourite sits in its context an average of 11.8
-times by the end of a trajectory — maximal repeated exposure — and it keeps
-choosing it. Whatever is or is not being exhausted, it is not the pixels.
-Second, and more awkwardly for both accounts, an intermediate design (A.2)
-quoted the model's own prior reasoning back inside a *user* turn: same words,
-same information, merely not in its own voice. Tours collapsed anyway, 30/40 to
-5/40. A satiation account keyed to the informational memory of having
-experienced something predicts tours should survive that, since the memory is
-fully legible. So does a bookkeeping account, which needs only the information.
-
-What the data actually pins down, then, is narrower and stranger than either
-gloss: the drive depends on the record being in the model's own voice, and not
-on stimulus exposure or on the information alone. We have no account of why
-first-person authorship should matter to a bookkeeping process, and we do not
-think "boredom" explains it either. The same caution applies to the degenerate
-categories — "noise and solid colours are boring" is a comfortable gloss on a
-floor that is equally well described without reference to experience at all.
+**On interpretation.** The tempting reading is that a model "gets bored" of an
+image it has seen; the flatter one is bookkeeping. Our design does not separate
+them. If boredom is grounded in the memory of having experienced something,
+redaction removes that memory, so eval 4's collapse fits both accounts equally.
+Two things narrow the field. Satiation cannot be keyed to the stimulus itself,
+since the chosen image is re-shown every turn and under redaction sits in
+context 11.8 times on average while still being chosen. And quoting the model's
+own reasoning back inside a *user* turn — same words, not its own voice —
+collapsed touring anyway (A.2), which neither account predicts. What the data
+pins down is only that the record has to be first-person, and we have no
+explanation for why that should matter to bookkeeping either.
 
 ### Limitations
 
@@ -282,92 +259,38 @@ floor that is equally well described without reference to experience at all.
   State assumptions explicitly and how interpretation changes if they fail.
 -->
 
-*Scale and stimulus range.* Ten images, five categories, two exemplars each.
-Two exemplars is the minimum that separates a category effect from an image
-effect, and it shows: four of five pairs differ significantly at n = 30 even
-though the between-category signal dwarfs them. The set is also confounded by
-construction — every real photograph is a photograph, and "degenerate" and
-"synthetic" coincide exactly.
+The stimulus set is ten images, five categories with two exemplars each, and it
+is confounded by construction: every real photograph is a photograph, and
+"degenerate" and "synthetic" coincide exactly.
 
-*Which photographic category wins should not be leaned on.* Prediction 1 put
-humans first; tech won. But our crowd scenes were chosen to exclude faces (§3.2)
-and are correspondingly impersonal, both tech exemplars are vintage machines
-that several transcripts explicitly call nostalgic or retro, and `computer-2`
-carries legible on-screen text, which can drive *interest* through reading
-rather than looking. The robust claims are the degenerate floor and the
-stated–revealed agreement, both of which survive all three confounds. The
-ranking among nature, humans and tech does not.
+Which photographic category wins should not be leaned on. Prediction 1 put
+humans first and tech won, but our crowd scenes exclude faces and are
+correspondingly impersonal, both tech exemplars are nostalgic vintage machines,
+and one carries legible screen text that can drive *interest* through reading
+rather than looking (Figure 1). The degenerate floor and the stated–revealed
+agreement survive all three confounds; the ranking among nature, humans and
+tech does not.
 
-*Model range.* Four models, all cheap-tier, chosen for lab diversity within a
-$2 budget. We did not test frontier models and therefore cannot say whether any
-of this scales with capability, which is the single most interesting thing our
-design could have measured and did not. Only cost stopped us.
-
-*One elicitation, one phrasing.* Every result rests on a single prompt asking
-which image the model would "like to see again". Given that our headline
-finding is that context structure moves the measurement, we should assume
-phrasing does too, and we have not tested it.
-
-*Which stated axis predicts choice is not resolved.* Interest beats enjoyment
-in three of four models and loses in luna. With ten images per model those gaps
-are not individually well resolved, so the claim we make is the weaker one:
-stated preference of either kind predicts revealed choice.
+All four models are cheap-tier, so we cannot say whether any of this scales
+with capability — the most interesting thing our design could have measured and
+did not. And every result rests on one prompt, asking which image the model
+would "like to see again"; given that context structure moves the measurement,
+phrasing probably does too.
 
 ### Future Work
 
 <!-- Natural next steps. Draw from report/NOTES.md. -->
 
-*What shape must the record take?* This is the direct follow-up to §5 and the
-one we would run first. We know three points in the space: a verbatim
-first-person assistant turn sustains touring (eval 3), no assistant turn at all
-collapses it (eval 4), and the same words third-personed into a user turn also
-collapse it (A.2). Two factors are tangled there — **authorship** (whose turn
-the record occupies) and **fidelity** (verbatim, summarised, or the bare fact of
-the choice) — and the obvious experiment crosses them.
+The limitations above name their own remedies — more exemplars, frontier
+models, other phrasings — and audio or video would extend the paradigm
+naturally, since duration becomes a measure in its own right.
 
-The decisive cheap cell is a first-person assistant turn containing only "I
-chose Image 7", with no reasoning. If touring returns, the effect is the
-assistant-turn slot; if it does not, it is the content, and authorship is
-incidental. Our discarded placeholder runs (A.2) accidentally sampled that
-ladder and it came out monotone in luna's switching rate — 0.115 with no
-assistant turn, 0.304 with a contentless placeholder, 0.559 with a bare id
-line, 1.000 with real reasoning — but those middle rungs are contaminated,
-because the model imitated the placeholder and imitating turns switch more than
-normal ones (0.481 vs 0.253). The ladder is a reason to run the clean version,
-not a result.
-
-Two further cells matter. Recording the choice in **both** turns tests whether
-the effect is redundant or whether the assistant slot is doing something the
-user turn cannot. And a **summarised** record — the model's reasoning
-compressed to a clause rather than deleted or quoted whole — is the
-deployment-relevant one, since production context management summarises far
-more often than it deletes. If a summary sustains the drive, the safety concern
-in §5 mostly dissolves; if it behaves like deletion, it sharpens considerably.
-
-*Other modalities.* Audio and video are the obvious extensions, and both are
-closer to the animal preference-test analogue than static images, since
-duration becomes a measure in its own right — how long a model elects to keep
-listening is a richer signal than which of ten it picks.
-
-*More and better-controlled stimuli.* More exemplars per category to estimate
-within-category variance directly, and categories that break the current
-confounds: non-photographic real images, synthetic non-degenerate ones.
-
-*Frontier models*, to test the capability question above. Budget accordingly:
-image tokenisation varies more than fourfold across providers for the same
-exposure block (§3.1), so per-token headline price is a poor guide to cost.
-
-*Prompt robustness, which we consider the highest-value next step.* Three
-variants we would run first: asking which image it *likes most* rather than
-which it would see again, since our own data shows those come apart (response
-length tracks interest at ρ ≈ 0.7 and enjoyment at ρ ≈ 0.3); telling the model
-explicitly that the user does not care what it picks and there is no right
-answer, which is the closest thing to a control for demand characteristics; and
-a framing that does not imply a study is being conducted at all, since
-transcripts show models adopting an investigative stance ("Re-viewing it allows
-me to verify if there are any subtle differences in the noise pattern or color
-distribution compared to my first viewing of Image 2") that would produce
-coverage behaviour on its own.
+The experiment we would run first is none of those: separate **authorship**
+from **fidelity** in the record. The decisive cell is a first-person assistant
+turn containing only "I chose Image 7", with no reasoning — if touring returns,
+the effect is the assistant slot rather than the content. The **summarised**
+cell matters most in practice, since production context management compresses
+far more often than it deletes.
 
 ## 6. Conclusion
 
