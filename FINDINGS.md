@@ -250,7 +250,12 @@ probability. Two of the five trajectories resumed choosing after declining,
 so it is a soft signal rather than a hard stop. `analyze.py` drops declined
 turns from switching and satiation rather than counting NaN as a switch.
 
-## 3c. luna imitates the redaction placeholder
+## 3c. The assistant-turn placeholder was contaminating both evals
+
+**Superseded by section 3d — read that too.** This section records what the
+placeholder did and why it had to go.
+
+
 
 In eval 4 the assistant's own prior turns are replaced, in the context it
 sees, with `[main model output redacted]` plus its `next_image_id=N` line.
@@ -281,12 +286,69 @@ on one model.
 
 It is still a defect in the design. The point of redaction was to remove the
 model's narrative from its own context, not to demonstrate to it that terse,
-reasoning-free turns are the house style. Roughly a fifth of luna's eval-4
-turns contain no reasoning at all, which is a fifth of the eval-4 transcript
-that cannot be read for *why* a choice was made. Any redaction marker is
-imitable in principle, so this is a property of the method rather than of the
-wording — worth testing against an alternative placeholder before treating
-eval-4 reasoning text as a data source.
+reasoning-free turns are the house style.
+
+Replacing the bracket line with a bare `next_image_id=N` **made it worse**:
+imitation of the bracket string went to zero, but reasoning-free turns rose
+from 108 to 194 of 520, because the model simply imitated the new, terser
+placeholder instead. A system-prompt instruction to "answer in full,
+reasoning included" was ignored — the in-context format demonstration beat
+the instruction outright. Switching also moved 0.304 -> 0.559, so the
+*measured size* of the redaction effect was partly an artefact of the marker.
+
+The conclusion is that any stand-in for an assistant turn demonstrates a
+format, and the model copies it. The fix is structural, not lexical.
+
+## 3d. Removing assistant turns entirely — and what it revised
+
+Both evals now keep **no assistant turns at all**. Each user turn reports the
+model's own last choice and re-delivers that image; eval 3 quotes the
+reasoning back, eval 4 states that it was removed. The two differ in exactly
+one thing, which is the manipulation.
+
+For eval 4 this worked cleanly and made the effect *stronger*:
+
+| luna eval 4 | switching | distinct/traj | reasoning-free | mean tokens |
+|---|---|---|---|---|
+| bracket placeholder | 0.304 | 4.03 | 108/520 | 42.0 |
+| bare-id placeholder | 0.559 | 6.83 | 194/520 | 34.9 |
+| **no assistant turns** | **0.125** | **2.20** | **0/520** | **51.8** |
+
+Imitation is gone, the model reasons *more* than under any previous design,
+and redacted trajectories collapse to revisiting barely two distinct images.
+luna's 0.125 lands essentially on qwen's 0.127.
+
+**But it also revised the eval-3 result, and that is the important part.**
+Holding the reasoning constant and changing only whether it arrives as the
+model's own assistant turn or quoted inside a user turn:
+
+| luna eval 3 | own assistant turns | quoted in user turn |
+|---|---|---|
+| toured all 10 within first 10 turns | **30/40** | **5/40** |
+| distinct images / trajectory | 9.85 | 8.10 |
+| coverage-phase category spread (max−min) | **2.7%** | **24.0%** |
+
+Under the clean structure the tour largely disappears and preference is
+visible *throughout*, not only in the forced-repeat turns: coverage-phase
+shares run nature 34.5 > tech 25.0 > humans 16.0 > solid_color 14.0 > noise
+10.5, against a nearly flat 18.8–21.5% before.
+
+So the strong claim in section 3 — that a coverage drive outranks preference
+until nothing is left unseen — **holds only when the model's reasoning sits
+in context as its own utterances.** Quoting the identical reasoning back at
+it as a user-side report mostly dissolves the behaviour. Coverage survives
+withholding the horizon (section 3a) but not this, which makes it a narrower
+phenomenon than first reported: it appears to need the model to experience
+the prior narrative as its own speech, not merely to have the information.
+
+The eval-3/eval-4 contrast itself is undamaged — 0.858 vs 0.125, paired
+Wilcoxon p = 6.3e-08.
+
+**Cross-model caveat.** qwen's evals 3/4 still use the old assistant-turn
+structure, so its numbers (0.956 / 0.127, 29/40 tours) are not directly
+comparable to luna's current ones. Re-running qwen on the clean design is the
+obvious next step and would test whether the structure-dependence above is
+general or luna-specific.
 
 ## 4. Measurement note: position bias
 

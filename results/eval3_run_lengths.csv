@@ -1,6 +1,10 @@
 model_label,run_length,count
-luna,1,518
-luna,2,1
+luna,1,428
+luna,2,15
+luna,4,5
+luna,5,1
+luna,11,1
+luna,13,2
 qwen,1,470
 qwen,2,11
 qwen,3,3

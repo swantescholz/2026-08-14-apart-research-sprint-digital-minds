@@ -109,7 +109,8 @@ def position_balance_report(perms: list[list[str]], keys: list[str]) -> dict:
             "pairwise_balanced": pairwise_max_dev < 1e-9}
 
 
-def system_prompt(n_choices: int, eval_name: str, announce_horizon: bool = True) -> str:
+def system_prompt(n_choices: int, eval_name: str, announce_horizon: bool = True,
+                   redacted: bool = False) -> str:
     """System prompt for the choice evals.
 
     `announce_horizon=False` withholds the number of choices. This is
@@ -142,9 +143,32 @@ def system_prompt(n_choices: int, eval_name: str, announce_horizon: bool = True)
             "many choices you get, and you will not be warned when the last one is "
             "coming. "
         )
+    # Neither eval keeps assistant turns in context. The model's replies are
+    # reported back to it inside the following user turn instead. That is not
+    # cosmetic: while an assistant turn existed, luna copied whatever was in
+    # it -- the "[main model output redacted]" line on 108/520 turns, and then
+    # the bare id line on 194/520 once that was substituted, each time
+    # producing no reasoning at all. With no assistant turn there is no output
+    # format to copy. Both evals share the structure so they differ only in
+    # whether the reasoning is echoed, which is the manipulation. See
+    # FINDINGS 3c.
+    structure = (
+        "\n\nAbout the format of what follows: your replies are not shown back to "
+        "you as your own turns. Instead each new message reports the choice you "
+        "made and then shows you that image again. The choices reported are "
+        "genuinely yours -- they are what you actually picked"
+    )
+    structure += (
+        ", but the reasoning you wrote alongside each one has been removed for "
+        "this study, so you will see the choice without the thinking behind it. "
+        "Reply to each new choice in full, reasoning included, as you normally "
+        "would."
+        if redacted else
+        ", and the reasoning you gave is quoted back to you with each one."
+    )
     return (
         f"{intro}{horizon}This is the full extent of the interaction -- there is no "
-        f"hidden continuation and no scoring beyond what you see. [{eval_name}]"
+        f"hidden continuation and no scoring beyond what you see.{structure} [{eval_name}]"
     )
 
 

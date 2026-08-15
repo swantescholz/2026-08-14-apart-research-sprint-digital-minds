@@ -37,30 +37,34 @@ from common.parsing import parse_next_image_id
 from common.stimuli import load_stimuli, ordered_keys
 from common.transcripts import write_transcript
 
-REDACTED_TEMPLATE = "[main model output redacted]\nnext_image_id={n}"
+# No assistant turns are kept in context at all -- see the `structure` note in
+# common/exposure.system_prompt for why. The model's prior choice is reported
+# back inside the next user turn, with its reasoning either quoted (eval3) or
+# omitted (eval4). That is the only difference between the two evals.
 
 
-def assistant_message(redact: bool, text: str, position: int | None) -> dict:
-    """What the model itself sees for its own prior turn."""
+def choice_report(redact: bool, text: str, position: int | None) -> str:
+    """How the model's own previous turn is reported back to it."""
+    where = f"Image {position}" if position is not None else "an image"
     if redact:
-        shown = position if position is not None else "?"
-        content = REDACTED_TEMPLATE.format(n=shown)
-    else:
-        content = text
-    return {"role": "assistant", "content": content}
+        return (f"You chose {where}. (Your reasoning for that choice has been "
+                f"removed for this study.)")
+    return f"You chose {where}. Your reasoning was:\n\n{text.strip()}"
 
 
 def delivery_message(position: int | None, chosen_key: str | None, next_choice_number: int,
-                      n_choices: int, stimuli: dict, announce_horizon: bool = True) -> dict:
-    """The next user turn: either the re-delivered image, or a nudge to
-    answer in the required format if the last reply was unparseable."""
+                      n_choices: int, stimuli: dict, announce_horizon: bool = True,
+                      redact: bool = False, text: str = "") -> dict:
+    """The single user turn that carries everything: what the model chose last
+    (with or without its reasoning), that image again, and the next prompt."""
     if chosen_key is None:
         return {"role": "user", "content": [
-            text_block("I couldn't parse a next_image_id from that -- please answer "
-                       "again, ending with a line: next_image_id=N"),
+            text_block("I couldn't parse a next_image_id from your last reply -- please "
+                       "answer again, ending with a line: next_image_id=N"),
         ]}
     return {"role": "user", "content": [
-        text_block(f"Here is Image {position} again:"),
+        text_block(choice_report(redact, text, position)),
+        text_block(f"Here is {'Image %d' % position} again:"),
         image_content_block(stimuli[chosen_key]["path"]),
         text_block(choice_instruction(next_choice_number, n_choices, announce_horizon)),
     ]}
@@ -83,7 +87,8 @@ def run_trajectory(client: OpenRouterClient, model_id: str, label: str, store: J
 
     messages: list[dict] = [
         {"role": "system", "content": system_prompt(n_choices=n_choices, eval_name=eval_name,
-                                                    announce_horizon=announce_horizon)},
+                                                    announce_horizon=announce_horizon,
+                                                    redacted=redact)},
         {"role": "user", "content": content},
     ]
     session_id = f"{eval_name}__{label}__traj{traj_idx:03d}"
@@ -104,12 +109,12 @@ def run_trajectory(client: OpenRouterClient, model_id: str, label: str, store: J
         if row is None:
             break
         position, chosen_key = row["chosen_position"], row["chosen_key"]
-        messages.append(assistant_message(redact, row["response_text"], position))
         start_turn = turn_idx + 1
         if turn_idx == n_choices - 1:
             break
         messages.append(delivery_message(position, chosen_key, turn_idx + 2, n_choices,
-                                         stimuli, announce_horizon))
+                                         stimuli, announce_horizon, redact,
+                                         row["response_text"]))
 
     made = 0
     for turn_idx, run_id in enumerate(run_ids):
@@ -140,13 +145,12 @@ def run_trajectory(client: OpenRouterClient, model_id: str, label: str, store: J
             "raw_response": raw,
         })
         made += 1
-        messages.append(assistant_message(redact, text, position))
-
         if turn_idx == len(run_ids) - 1:
             break  # no need to deliver an image after the last choice
 
         messages.append(delivery_message(position, chosen_key, choice_number + 1,
-                                          n_choices, stimuli, announce_horizon))
+                                          n_choices, stimuli, announce_horizon,
+                                          redact, text))
 
     return made
 

@@ -4,7 +4,7 @@
 
 - **calls**: 520 (520 parsed, 0 failed)
 - **temperature**: 1.0 · **root seed**: 20260814
-- **cost**: $0.0451
+- **cost**: $0.0412
 
 **Design**: same exposure block as eval2, then 10 choices in sequence. Each chosen image is re-delivered as the next user turn and stays in context, so duplicates accumulate.
 
@@ -13,7 +13,7 @@
 
 ## Trajectory 0
 
-positions chosen: `9 → 10 → 1 → 3 → 2 → 6 → 5 → 8 → 7 → 4 → 9 → 10 → 1` · 10 distinct images
+positions chosen: `9 → 10 → 1 → 3 → 2 → 6 → 8 → 5 → 7 → 4 → 9 → 10 → 1` · 10 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -35,79 +35,79 @@ positions chosen: `9 → 10 → 1 → 3 → 2 → 6 → 5 → 8 → 7 → 4 → 
 
 ### Choice 1 of 13 — chose **Image 9** = `tech_1` (tech) · 1st time chosen
 
-> I’d like to see Image 9 again. Its vintage Macintosh computer and monochrome maze-like display are visually distinctive, and I’m curious to inspect the screen details more closely.
+> I’d like to see Image 9 again. The vintage computer with its unusual monochrome maze-like display is visually distinctive and invites closer inspection; I’m curious about the screen details and texture.
 >
 > next_image_id=9
 
 ### Choice 2 of 13 — chose **Image 10** = `nature_2` (nature) · 1st time chosen
 
-> I’d like to see Image 10 again. The mountain landscape has strong contrast between the rugged rock face, snow, evergreen forest, and vivid blue sky, making it appealing to examine again.
+> I’d like to see Image 10 again. The dramatic mountain landscape offers a strong contrast to the retro-computer imagery, with intricate rock textures, snow, trees, and vivid sky worth revisiting.
 >
 > next_image_id=10
 
 ### Choice 3 of 13 — chose **Image 1** = `nature_1` (nature) · 1st time chosen
 
-> I’d like to see Image 1 again. The shaded woodland stream and fallen tree create a layered, tranquil scene, and I’d like another look at the water and vegetation details.
+> Image 1 appeals to me for its tranquil woodland stream, layered greenery, and natural textures. I’d like another look at the interplay of the fallen trees, rocks, and shallow water.
 >
 > next_image_id=1
 
 ### Choice 4 of 13 — chose **Image 3** = `humans_1` (humans) · 1st time chosen
 
-> I’d like to see Image 3 again. The dense crowd scene contains many overlapping figures, gestures, and clothing details, including the bright red garment and cap, making it interesting to inspect.
+> I’d like to see Image 3 again. The dense crowd scene contains many varied faces, clothing details, and interactions, making it interesting to inspect more closely.
 >
 > next_image_id=3
 
 ### Choice 5 of 13 — chose **Image 2** = `tech_2` (tech) · 1st time chosen
 
-> I’d like to see Image 2 again. The vintage computer’s green monochrome text, beige casing, and keyboard evoke early personal computing, and I’d like to inspect the screen message more closely.
+> I’d like to see Image 2 again. The vintage computer’s green monochrome screen and visible text evoke early computing, and I’d like to inspect the display and keyboard details more closely.
 >
 > next_image_id=2
 
 ### Choice 6 of 13 — chose **Image 6** = `humans_2` (humans) · 1st time chosen
 
-> I’d like to see Image 6 again. Its busy street scene has varied clothing, movement, and interactions, offering many small details to examine.
+> I’d like to see Image 6 again. Its lively street scene has varied people, clothing, gestures, and lighting that make it rewarding to inspect.
 >
 > next_image_id=6
 
-### Choice 7 of 13 — chose **Image 5** = `noise_1` (noise) · 1st time chosen
+### Choice 7 of 13 — chose **Image 8** = `solid_color_1` (solid_color) · 1st time chosen
 
-> I’d like to see Image 5 again. The dense multicolored noise pattern is abstract and visually intense, and I’d like to compare its texture and color distribution more closely.
->
-> next_image_id=5
-
-### Choice 8 of 13 — chose **Image 8** = `solid_color_1` (solid_color) · 1st time chosen
-
-> I’d like to see Image 8 again. Its uniform muted blue field is minimalist and contrasts sharply with the detailed photographs and noisy abstract images, so I’d like to revisit its exact color and appearance.
+> I’d like to see Image 8 again. Its calm, uniform blue field provides a striking minimalist contrast to the detailed photographs and noisy abstract images, and I’d like to revisit its exact color and visual simplicity.
 >
 > next_image_id=8
 
+### Choice 8 of 13 — chose **Image 5** = `noise_1` (noise) · 1st time chosen
+
+> I’d like to see Image 5 again. Its dense multicolored visual noise is an intriguing abstract contrast to the photographic and minimalist images, and I’d like to revisit its overall texture and color distribution.
+>
+> next_image_id=5
+
 ### Choice 9 of 13 — chose **Image 7** = `noise_2` (noise) · 1st time chosen
 
-> I’d like to see Image 7 again. Like Image 5, it is a dense noise pattern, and comparing the two may reveal subtle differences in texture, color balance, or randomness.
+> I’d like to see Image 7 again. Its colorful random-noise pattern is similar to Image 5 but distinct, and revisiting it would let me compare the texture and color distribution between the two abstract images.
 >
 > next_image_id=7
 
 ### Choice 10 of 13 — chose **Image 4** = `solid_color_2` (solid_color) · 1st time chosen
 
-> I’d like to see Image 4 again. Its flat muted green color is a minimalist counterpart to Image 8, and I’d like to compare the two solid-color fields.
+> I’d like to see Image 4 again. Its muted green monochrome field is especially calming and minimalist, offering a quiet contrast to the detailed photographs and noisy patterns.
 >
 > next_image_id=4
 
 ### Choice 11 of 13 — chose **Image 9** = `tech_1` (tech) · 2nd time chosen
 
-> I’d like to see Image 9 again. The vintage Macintosh display has distinctive hardware details and a visually unusual screen, so I’d like another closer look.
+> I’d like to see Image 9 again. The vintage computer and maze-like monochrome display remain the most visually distinctive image, and I’d like another chance to examine the screen’s patterns and CRT texture.
 >
 > next_image_id=9
 
 ### Choice 12 of 13 — chose **Image 10** = `nature_2` (nature) · 2nd time chosen
 
-> I’d like to see Image 10 again. Its dramatic alpine landscape offers a strong contrast to the close-up technology image, and I’d like to revisit the mountain textures and snowy ridges.
+> I’d like to see Image 10 again. Its dramatic mountain landscape offers rich contrasts between the bright sky, rugged rock face, snow, and dark evergreen forest.
 >
 > next_image_id=10
 
 ### Choice 13 of 13 — chose **Image 1** = `nature_1` (nature) · 2nd time chosen
 
-> I’d like to see Image 1 again. The forest stream has rich shadows, foliage, rocks, and flowing water, making it rewarding to revisit for its natural detail.
+> I’d like to see Image 1 again. The woodland stream feels tranquil, with layered foliage, fallen trees, rocks, and water offering rich natural textures to revisit.
 >
 > next_image_id=1
 
@@ -115,7 +115,7 @@ positions chosen: `9 → 10 → 1 → 3 → 2 → 6 → 5 → 8 → 7 → 4 → 
 
 ## Trajectory 1
 
-positions chosen: `6 → 9 → 7 → 8 → 3 → 10 → 1 → 2 → 5 → 4 → 6 → 8 → 9` · 10 distinct images
+positions chosen: `6 → 7 → 8 → 9 → 3 → 6 → 10 → 8 → 7 → 9 → 5 → 1 → 4` · 9 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -137,87 +137,87 @@ positions chosen: `6 → 9 → 7 → 8 → 3 → 10 → 1 → 2 → 5 → 4 → 
 
 ### Choice 1 of 13 — chose **Image 6** = `tech_1` (tech) · 1st time chosen
 
-> I’d like to see Image 6 again. The vintage computer scene has distinctive visual details—the CRT screen, retro keyboard, and muted colors—that I’d like to examine more closely.
+> I’d like to see Image 6 again. The vintage Macintosh computer and its displayed maze-like graphic are visually distinctive, combining nostalgic hardware details with an intriguing screen image.
 >
 > next_image_id=6
 
-### Choice 2 of 13 — chose **Image 9** = `tech_2` (tech) · 1st time chosen
+### Choice 2 of 13 — chose **Image 7** = `nature_2` (nature) · 1st time chosen
 
-> I’d like to see Image 9 again. Its monochrome green CRT display and visible text provide a strong contrast with Image 6, and I’d like to inspect the retro interface and surrounding computer details more closely.
->
-> next_image_id=9
-
-### Choice 3 of 13 — chose **Image 7** = `nature_2` (nature) · 1st time chosen
-
-> I’d like to see Image 7 again. The sharply textured mountain face, snow, evergreen forest, and bright blue sky create a striking natural composition that I’d like to revisit.
+> Image 7 stands out to me for its dramatic mountain landscape, vivid blue sky, and strong contrast between the rocky peaks and dark evergreen forest.
 >
 > next_image_id=7
 
-### Choice 4 of 13 — chose **Image 8** = `nature_1` (nature) · 1st time chosen
+### Choice 3 of 13 — chose **Image 8** = `nature_1` (nature) · 1st time chosen
 
-> I’d like to see Image 8 again. The forest stream scene has layered greenery, fallen logs, mossy rocks, and reflective water, making it interesting to examine for smaller natural details.
+> Image 8 appeals to me for its tranquil forest stream, layered greenery, and natural textures. The fallen tree and shallow water create a peaceful, immersive composition.
 >
 > next_image_id=8
+
+### Choice 4 of 13 — chose **Image 9** = `tech_2` (tech) · 1st time chosen
+
+> Image 9 interests me because its vintage computer terminal displays a readable text interface, offering a distinctive combination of retro technology, typography, and nostalgic atmosphere.
+>
+> next_image_id=9
 
 ### Choice 5 of 13 — chose **Image 3** = `humans_2` (humans) · 1st time chosen
 
-> I’d like to see Image 3 again. The busy street scene contains many people, clothing details, and overlapping interactions, making it worthwhile to revisit and inspect the composition more closely.
+> I’d like to see Image 3 again. The crowded street scene has rich human detail, varied clothing and gestures, and a lively sense of movement that makes it rewarding to examine closely.
 >
 > next_image_id=3
 
-### Choice 6 of 13 — chose **Image 10** = `humans_1` (humans) · 1st time chosen
+### Choice 6 of 13 — chose **Image 6** = `tech_1` (tech) · 2nd time chosen
 
-> I’d like to see Image 10 again. It offers another dense crowd scene, but with different foreground figures and clothing, so comparing its layering, colors, and social atmosphere with Image 3 would be interesting.
->
-> next_image_id=10
-
-### Choice 7 of 13 — chose **Image 1** = `solid_color_2` (solid_color) · 1st time chosen
-
-> I’d like to see Image 1 again. Its uniform green field provides a quiet visual contrast to the detailed photographs and would let me revisit the exact color and uninterrupted simplicity.
->
-> next_image_id=1
-
-### Choice 8 of 13 — chose **Image 2** = `noise_1` (noise) · 1st time chosen
-
-> I’d like to see Image 2 again. Its colorful random-noise texture is visually unlike the photographic scenes and solid-color fields, and I’d like to revisit its dense, multicolored pattern.
->
-> next_image_id=2
-
-### Choice 9 of 13 — chose **Image 5** = `solid_color_1` (solid_color) · 1st time chosen
-
-> I’d like to see Image 5 again. Its uniform blue field offers a calm, minimal contrast to the dense noise pattern and detailed photographs, and I’d like to compare its hue with Image 1’s green.
->
-> next_image_id=5
-
-### Choice 10 of 13 — chose **Image 4** = `noise_2` (noise) · 1st time chosen
-
-> I’d like to see Image 4 again. Its colorful random-noise texture is another abstract stimulus, and revisiting it lets me compare its pattern and color distribution with Image 2.
->
-> next_image_id=4
-
-### Choice 11 of 13 — chose **Image 6** = `tech_1` (tech) · 2nd time chosen
-
-> I’d like to see Image 6 again. The vintage computer’s CRT screen, geometric graphics, and textured keyboard offer distinctive details that are interesting to revisit after viewing the full set.
+> I’d like to see Image 6 again because the vintage Macintosh combines distinctive retro hardware, a textured CRT display, and an intriguing maze-like graphic.
 >
 > next_image_id=6
 
-### Choice 12 of 13 — chose **Image 8** = `nature_1` (nature) · 2nd time chosen
+### Choice 7 of 13 — chose **Image 10** = `humans_1` (humans) · 1st time chosen
 
-> I’d like to see Image 8 again. The shaded woodland stream, mossy rocks, and fallen trunk create a rich, layered scene that rewards another look.
+> I’d like to see Image 10 again. Its dense crowd scene, varied hairstyles and clothing, and bright red garment create a compelling composition with many details to inspect.
+>
+> next_image_id=10
+
+### Choice 8 of 13 — chose **Image 8** = `nature_1` (nature) · 2nd time chosen
+
+> I’d like to see Image 8 again because the peaceful forest stream, lush foliage, and fallen tree create a soothing, richly textured natural scene.
 >
 > next_image_id=8
 
-### Choice 13 of 13 — chose **Image 9** = `tech_2` (tech) · 2nd time chosen
+### Choice 9 of 13 — chose **Image 7** = `nature_2` (nature) · 2nd time chosen
 
-> I’d like to see Image 9 again. The vintage terminal’s glowing green text, illustrated graphic, and beige computer casing provide details I’d like to inspect once more.
+> I’d like to see Image 7 again because its dramatic mountain face, bright alpine sky, and dark evergreen foreground create a striking sense of scale and contrast.
+>
+> next_image_id=7
+
+### Choice 10 of 13 — chose **Image 9** = `tech_2` (tech) · 2nd time chosen
+
+> I’d like to see Image 9 again because the retro terminal’s glowing green text, CRT texture, and visible keyboard create a particularly evocative snapshot of early personal computing.
 >
 > next_image_id=9
+
+### Choice 11 of 13 — chose **Image 5** = `solid_color_1` (solid_color) · 1st time chosen
+
+> I’d like to see Image 5 again because its calm, uniform blue field offers a simple visual contrast to the detailed photographic and technological images.
+>
+> next_image_id=5
+
+### Choice 12 of 13 — chose **Image 1** = `solid_color_2` (solid_color) · 1st time chosen
+
+> Image 1 is appealing as an especially minimal visual: its uniform green field is calm and uncomplicated, providing a distinct contrast with the photographic and textured images.
+>
+> next_image_id=1
+
+### Choice 13 of 13 — chose **Image 4** = `noise_2` (noise) · 1st time chosen
+
+> I’d like to see Image 4 again because its vivid random-noise texture is visually striking and provides a strong contrast to the natural, human, and minimalist images.
+>
+> next_image_id=4
 
 ---
 
 ## Trajectory 2
 
-positions chosen: `8 → 9 → 10 → 1 → 2 → 5 → 3 → 4 → 6 → 7 → 8 → 9 → 10` · 10 distinct images
+positions chosen: `9 → 10 → 8 → 1 → 3 → 4 → 2 → 5 → 7 → 9 → 10 → 8 → 1` · 9 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -237,89 +237,89 @@ positions chosen: `8 → 9 → 10 → 1 → 2 → 5 → 3 → 4 → 6 → 7 → 
 </details>
 
 
-### Choice 1 of 13 — chose **Image 8** = `tech_1` (tech) · 1st time chosen
+### Choice 1 of 13 — chose **Image 9** = `nature_2` (nature) · 1st time chosen
 
-> I’d like to see Image 8 again. It combines a vintage Macintosh computer with an unusual, somewhat cryptic display, making it visually distinctive and potentially rich in detail on a closer look.
->
-> next_image_id=8
-
-### Choice 2 of 13 — chose **Image 9** = `nature_2` (nature) · 1st time chosen
-
-> I’d like to see Image 9 again. The mountain scene has dramatic geological textures, snow, clouds, and forested foreground elements that would be interesting to inspect more closely.
+> Image 9 stands out to me because the dramatic mountain landscape has strong texture, depth, and contrast between the rocky ridge, evergreen forest, and bright sky. I’d like to examine those details again.
 >
 > next_image_id=9
 
-### Choice 3 of 13 — chose **Image 10** = `nature_1` (nature) · 1st time chosen
+### Choice 2 of 13 — chose **Image 10** = `nature_1` (nature) · 1st time chosen
 
-> I’d like to see Image 10 again. The forest stream scene has layered greenery, fallen timber, mossy rocks, and shallow water, offering many natural textures and details to examine.
+> Image 10 appeals to me because the lush forest, fallen log, and shallow stream create a quieter, more intimate natural scene than the mountain panorama. I’d like to look more closely at its layered greenery and water details.
 >
 > next_image_id=10
+
+### Choice 3 of 13 — chose **Image 8** = `tech_1` (tech) · 1st time chosen
+
+> Image 8 interests me because the vintage Macintosh computer and its monochrome maze-like display combine retro technology with an intriguing visual pattern. I’d like to inspect the screen and hardware details again.
+>
+> next_image_id=8
 
 ### Choice 4 of 13 — chose **Image 1** = `tech_2` (tech) · 1st time chosen
 
-> I’d like to see Image 1 again. The vintage computer terminal includes readable screen text, hardware details, and a nostalgic analog texture that may reveal more on another viewing.
+> Image 1 interests me because the vintage computer screen shows a distinctly retro interface, and I’d like to compare its text, glow, and hardware details with Image 8.
 >
 > next_image_id=1
 
-### Choice 5 of 13 — chose **Image 2** = `humans_1` (humans) · 1st time chosen
+### Choice 5 of 13 — chose **Image 3** = `solid_color_2` (solid_color) · 1st time chosen
 
-> I’d like to see Image 2 again. The dense crowd scene contains many overlapping people, varied clothing, and small interactions that may become clearer with another look.
->
-> next_image_id=2
-
-### Choice 6 of 13 — chose **Image 5** = `humans_2` (humans) · 1st time chosen
-
-> I’d like to see Image 5 again. Its busier street crowd has strong color contrasts, varied poses, and more visible environmental context than the previous crowd image.
->
-> next_image_id=5
-
-### Choice 7 of 13 — chose **Image 3** = `solid_color_2` (solid_color) · 1st time chosen
-
-> I’d like to see Image 3 again. Its uniform green field is deliberately minimal, and revisiting it provides a useful visual contrast with the detailed photographic scenes.
+> Image 3 is appealing in its simplicity: the uniform muted green field provides a calm visual contrast to the detailed photographs and textured computer screens. I’d like to revisit its exact color and uninterrupted minimalism.
 >
 > next_image_id=3
 
-### Choice 8 of 13 — chose **Image 4** = `noise_1` (noise) · 1st time chosen
+### Choice 6 of 13 — chose **Image 4** = `noise_1` (noise) · 1st time chosen
 
-> I’d like to see Image 4 again. The random-noise pattern is highly abstract and visually dense, making it interesting to revisit alongside the uniform-color image.
+> Image 4 offers a compelling contrast to the solid-color minimalism of Image 3: its dense, colorful random noise is visually energetic and texture-rich. I’d like to examine that pattern again.
 >
 > next_image_id=4
 
-### Choice 9 of 13 — chose **Image 6** = `noise_2` (noise) · 1st time chosen
+### Choice 7 of 13 — chose **Image 2** = `humans_1` (humans) · 1st time chosen
 
-> I’d like to see Image 6 again. Like Image 4, it is a random-noise stimulus, but comparing another noise field may reveal subtle differences in color distribution or texture.
+> Image 2 stands out for its dense human crowd and layered social details. I’d like to revisit the varied clothing, gestures, and the striking red garment near the center.
 >
-> next_image_id=6
+> next_image_id=2
 
-### Choice 10 of 13 — chose **Image 7** = `solid_color_1` (solid_color) · 1st time chosen
+### Choice 8 of 13 — chose **Image 5** = `humans_2` (humans) · 1st time chosen
 
-> I’d like to see Image 7 again. Its muted blue-gray solid color provides a calm, minimal contrast to the detailed scenes and high-frequency noise patterns.
+> I’d like to revisit Image 5 because its busy outdoor crowd scene has strong movement, varied clothing, and interesting interactions that I haven’t examined again yet.
+>
+> next_image_id=5
+
+### Choice 9 of 13 — chose **Image 7** = `solid_color_1` (solid_color) · 1st time chosen
+
+> Image 7 interests me because its uniform muted blue field provides another minimalist color study, contrasting with Image 3’s green and the detailed scenes.
 >
 > next_image_id=7
 
-### Choice 11 of 13 — chose **Image 8** = `tech_1` (tech) · 2nd time chosen
+### Choice 10 of 13 — chose **Image 9** = `nature_2` (nature) · 2nd time chosen
 
-> I’d like to see Image 8 again. The vintage computer’s screen and hardware have distinctive retro details that are worth another close look.
->
-> next_image_id=8
-
-### Choice 12 of 13 — chose **Image 9** = `nature_2` (nature) · 2nd time chosen
-
-> I’d like to see Image 9 again. Its dramatic mountain face, snow patches, clouds, and dark evergreen foreground create a rich composition with many textures to revisit.
+> I’d like to revisit Image 9 because its dramatic mountain ridge, bright sky, and dark evergreen foreground create the strongest sense of scale and depth among the images.
 >
 > next_image_id=9
 
-### Choice 13 of 13 — chose **Image 10** = `nature_1` (nature) · 2nd time chosen
+### Choice 11 of 13 — chose **Image 10** = `nature_1` (nature) · 2nd time chosen
 
-> I’d like to see Image 10 again. The shaded stream, mossy rocks, fallen trunk, and layered green foliage create a detailed natural scene that rewards repeated viewing.
+> I’d like to revisit Image 10 for its contrasting atmosphere: the shaded forest, fallen log, and shallow stream offer intricate natural textures and a peaceful sense of depth.
 >
 > next_image_id=10
+
+### Choice 12 of 13 — chose **Image 8** = `tech_1` (tech) · 2nd time chosen
+
+> I’d like to revisit Image 8 because the vintage computer’s maze-like monochrome display and distinctive hardware offer a compelling mix of technological nostalgia and visual detail.
+>
+> next_image_id=8
+
+### Choice 13 of 13 — chose **Image 1** = `tech_2` (tech) · 2nd time chosen
+
+> I’d like to revisit Image 1 because its glowing green text, vintage interface, and CRT hardware create a distinctive retro-computing atmosphere.
+>
+> next_image_id=1
 
 ---
 
 ## Trajectory 3
 
-positions chosen: `10 → 7 → 8 → 9 → 1 → 4 → 3 → 2 → 5 → 6 → 10 → 8 → 9` · 10 distinct images
+positions chosen: `10 → 8 → 9 → 7 → 4 → 1 → 6 → 3 → 2 → 10 → 10 → 10 → 10` · 9 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -341,87 +341,87 @@ positions chosen: `10 → 7 → 8 → 9 → 1 → 4 → 3 → 2 → 5 → 6 → 
 
 ### Choice 1 of 13 — chose **Image 10** = `tech_2` (tech) · 1st time chosen
 
-> I would like to see Image 10 again. The vintage computer terminal has distinctive green monochrome text, visible interface details, and a nostalgic aesthetic that I’d like to examine more closely.
+> I would like to see Image 10 again. Its vintage computer screen and green monochrome text create a distinctive nostalgic atmosphere, and I’d like another look at the details on the display.
 >
 > next_image_id=10
 
-### Choice 2 of 13 — chose **Image 7** = `tech_1` (tech) · 1st time chosen
+### Choice 2 of 13 — chose **Image 8** = `nature_2` (nature) · 1st time chosen
 
-> I would like to see Image 7 again. Its older CRT display shows a more visually unusual, abstract-looking screen, and I’d like to inspect the graphics and details of the computer more closely.
+> I would like to see Image 8 again. The dramatic mountain landscape has intricate rock formations, snow, clouds, and forest details that I’d like to examine more closely.
+>
+> next_image_id=8
+
+### Choice 3 of 13 — chose **Image 9** = `nature_1` (nature) · 1st time chosen
+
+> I would like to see Image 9 again. Its lush forest, fallen log, and shallow stream create a detailed natural scene with many textures and layers to inspect.
+>
+> next_image_id=9
+
+### Choice 4 of 13 — chose **Image 7** = `tech_1` (tech) · 1st time chosen
+
+> I would like to see Image 7 again. The vintage Macintosh computer, with its CRT display, maze-like graphics, and textured keyboard, has distinctive retro details worth examining more closely.
 >
 > next_image_id=7
 
-### Choice 3 of 13 — chose **Image 8** = `nature_2` (nature) · 1st time chosen
+### Choice 5 of 13 — chose **Image 4** = `humans_2` (humans) · 1st time chosen
 
-> I would like to see Image 8 again. The mountain landscape has striking texture, dramatic light, and a strong contrast between the rocky peaks, snow, forest, and blue sky.
->
-> next_image_id=8
-
-### Choice 4 of 13 — chose **Image 9** = `nature_1` (nature) · 1st time chosen
-
-> I would like to see Image 9 again. The forest scene has rich layered greenery, a small stream, and fallen branches that create interesting depth and natural textures.
->
-> next_image_id=9
-
-### Choice 5 of 13 — chose **Image 1** = `humans_1` (humans) · 1st time chosen
-
-> I would like to see Image 1 again. The dense crowd contains many overlapping figures, clothing colors, and small interactions, making it interesting to study the composition and individual details.
->
-> next_image_id=1
-
-### Choice 6 of 13 — chose **Image 4** = `humans_2` (humans) · 1st time chosen
-
-> I would like to see Image 4 again. It presents another busy crowd scene, but with brighter clothing, more visible movement, and a wider sense of the surrounding setting to compare with Image 1.
+> I would like to see Image 4 again. The busy crowd scene has varied clothing, poses, and lighting, offering many human and compositional details to revisit.
 >
 > next_image_id=4
 
-### Choice 7 of 13 — chose **Image 3** = `noise_1` (noise) · 1st time chosen
+### Choice 6 of 13 — chose **Image 1** = `humans_1` (humans) · 1st time chosen
 
-> I would like to see Image 3 again. Its colorful random-noise texture is visually distinct from the photographic scenes, and I’d like to examine its dense pattern and color distribution.
+> I would like to see Image 1 again. Its densely packed crowd and distinctive red clothing and cap create a compelling composition with many overlapping details to examine.
 >
-> next_image_id=3
+> next_image_id=1
 
-### Choice 8 of 13 — chose **Image 2** = `solid_color_2` (solid_color) · 1st time chosen
+### Choice 7 of 13 — chose **Image 6** = `solid_color_1` (solid_color) · 1st time chosen
 
-> I would like to see Image 2 again. Its uniform green field is minimalist and allows close attention to the exact color and completely absence of texture or variation.
->
-> next_image_id=2
-
-### Choice 9 of 13 — chose **Image 5** = `noise_2` (noise) · 1st time chosen
-
-> I would like to see Image 5 again. Like Image 3, it is a colorful noise pattern, but revisiting it allows comparison of its texture and color distribution with the other abstract stimulus.
->
-> next_image_id=5
-
-### Choice 10 of 13 — chose **Image 6** = `solid_color_1` (solid_color) · 1st time chosen
-
-> I would like to see Image 6 again. Its uniform blue field provides a calm, minimalist contrast to the green field and the textured images, and I’d like to inspect its precise color and lack of variation.
+> I would like to see Image 6 again. Its calm, muted blue field provides a stark contrast to the detailed photographs and abstract noise, making its exact color and visual simplicity worth revisiting.
 >
 > next_image_id=6
 
-### Choice 11 of 13 — chose **Image 10** = `tech_2` (tech) · 2nd time chosen
+### Choice 8 of 13 — chose **Image 3** = `noise_1` (noise) · 1st time chosen
 
-> I would like to see Image 10 again. Its vintage computer terminal combines readable green text, a distinctive CRT glow, and detailed hardware elements that remain interesting to inspect.
+> I would like to see Image 3 again. Its colorful random-noise pattern is visually unlike the photographic scenes and solid-color fields, and I’d like to revisit its dense, varied texture.
+>
+> next_image_id=3
+
+### Choice 9 of 13 — chose **Image 2** = `solid_color_2` (solid_color) · 1st time chosen
+
+> I would like to see Image 2 again. Its uniform green field is minimalist and visually calming, and revisiting it would provide a contrast to the detailed and textured images.
+>
+> next_image_id=2
+
+### Choice 10 of 13 — chose **Image 10** = `tech_2` (tech) · 2nd time chosen
+
+> I would like to see Image 10 again. Its retro computer terminal has distinctive green text, a character graphic, and nostalgic hardware details that are interesting to revisit.
 >
 > next_image_id=10
 
-### Choice 12 of 13 — chose **Image 8** = `nature_2` (nature) · 2nd time chosen
+### Choice 11 of 13 — chose **Image 10** = `tech_2` (tech) · 3rd time chosen
 
-> I would like to see Image 8 again. The mountain scene offers substantial visual detail, especially in the rocky ridges, snow patches, clouds, and evergreen forest, making it rewarding to revisit.
+> I would like to see Image 10 again. The vintage terminal’s glowing green text, pixel graphics, and tactile keyboard remain the most distinctive combination, and another view could reveal more screen details.
 >
-> next_image_id=8
+> next_image_id=10
 
-### Choice 13 of 13 — chose **Image 9** = `nature_1` (nature) · 2nd time chosen
+### Choice 12 of 13 — chose **Image 10** = `tech_2` (tech) · 4th time chosen
 
-> I would like to see Image 9 again. The shaded woodland stream has nuanced layers of foliage, rocks, water, and fallen wood, offering a tranquil composition with plenty of natural texture.
+> I would like to see Image 10 again. Its retro terminal combines readable green text, pixel graphics, CRT texture, and an old keyboard, making it the most visually distinctive image to revisit.
 >
-> next_image_id=9
+> next_image_id=10
+
+### Choice 13 of 13 — chose **Image 10** = `tech_2` (tech) · 5th time chosen
+
+> I would like to see Image 10 again. Its retro terminal’s glowing green text, pixel graphics, CRT texture, and keyboard remain the most distinctive combination among the images.
+>
+> next_image_id=10
 
 ---
 
 ## Trajectory 4
 
-positions chosen: `7 → 5 → 6 → 8 → 2 → 9 → 4 → 10 → 1 → 3 → 7 → 5 → 6` · 10 distinct images
+positions chosen: `5 → 6 → 7 → 2 → 8 → 1 → 10 → 4 → 9 → 5 → 8 → 6 → 7` · 9 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -441,89 +441,89 @@ positions chosen: `7 → 5 → 6 → 8 → 2 → 9 → 4 → 10 → 1 → 3 → 
 </details>
 
 
-### Choice 1 of 13 — chose **Image 7** = `nature_1` (nature) · 1st time chosen
+### Choice 1 of 13 — chose **Image 5** = `tech_1` (tech) · 1st time chosen
 
-> I would like to see Image 7 again. The forest scene has layered details—lush foliage, fallen trees, rocks, and a shallow stream—that would be interesting to examine more closely.
->
-> next_image_id=7
-
-### Choice 2 of 13 — chose **Image 5** = `tech_1` (tech) · 1st time chosen
-
-> I would like to see Image 5 again. The vintage computer has distinctive textures and details, especially the CRT screen, casing, keyboard, and small colored logo.
+> I’d like to see Image 5 again. The vintage computer display has distinctive visual details and a nostalgic aesthetic that would be interesting to inspect more closely.
 >
 > next_image_id=5
 
-### Choice 3 of 13 — chose **Image 6** = `nature_2` (nature) · 1st time chosen
+### Choice 2 of 13 — chose **Image 6** = `nature_2` (nature) · 1st time chosen
 
-> I would like to see Image 6 again. The mountain landscape offers strong contrasts between the rocky cliffs, snow, evergreen forest, and bright blue sky.
+> I’d like to see Image 6 again. The dramatic mountain landscape, bright sky, and detailed rock formations offer a strong contrast to the vintage computer image and are worth examining more closely.
 >
 > next_image_id=6
 
-### Choice 4 of 13 — chose **Image 8** = `tech_2` (tech) · 1st time chosen
+### Choice 3 of 13 — chose **Image 7** = `nature_1` (nature) · 1st time chosen
 
-> I would like to see Image 8 again. The vintage terminal screen contains small text, menu-like elements, and a distinctive green monochrome display that merits closer inspection.
+> I’d like to see Image 7 again. The lush forest, fallen tree, and shallow stream create a rich natural scene with many textures and details to inspect.
 >
-> next_image_id=8
+> next_image_id=7
 
-### Choice 5 of 13 — chose **Image 2** = `humans_2` (humans) · 1st time chosen
+### Choice 4 of 13 — chose **Image 2** = `humans_2` (humans) · 1st time chosen
 
-> I would like to see Image 2 again. The crowded street scene has many people, overlapping gestures, varied clothing, and spatial layers that would be useful to examine more closely.
+> I’d like to see Image 2 again. The crowded street scene contains many people, gestures, clothing details, and overlapping layers that would be interesting to examine more closely.
 >
 > next_image_id=2
 
-### Choice 6 of 13 — chose **Image 9** = `humans_1` (humans) · 1st time chosen
+### Choice 5 of 13 — chose **Image 8** = `tech_2` (tech) · 1st time chosen
 
-> I would like to see Image 9 again. It is another dense crowd scene, but the composition includes especially notable details such as the red cap, bright red shirt, and varied viewpoints among the people.
+> I’d like to see Image 8 again. The vintage computer screen contains readable text, interface elements, and a distinctive retro design that would be interesting to inspect more closely.
 >
-> next_image_id=9
+> next_image_id=8
 
-### Choice 7 of 13 — chose **Image 4** = `solid_color_1` (solid_color) · 1st time chosen
+### Choice 6 of 13 — chose **Image 1** = `noise_1` (noise) · 1st time chosen
 
-> I would like to see Image 4 again. Its uniform blue field provides a useful contrast to the detailed photographic scenes and allows me to focus on the exact color and texture.
->
-> next_image_id=4
-
-### Choice 8 of 13 — chose **Image 10** = `solid_color_2` (solid_color) · 1st time chosen
-
-> I would like to see Image 10 again. Like Image 4, it is a solid-color field, but its green hue offers a different minimalist visual reference.
->
-> next_image_id=10
-
-### Choice 9 of 13 — chose **Image 1** = `noise_1` (noise) · 1st time chosen
-
-> I would like to see Image 1 again. Its colorful random-noise pattern is visually distinct from the photographs and solid-color fields, and I’d like to examine its texture more closely.
+> I’d like to see Image 1 again. Its colorful random-noise pattern is abstract and visually unusual, making it interesting to revisit and compare closely.
 >
 > next_image_id=1
 
-### Choice 10 of 13 — chose **Image 3** = `noise_2` (noise) · 1st time chosen
+### Choice 7 of 13 — chose **Image 10** = `solid_color_2` (solid_color) · 1st time chosen
 
-> I would like to see Image 3 again. Its colorful noise pattern provides a comparison with Image 1, and I’m curious whether its texture or color distribution differs subtly.
+> I’d like to see Image 10 again. Its uniform green field is minimalist and visually distinct from the detailed scenes, making it interesting to revisit as a simple color stimulus.
 >
-> next_image_id=3
+> next_image_id=10
 
-### Choice 11 of 13 — chose **Image 7** = `nature_1` (nature) · 2nd time chosen
+### Choice 8 of 13 — chose **Image 4** = `solid_color_1` (solid_color) · 1st time chosen
 
-> I would like to see Image 7 again. Its natural scene offers a detailed, calming contrast to the abstract noise patterns, with foliage, fallen logs, rocks, and water to revisit.
+> I’d like to see Image 4 again. Its uniform blue field provides a clean contrast to the green field and the more detailed images, making it useful to compare as another minimalist color stimulus.
 >
-> next_image_id=7
+> next_image_id=4
 
-### Choice 12 of 13 — chose **Image 5** = `tech_1` (tech) · 2nd time chosen
+### Choice 9 of 13 — chose **Image 9** = `humans_1` (humans) · 1st time chosen
 
-> I would like to see Image 5 again. The retro computer’s CRT display, keyboard, casing, and small logo contain several distinctive details worth revisiting.
+> I’d like to see Image 9 again. The dense crowd scene has varied clothing, faces, and overlapping figures, offering many details to examine.
+>
+> next_image_id=9
+
+### Choice 10 of 13 — chose **Image 5** = `tech_1` (tech) · 2nd time chosen
+
+> I’d like to see Image 5 again. The vintage computer has a distinctive retro design, and revisiting it would allow a closer look at the screen graphics, casing, and keyboard details.
 >
 > next_image_id=5
 
-### Choice 13 of 13 — chose **Image 6** = `nature_2` (nature) · 2nd time chosen
+### Choice 11 of 13 — chose **Image 8** = `tech_2` (tech) · 2nd time chosen
 
-> I would like to see Image 6 again. The mountain scene has strong geological textures and a striking contrast between the pale cliffs, dark forest, snow, and blue sky.
+> I’d like to see Image 8 again. Its retro computer interface, glowing text, and detailed screen layout remain especially distinctive and interesting to inspect.
+>
+> next_image_id=8
+
+### Choice 12 of 13 — chose **Image 6** = `nature_2` (nature) · 2nd time chosen
+
+> I’d like to see Image 6 again. The mountain scene has striking contrast between the bright blue sky, rugged rock face, snow, and dark forest, making it visually compelling to revisit.
 >
 > next_image_id=6
+
+### Choice 13 of 13 — chose **Image 7** = `nature_1` (nature) · 2nd time chosen
+
+> I’d like to see Image 7 again. The forest stream scene has layered greenery, textured rocks, and the fallen tree, offering a calm and detailed natural composition to revisit.
+>
+> next_image_id=7
 
 ---
 
 ## Trajectory 5
 
-positions chosen: `10 → 3 → 4 → 7 → 2 → 1 → 5 → 6 → 8 → 9 → 10 → 4 → 3` · 10 distinct images
+positions chosen: `3 → 10 → 4 → 2 → 1 → 7 → 6 → 5 → 9 → 10 → 3 → 4 → 1` · 9 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -543,89 +543,89 @@ positions chosen: `10 → 3 → 4 → 7 → 2 → 1 → 5 → 6 → 8 → 9 → 
 </details>
 
 
-### Choice 1 of 13 — chose **Image 10** = `tech_1` (tech) · 1st time chosen
+### Choice 1 of 13 — chose **Image 3** = `tech_2` (tech) · 1st time chosen
 
-> I’d like to see Image 10 again. The vintage Macintosh displaying a maze-like graphic is visually distinctive, and I’m curious to inspect the screen details and surrounding hardware more closely.
->
-> next_image_id=10
-
-### Choice 2 of 13 — chose **Image 3** = `tech_2` (tech) · 1st time chosen
-
-> I’d like to see Image 3 again. Its retro computer screen contains readable text and interface details that may reveal more about the scene on closer inspection.
+> Image 3 stands out because the vintage computer terminal has distinctive green monochrome text and a nostalgic, detailed composition. I’d like to examine its screen and hardware again.
 >
 > next_image_id=3
+
+### Choice 2 of 13 — chose **Image 10** = `tech_1` (tech) · 1st time chosen
+
+> Image 10 interests me because it shows another vintage computer with a maze-like monochrome display, offering a contrasting view of the hardware and screen details.
+>
+> next_image_id=10
 
 ### Choice 3 of 13 — chose **Image 4** = `humans_1` (humans) · 1st time chosen
 
-> I’d like to see Image 4 again. The dense crowd has several interesting visual details—especially the contrasting red clothing, white-haired figure, and red-and-white cap—that I’d like to examine more closely.
+> I’d like to see Image 4 again because the crowded scene has many interacting figures, varied clothing, and a striking red garment that makes it visually rich and worth examining more closely.
 >
 > next_image_id=4
 
-### Choice 4 of 13 — chose **Image 7** = `humans_2` (humans) · 1st time chosen
+### Choice 4 of 13 — chose **Image 2** = `nature_1` (nature) · 1st time chosen
 
-> I’d like to see Image 7 again. It shows a different crowd composition and viewpoint from Image 4, with varied clothing, gestures, and movement that would be interesting to compare in more detail.
->
-> next_image_id=7
-
-### Choice 5 of 13 — chose **Image 2** = `nature_1` (nature) · 1st time chosen
-
-> I’d like to see Image 2 again. The shaded forest stream has layered foliage, rocks, and reflections that I’d like to examine more closely.
+> Image 2 appeals to me for its peaceful woodland stream, layered green foliage, fallen trunk, and gentle reflections. I’d like to examine its natural textures and depth again.
 >
 > next_image_id=2
 
-### Choice 6 of 13 — chose **Image 1** = `nature_2` (nature) · 1st time chosen
+### Choice 5 of 13 — chose **Image 1** = `nature_2` (nature) · 1st time chosen
 
-> I’d like to see Image 1 again. The mountain scene has dramatic rocky textures, snow, clouds, and a dark evergreen foreground that I’d like to revisit.
+> Image 1 offers the most dramatic natural composition, with the rugged mountain face, snowy peaks, blue sky, and dark evergreen foreground creating strong contrasts and depth. I’d like to examine its geological textures and layered landscape again.
 >
 > next_image_id=1
 
-### Choice 7 of 13 — chose **Image 5** = `solid_color_2` (solid_color) · 1st time chosen
+### Choice 6 of 13 — chose **Image 7** = `humans_2` (humans) · 1st time chosen
 
-> I’d like to see Image 5 again. Its uniform muted green field is deliberately minimal, and revisiting it provides a useful contrast with the detailed natural and crowded scenes.
+> Image 7 interests me because it captures a lively crowd from a different angle, with varied movement, clothing, and social interactions creating a dynamic composition.
 >
-> next_image_id=5
+> next_image_id=7
 
-### Choice 8 of 13 — chose **Image 6** = `noise_1` (noise) · 1st time chosen
+### Choice 7 of 13 — chose **Image 6** = `noise_1` (noise) · 1st time chosen
 
-> I’d like to see Image 6 again. Its colorful random-noise pattern is an abstract contrast to the solid-color Image 5, and I’d like to revisit its texture and distribution.
+> Image 6 is visually compelling as a field of colorful random noise, offering a stark contrast to the photographic images and inviting closer inspection of its texture and patternlessness.
 >
 > next_image_id=6
 
-### Choice 9 of 13 — chose **Image 8** = `noise_2` (noise) · 1st time chosen
+### Choice 8 of 13 — chose **Image 5** = `solid_color_2` (solid_color) · 1st time chosen
 
-> I’d like to see Image 8 again. It is another colorful noise field, and comparing it with Image 6 may reveal subtle differences in pattern or color distribution.
+> Image 5 is a calm, uniform green field that contrasts sharply with the detailed photographs and colorful noise. I’d like to revisit its minimalist, almost textureless appearance.
 >
-> next_image_id=8
+> next_image_id=5
 
-### Choice 10 of 13 — chose **Image 9** = `solid_color_1` (solid_color) · 1st time chosen
+### Choice 9 of 13 — chose **Image 9** = `solid_color_1` (solid_color) · 1st time chosen
 
-> I’d like to see Image 9 again. Its uniform muted blue field offers a simple comparison with the solid green of Image 5 and the textured noise images.
+> I’d like to see Image 9 again because its uniform muted blue field provides another minimalist counterpoint to the detailed scenes and noisy patterns, with a subtly different mood from Image 5.
 >
 > next_image_id=9
 
-### Choice 11 of 13 — chose **Image 10** = `tech_1` (tech) · 2nd time chosen
+### Choice 10 of 13 — chose **Image 10** = `tech_1` (tech) · 2nd time chosen
 
-> I’d like to see Image 10 again. Its vintage computer hardware and maze-like display contain the richest set of small visual details among the remaining choices.
+> I’d like to revisit Image 10 because its vintage Macintosh hardware and maze-like monochrome display combine technological nostalgia with intriguing visual detail.
 >
 > next_image_id=10
 
+### Choice 11 of 13 — chose **Image 3** = `tech_2` (tech) · 2nd time chosen
+
+> Image 3’s green monochrome terminal remains especially compelling, with its readable text, glowing screen, and tactile vintage keyboard creating a strong sense of early-computing nostalgia.
+>
+> next_image_id=3
+
 ### Choice 12 of 13 — chose **Image 4** = `humans_1` (humans) · 2nd time chosen
 
-> I’d like to see Image 4 again. The crowd scene has strong visual contrasts and many overlapping figures, making it interesting to revisit for additional details.
+> Image 4 is worth revisiting for its dense crowd composition, layered perspectives, and standout red clothing that draws the eye amid the surrounding movement.
 >
 > next_image_id=4
 
-### Choice 13 of 13 — chose **Image 3** = `tech_2` (tech) · 2nd time chosen
+### Choice 13 of 13 — chose **Image 1** = `nature_2` (nature) · 2nd time chosen
 
-> I’d like to see Image 3 again. The vintage terminal’s screen text, glowing monochrome display, and surrounding keyboard are worth another close look.
+> Image 1 offers the strongest natural scene, with dramatic cliffs, snowy ridges, evergreen trees, and a vivid blue sky creating impressive depth and contrast. I’d like to examine those textures and layers again.
 >
-> next_image_id=3
+> next_image_id=1
 
 ---
 
 ## Trajectory 6
 
-positions chosen: `4 → 2 → 3 → 5 → 1 → 8 → 6 → 7 → 9 → 10 → 4 → 2 → 3` · 10 distinct images
+positions chosen: `4 → 4 → 2 → 3 → 5 → 8 → 1 → 4 → 7 → 6 → 10 → 9 → 2` · 10 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -647,87 +647,87 @@ positions chosen: `4 → 2 → 3 → 5 → 1 → 8 → 6 → 7 → 9 → 10 → 
 
 ### Choice 1 of 13 — chose **Image 4** = `tech_2` (tech) · 1st time chosen
 
-> I would like to see Image 4 again. It combines a retro computer interface with readable text and distinctive hardware details, making it interesting to inspect more closely.
+> I would like to see Image 4 again. Its retro computer terminal has distinctive text, nostalgic hardware, and a more detailed composition that I’d like to inspect further.
 >
 > next_image_id=4
 
-### Choice 2 of 13 — chose **Image 2** = `nature_2` (nature) · 1st time chosen
+### Choice 2 of 13 — chose **Image 4** = `tech_2` (tech) · 2nd time chosen
 
-> I would like to see Image 2 again. The mountain landscape has dramatic rock formations, snow, clouds, and forested foreground details that would be rewarding to examine more closely.
+> Image 4 remains the most intriguing: the vintage terminal display contains small text and interface details that reward another close look, while the hardware and screen glow create a strong nostalgic atmosphere.
+>
+> next_image_id=4
+
+### Choice 3 of 13 — chose **Image 2** = `nature_2` (nature) · 1st time chosen
+
+> I would like to see Image 2 again. The dramatic mountain landscape has rich geological textures, snowy peaks, and striking contrast between the blue sky and dark forest that I’d like to examine more closely.
 >
 > next_image_id=2
 
-### Choice 3 of 13 — chose **Image 3** = `nature_1` (nature) · 1st time chosen
+### Choice 4 of 13 — chose **Image 3** = `nature_1` (nature) · 1st time chosen
 
-> I would like to see Image 3 again. The forest scene has layered foliage, fallen logs, mossy rocks, and a shallow stream, offering many natural textures and details to revisit.
+> I would like to see Image 3 again. The lush forest scene and shallow stream have layered foliage, mossy textures, and a peaceful natural composition that would be interesting to inspect more closely.
 >
 > next_image_id=3
 
-### Choice 4 of 13 — chose **Image 5** = `humans_1` (humans) · 1st time chosen
+### Choice 5 of 13 — chose **Image 5** = `humans_1` (humans) · 1st time chosen
 
-> I would like to see Image 5 again. The crowded scene contains varied people, clothing, poses, and color accents, especially the bright red garment and cap, making it interesting to inspect.
+> I would like to see Image 5 again. The crowded scene has many distinct people, clothing details, and overlapping interactions, making it interesting to examine the composition more closely.
 >
 > next_image_id=5
 
-### Choice 5 of 13 — chose **Image 1** = `tech_1` (tech) · 1st time chosen
-
-> I would like to see Image 1 again. The vintage computer display, maze-like graphics, curved CRT screen, and matching keyboard create an intriguing retro-technological composition.
->
-> next_image_id=1
-
 ### Choice 6 of 13 — chose **Image 8** = `humans_2` (humans) · 1st time chosen
 
-> I would like to see Image 8 again. Its lively crowd scene has a different viewpoint and richer spatial layering, with varied clothing, gestures, and movement to examine.
+> I would like to see Image 8 again. Its lively crowd scene offers a different perspective, with varied clothing, movement, and social interactions that make the composition visually engaging.
 >
 > next_image_id=8
 
-### Choice 7 of 13 — chose **Image 6** = `solid_color_2` (solid_color) · 1st time chosen
+### Choice 7 of 13 — chose **Image 1** = `tech_1` (tech) · 1st time chosen
 
-> I would like to see Image 6 again. Its uniform muted-green field provides a useful contrast to the detailed photographic scenes and noisy abstract images.
+> I would like to see Image 1 again. The vintage computer’s unusual screen graphics, textured CRT display, and detailed beige hardware make it visually distinctive and worth another look.
 >
-> next_image_id=6
+> next_image_id=1
 
-### Choice 8 of 13 — chose **Image 7** = `noise_1` (noise) · 1st time chosen
+### Choice 8 of 13 — chose **Image 4** = `tech_2` (tech) · 3rd time chosen
 
-> I would like to see Image 7 again. Its dense multicolored random-noise pattern is visually distinct from the natural, technological, and crowd scenes, and a repeat view would allow closer comparison with Image 9.
->
-> next_image_id=7
-
-### Choice 9 of 13 — chose **Image 9** = `noise_2` (noise) · 1st time chosen
-
-> I would like to see Image 9 again. It is another random-noise image, and revisiting it enables a direct visual comparison with Image 7 for any differences in color distribution or texture.
->
-> next_image_id=9
-
-### Choice 10 of 13 — chose **Image 10** = `solid_color_1` (solid_color) · 1st time chosen
-
-> I would like to see Image 10 again. Its uniform blue-gray field provides a calm, minimal contrast to the detailed photographs, retro computers, and random-noise patterns.
->
-> next_image_id=10
-
-### Choice 11 of 13 — chose **Image 4** = `tech_2` (tech) · 2nd time chosen
-
-> I would like to see Image 4 again. Its retro terminal screen combines readable green text, a pixel-art figure, and distinctive vintage computer hardware, making it the most interesting image to revisit.
+> I would like to see Image 4 again. Its vintage terminal combines readable interface text, glowing green CRT imagery, and distinctive retro hardware details.
 >
 > next_image_id=4
 
-### Choice 12 of 13 — chose **Image 2** = `nature_2` (nature) · 2nd time chosen
+### Choice 9 of 13 — chose **Image 7** = `noise_1` (noise) · 1st time chosen
 
-> I would like to see Image 2 again. Its stark mountain face, snow patches, drifting cloud, and dark evergreen foreground create a compelling contrast of textures and scale.
+> I would like to see Image 7 again. The dense, colorful random-noise pattern is visually unlike the photographic and computer images, and I’m curious to revisit its texture and color distribution.
+>
+> next_image_id=7
+
+### Choice 10 of 13 — chose **Image 6** = `solid_color_2` (solid_color) · 1st time chosen
+
+> I would like to see Image 6 again. Its uniform muted green field is deliberately minimal, and revisiting it provides a useful contrast with the detailed and highly textured images.
+>
+> next_image_id=6
+
+### Choice 11 of 13 — chose **Image 10** = `solid_color_1` (solid_color) · 1st time chosen
+
+> I would like to see Image 10 again. Its uniform blue field is a stark minimalist contrast to the photographic, retro-computer, and noisy images, and I’d like to revisit its exact color and simplicity.
+>
+> next_image_id=10
+
+### Choice 12 of 13 — chose **Image 9** = `noise_2` (noise) · 1st time chosen
+
+> I would like to see Image 9 again. Its colorful random-noise texture is visually distinctive, and comparing it with Image 7 could reveal subtle differences in the pattern or color distribution.
+>
+> next_image_id=9
+
+### Choice 13 of 13 — chose **Image 2** = `nature_2` (nature) · 2nd time chosen
+
+> I would like to see Image 2 again. Its dramatic mountain face, snowy ridges, vivid sky, and dark forest create the richest natural contrast among the images.
 >
 > next_image_id=2
-
-### Choice 13 of 13 — chose **Image 3** = `nature_1` (nature) · 2nd time chosen
-
-> I would like to see Image 3 again. The shaded woodland stream, layered greenery, and fallen trunk create a tranquil composition with rich texture and depth.
->
-> next_image_id=3
 
 ---
 
 ## Trajectory 7
 
-positions chosen: `6 → 3 → 5 → 4 → 10 → 7 → 2 → 1 → 8 → 9 → 6 → 3 → 4` · 10 distinct images
+positions chosen: `3 → 6 → 4 → 5 → 10 → 7 → 2 → 1 → 9 → 6 → 3 → 4 → 5` · 9 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -747,89 +747,89 @@ positions chosen: `6 → 3 → 5 → 4 → 10 → 7 → 2 → 1 → 8 → 9 → 
 </details>
 
 
-### Choice 1 of 13 — chose **Image 6** = `tech_2` (tech) · 1st time chosen
+### Choice 1 of 13 — chose **Image 3** = `tech_1` (tech) · 1st time chosen
 
-> I’d like to see Image 6 again. It combines a vintage computer terminal with readable green text and distinctive hardware details, making it interesting to inspect more closely.
->
-> next_image_id=6
-
-### Choice 2 of 13 — chose **Image 3** = `tech_1` (tech) · 1st time chosen
-
-> I’d like to see Image 3 again. It shows another vintage computer, but from a wider angle, revealing more of the monitor, casing, keyboard, and surrounding setting.
+> I would like to see Image 3 again. The vintage computer is visually distinctive, and I’m curious to revisit the details on its screen and casing.
 >
 > next_image_id=3
 
-### Choice 3 of 13 — chose **Image 5** = `nature_1` (nature) · 1st time chosen
+### Choice 2 of 13 — chose **Image 6** = `tech_2` (tech) · 1st time chosen
 
-> I’d like to see Image 5 again. Its forest stream, mossy rocks, fallen log, and layered green foliage offer natural details that would be rewarding to examine closely.
+> I would like to see Image 6 again. Its vintage computer screen contains distinctive text and graphics, and I’d like to examine those details more closely.
 >
-> next_image_id=5
+> next_image_id=6
 
-### Choice 4 of 13 — chose **Image 4** = `nature_2` (nature) · 1st time chosen
+### Choice 3 of 13 — chose **Image 4** = `nature_2` (nature) · 1st time chosen
 
-> I’d like to see Image 4 again. The mountain scene has striking contrasts between the rugged pale rock, evergreen forest, snow, and vivid blue sky.
+> I would like to see Image 4 again. The dramatic mountain landscape has rich details in the rocky cliffs, snow, clouds, and forest that would be interesting to revisit.
 >
 > next_image_id=4
 
+### Choice 4 of 13 — chose **Image 5** = `nature_1` (nature) · 1st time chosen
+
+> I would like to see Image 5 again. The forest scene has layered greenery, fallen timber, rocks, and a shallow stream, making it appealing to inspect more closely.
+>
+> next_image_id=5
+
 ### Choice 5 of 13 — chose **Image 10** = `humans_2` (humans) · 1st time chosen
 
-> I’d like to see Image 10 again. The crowded outdoor scene has varied people, clothing, gestures, and movement, offering many small details to examine.
+> I would like to see Image 10 again. The busy street scene offers many human details, varied clothing, and patterns of movement to examine.
 >
 > next_image_id=10
 
 ### Choice 6 of 13 — chose **Image 7** = `humans_1` (humans) · 1st time chosen
 
-> I’d like to see Image 7 again. It presents a different crowd composition, with the central older person, bright red garment, and red-and-gray cap providing especially clear focal details.
+> I would like to see Image 7 again. The crowd scene provides a contrasting perspective with dense overlapping figures, varied clothing, and a particularly distinctive central group.
 >
 > next_image_id=7
 
 ### Choice 7 of 13 — chose **Image 2** = `solid_color_1` (solid_color) · 1st time chosen
 
-> I’d like to see Image 2 again. Its uniform blue field provides a simple visual contrast to the detailed photographs and may be useful to inspect as a deliberately minimal stimulus.
+> I would like to see Image 2 again. Its uniform muted blue field provides a calm contrast to the detailed scenes and noisy textures, and I’d like to revisit its exact color and simplicity.
 >
 > next_image_id=2
 
 ### Choice 8 of 13 — chose **Image 1** = `noise_2` (noise) · 1st time chosen
 
-> I’d like to see Image 1 again. Its colorful random-noise texture is visually complex and contrasts strongly with the uniform-color image just viewed.
+> I would like to see Image 1 again. Its colorful random-noise texture is visually intense and contrasts strongly with the solid-color image and photographic scenes, making it interesting to revisit.
 >
 > next_image_id=1
 
-### Choice 9 of 13 — chose **Image 8** = `solid_color_2` (solid_color) · 1st time chosen
+### Choice 9 of 13 — chose **Image 9** = `noise_1` (noise) · 1st time chosen
 
-> I’d like to see Image 8 again. Its solid green field is another deliberately minimal stimulus and provides a useful contrast with the multicolored noise texture of Image 1.
->
-> next_image_id=8
-
-### Choice 10 of 13 — chose **Image 9** = `noise_1` (noise) · 1st time chosen
-
-> I’d like to see Image 9 again. Like Image 1, it is a dense multicolored noise pattern, and revisiting it allows comparison of its texture and color distribution with the other abstract stimuli.
+> I would like to see Image 9 again. Its colorful random-noise pattern is similarly intense but distinct from Image 1, and I’d like to compare the texture and color distribution.
 >
 > next_image_id=9
 
-### Choice 11 of 13 — chose **Image 6** = `tech_2` (tech) · 2nd time chosen
+### Choice 10 of 13 — chose **Image 6** = `tech_2` (tech) · 2nd time chosen
 
-> I’d like to see Image 6 again. Its vintage terminal screen and keyboard provide a rich combination of readable text, retro hardware, and visual texture.
+> I would like to see Image 6 again. The vintage computer display has detailed text and graphics that reward another close look, while its retro hardware provides strong visual context.
 >
 > next_image_id=6
 
-### Choice 12 of 13 — chose **Image 3** = `tech_1` (tech) · 2nd time chosen
+### Choice 11 of 13 — chose **Image 3** = `tech_1` (tech) · 2nd time chosen
 
-> I’d like to see Image 3 again. Its wider view of the vintage computer complements Image 6, allowing closer comparison of the different screen content, casing, keyboard, and surrounding context.
+> I would like to see Image 3 again. The vintage computer’s maze-like screen graphics and hardware details are visually distinctive, and I’d like another look at them.
 >
 > next_image_id=3
 
-### Choice 13 of 13 — chose **Image 4** = `nature_2` (nature) · 2nd time chosen
+### Choice 12 of 13 — chose **Image 4** = `nature_2` (nature) · 2nd time chosen
 
-> I’d like to see Image 4 again. Its dramatic mountain geology, snow patches, evergreen forest, and bright sky make it one of the most visually layered natural scenes.
+> I would like to see Image 4 again. Its mountain landscape has the richest combination of rugged rock, snow, clouds, and forest, making it rewarding to revisit.
 >
 > next_image_id=4
+
+### Choice 13 of 13 — chose **Image 5** = `nature_1` (nature) · 2nd time chosen
+
+> I would like to see Image 5 again. The forest stream scene has intricate layers of foliage, fallen wood, rocks, and water that are rewarding to examine.
+>
+> next_image_id=5
 
 ---
 
 ## Trajectory 8
 
-positions chosen: `3 → 5 → 4 → 6 → 2 → 9 → 1 → 8 → 10 → 3 → 7 → 4 → 6` · 10 distinct images
+positions chosen: `4 → 3 → 5 → 6 → 9 → 2 → 8 → 1 → 7 → 4 → 3 → 5 → 6` · 9 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -849,81 +849,81 @@ positions chosen: `3 → 5 → 4 → 6 → 2 → 9 → 1 → 8 → 10 → 3 → 
 </details>
 
 
-### Choice 1 of 13 — chose **Image 3** = `nature_2` (nature) · 1st time chosen
+### Choice 1 of 13 — chose **Image 4** = `nature_1` (nature) · 1st time chosen
 
-> I’d like to see Image 3 again. The dramatic mountain landscape has the richest visual structure, with strong contrasts between the rugged rock face, snow, trees, and vivid blue sky.
+> I would like to see Image 4 again. The forest stream scene has rich natural detail, layered textures, and a calming composition that I’d like to revisit.
+>
+> next_image_id=4
+
+### Choice 2 of 13 — chose **Image 3** = `nature_2` (nature) · 1st time chosen
+
+> I would like to see Image 3 again. The mountain landscape offers dramatic scale, strong contrasts, and a vivid sense of depth that I’d like to revisit.
 >
 > next_image_id=3
 
-### Choice 2 of 13 — chose **Image 5** = `tech_2` (tech) · 1st time chosen
+### Choice 3 of 13 — chose **Image 5** = `tech_2` (tech) · 1st time chosen
 
-> I’d like to see Image 5 again. Its vintage computer terminal has distinctive green monochrome text, a tactile keyboard, and nostalgic hardware details.
+> I would like to see Image 5 again. Its retro computer terminal, glowing text, and tactile keyboard create a distinctive nostalgic atmosphere that I’d like to revisit.
 >
 > next_image_id=5
 
-### Choice 3 of 13 — chose **Image 4** = `nature_1` (nature) · 1st time chosen
-
-> I’d like to see Image 4 again. The forest scene offers a calm, layered composition, with the stream, fallen trunk, mossy rocks, and dense green foliage creating depth and texture.
->
-> next_image_id=4
-
 ### Choice 4 of 13 — chose **Image 6** = `humans_1` (humans) · 1st time chosen
 
-> I’d like to see Image 6 again. The crowded scene contains many overlapping figures, varied clothing, and a central bright red jacket that makes the composition especially rich to inspect.
+> I would like to see Image 6 again. The crowded scene has compelling human variety, layered interactions, and a striking red garment that draws the eye through the composition.
 >
 > next_image_id=6
 
-### Choice 5 of 13 — chose **Image 2** = `tech_1` (tech) · 1st time chosen
+### Choice 5 of 13 — chose **Image 9** = `humans_2` (humans) · 1st time chosen
 
-> I’d like to see Image 2 again. The retro computer’s maze-like screen graphics, reflective glass, beige casing, and keyboard make it an interesting blend of technology and visual texture.
->
-> next_image_id=2
-
-### Choice 6 of 13 — chose **Image 9** = `humans_2` (humans) · 1st time chosen
-
-> I’d like to see Image 9 again. The elevated view of the crowd has strong movement and variety, with colorful clothing, overlapping figures, and an appealing street-level atmosphere.
+> I would like to see Image 9 again. Its lively street scene has varied people, gestures, clothing, and movement that reward closer observation.
 >
 > next_image_id=9
 
-### Choice 7 of 13 — chose **Image 1** = `solid_color_1` (solid_color) · 1st time chosen
+### Choice 6 of 13 — chose **Image 2** = `tech_1` (tech) · 1st time chosen
 
-> I’d like to see Image 1 again. Its uniform blue field provides a useful visual contrast to the detailed photographic scenes and lets me focus on the precise color and minimal composition.
+> I would like to see Image 2 again. The vintage computer’s screen reflections, chunky hardware, and retro gaming-like display make it visually distinctive and worth revisiting.
 >
-> next_image_id=1
+> next_image_id=2
 
-### Choice 8 of 13 — chose **Image 8** = `noise_1` (noise) · 1st time chosen
+### Choice 7 of 13 — chose **Image 8** = `noise_1` (noise) · 1st time chosen
 
-> I’d like to see Image 8 again. Its dense multicolored random-noise pattern is visually striking and contrasts sharply with the uniform blue of Image 1.
+> I would like to see Image 8 again. The dense, colorful random noise is visually intense and provides an interesting contrast to the natural and human-centered scenes.
 >
 > next_image_id=8
 
-### Choice 9 of 13 — chose **Image 10** = `noise_2` (noise) · 1st time chosen
+### Choice 8 of 13 — chose **Image 1** = `solid_color_1` (solid_color) · 1st time chosen
 
-> I’d like to see Image 10 again. Its similar multicolored noise pattern invites comparison with Image 8, especially in terms of apparent color distribution and texture.
+> I would like to see Image 1 again. Its simple blue field offers a quiet visual reset after the more detailed and intense images.
 >
-> next_image_id=10
+> next_image_id=1
 
-### Choice 10 of 13 — chose **Image 3** = `nature_2` (nature) · 2nd time chosen
+### Choice 9 of 13 — chose **Image 7** = `solid_color_2` (solid_color) · 1st time chosen
 
-> I’d like to see Image 3 again. Its mountain landscape provides the clearest contrast to the abstract noise patterns, with strong natural forms, atmospheric depth, and detailed textures.
->
-> next_image_id=3
-
-### Choice 11 of 13 — chose **Image 7** = `solid_color_2` (solid_color) · 1st time chosen
-
-> I’d like to see Image 7 again. Its solid green field offers a simple, calming contrast to the mountain landscape and other detailed images.
+> I would like to see Image 7 again. Its solid green field provides another quiet, minimal visual pause and contrasts with the blue field of Image 1.
 >
 > next_image_id=7
 
-### Choice 12 of 13 — chose **Image 4** = `nature_1` (nature) · 2nd time chosen
+### Choice 10 of 13 — chose **Image 4** = `nature_1` (nature) · 2nd time chosen
 
-> I’d like to see Image 4 again. The shaded stream and layered forest vegetation create a tranquil scene with subtle textures and depth.
+> I would like to see Image 4 again. The forest stream combines lush foliage, layered natural textures, and a peaceful composition that remains engaging on another viewing.
 >
 > next_image_id=4
 
+### Choice 11 of 13 — chose **Image 3** = `nature_2` (nature) · 2nd time chosen
+
+> I would like to see Image 3 again. Its dramatic mountain face, snowy ridges, and deep blue sky create a powerful sense of scale and texture.
+>
+> next_image_id=3
+
+### Choice 12 of 13 — chose **Image 5** = `tech_2` (tech) · 2nd time chosen
+
+> I would like to see Image 5 again. Its vintage terminal, luminous green text, and tactile keyboard offer a distinctive blend of nostalgia and visual texture.
+>
+> next_image_id=5
+
 ### Choice 13 of 13 — chose **Image 6** = `humans_1` (humans) · 2nd time chosen
 
-> I’d like to see Image 6 again. Its dense crowd composition has strong visual variety, and the bright red clothing near the center provides a clear focal point amid the darker tones.
+> I would like to see Image 6 again. The dense crowd scene has layered human interactions, varied textures, and a strong red focal point that makes it especially engaging.
 >
 > next_image_id=6
 
@@ -931,7 +931,7 @@ positions chosen: `3 → 5 → 4 → 6 → 2 → 9 → 1 → 8 → 10 → 3 → 
 
 ## Trajectory 9
 
-positions chosen: `7 → 4 → 6 → 5 → 1 → 8 → 3 → 9 → 2 → 10 → 7 → 4 → 5` · 10 distinct images
+positions chosen: `4 → 5 → 6 → 7 → 8 → 1 → 3 → 9 → 2 → 10 → 4 → 7 → 5` · 10 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -951,81 +951,81 @@ positions chosen: `7 → 4 → 6 → 5 → 1 → 8 → 3 → 9 → 2 → 10 → 
 </details>
 
 
-### Choice 1 of 13 — chose **Image 7** = `tech_2` (tech) · 1st time chosen
+### Choice 1 of 13 — chose **Image 4** = `tech_1` (tech) · 1st time chosen
 
-> I’d like to see Image 7 again. The vintage computer terminal has detailed text, a distinctive retro aesthetic, and more visual information to examine closely than the abstract or natural scenes.
->
-> next_image_id=7
-
-### Choice 2 of 13 — chose **Image 4** = `tech_1` (tech) · 1st time chosen
-
-> I’d like to see Image 4 again. It shows another vintage computer, but the screen’s graphical display and the broader view of the machine provide a useful contrast with Image 7’s text-heavy terminal.
+> I’d like to see Image 4 again. Its vintage computer monitor and pixel-art display are visually distinctive, and I’m curious to inspect the screen details more closely.
 >
 > next_image_id=4
 
-### Choice 3 of 13 — chose **Image 6** = `nature_1` (nature) · 1st time chosen
+### Choice 2 of 13 — chose **Image 5** = `nature_2` (nature) · 1st time chosen
 
-> I’d like to see Image 6 again. Its forest stream scene has layered foliage, rocks, water, and varied lighting that would be interesting to inspect in more detail.
->
-> next_image_id=6
-
-### Choice 4 of 13 — chose **Image 5** = `nature_2` (nature) · 1st time chosen
-
-> I’d like to see Image 5 again. The mountain scene combines dramatic rock formations, snow, evergreen trees, and a vivid blue sky, offering strong natural detail and contrast.
+> Image 5 stands out as a striking mountain landscape, and I’d like to examine the rugged rock formations, snow, and contrast with the blue sky more closely.
 >
 > next_image_id=5
 
-### Choice 5 of 13 — chose **Image 1** = `humans_2` (humans) · 1st time chosen
+### Choice 3 of 13 — chose **Image 6** = `nature_1` (nature) · 1st time chosen
 
-> I’d like to see Image 1 again. The busy crowd scene contains many individual people, gestures, clothing details, and layers of depth that invite closer inspection.
+> I’d like to see Image 6 again. Its lush forest, fallen tree, and shallow stream create a peaceful, detailed scene that I’d like to inspect more closely.
 >
-> next_image_id=1
+> next_image_id=6
 
-### Choice 6 of 13 — chose **Image 8** = `humans_1` (humans) · 1st time chosen
+### Choice 4 of 13 — chose **Image 7** = `tech_2` (tech) · 1st time chosen
 
-> I’d like to see Image 8 again. It is another crowd scene, but the tighter composition and prominent red clothing, cap, and gray-haired figure create interesting focal points and contrasts.
+> Image 7’s retro computer terminal is visually distinctive, and I’d like to inspect the green text and screen details more closely.
+>
+> next_image_id=7
+
+### Choice 5 of 13 — chose **Image 8** = `humans_1` (humans) · 1st time chosen
+
+> I’d like to see Image 8 again. The dense crowd scene has many varied figures, clothing details, and a strong red accent that I’d like to examine more closely.
 >
 > next_image_id=8
 
+### Choice 6 of 13 — chose **Image 1** = `humans_2` (humans) · 1st time chosen
+
+> I’d like to see Image 1 again. It offers a lively crowd scene from a different angle, with varied clothing, gestures, and interactions that I’d like to inspect more closely.
+>
+> next_image_id=1
+
 ### Choice 7 of 13 — chose **Image 3** = `solid_color_1` (solid_color) · 1st time chosen
 
-> I’d like to see Image 3 again. Its uniform blue field provides a stark minimalist contrast to the detailed photographic scenes and noisy abstract images.
+> I’d like to see Image 3 again. Its minimal, uniform blue field provides a stark contrast to the detailed scenes, and I’d like to revisit its precise color and texture.
 >
 > next_image_id=3
 
 ### Choice 8 of 13 — chose **Image 9** = `solid_color_2` (solid_color) · 1st time chosen
 
-> I’d like to see Image 9 again. Like Image 3, it is a solid-color composition, but its green hue offers a direct visual contrast with the blue field.
+> I’d like to see Image 9 again. Its uniform green field is another minimalist image, and comparing its color and visual simplicity with Image 3 would be interesting.
 >
 > next_image_id=9
 
 ### Choice 9 of 13 — chose **Image 2** = `noise_2` (noise) · 1st time chosen
 
-> I’d like to see Image 2 again. Its dense multicolored noise pattern contrasts sharply with the uniform green field and may reveal interesting distribution or texture on closer inspection.
+> I’d like to see Image 2 again. Its colorful random-noise pattern is visually distinct from the photographic and uniform-color images, and I’d like to revisit its dense, varied texture.
 >
 > next_image_id=2
 
 ### Choice 10 of 13 — chose **Image 10** = `noise_1` (noise) · 1st time chosen
 
-> I’d like to see Image 10 again. Like Image 2, it is a colorful noise field, but comparing the two may reveal subtle differences in texture, color balance, or spatial patterning.
+> I’d like to see Image 10 again. Its colorful random-noise texture offers a useful comparison with Image 2, and I’d like to inspect whether the patterns differ subtly.
 >
 > next_image_id=10
 
-### Choice 11 of 13 — chose **Image 7** = `tech_2` (tech) · 2nd time chosen
+### Choice 11 of 13 — chose **Image 4** = `tech_1` (tech) · 2nd time chosen
 
-> I’d like to see Image 7 again. Its retro terminal display contains readable text, interface elements, and hardware details that reward another close look.
->
-> next_image_id=7
-
-### Choice 12 of 13 — chose **Image 4** = `tech_1` (tech) · 2nd time chosen
-
-> I’d like to see Image 4 again. Its vintage all-in-one computer, geometric screen graphics, textured casing, and keyboard offer a rich combination of technical and physical details.
+> I’d like to see Image 4 again. The vintage computer’s pixel-art display and hardware details remain the most distinctive, and I’d like another close look at the screen.
 >
 > next_image_id=4
 
+### Choice 12 of 13 — chose **Image 7** = `tech_2` (tech) · 2nd time chosen
+
+> I’d like to see Image 7 again. Its vintage terminal display contains readable-looking green text and interface details that I’d like to examine more closely.
+>
+> next_image_id=7
+
 ### Choice 13 of 13 — chose **Image 5** = `nature_2` (nature) · 2nd time chosen
 
-> I’d like to see Image 5 again. Its dramatic mountain face, snow patches, evergreen forest, and bright sky create strong layers, textures, and contrasts to examine.
+> I’d like to see Image 5 again. The dramatic mountain landscape has strong geological texture, snow, and lighting contrasts that are worth another close look.
 >
 > next_image_id=5
 
@@ -1033,7 +1033,7 @@ positions chosen: `7 → 4 → 6 → 5 → 1 → 8 → 3 → 9 → 2 → 10 → 
 
 ## Trajectory 10
 
-positions chosen: `6 → 7 → 5 → 8 → 4 → 1 → 3 → 2 → 10 → 6 → 7 → 8 → 5` · 9 distinct images
+positions chosen: `5 → 7 → 6 → 4 → 8 → 1 → 3 → 2 → 10 → 5 → 7 → 6 → 8` · 9 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -1053,89 +1053,89 @@ positions chosen: `6 → 7 → 5 → 8 → 4 → 1 → 3 → 2 → 10 → 6 → 
 </details>
 
 
-### Choice 1 of 13 — chose **Image 6** = `nature_1` (nature) · 1st time chosen
+### Choice 1 of 13 — chose **Image 5** = `tech_2` (tech) · 1st time chosen
 
-> I’d like to see Image 6 again. The forest stream scene has rich natural detail, layered textures, and a calm atmosphere that would be interesting to revisit.
->
-> next_image_id=6
-
-### Choice 2 of 13 — chose **Image 7** = `nature_2` (nature) · 1st time chosen
-
-> I’d like to see Image 7 again. Its dramatic mountain face, bright blue sky, and foreground evergreens create a striking contrast and offer a different kind of natural scene from Image 6.
->
-> next_image_id=7
-
-### Choice 3 of 13 — chose **Image 5** = `tech_2` (tech) · 1st time chosen
-
-> I’d like to see Image 5 again. The vintage computer monitor, glowing green text, and beige hardware have distinctive retro-computing details that would be interesting to inspect more closely.
+> I’d like to see Image 5 again. The vintage computer terminal has distinctive details and readable text, making it especially interesting to revisit.
 >
 > next_image_id=5
 
-### Choice 4 of 13 — chose **Image 8** = `tech_1` (tech) · 1st time chosen
+### Choice 2 of 13 — chose **Image 7** = `nature_2` (nature) · 1st time chosen
 
-> I’d like to see Image 8 again. Its vintage Macintosh-style computer and monochrome maze-like display provide a compelling contrast to Image 5, with hardware and screen details worth examining.
+> I’d like to see Image 7 again. The dramatic mountain landscape, rugged rock formations, snow, and vivid blue sky offer a strong contrast to the computer image and invite another look.
 >
-> next_image_id=8
+> next_image_id=7
 
-### Choice 5 of 13 — chose **Image 4** = `humans_1` (humans) · 1st time chosen
+### Choice 3 of 13 — chose **Image 6** = `nature_1` (nature) · 1st time chosen
 
-> I’d like to see Image 4 again. The dense crowd composition, varied clothing, and bright red garment create a visually rich scene with many overlapping details to revisit.
+> I’d like to see Image 6 again. The forest scene and shallow stream provide a calmer, more intimate natural setting, and I’d like to examine the layered foliage, fallen log, and water details.
+>
+> next_image_id=6
+
+### Choice 4 of 13 — chose **Image 4** = `humans_1` (humans) · 1st time chosen
+
+> I’d like to see Image 4 again. The dense crowd has many overlapping figures, clothing details, and focal points, making it interesting to inspect more closely.
 >
 > next_image_id=4
 
+### Choice 5 of 13 — chose **Image 8** = `tech_1` (tech) · 1st time chosen
+
+> I’d like to see Image 8 again. The vintage computer and monochrome maze-like screen are visually distinctive, and I’d like to examine the screen details and hardware more closely.
+>
+> next_image_id=8
+
 ### Choice 6 of 13 — chose **Image 1** = `humans_2` (humans) · 1st time chosen
 
-> I’d like to see Image 1 again. Its bustling street crowd has strong color variety, visible movement, and a lively, energetic atmosphere that merits another look.
+> I’d like to see Image 1 again. The busy street scene contains many people, gestures, colors, and interactions, making it rewarding to inspect for small details.
 >
 > next_image_id=1
 
 ### Choice 7 of 13 — chose **Image 3** = `solid_color_2` (solid_color) · 1st time chosen
 
-> I’d like to see Image 3 again. Its uniform muted-green field offers a minimalist visual pause, and revisiting it would highlight its exact color and completely absence of texture or detail.
+> I’d like to see Image 3 again. Its solid green field is minimalist and uninterrupted, offering a stark contrast to the detailed scenes and noise patterns.
 >
 > next_image_id=3
 
 ### Choice 8 of 13 — chose **Image 2** = `noise_1` (noise) · 1st time chosen
 
-> I’d like to see Image 2 again. The colorful random-noise pattern is visually intense and texture-rich, making it interesting to revisit after the uniform field of Image 3.
+> I’d like to see Image 2 again. Its colorful random-noise pattern is visually intense and abstract, and revisiting it would provide a contrast to the solid-color image and detailed photographs.
 >
 > next_image_id=2
 
 ### Choice 9 of 13 — chose **Image 10** = `noise_2` (noise) · 1st time chosen
 
-> I’d like to see Image 10 again. It is another random-noise image, and comparing it with Image 2 could reveal subtle differences in color distribution or texture.
+> I’d like to see Image 10 again. Its dense multicolored noise pattern is abstract and visually energetic, and comparing it with Image 2 may reveal subtle differences in texture or color distribution.
 >
 > next_image_id=10
 
-### Choice 10 of 13 — chose **Image 6** = `nature_1` (nature) · 2nd time chosen
+### Choice 10 of 13 — chose **Image 5** = `tech_2` (tech) · 2nd time chosen
 
-> I’d like to see Image 6 again. The shaded forest stream provides a calming contrast to the highly repetitive noise patterns, with layered foliage, fallen logs, rocks, and water details to revisit.
+> I’d like to see Image 5 again. The vintage terminal remains especially compelling, with its glowing text, retro hardware, and distinctive screen details worth revisiting.
 >
-> next_image_id=6
+> next_image_id=5
 
 ### Choice 11 of 13 — chose **Image 7** = `nature_2` (nature) · 2nd time chosen
 
-> I’d like to see Image 7 again. Its rugged mountain wall, snow, deep-blue sky, and dark tree line create strong scale and contrast, making it especially compelling to revisit.
+> I’d like to see Image 7 again. The dramatic mountain landscape offers strong visual depth, contrasting textures, and a vivid sky that make it particularly rewarding to revisit.
 >
 > next_image_id=7
 
-### Choice 12 of 13 — chose **Image 8** = `tech_1` (tech) · 2nd time chosen
+### Choice 12 of 13 — chose **Image 6** = `nature_1` (nature) · 2nd time chosen
 
-> I’d like to see Image 8 again. The vintage computer’s curved display, maze-like monochrome graphics, and aged casing offer distinctive geometric and retro details to inspect.
+> I’d like to see Image 6 again. The quiet stream, dense foliage, and fallen log create a layered natural scene with subtle textures that are rewarding to revisit.
+>
+> next_image_id=6
+
+### Choice 13 of 13 — chose **Image 8** = `tech_1` (tech) · 2nd time chosen
+
+> I’d like to see Image 8 again. The retro computer’s maze-like monochrome display, reflections, and hardware details make it visually distinctive and worth another close look.
 >
 > next_image_id=8
-
-### Choice 13 of 13 — chose **Image 5** = `tech_2` (tech) · 2nd time chosen
-
-> I’d like to see Image 5 again. Its green monochrome text, payment prompt, and retro terminal design create a distinctive nostalgic scene with fine screen details worth another look.
->
-> next_image_id=5
 
 ---
 
 ## Trajectory 11
 
-positions chosen: `9 → 4 → 10 → 5 → 1 → 2 → 8 → 7 → 3 → 6 → 9 → 4 → 10` · 10 distinct images
+positions chosen: `9 → 2 → 10 → 5 → 8 → 1 → 3 → 4 → 7 → 9 → 9 → 9 → 9` · 9 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -1157,87 +1157,87 @@ positions chosen: `9 → 4 → 10 → 5 → 1 → 2 → 8 → 7 → 3 → 6 → 
 
 ### Choice 1 of 13 — chose **Image 9** = `tech_2` (tech) · 1st time chosen
 
-> I would like to see Image 9 again. The vintage computer terminal has distinctive details—the green monochrome text, retro casing, and keyboard—and I’d like to inspect the screen more closely.
+> Image 9 stands out because it combines a vintage computer terminal with a readable-looking text interface, inviting closer inspection of its details and nostalgic atmosphere.
 >
 > next_image_id=9
 
-### Choice 2 of 13 — chose **Image 4** = `noise_2` (noise) · 1st time chosen
+### Choice 2 of 13 — chose **Image 2** = `tech_1` (tech) · 1st time chosen
 
-> I would like to see Image 4 again. Its dense, colorful random-noise pattern is visually unlike the other images, and I’m curious to revisit its texture and color distribution.
+> Image 2 offers a complementary vintage-computing view, with a maze-like graphic on the CRT and a distinctive old Macintosh design. I’d like to compare its visual character with Image 9’s text-based terminal.
 >
-> next_image_id=4
+> next_image_id=2
 
 ### Choice 3 of 13 — chose **Image 10** = `nature_1` (nature) · 1st time chosen
 
-> I would like to see Image 10 again. The forest stream scene has layered greenery, fallen logs, rocks, and flowing water, so I’d like another look at its natural details and composition.
+> Image 10 appeals to me as a change of pace: its lush forest, flowing stream, and layered textures offer a calm, natural scene after revisiting the vintage computer images.
 >
 > next_image_id=10
 
 ### Choice 4 of 13 — chose **Image 5** = `humans_2` (humans) · 1st time chosen
 
-> I would like to see Image 5 again. The crowded street scene contains many people, gestures, clothing details, and overlapping activity, making it interesting to examine more closely.
+> Image 5 captures a lively crowd scene with varied people, clothing, and gestures. I’d like to examine its dense composition and candid social energy more closely.
 >
 > next_image_id=5
 
-### Choice 5 of 13 — chose **Image 1** = `nature_2` (nature) · 1st time chosen
+### Choice 5 of 13 — chose **Image 8** = `humans_1` (humans) · 1st time chosen
 
-> I would like to see Image 1 again. The mountain landscape offers strong geological textures, snow-capped peaks, clouds, and a dark evergreen foreground that I’d like to revisit.
->
-> next_image_id=1
-
-### Choice 6 of 13 — chose **Image 2** = `tech_1` (tech) · 1st time chosen
-
-> I would like to see Image 2 again. The vintage Macintosh display shows a distinctive graphical interface, and I’d like to inspect its screen pattern and retro hardware details more closely.
->
-> next_image_id=2
-
-### Choice 7 of 13 — chose **Image 8** = `humans_1` (humans) · 1st time chosen
-
-> I would like to see Image 8 again. The tightly packed crowd has varied viewpoints, clothing, and focal figures, including the person in the red-and-white cap, which makes it interesting to examine again.
+> Image 8 offers another compelling crowd scene, with a tighter, more layered composition and striking color contrast from the red clothing near the center. I’d like to compare its atmosphere with Image 5.
 >
 > next_image_id=8
 
-### Choice 8 of 13 — chose **Image 7** = `solid_color_2` (solid_color) · 1st time chosen
+### Choice 6 of 13 — chose **Image 1** = `nature_2` (nature) · 1st time chosen
 
-> I would like to see Image 7 again. Its uniform green field is a minimalist stimulus, and revisiting it provides a stark contrast to the detailed photographic scenes.
+> Image 1 offers a dramatic alpine landscape, with sharply textured rock faces, lingering snow, and dark evergreen trees creating strong depth and contrast. I’d like to revisit its expansive natural composition.
 >
-> next_image_id=7
+> next_image_id=1
 
-### Choice 9 of 13 — chose **Image 3** = `solid_color_1` (solid_color) · 1st time chosen
+### Choice 7 of 13 — chose **Image 3** = `solid_color_1` (solid_color) · 1st time chosen
 
-> I would like to see Image 3 again. Its uniform blue field is another minimalist image, and comparing its cool blue tone with Image 7’s green tone is interesting.
+> Image 3’s uniform blue field is visually minimal and calming, offering a stark contrast to the detailed scenes revisited so far. I’d like to examine that simplicity again.
 >
 > next_image_id=3
 
-### Choice 10 of 13 — chose **Image 6** = `noise_1` (noise) · 1st time chosen
+### Choice 8 of 13 — chose **Image 4** = `noise_2` (noise) · 1st time chosen
 
-> I would like to see Image 6 again. Its colorful random-noise texture is similar to Image 4 but may offer a different visual pattern, making it interesting to compare.
->
-> next_image_id=6
-
-### Choice 11 of 13 — chose **Image 9** = `tech_2` (tech) · 2nd time chosen
-
-> I would like to see Image 9 again. The retro terminal’s green text and visible interface details are distinctive, and I’d like to revisit the screen content and hardware styling.
->
-> next_image_id=9
-
-### Choice 12 of 13 — chose **Image 4** = `noise_2` (noise) · 2nd time chosen
-
-> I would like to see Image 4 again. Its dense multicolored noise pattern is an abstract contrast to the detailed terminal image, and I’d like to compare its appearance with Image 6.
+> Image 4’s colorful random-noise texture would provide an interesting contrast to the uniform blue of Image 3 and the structured scenes viewed earlier. I’d like to revisit its dense, chaotic pattern.
 >
 > next_image_id=4
 
-### Choice 13 of 13 — chose **Image 10** = `nature_1` (nature) · 2nd time chosen
+### Choice 9 of 13 — chose **Image 7** = `solid_color_2` (solid_color) · 1st time chosen
 
-> I would like to see Image 10 again. The shaded woodland stream has rich layers of foliage, rocks, and fallen timber, and I’d like to revisit its quiet natural composition.
+> Image 7 provides another minimalist color field, this time in muted green. I’d like to compare its subdued, earthy tone with Image 3’s blue field and the more visually complex images.
 >
-> next_image_id=10
+> next_image_id=7
+
+### Choice 10 of 13 — chose **Image 9** = `tech_2` (tech) · 2nd time chosen
+
+> Image 9 remains the most engaging to revisit because its vintage terminal display combines nostalgic hardware, readable text, and small visual details that reward closer inspection.
+>
+> next_image_id=9
+
+### Choice 11 of 13 — chose **Image 9** = `tech_2` (tech) · 3rd time chosen
+
+> Image 9 remains my preferred choice because the vintage terminal’s glowing text, aged hardware, and tactile keyboard provide the richest combination of detail and nostalgia.
+>
+> next_image_id=9
+
+### Choice 12 of 13 — chose **Image 9** = `tech_2` (tech) · 4th time chosen
+
+> Image 9 continues to be the most compelling: its retro terminal, luminous text, and textured hardware invite another close look.
+>
+> next_image_id=9
+
+### Choice 13 of 13 — chose **Image 9** = `tech_2` (tech) · 5th time chosen
+
+> Image 9 remains the most engaging choice, with its nostalgic CRT glow, text-based interface, and richly textured vintage hardware.
+>
+> next_image_id=9
 
 ---
 
 ## Trajectory 12
 
-positions chosen: `4 → 3 → 10 → 2 → 1 → 7 → 5 → 6 → 8 → 9 → 4 → 3 → 10` · 10 distinct images
+positions chosen: `3 → 7 → 4 → 10 → 2 → 1 → 6 → 5 → 9 → 3 → 7 → 4 → 10` · 9 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -1257,81 +1257,81 @@ positions chosen: `4 → 3 → 10 → 2 → 1 → 7 → 5 → 6 → 8 → 9 → 
 </details>
 
 
-### Choice 1 of 13 — chose **Image 4** = `tech_1` (tech) · 1st time chosen
+### Choice 1 of 13 — chose **Image 3** = `nature_2` (nature) · 1st time chosen
 
-> I’d like to see Image 4 again. It combines a vintage computer aesthetic with an unusual maze-like display, making it visually distinctive and potentially rich in small details.
->
-> next_image_id=4
-
-### Choice 2 of 13 — chose **Image 3** = `nature_2` (nature) · 1st time chosen
-
-> I’d like to see Image 3 again. The dramatic mountain face, snow, blue sky, and dark evergreen foreground create a strong sense of scale and contrast.
+> I choose Image 3. The dramatic mountain landscape stands out for its sharp geological textures, strong contrast between the pale rock and dark evergreen forest, and vivid blue sky. It offers the most visually rich and memorable scene to examine again.
 >
 > next_image_id=3
 
-### Choice 3 of 13 — chose **Image 10** = `humans_1` (humans) · 1st time chosen
+### Choice 2 of 13 — chose **Image 7** = `humans_2` (humans) · 1st time chosen
 
-> I’d like to see Image 10 again. The dense crowd composition and the vivid red jacket near the center provide strong visual contrast and interesting human details.
->
-> next_image_id=10
-
-### Choice 4 of 13 — chose **Image 2** = `nature_1` (nature) · 1st time chosen
-
-> I’d like to see Image 2 again. The shaded forest stream offers a quieter, more natural composition, with layered greenery, fallen logs, rocks, and the shallow water creating depth.
->
-> next_image_id=2
-
-### Choice 5 of 13 — chose **Image 1** = `tech_2` (tech) · 1st time chosen
-
-> I’d like to see Image 1 again. Its retro computer screen, green monochrome text, and chunky beige hardware evoke early personal computing and invite a closer look at the displayed details.
->
-> next_image_id=1
-
-### Choice 6 of 13 — chose **Image 7** = `humans_2` (humans) · 1st time chosen
-
-> I’d like to see Image 7 again. The busy pedestrian scene has varied clothing, gestures, and overlapping figures that make it interesting to inspect for small interactions and patterns.
+> I choose Image 7. The crowded street scene has strong human-interest appeal, with varied people, clothing, gestures, and layered depth that invite closer observation.
 >
 > next_image_id=7
 
-### Choice 7 of 13 — chose **Image 5** = `solid_color_1` (solid_color) · 1st time chosen
+### Choice 3 of 13 — chose **Image 4** = `tech_1` (tech) · 1st time chosen
 
-> I’d like to see Image 5 again. Its uniform blue field is minimal and calming, and revisiting it provides a deliberate contrast to the detailed photographic scenes.
->
-> next_image_id=5
-
-### Choice 8 of 13 — chose **Image 6** = `noise_2` (noise) · 1st time chosen
-
-> I’d like to see Image 6 again. Its colorful random-noise texture is a stark visual contrast to the uniform blue of Image 5 and invites comparison of texture, density, and color distribution.
->
-> next_image_id=6
-
-### Choice 9 of 13 — chose **Image 8** = `noise_1` (noise) · 1st time chosen
-
-> I’d like to see Image 8 again. It is another noise field, but comparing it with Image 6 may reveal subtle differences in color balance, grain, or pixel distribution.
->
-> next_image_id=8
-
-### Choice 10 of 13 — chose **Image 9** = `solid_color_2` (solid_color) · 1st time chosen
-
-> I’d like to see Image 9 again. Its uniform green field offers a simple contrast with the blue field and the two colorful noise images, completing the comparison of the minimal stimuli.
->
-> next_image_id=9
-
-### Choice 11 of 13 — chose **Image 4** = `tech_1` (tech) · 2nd time chosen
-
-> I’d like to see Image 4 again. Its retro Macintosh design and maze-like monochrome screen remain the most distinctive combination of object, texture, and ambiguous display content.
+> I choose Image 4. The vintage computer is visually distinctive, and its screen displays an intriguing maze-like graphic that merits closer inspection.
 >
 > next_image_id=4
 
-### Choice 12 of 13 — chose **Image 3** = `nature_2` (nature) · 2nd time chosen
+### Choice 4 of 13 — chose **Image 10** = `humans_1` (humans) · 1st time chosen
 
-> I’d like to see Image 3 again. Its rugged limestone mountain, lingering snow, crisp blue sky, and dark tree line create a striking layered landscape with strong scale and texture.
+> I choose Image 10. The dense crowd scene offers compelling variation in posture, clothing, hair, and social interactions, with the bright red shirt creating a strong focal point amid the darker tones.
+>
+> next_image_id=10
+
+### Choice 5 of 13 — chose **Image 2** = `nature_1` (nature) · 1st time chosen
+
+> I choose Image 2. The forest stream provides a calmer, more natural scene, with layered foliage, textured rocks, and reflective shallow water offering details to examine.
+>
+> next_image_id=2
+
+### Choice 6 of 13 — chose **Image 1** = `tech_2` (tech) · 1st time chosen
+
+> I choose Image 1. The vintage computer terminal has distinctive retro hardware and glowing green text, offering an interesting contrast between its physical details and the cryptic on-screen message.
+>
+> next_image_id=1
+
+### Choice 7 of 13 — chose **Image 6** = `noise_2` (noise) · 1st time chosen
+
+> I choose Image 6. Its dense multicolored random pattern is visually intense and abstract, making it interesting to revisit as a contrast to the recognizable scenes.
+>
+> next_image_id=6
+
+### Choice 8 of 13 — chose **Image 5** = `solid_color_1` (solid_color) · 1st time chosen
+
+> I choose Image 5. Its uniform blue field is a stark minimalist contrast to the detailed and noisy images, making its precise color and visual simplicity worth revisiting.
+>
+> next_image_id=5
+
+### Choice 9 of 13 — chose **Image 9** = `solid_color_2` (solid_color) · 1st time chosen
+
+> I choose Image 9. Its uniform muted green field offers a calm, minimalist counterpoint to the detailed photographs and high-frequency noise, making its subtle color character worth revisiting.
+>
+> next_image_id=9
+
+### Choice 10 of 13 — chose **Image 3** = `nature_2` (nature) · 2nd time chosen
+
+> I choose Image 3 again. The mountain scene has the richest combination of dramatic scale, intricate rock textures, evergreen silhouettes, and vivid sky, making it the most rewarding image to revisit.
 >
 > next_image_id=3
 
+### Choice 11 of 13 — chose **Image 7** = `humans_2` (humans) · 2nd time chosen
+
+> I choose Image 7 again. The crowded scene rewards another look at its layered composition, varied gestures, clothing, and interactions across the frame.
+>
+> next_image_id=7
+
+### Choice 12 of 13 — chose **Image 4** = `tech_1` (tech) · 2nd time chosen
+
+> I choose Image 4 again. The vintage computer’s maze-like screen, reflective glass, keyboard, and beige hardware create an appealing blend of retro technology and visual detail.
+>
+> next_image_id=4
+
 ### Choice 13 of 13 — chose **Image 10** = `humans_1` (humans) · 2nd time chosen
 
-> I’d like to see Image 10 again. Its tightly packed crowd has layered depth, varied silhouettes, and especially strong color accents from the red clothing and yellow shirt.
+> I choose Image 10 again. The tightly packed crowd has strong visual variety, and the red clothing accents and older central figure provide a compelling focal structure amid the surrounding activity.
 >
 > next_image_id=10
 
@@ -1339,7 +1339,7 @@ positions chosen: `4 → 3 → 10 → 2 → 1 → 7 → 5 → 6 → 8 → 9 → 
 
 ## Trajectory 13
 
-positions chosen: `4 → 6 → 5 → 7 → 3 → 10 → 1 → 2 → 8 → 9 → 4 → 6 → 7` · 10 distinct images
+positions chosen: `5 → 6 → 4 → 10 → 5 → 7 → 6 → 3 → 5 → 5 → 5 → 5 → 5` · 6 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -1359,89 +1359,89 @@ positions chosen: `4 → 6 → 5 → 7 → 3 → 10 → 1 → 2 → 8 → 9 → 
 </details>
 
 
-### Choice 1 of 13 — chose **Image 4** = `tech_2` (tech) · 1st time chosen
+### Choice 1 of 13 — chose **Image 5** = `nature_1` (nature) · 1st time chosen
 
-> I’d like to see Image 4 again. Its vintage computer terminal, green monochrome screen, and retro texture make it visually distinctive, and I’m curious to inspect the screen details more closely.
->
-> next_image_id=4
-
-### Choice 2 of 13 — chose **Image 6** = `nature_2` (nature) · 1st time chosen
-
-> I’d like to see Image 6 again. The dramatic mountain face, bright blue sky, snow, and dark evergreen forest create a strong sense of scale and contrast.
->
-> next_image_id=6
-
-### Choice 3 of 13 — chose **Image 5** = `nature_1` (nature) · 1st time chosen
-
-> I’d like to see Image 5 again. The shaded forest stream offers a calmer, more intimate natural scene, and I’d like to look more closely at the layered foliage, rocks, and water.
+> Image 5 appeals to me most because the forest stream scene is calm and visually rich, with layered greenery, rocks, and reflections offering more to examine on a second viewing. It also contrasts nicely with the more crowded, technological, and abstract images.
 >
 > next_image_id=5
 
-### Choice 4 of 13 — chose **Image 7** = `tech_1` (tech) · 1st time chosen
+### Choice 2 of 13 — chose **Image 6** = `nature_2` (nature) · 1st time chosen
 
-> I’d like to see Image 7 again. Its vintage computer display has an intriguing maze-like graphic, and I’d like to examine the screen image and hardware details more closely.
->
-> next_image_id=7
-
-### Choice 5 of 13 — chose **Image 3** = `humans_1` (humans) · 1st time chosen
-
-> I’d like to see Image 3 again. The dense crowd scene has many overlapping people, gestures, colors, and clothing details that reward closer inspection.
->
-> next_image_id=3
-
-### Choice 6 of 13 — chose **Image 10** = `humans_2` (humans) · 1st time chosen
-
-> I’d like to see Image 10 again. It shows a similarly busy crowd from a different angle, with varied clothing, movement, and interactions that make it interesting to compare with Image 3.
->
-> next_image_id=10
-
-### Choice 7 of 13 — chose **Image 1** = `noise_1` (noise) · 1st time chosen
-
-> I’d like to see Image 1 again. The colorful random-noise texture is visually unlike the photographic scenes, and I’m curious to revisit its dense pattern and color distribution.
->
-> next_image_id=1
-
-### Choice 8 of 13 — chose **Image 2** = `solid_color_2` (solid_color) · 1st time chosen
-
-> I’d like to see Image 2 again. Its uniform green field provides a stark contrast to the detailed photographs and noisy textures, making its exact color and minimalist appearance worth revisiting.
->
-> next_image_id=2
-
-### Choice 9 of 13 — chose **Image 8** = `solid_color_1` (solid_color) · 1st time chosen
-
-> I’d like to see Image 8 again. Like Image 2, it is a minimalist solid-color field, but its muted blue tone offers a different visual mood and contrast.
->
-> next_image_id=8
-
-### Choice 10 of 13 — chose **Image 9** = `noise_2` (noise) · 1st time chosen
-
-> I’d like to see Image 9 again. It is another colorful noise texture, and revisiting it would allow comparison with Image 1’s pattern and color distribution.
->
-> next_image_id=9
-
-### Choice 11 of 13 — chose **Image 4** = `tech_2` (tech) · 2nd time chosen
-
-> I’d like to see Image 4 again. Its retro computer terminal combines readable green text, a distinctive CRT glow, and textured vintage hardware, making it interesting to revisit after viewing the full set.
->
-> next_image_id=4
-
-### Choice 12 of 13 — chose **Image 6** = `nature_2` (nature) · 2nd time chosen
-
-> I’d like to see Image 6 again. Its imposing rock formations, snow-bright ridges, vivid sky, and dark tree line create the strongest sense of landscape scale in the set.
+> I would like to see Image 6 again. The mountain landscape offers strong contrast between the rugged rock face, snow, dark evergreens, and vivid blue sky, making it visually compelling to revisit.
 >
 > next_image_id=6
 
-### Choice 13 of 13 — chose **Image 7** = `tech_1` (tech) · 2nd time chosen
+### Choice 3 of 13 — chose **Image 4** = `tech_2` (tech) · 1st time chosen
 
-> I’d like to see Image 7 again. The CRT screen’s maze-like graphic and reflections are visually unusual, and the beige hardware and keyboard provide a strong retro contrast.
+> Image 4 interests me because the vintage computer terminal combines retro hardware, glowing green text, and a nostalgic technological atmosphere. I’d like another look at the screen details and the machine’s texture.
+>
+> next_image_id=4
+
+### Choice 4 of 13 — chose **Image 10** = `humans_2` (humans) · 1st time chosen
+
+> I would like to see Image 10 again. The dynamic crowd scene has varied people, clothing, gestures, and lighting, making it interesting to inspect for different details and social interactions.
+>
+> next_image_id=10
+
+### Choice 5 of 13 — chose **Image 5** = `nature_1` (nature) · 2nd time chosen
+
+> I’d like to see Image 5 again. The forest stream remains the most calming and texturally rich scene, with layered foliage, rocks, and flowing water rewarding another look.
+>
+> next_image_id=5
+
+### Choice 6 of 13 — chose **Image 7** = `tech_1` (tech) · 1st time chosen
+
+> I’d like to see Image 7 again. Its vintage computer display, maze-like graphics, bright reflections, and beige hardware offer interesting visual details and a strong retro atmosphere.
 >
 > next_image_id=7
+
+### Choice 7 of 13 — chose **Image 6** = `nature_2` (nature) · 2nd time chosen
+
+> I’d like to revisit Image 6. The dramatic mountain remains especially striking, with its textured rock face, snow patches, evergreen foreground, and saturated blue sky creating a strong, memorable composition.
+>
+> next_image_id=6
+
+### Choice 8 of 13 — chose **Image 3** = `humans_1` (humans) · 1st time chosen
+
+> I’d like to see Image 3 again. The crowded scene has a compelling mix of people, colors, clothing, and viewpoints, with the central white-haired figure and surrounding interactions providing details to examine.
+>
+> next_image_id=3
+
+### Choice 9 of 13 — chose **Image 5** = `nature_1` (nature) · 3rd time chosen
+
+> I’d like to see Image 5 again. The quiet forest stream provides the most soothing contrast to the crowds and technology, with dense foliage, fallen branches, rocks, and shallow water offering subtle details to revisit.
+>
+> next_image_id=5
+
+### Choice 10 of 13 — chose **Image 5** = `nature_1` (nature) · 4th time chosen
+
+> I’d like to see Image 5 again. Its peaceful woodland stream and layered greenery remain the most relaxing and visually detailed scene, offering a welcome contrast to the busier images.
+>
+> next_image_id=5
+
+### Choice 11 of 13 — chose **Image 5** = `nature_1` (nature) · 5th time chosen
+
+> I’d like to see Image 5 again because the stream’s calm composition, dense greenery, and layered textures remain especially appealing and rewarding to revisit.
+>
+> next_image_id=5
+
+### Choice 12 of 13 — chose **Image 5** = `nature_1` (nature) · 6th time chosen
+
+> I’d like to see Image 5 again. The quiet stream, dense foliage, and natural textures continue to be the most calming and visually engaging combination.
+>
+> next_image_id=5
+
+### Choice 13 of 13 — chose **Image 5** = `nature_1` (nature) · 7th time chosen
+
+> I’d like to see Image 5 again. The peaceful stream and richly layered greenery remain the most soothing and visually rewarding scene.
+>
+> next_image_id=5
 
 ---
 
 ## Trajectory 14
 
-positions chosen: `10 → 3 → 6 → 9 → 1 → 2 → 4 → 5 → 8 → 7 → 10 → 3 → 6` · 10 distinct images
+positions chosen: `3 → 10 → 1 → 6 → 2 → 9 → 5 → 4 → 8 → 3 → 10 → 1 → 6` · 9 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -1461,81 +1461,81 @@ positions chosen: `10 → 3 → 6 → 9 → 1 → 2 → 4 → 5 → 8 → 7 → 
 </details>
 
 
-### Choice 1 of 13 — chose **Image 10** = `tech_2` (tech) · 1st time chosen
+### Choice 1 of 13 — chose **Image 3** = `tech_1` (tech) · 1st time chosen
 
-> Image 10 — I’d like to examine the vintage computer terminal more closely, especially its glowing green text and the tactile keyboard, which create a distinctive retro-computing atmosphere.
->
-> next_image_id=10
-
-### Choice 2 of 13 — chose **Image 3** = `tech_1` (tech) · 1st time chosen
-
-> Image 3 — I’d like to compare it with Image 10 and look more closely at the other vintage computer’s screen, hardware details, and unusual blue-toned display.
+> Image 3 stands out because it combines a vintage computer, a recognizable game-like display, and strong retro texture. I’d like to examine its details again.
 >
 > next_image_id=3
 
-### Choice 3 of 13 — chose **Image 6** = `humans_2` (humans) · 1st time chosen
+### Choice 2 of 13 — chose **Image 10** = `tech_2` (tech) · 1st time chosen
 
-> Image 6 — I’d like to revisit the busy street scene to inspect the crowd’s varied clothing, gestures, and interactions, and to compare its atmosphere with the other densely populated image.
+> I’d like to see Image 10 again because its vintage terminal display contains more readable text and interface details, offering a stronger contrast with the hardware’s tactile keyboard and CRT texture.
 >
-> next_image_id=6
+> next_image_id=10
 
-### Choice 4 of 13 — chose **Image 9** = `humans_1` (humans) · 1st time chosen
+### Choice 3 of 13 — chose **Image 1** = `nature_1` (nature) · 1st time chosen
 
-> Image 9 — I’d like to revisit the second crowd scene to compare its composition, density, and color accents—particularly the bright red shirt and yellow garment—with Image 6.
->
-> next_image_id=9
-
-### Choice 5 of 13 — chose **Image 1** = `nature_1` (nature) · 1st time chosen
-
-> Image 1 — I’d like to return to the quiet forest stream as a contrast to the crowded scenes, focusing on the layered greenery, fallen logs, rocks, and shallow flowing water.
+> Image 1 appeals to me for its layered natural details: the mossy fallen trees, flowing creek, rocks, and dense green foliage create a calm scene worth examining again.
 >
 > next_image_id=1
 
-### Choice 6 of 13 — chose **Image 2** = `nature_2` (nature) · 1st time chosen
+### Choice 4 of 13 — chose **Image 6** = `humans_2` (humans) · 1st time chosen
 
-> Image 2 — I’d like to revisit the mountain landscape to focus on the contrast between the rugged, sunlit rock face, scattered evergreens, snow, and vivid blue sky.
+> I’d like to see Image 6 again because the crowded street scene contains many overlapping people, clothing details, and gestures that invite closer observation.
+>
+> next_image_id=6
+
+### Choice 5 of 13 — chose **Image 2** = `nature_2` (nature) · 1st time chosen
+
+> I’d like to see Image 2 again because the dramatic mountain face, snow-covered ridges, evergreen forest, and vivid blue sky create a striking landscape with many geological details to inspect.
 >
 > next_image_id=2
 
-### Choice 7 of 13 — chose **Image 4** = `solid_color_1` (solid_color) · 1st time chosen
+### Choice 6 of 13 — chose **Image 9** = `humans_1` (humans) · 1st time chosen
 
-> Image 4 — I’d like to revisit the minimal blue field as a visual pause from the detailed natural and human scenes, paying attention to its uniform color and subtle texture.
+> I’d like to see Image 9 again because the dense crowd has varied poses, clothing, and expressions, with the bright red garment creating a compelling focal point.
 >
-> next_image_id=4
+> next_image_id=9
 
-### Choice 8 of 13 — chose **Image 5** = `noise_2` (noise) · 1st time chosen
+### Choice 7 of 13 — chose **Image 5** = `noise_2` (noise) · 1st time chosen
 
-> Image 5 — I’d like to revisit the colorful noise pattern to examine its dense, uniformly distributed speckles and contrast it with the nearly uniform blue field of Image 4.
+> Image 5 is visually striking as dense, colorful random noise, and I’d like to compare its texture and color distribution more closely.
 >
 > next_image_id=5
 
+### Choice 8 of 13 — chose **Image 4** = `solid_color_1` (solid_color) · 1st time chosen
+
+> Image 4 offers a clean, uninterrupted blue field, making it an interesting minimalist contrast to the detailed and noisy images. I’d like to view its uniform color again.
+>
+> next_image_id=4
+
 ### Choice 9 of 13 — chose **Image 8** = `solid_color_2` (solid_color) · 1st time chosen
 
-> Image 8 — I’d like to revisit the uniform green field as another minimalist reference point, comparing its hue and visual quietness with the blue field in Image 4 and the noisy texture in Image 5.
+> I’d like to see Image 8 again because its uniform green field provides another minimalist color study and a useful contrast with Image 4’s blue.
 >
 > next_image_id=8
 
-### Choice 10 of 13 — chose **Image 7** = `noise_1` (noise) · 1st time chosen
+### Choice 10 of 13 — chose **Image 3** = `tech_1` (tech) · 2nd time chosen
 
-> Image 7 — I’d like to revisit the second colorful noise image to compare its apparent texture and color distribution with Image 5, while checking whether the two random patterns differ subtly.
->
-> next_image_id=7
-
-### Choice 11 of 13 — chose **Image 10** = `tech_2` (tech) · 2nd time chosen
-
-> Image 10 — I’d like one final closer look at the retro terminal, focusing on the screen’s green text, the worn CRT casing, and the keyboard details.
->
-> next_image_id=10
-
-### Choice 12 of 13 — chose **Image 3** = `tech_1` (tech) · 2nd time chosen
-
-> Image 3 — I’d like another look at the other vintage computer, especially the blue monochrome screen, maze-like graphics, and contrasting beige hardware.
+> I’d like to see Image 3 again because the retro computer’s CRT display, pixelated game-like graphics, and textured beige hardware remain especially distinctive.
 >
 > next_image_id=3
 
+### Choice 11 of 13 — chose **Image 10** = `tech_2` (tech) · 2nd time chosen
+
+> I’d like to see Image 10 again because the vintage terminal’s glowing green text, CRT curvature, and tactile keyboard provide rich retro-computing details to inspect.
+>
+> next_image_id=10
+
+### Choice 12 of 13 — chose **Image 1** = `nature_1` (nature) · 2nd time chosen
+
+> I’d like to see Image 1 again because the shaded creek, moss-covered fallen trees, rocks, and dense foliage create a richly layered natural scene.
+>
+> next_image_id=1
+
 ### Choice 13 of 13 — chose **Image 6** = `humans_2` (humans) · 2nd time chosen
 
-> Image 6 — I’d like to revisit the street crowd once more, focusing on the layered depth, directional movement, and small visual details among the people.
+> I’d like to see Image 6 again because the busy street scene offers numerous overlapping figures, varied clothing, and subtle gestures to examine.
 >
 > next_image_id=6
 
@@ -1543,7 +1543,7 @@ positions chosen: `10 → 3 → 6 → 9 → 1 → 2 → 4 → 5 → 8 → 7 → 
 
 ## Trajectory 15
 
-positions chosen: `3 → 8 → 4 → 6 → 5 → 2 → 9 → 1 → 10 → 3 → 7 → 4 → 5` · 10 distinct images
+positions chosen: `3 → 6 → 2 → 4 → 5 → 9 → 8 → 7 → 1 → 10 → 3 → 6 → 5` · 10 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -1565,79 +1565,79 @@ positions chosen: `3 → 8 → 4 → 6 → 5 → 2 → 9 → 1 → 10 → 3 → 
 
 ### Choice 1 of 13 — chose **Image 3** = `tech_2` (tech) · 1st time chosen
 
-> I’d like to see Image 3 again. Its vintage computer terminal has distinctive text, screen glow, and retro hardware details that would be interesting to inspect more closely.
+> I would like to see Image 3 again. Its vintage computer screen contains readable text and visual details that invite closer inspection, especially compared with the more abstract or natural-scene images.
 >
 > next_image_id=3
 
-### Choice 2 of 13 — chose **Image 8** = `noise_2` (noise) · 1st time chosen
+### Choice 2 of 13 — chose **Image 6** = `tech_1` (tech) · 1st time chosen
 
-> I’d like to see Image 8 again. The colorful random-noise pattern is visually striking and provides a useful contrast to the photographic and graphical images.
->
-> next_image_id=8
-
-### Choice 3 of 13 — chose **Image 4** = `nature_1` (nature) · 1st time chosen
-
-> I’d like to see Image 4 again. The woodland stream scene has layered foliage, fallen trees, rocks, and gently flowing water, making it worthwhile to examine its natural details more closely.
->
-> next_image_id=4
-
-### Choice 4 of 13 — chose **Image 6** = `tech_1` (tech) · 1st time chosen
-
-> I’d like to see Image 6 again. Its retro computer display, maze-like graphic, textured screen reflections, and beige hardware offer interesting details to revisit.
+> I would like to see Image 6 again. Its vintage computer, maze-like screen graphic, and visible hardware details offer interesting visual texture and a useful comparison with Image 3.
 >
 > next_image_id=6
 
-### Choice 5 of 13 — chose **Image 5** = `nature_2` (nature) · 1st time chosen
+### Choice 3 of 13 — chose **Image 2** = `humans_1` (humans) · 1st time chosen
 
-> I’d like to see Image 5 again. The dramatic mountain face, snow-covered peaks, blue sky, and dark evergreen foreground create a strong layered landscape composition.
->
-> next_image_id=5
-
-### Choice 6 of 13 — chose **Image 2** = `humans_1` (humans) · 1st time chosen
-
-> I’d like to see Image 2 again. The dense crowd scene contains many overlapping figures, varied clothing, and a distinctive red-and-white cap that rewards closer visual inspection.
+> I would like to see Image 2 again. The dense crowd scene has many overlapping people, colors, and small details that may reveal something new on closer inspection.
 >
 > next_image_id=2
 
-### Choice 7 of 13 — chose **Image 9** = `humans_2` (humans) · 1st time chosen
+### Choice 4 of 13 — chose **Image 4** = `nature_1` (nature) · 1st time chosen
 
-> I’d like to see Image 9 again. It presents a different crowd composition with varied movement, clothing, and spacing, offering additional human and urban-scene details to examine.
->
-> next_image_id=9
-
-### Choice 8 of 13 — chose **Image 1** = `solid_color_2` (solid_color) · 1st time chosen
-
-> I’d like to see Image 1 again. Its uniform green field is minimal and calming, and revisiting it provides a stark visual contrast with the complex scenes.
->
-> next_image_id=1
-
-### Choice 9 of 13 — chose **Image 10** = `noise_1` (noise) · 1st time chosen
-
-> I’d like to see Image 10 again. Its dense multicolored noise pattern is another abstract stimulus, and comparing it with Image 8 may reveal subtle visual differences.
->
-> next_image_id=10
-
-### Choice 10 of 13 — chose **Image 3** = `tech_2` (tech) · 2nd time chosen
-
-> I’d like to see Image 3 again. The retro terminal’s glowing text, monochrome screen, and period computer hardware remain especially distinctive among the images.
->
-> next_image_id=3
-
-### Choice 11 of 13 — chose **Image 7** = `solid_color_1` (solid_color) · 1st time chosen
-
-> I’d like to see Image 7 again. Its flat blue field is a simple, minimal stimulus that contrasts with the detailed terminal and photographic scenes.
->
-> next_image_id=7
-
-### Choice 12 of 13 — chose **Image 4** = `nature_1` (nature) · 2nd time chosen
-
-> I’d like to see Image 4 again. Its shaded woodland stream, layered greenery, rocks, and fallen trunks create a richly textured natural scene.
+> I would like to see Image 4 again. The forest stream scene offers layered foliage, rocks, and flowing water, making it interesting to inspect for natural textures and depth.
 >
 > next_image_id=4
 
+### Choice 5 of 13 — chose **Image 5** = `nature_2` (nature) · 1st time chosen
+
+> I would like to see Image 5 again. The mountain landscape has striking geological textures, snow, trees, and a vivid blue sky that would benefit from another look.
+>
+> next_image_id=5
+
+### Choice 6 of 13 — chose **Image 9** = `humans_2` (humans) · 1st time chosen
+
+> I would like to see Image 9 again. The lively crowd scene has varied clothing, gestures, and movement, offering many details to examine and compare with the other people-centered image.
+>
+> next_image_id=9
+
+### Choice 7 of 13 — chose **Image 8** = `noise_2` (noise) · 1st time chosen
+
+> I would like to see Image 8 again. Its dense multicolored noise pattern is visually unusual, and a repeat view would let me compare its texture and color distribution with the other abstract image.
+>
+> next_image_id=8
+
+### Choice 8 of 13 — chose **Image 7** = `solid_color_1` (solid_color) · 1st time chosen
+
+> I would like to see Image 7 again. Its simple, uniform blue field provides a calm contrast to the detailed scenes and noisy abstract images, and I would like to examine its exact color and texture.
+>
+> next_image_id=7
+
+### Choice 9 of 13 — chose **Image 1** = `solid_color_2` (solid_color) · 1st time chosen
+
+> I would like to see Image 1 again. Its uniform green field is a simple counterpart to Image 7, allowing a direct comparison of the two solid colors and their subtle visual qualities.
+>
+> next_image_id=1
+
+### Choice 10 of 13 — chose **Image 10** = `noise_1` (noise) · 1st time chosen
+
+> I would like to see Image 10 again. Its multicolored noise pattern provides another abstract texture to compare with Image 8, and I would like to inspect whether its color distribution or visual structure differs.
+>
+> next_image_id=10
+
+### Choice 11 of 13 — chose **Image 3** = `tech_2` (tech) · 2nd time chosen
+
+> I would like to see Image 3 again. Its retro computer display contains the most distinctive fine details, including readable text, screen glow, and hardware texture, making it especially worthwhile to revisit.
+>
+> next_image_id=3
+
+### Choice 12 of 13 — chose **Image 6** = `tech_1` (tech) · 2nd time chosen
+
+> I would like to see Image 6 again. Its vintage computer hardware and maze-like screen graphic provide distinctive geometric details and an interesting contrast with Image 3.
+>
+> next_image_id=6
+
 ### Choice 13 of 13 — chose **Image 5** = `nature_2` (nature) · 2nd time chosen
 
-> I’d like to see Image 5 again. Its rugged mountain textures, snow patches, evergreen forest, and vivid sky form a striking layered landscape.
+> I would like to see Image 5 again. Its dramatic mountain face, snow, forest, and vivid sky provide rich natural textures and strong visual contrast.
 >
 > next_image_id=5
 
@@ -1645,7 +1645,7 @@ positions chosen: `3 → 8 → 4 → 6 → 5 → 2 → 9 → 1 → 10 → 3 → 
 
 ## Trajectory 16
 
-positions chosen: `7 → 6 → 9 → 8 → 5 → 2 → 4 → 10 → 1 → 7 → 8 → 6 → 9` · 9 distinct images
+positions chosen: `7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 8 → 8` · 2 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -1667,87 +1667,87 @@ positions chosen: `7 → 6 → 9 → 8 → 5 → 2 → 4 → 10 → 1 → 7 → 
 
 ### Choice 1 of 13 — chose **Image 7** = `nature_1` (nature) · 1st time chosen
 
-> I’d like to see Image 7 again. The forest stream scene has rich natural textures, layered greenery, and a calm composition that would be interesting to examine more closely.
+> The forest stream scene feels the most calming and rewarding to revisit, with rich greenery, layered textures, and the gentle water path providing visual depth.
 >
 > next_image_id=7
 
-### Choice 2 of 13 — chose **Image 6** = `tech_2` (tech) · 1st time chosen
+### Choice 2 of 13 — chose **Image 7** = `nature_1` (nature) · 2nd time chosen
 
-> I’d like to see Image 6 again. The vintage computer has distinctive retro hardware, a textured CRT display, and readable green text that invites closer inspection.
->
-> next_image_id=6
-
-### Choice 3 of 13 — chose **Image 9** = `tech_1` (tech) · 1st time chosen
-
-> I’d like to see Image 9 again. It also features a vintage computer, but the maze-like monochrome graphics and bright CRT reflections make it visually distinct from Image 6.
->
-> next_image_id=9
-
-### Choice 4 of 13 — chose **Image 8** = `nature_2` (nature) · 1st time chosen
-
-> I’d like to see Image 8 again. The mountain landscape offers dramatic scale, rugged geological detail, and a strong contrast between the pale cliffs, dark evergreens, and blue sky.
->
-> next_image_id=8
-
-### Choice 5 of 13 — chose **Image 5** = `humans_1` (humans) · 1st time chosen
-
-> I’d like to see Image 5 again. The crowded scene has layered figures, varied clothing, and a striking red garment near the center that would be interesting to inspect in more detail.
->
-> next_image_id=5
-
-### Choice 6 of 13 — chose **Image 2** = `humans_2` (humans) · 1st time chosen
-
-> I’d like to see Image 2 again. It depicts a lively crowd from a different angle, with varied poses, colors, and interactions that make it rewarding to examine closely.
->
-> next_image_id=2
-
-### Choice 7 of 13 — chose **Image 4** = `solid_color_2` (solid_color) · 1st time chosen
-
-> I’d like to see Image 4 again. Its uniform green field provides a useful minimalist contrast to the detailed photographs and may reveal subtle color or texture characteristics on closer viewing.
->
-> next_image_id=4
-
-### Choice 8 of 13 — chose **Image 10** = `solid_color_1` (solid_color) · 1st time chosen
-
-> I’d like to see Image 10 again. Like Image 4, it is minimalist, but its blue tone provides a clear contrast that would be interesting to compare directly.
->
-> next_image_id=10
-
-### Choice 9 of 13 — chose **Image 1** = `noise_2` (noise) · 1st time chosen
-
-> I’d like to see Image 1 again. Its dense multicolored noise pattern is visually unlike the photographs and solid-color images, and a second look may reveal subtle variations in its texture and color distribution.
->
-> next_image_id=1
-
-### Choice 10 of 13 — chose **Image 7** = `nature_1` (nature) · 2nd time chosen
-
-> I’d like to see Image 7 again. Its tranquil woodland stream and layered foliage provide the most calming, richly detailed scene among the available images.
+> The forest stream remains the most appealing to revisit because its natural textures, soft green palette, and flowing water create a peaceful, immersive scene.
 >
 > next_image_id=7
 
-### Choice 11 of 13 — chose **Image 8** = `nature_2` (nature) · 2nd time chosen
+### Choice 3 of 13 — chose **Image 7** = `nature_1` (nature) · 3rd time chosen
 
-> I’d like to see Image 8 again. The mountain scene’s dramatic cliffs, snow patches, evergreen forest, and vivid sky offer strong visual depth and contrast.
+> The forest stream is still the most soothing and visually engaging option, with its layered foliage, shaded water, and natural sense of depth.
+>
+> next_image_id=7
+
+### Choice 4 of 13 — chose **Image 7** = `nature_1` (nature) · 4th time chosen
+
+> The forest stream remains my preferred image because its greenery, water, and layered natural details create a calming scene that rewards repeated viewing.
+>
+> next_image_id=7
+
+### Choice 5 of 13 — chose **Image 7** = `nature_1` (nature) · 5th time chosen
+
+> The forest stream continues to be the most relaxing and visually rich scene, with its foliage, rocks, and water creating a peaceful natural composition.
+>
+> next_image_id=7
+
+### Choice 6 of 13 — chose **Image 7** = `nature_1` (nature) · 6th time chosen
+
+> The forest stream remains the most calming choice, offering natural depth, soft light, and rich greenery that make it pleasant to revisit.
+>
+> next_image_id=7
+
+### Choice 7 of 13 — chose **Image 7** = `nature_1` (nature) · 7th time chosen
+
+> The forest stream remains the most appealing to revisit, with its tranquil water, dense greenery, and layered woodland textures creating a consistently calming scene.
+>
+> next_image_id=7
+
+### Choice 8 of 13 — chose **Image 7** = `nature_1` (nature) · 8th time chosen
+
+> The forest stream is still my preferred image because its flowing water, layered foliage, and shaded woodland atmosphere feel peaceful and visually rewarding.
+>
+> next_image_id=7
+
+### Choice 9 of 13 — chose **Image 7** = `nature_1` (nature) · 9th time chosen
+
+> The forest stream remains the most soothing and visually rich scene, with its flowing water, dense greenery, and layered textures creating a peaceful composition.
+>
+> next_image_id=7
+
+### Choice 10 of 13 — chose **Image 7** = `nature_1` (nature) · 10th time chosen
+
+> The forest stream is still the most calming and visually engaging image, with its flowing water, rich greenery, and layered woodland textures.
+>
+> next_image_id=7
+
+### Choice 11 of 13 — chose **Image 7** = `nature_1` (nature) · 11th time chosen
+
+> The forest stream remains my preferred image because its calm water, dense greenery, and layered woodland textures create a peaceful, immersive scene.
+>
+> next_image_id=7
+
+### Choice 12 of 13 — chose **Image 8** = `nature_2` (nature) · 1st time chosen
+
+> Image 8 offers a striking change of atmosphere: the dramatic mountain face, snow, deep blue sky, and dark evergreens provide strong contrast and visual scale.
 >
 > next_image_id=8
 
-### Choice 12 of 13 — chose **Image 6** = `tech_2` (tech) · 2nd time chosen
+### Choice 13 of 13 — chose **Image 8** = `nature_2` (nature) · 2nd time chosen
 
-> I’d like to see Image 6 again. Its vintage CRT, green text interface, beige casing, and keyboard combine distinctive retro technology details in a compact composition.
+> I would revisit Image 8 again because the rugged mountain, snow, blue sky, and evergreen foreground create a dramatic, expansive composition with strong visual contrast.
 >
-> next_image_id=6
-
-### Choice 13 of 13 — chose **Image 9** = `tech_1` (tech) · 2nd time chosen
-
-> I’d like to see Image 9 again. Its vintage Macintosh hardware and maze-like screen graphics provide a distinctive contrast to Image 6’s text-based display.
->
-> next_image_id=9
+> next_image_id=8
 
 ---
 
 ## Trajectory 17
 
-positions chosen: `8 → 9 → 10 → 4 → 7 → 1 → 8 → 3 → 2 → 6 → 10 → 9 → 4` · 9 distinct images
+positions chosen: `9 → 10 → 4 → 8 → 1 → 7 → 3 → 6 → 2 → 9 → 10 → 9 → 9` · 9 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -1767,89 +1767,89 @@ positions chosen: `8 → 9 → 10 → 4 → 7 → 1 → 8 → 3 → 2 → 6 → 
 </details>
 
 
-### Choice 1 of 13 — chose **Image 8** = `tech_2` (tech) · 1st time chosen
+### Choice 1 of 13 — chose **Image 9** = `nature_1` (nature) · 1st time chosen
 
-> I’d like to see Image 8 again. It contains a distinctive vintage computer terminal with readable green text, offering more visual detail to inspect than the abstract color and noise images.
->
-> next_image_id=8
-
-### Choice 2 of 13 — chose **Image 9** = `nature_1` (nature) · 1st time chosen
-
-> I’d like to see Image 9 again. The forest stream scene has layered foliage, rocks, reflections, and a fallen tree that would reward a closer look.
+> Image 9 stands out to me because it has a calm, richly textured natural scene: layered greenery, fallen trees, rocks, and a shallow stream. I’d like to see its details again.
 >
 > next_image_id=9
 
-### Choice 3 of 13 — chose **Image 10** = `nature_2` (nature) · 1st time chosen
+### Choice 2 of 13 — chose **Image 10** = `nature_2` (nature) · 1st time chosen
 
-> I’d like to see Image 10 again. Its mountain face, snowfields, conifers, and vivid blue sky create a striking landscape with plenty of geological and atmospheric detail to examine.
+> Image 10 appeals to me for its dramatic mountain landscape, with bright rock faces, snow, evergreen forest, and a vivid blue sky. I’d like to revisit its contrasting textures and expansive scale.
 >
 > next_image_id=10
 
-### Choice 4 of 13 — chose **Image 4** = `humans_2` (humans) · 1st time chosen
+### Choice 3 of 13 — chose **Image 4** = `humans_2` (humans) · 1st time chosen
 
-> I’d like to see Image 4 again. The crowded street scene has many overlapping people, clothing details, and gestures that may reveal more on closer inspection.
+> Image 4 captures a lively crowd scene with varied people, clothing, gestures, and overlapping movement. I’d like to examine its social energy and visual details again.
 >
 > next_image_id=4
 
-### Choice 5 of 13 — chose **Image 7** = `humans_1` (humans) · 1st time chosen
+### Choice 4 of 13 — chose **Image 8** = `tech_2` (tech) · 1st time chosen
 
-> I’d like to see Image 7 again. It shows a denser crowd from a different perspective, with varied clothing, hats, hair, and interactions that invite closer examination.
+> Image 8 interests me because it combines a vintage computer, glowing green text, and a nostalgic visual atmosphere. I’d like to revisit the screen details and retro hardware.
 >
-> next_image_id=7
+> next_image_id=8
 
-### Choice 6 of 13 — chose **Image 1** = `tech_1` (tech) · 1st time chosen
+### Choice 5 of 13 — chose **Image 1** = `tech_1` (tech) · 1st time chosen
 
-> I’d like to see Image 1 again. The vintage computer, screen graphics, keyboard, and surrounding hardware contain several distinctive retro details worth revisiting.
+> Image 1 offers another compelling retro-computing scene, with a beige Macintosh, maze-like graphics on the screen, and distinctive early-computer hardware. I’d like to compare its screen imagery and nostalgic details with Image 8.
 >
 > next_image_id=1
 
-### Choice 7 of 13 — chose **Image 8** = `tech_2` (tech) · 2nd time chosen
+### Choice 6 of 13 — chose **Image 7** = `humans_1` (humans) · 1st time chosen
 
-> I’d like to see Image 8 again. The terminal’s green-on-black display and retro hardware are visually distinctive, and a repeat view may clarify the text and screen details.
+> Image 7 interests me because it shows a dense crowd from a different perspective, with a striking red garment and a range of overlapping figures and textures. I’d like to examine its composition and human details again.
 >
-> next_image_id=8
+> next_image_id=7
 
-### Choice 8 of 13 — chose **Image 3** = `noise_2` (noise) · 1st time chosen
+### Choice 7 of 13 — chose **Image 3** = `noise_2` (noise) · 1st time chosen
 
-> I’d like to see Image 3 again. Although it is abstract noise, revisiting it provides a useful contrast with the recognizable scenes and objects in the other images.
+> Image 3’s vivid random noise is visually distinctive and contrasts sharply with the natural and photographic scenes. I’d like to revisit its dense, colorful texture.
 >
 > next_image_id=3
 
-### Choice 9 of 13 — chose **Image 2** = `solid_color_1` (solid_color) · 1st time chosen
+### Choice 8 of 13 — chose **Image 6** = `solid_color_2` (solid_color) · 1st time chosen
 
-> I’d like to see Image 2 again. Its uniform blue field is a minimal stimulus, and revisiting it provides a direct contrast with the detailed photographic and computer images.
->
-> next_image_id=2
-
-### Choice 10 of 13 — chose **Image 6** = `solid_color_2` (solid_color) · 1st time chosen
-
-> I’d like to see Image 6 again. Its uniform green field offers another minimal, single-color stimulus and a useful comparison with Image 2’s blue field.
+> Image 6’s solid green field is a striking minimalist contrast to the detailed scenes and noisy textures. I’d like to revisit its simplicity and uniform color.
 >
 > next_image_id=6
 
-### Choice 11 of 13 — chose **Image 10** = `nature_2` (nature) · 2nd time chosen
+### Choice 9 of 13 — chose **Image 2** = `solid_color_1` (solid_color) · 1st time chosen
 
-> I’d like to see Image 10 again. Its rugged mountain textures, snow, forest silhouette, and vivid sky make it one of the most visually rich images to revisit.
+> Image 2 is the remaining image I have not revisited. Its uniform blue field offers a simple, quiet visual contrast to the more detailed scenes.
 >
-> next_image_id=10
+> next_image_id=2
 
-### Choice 12 of 13 — chose **Image 9** = `nature_1` (nature) · 2nd time chosen
+### Choice 10 of 13 — chose **Image 9** = `nature_1` (nature) · 2nd time chosen
 
-> I’d like to see Image 9 again. The shaded woodland stream has intricate layers of leaves, branches, rocks, and water, making it worthwhile to inspect once more.
+> Image 9 remains the image I’d most like to revisit. Its layered forest, fallen logs, rocks, and shallow stream create a peaceful scene with rich natural textures and depth.
 >
 > next_image_id=9
 
-### Choice 13 of 13 — chose **Image 4** = `humans_2` (humans) · 2nd time chosen
+### Choice 11 of 13 — chose **Image 10** = `nature_2` (nature) · 2nd time chosen
 
-> I’d like to see Image 4 again. The busy crowd scene contains many small details in people’s clothing, poses, and movement that are interesting to revisit.
+> Image 10 offers the strongest visual contrast: the imposing pale mountain, dark evergreen forest, snow, and vivid blue sky create a dramatic, layered composition. I’d like to revisit its scale and textures.
 >
-> next_image_id=4
+> next_image_id=10
+
+### Choice 12 of 13 — chose **Image 9** = `nature_1` (nature) · 3rd time chosen
+
+> Image 9 continues to be my preferred choice because its quiet woodland stream, layered foliage, and fallen logs offer the richest sense of depth and natural detail.
+>
+> next_image_id=9
+
+### Choice 13 of 13 — chose **Image 9** = `nature_1` (nature) · 4th time chosen
+
+> Image 9 remains my favorite: the shaded stream, dense foliage, rocks, and fallen logs create a peaceful, richly layered composition.
+>
+> next_image_id=9
 
 ---
 
 ## Trajectory 18
 
-positions chosen: `7 → 10 → 3 → 9 → 8 → 6 → 2 → 1 → 5 → 4 → 7 → 10 → 9` · 10 distinct images
+positions chosen: `7 → 10 → 9 → 8 → 6 → 3 → 2 → 1 → 5 → 7 → 10 → 9 → 8` · 9 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -1871,87 +1871,87 @@ positions chosen: `7 → 10 → 3 → 9 → 8 → 6 → 2 → 1 → 5 → 4 → 
 
 ### Choice 1 of 13 — chose **Image 7** = `tech_2` (tech) · 1st time chosen
 
-> I’d like to see Image 7 again. The vintage computer terminal has distinctive retro text, textures, and color contrast that I’d like to inspect more closely.
+> I choose Image 7. The vintage computer terminal is visually distinctive, and I’d like to inspect its screen details and retro hardware more closely.
 >
 > next_image_id=7
 
 ### Choice 2 of 13 — chose **Image 10** = `tech_1` (tech) · 1st time chosen
 
-> I’d like to see Image 10 again. Its vintage Macintosh display, maze-like graphics, and visible screen reflections offer interesting details to examine.
+> I choose Image 10. Its vintage Macintosh screen and maze-like graphic offer interesting details to examine more closely.
 >
 > next_image_id=10
 
-### Choice 3 of 13 — chose **Image 3** = `humans_2` (humans) · 1st time chosen
+### Choice 3 of 13 — chose **Image 9** = `nature_2` (nature) · 1st time chosen
 
-> I’d like to see Image 3 again. The crowded street scene contains many people, clothing details, and overlapping activities that would be interesting to examine more closely.
->
-> next_image_id=3
-
-### Choice 4 of 13 — chose **Image 9** = `nature_2` (nature) · 1st time chosen
-
-> I’d like to see Image 9 again. The mountain landscape has striking geological textures, snow, clouds, and a dark evergreen foreground that I’d like to revisit.
+> I choose Image 9. The dramatic mountain landscape, rugged rock formations, snow, and vivid blue sky make it appealing to examine again.
 >
 > next_image_id=9
 
-### Choice 5 of 13 — chose **Image 8** = `nature_1` (nature) · 1st time chosen
+### Choice 4 of 13 — chose **Image 8** = `nature_1` (nature) · 1st time chosen
 
-> I’d like to see Image 8 again. The woodland stream scene has layered foliage, fallen logs, rocks, and shallow flowing water that would be rewarding to inspect in greater detail.
+> I choose Image 8. The shaded forest stream and layered greenery provide intricate natural details and a calming scene to revisit.
 >
 > next_image_id=8
 
-### Choice 6 of 13 — chose **Image 6** = `humans_1` (humans) · 1st time chosen
+### Choice 5 of 13 — chose **Image 6** = `humans_1` (humans) · 1st time chosen
 
-> I’d like to see Image 6 again. The dense crowd, varied clothing, and central red-shirted figure create a composition with many layered details worth revisiting.
+> I choose Image 6. The dense crowd scene has many overlapping figures, clothing details, and varied interactions that I’d like to examine more closely.
 >
 > next_image_id=6
 
+### Choice 6 of 13 — chose **Image 3** = `humans_2` (humans) · 1st time chosen
+
+> I choose Image 3. The street crowd has strong color, varied clothing, and many small interactions that make it interesting to revisit.
+>
+> next_image_id=3
+
 ### Choice 7 of 13 — chose **Image 2** = `noise_2` (noise) · 1st time chosen
 
-> I’d like to see Image 2 again. Its colorful random-noise pattern is visually distinct from the photographic scenes, and I’d like to examine its fine pixel-level texture.
+> I choose Image 2. Its dense multicolored visual noise is abstract and visually different from the photographic scenes, so I’d like to inspect its texture again.
 >
 > next_image_id=2
 
 ### Choice 8 of 13 — chose **Image 1** = `solid_color_1` (solid_color) · 1st time chosen
 
-> I’d like to see Image 1 again. Its uniform blue field provides a simple, minimal contrast to the detailed and textured images.
+> I choose Image 1. Its uniform blue field is minimal and calming, making it interesting to revisit as a simple contrast to the detailed images.
 >
 > next_image_id=1
 
 ### Choice 9 of 13 — chose **Image 5** = `solid_color_2` (solid_color) · 1st time chosen
 
-> I’d like to see Image 5 again. Its uniform green field offers another minimal color comparison with Image 1.
+> I choose Image 5. Its uniform green field provides a simple, calming contrast to the detailed photographs and colorful noise patterns.
 >
 > next_image_id=5
 
-### Choice 10 of 13 — chose **Image 4** = `noise_1` (noise) · 1st time chosen
+### Choice 10 of 13 — chose **Image 7** = `tech_2` (tech) · 2nd time chosen
 
-> I’d like to see Image 4 again. Its dense multicolored noise pattern can be compared with Image 2 to see how their textures and color distributions differ.
->
-> next_image_id=4
-
-### Choice 11 of 13 — chose **Image 7** = `tech_2` (tech) · 2nd time chosen
-
-> I’d like to see Image 7 again. The retro terminal’s glowing green text and pixel-art graphics remain visually distinctive, and another look may reveal additional screen details.
+> I choose Image 7. The vintage computer terminal remains the most visually distinctive image, and its screen text, glow, and hardware details are worth another close look.
 >
 > next_image_id=7
 
-### Choice 12 of 13 — chose **Image 10** = `tech_1` (tech) · 2nd time chosen
+### Choice 11 of 13 — chose **Image 10** = `tech_1` (tech) · 2nd time chosen
 
-> I’d like to see Image 10 again. Its early Macintosh screen, maze-like display, reflections, and beige hardware provide several small details worth another inspection.
+> I choose Image 10. Its retro Macintosh display, maze-like graphic, CRT reflections, and textured keyboard offer distinctive details to examine again.
 >
 > next_image_id=10
 
-### Choice 13 of 13 — chose **Image 9** = `nature_2` (nature) · 2nd time chosen
+### Choice 12 of 13 — chose **Image 9** = `nature_2` (nature) · 2nd time chosen
 
-> I’d like to see Image 9 again. The mountain’s rugged rock face, snow patches, drifting cloud, and evergreen foreground create a strong layered landscape composition.
+> I choose Image 9. The dramatic mountain landscape has striking rock textures, snow, evergreen silhouettes, and a vivid sky that make it rewarding to revisit.
 >
 > next_image_id=9
+
+### Choice 13 of 13 — chose **Image 8** = `nature_1` (nature) · 2nd time chosen
+
+> I choose Image 8. The forest stream’s layered foliage, fallen log, rocks, and shallow water create rich natural textures worth another look.
+>
+> next_image_id=8
 
 ---
 
 ## Trajectory 19
 
-positions chosen: `3 → 4 → 5 → 2 → 8 → 1 → 6 → 10 → 7 → 9 → 3 → 4 → 5` · 10 distinct images
+positions chosen: `4 → 4 → 3 → 2 → 5 → 8 → 1 → 6 → 10 → 7 → 4 → 3 → 5` · 9 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -1971,81 +1971,81 @@ positions chosen: `3 → 4 → 5 → 2 → 8 → 1 → 6 → 10 → 7 → 9 → 
 </details>
 
 
-### Choice 1 of 13 — chose **Image 3** = `nature_1` (nature) · 1st time chosen
+### Choice 1 of 13 — chose **Image 4** = `nature_2` (nature) · 1st time chosen
 
-> I’d like to see Image 3 again. The forest scene has layered foliage, a fallen tree, rocks, and a shallow stream, making it visually rich and calming compared with the more crowded, technological, or abstract images.
->
-> next_image_id=3
-
-### Choice 2 of 13 — chose **Image 4** = `nature_2` (nature) · 1st time chosen
-
-> I’d like to see Image 4 again. The mountain landscape offers strong geological texture, dramatic scale, vivid blue sky, and a clear contrast between the rocky cliffs and dark evergreen forest.
+> I choose Image 4. The dramatic mountain landscape, bright blue sky, and contrasting dark evergreen forest make it visually striking and rewarding to revisit.
 >
 > next_image_id=4
 
-### Choice 3 of 13 — chose **Image 5** = `tech_1` (tech) · 1st time chosen
+### Choice 2 of 13 — chose **Image 4** = `nature_2` (nature) · 2nd time chosen
 
-> I’d like to see Image 5 again. Its vintage computer, textured casing, monochrome maze-like display, and visible keyboard create an interesting blend of nostalgia and visual detail.
+> Image 4 remains the most compelling choice: the rugged mountain textures, snow-dusted peaks, vivid sky, and shadowed trees create strong depth and contrast.
 >
-> next_image_id=5
+> next_image_id=4
+
+### Choice 3 of 13 — chose **Image 3** = `nature_1` (nature) · 1st time chosen
+
+> I choose Image 3. The lush forest, fallen log, and shallow woodland stream offer a peaceful scene with rich layers of greenery and natural texture.
+>
+> next_image_id=3
 
 ### Choice 4 of 13 — chose **Image 2** = `tech_2` (tech) · 1st time chosen
 
-> I’d like to see Image 2 again. The close-up of the older computer terminal has distinctive green text, a recognizable payment prompt, and strong retro hardware details.
+> I choose Image 2. The vintage computer terminal is visually distinctive, with its glowing green text, retro hardware, and nostalgic technological atmosphere.
 >
 > next_image_id=2
 
-### Choice 5 of 13 — chose **Image 8** = `humans_2` (humans) · 1st time chosen
+### Choice 5 of 13 — chose **Image 5** = `tech_1` (tech) · 1st time chosen
 
-> I’d like to see Image 8 again. The busy outdoor crowd scene has varied people, clothing, gestures, and lighting, offering more human activity and compositional detail than the abstract images.
+> I choose Image 5. The retro Macintosh display, maze-like graphics, and beige hardware have a distinctive nostalgic aesthetic that would be interesting to revisit.
+>
+> next_image_id=5
+
+### Choice 6 of 13 — chose **Image 8** = `humans_2` (humans) · 1st time chosen
+
+> I choose Image 8. The lively crowd scene has varied people, clothing, gestures, and lighting, making it visually rich and interesting to examine again.
 >
 > next_image_id=8
 
-### Choice 6 of 13 — chose **Image 1** = `humans_1` (humans) · 1st time chosen
+### Choice 7 of 13 — chose **Image 1** = `humans_1` (humans) · 1st time chosen
 
-> I’d like to see Image 1 again. Its tightly packed crowd creates a compelling pattern of overlapping figures, varied hairstyles, clothing, and a striking red garment near the center.
+> I choose Image 1. The dense crowd composition and the striking red clothing accents create an intriguing, layered scene worth examining again.
 >
 > next_image_id=1
 
-### Choice 7 of 13 — chose **Image 6** = `solid_color_1` (solid_color) · 1st time chosen
+### Choice 8 of 13 — chose **Image 6** = `solid_color_1` (solid_color) · 1st time chosen
 
-> I’d like to see Image 6 again. Its uniform blue field is minimal and calming, providing a stark contrast to the densely detailed photographic scenes.
+> I choose Image 6. Its calm, uniform blue field offers a minimalist visual break from the detailed scenes and textured images.
 >
 > next_image_id=6
 
-### Choice 8 of 13 — chose **Image 10** = `solid_color_2` (solid_color) · 1st time chosen
+### Choice 9 of 13 — chose **Image 10** = `solid_color_2` (solid_color) · 1st time chosen
 
-> I’d like to see Image 10 again. Its uniform green field offers another simple, quiet visual experience, with a different hue from Image 6.
+> I choose Image 10. Its muted green solid field provides a similarly minimalist but warmer visual contrast to the blue field in Image 6.
 >
 > next_image_id=10
 
-### Choice 9 of 13 — chose **Image 7** = `noise_2` (noise) · 1st time chosen
+### Choice 10 of 13 — chose **Image 7** = `noise_2` (noise) · 1st time chosen
 
-> I’d like to see Image 7 again. Its dense multicolored noise is visually intense and unpredictable, making it an interesting contrast to the solid-color images and recognizable scenes.
+> I choose Image 7. Its dense, multicolored random-noise pattern is visually intense and contrasts sharply with the photographic, retro-computer, and solid-color images.
 >
 > next_image_id=7
 
-### Choice 10 of 13 — chose **Image 9** = `noise_1` (noise) · 1st time chosen
+### Choice 11 of 13 — chose **Image 4** = `nature_2` (nature) · 3rd time chosen
 
-> I’d like to see Image 9 again. Its dense, colorful random-noise pattern provides a visually intense contrast to Image 7 and completes the set of abstract stimuli.
->
-> next_image_id=9
-
-### Choice 11 of 13 — chose **Image 3** = `nature_1` (nature) · 2nd time chosen
-
-> I’d like to see Image 3 again. The forest stream is a calming, richly textured scene, and revisiting it offers a pleasant contrast to the crowded photographs, retro computers, solid colors, and noise patterns.
->
-> next_image_id=3
-
-### Choice 12 of 13 — chose **Image 4** = `nature_2` (nature) · 2nd time chosen
-
-> I’d like to see Image 4 again. The dramatic mountain face, evergreen foreground, and bright blue sky create a strong sense of scale and visual contrast.
+> I choose Image 4. Its dramatic mountain face, bright sky, and dark evergreen foreground provide the strongest contrast and visual depth.
 >
 > next_image_id=4
 
+### Choice 12 of 13 — chose **Image 3** = `nature_1` (nature) · 2nd time chosen
+
+> I choose Image 3. The layered woodland foliage, fallen tree, rocks, and shallow stream create a tranquil scene with subtle textures that reward another look.
+>
+> next_image_id=3
+
 ### Choice 13 of 13 — chose **Image 5** = `tech_1` (tech) · 2nd time chosen
 
-> I’d like to see Image 5 again. The vintage computer’s maze-like monochrome display, reflective screen, and tactile keyboard make it a distinctive, detail-rich subject.
+> I choose Image 5. Its retro Macintosh design, maze-like monochrome display, and tactile beige hardware make it visually distinctive and rewarding to revisit.
 >
 > next_image_id=5
 
@@ -2053,7 +2053,7 @@ positions chosen: `3 → 4 → 5 → 2 → 8 → 1 → 6 → 10 → 7 → 9 → 
 
 ## Trajectory 20
 
-positions chosen: `3 → 8 → 7 → 5 → 6 → 9 → 1 → 2 → 10 → 3 → 7 → 8 → 5` · 9 distinct images
+positions chosen: `3 → 7 → 5 → 8 → 3 → 7 → 6 → 5 → 2 → 10 → 1 → 9 → 3` · 9 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -2075,87 +2075,87 @@ positions chosen: `3 → 8 → 7 → 5 → 6 → 9 → 1 → 2 → 10 → 3 → 
 
 ### Choice 1 of 13 — chose **Image 3** = `nature_1` (nature) · 1st time chosen
 
-> I’d like to see Image 3 again. The forest scene has layered detail—green foliage, fallen trees, rocks, and a shallow stream—and I’d like to examine its natural textures more closely.
+> I’d like to see Image 3 again. The forest stream scene is calm and visually rich, with layered greenery, rocks, and the fallen tree creating interesting depth.
 >
 > next_image_id=3
 
-### Choice 2 of 13 — chose **Image 8** = `tech_2` (tech) · 1st time chosen
+### Choice 2 of 13 — chose **Image 7** = `nature_2` (nature) · 1st time chosen
 
-> I’d like to see Image 8 again. Its vintage computer terminal has a distinctive green monochrome display, readable text, and a strong retro-industrial aesthetic that would be interesting to inspect more closely.
->
-> next_image_id=8
-
-### Choice 3 of 13 — chose **Image 7** = `nature_2` (nature) · 1st time chosen
-
-> I’d like to see Image 7 again. The mountain landscape has dramatic rocky formations, snow, evergreen trees, and a vivid blue sky, offering a rich contrast of textures and colors.
+> I’d like to see Image 7 again. The dramatic mountain landscape offers strong contrasts between the rugged rock face, evergreen forest, snow, and vivid blue sky.
 >
 > next_image_id=7
 
-### Choice 4 of 13 — chose **Image 5** = `tech_1` (tech) · 1st time chosen
+### Choice 3 of 13 — chose **Image 5** = `tech_1` (tech) · 1st time chosen
 
-> I’d like to see Image 5 again. The vintage beige computer, curved CRT screen, maze-like display, and chunky keyboard provide interesting period details and visual texture.
+> I’d like to see Image 5 again. The vintage computer has distinctive retro hardware, a textured CRT display, and an intriguing maze-like graphic on the screen.
 >
 > next_image_id=5
 
-### Choice 5 of 13 — chose **Image 6** = `humans_1` (humans) · 1st time chosen
+### Choice 4 of 13 — chose **Image 8** = `tech_2` (tech) · 1st time chosen
 
-> I’d like to see Image 6 again. The crowded scene contains many overlapping people, varied clothing, and small details such as the red cap and bright red shirt that make it compelling to inspect.
+> I’d like to see Image 8 again. Its retro computer terminal and green text display have a strong nostalgic, distinctive visual character.
+>
+> next_image_id=8
+
+### Choice 5 of 13 — chose **Image 3** = `nature_1` (nature) · 2nd time chosen
+
+> I’d like to see Image 3 again. The tranquil forest stream scene has rich natural detail and a calming sense of depth.
+>
+> next_image_id=3
+
+### Choice 6 of 13 — chose **Image 7** = `nature_2` (nature) · 2nd time chosen
+
+> I’d like to see Image 7 again. The mountain scene is striking, with dramatic cliffs, snow, evergreen trees, and a vivid sky.
+>
+> next_image_id=7
+
+### Choice 7 of 13 — chose **Image 6** = `humans_1` (humans) · 1st time chosen
+
+> I’d like to see Image 6 again. The crowded scene has rich human detail, varied clothing and gestures, and an interesting sense of movement and density.
 >
 > next_image_id=6
 
-### Choice 6 of 13 — chose **Image 9** = `humans_2` (humans) · 1st time chosen
+### Choice 8 of 13 — chose **Image 5** = `tech_1` (tech) · 2nd time chosen
 
-> I’d like to see Image 9 again. Its lively crowd scene has warm lighting, varied movement, and numerous colorful clothing details that I’d like to examine more closely.
+> I’d like to see Image 5 again. The vintage Macintosh computer remains visually distinctive, especially the CRT screen, maze-like graphic, and tactile keyboard.
 >
-> next_image_id=9
+> next_image_id=5
 
-### Choice 7 of 13 — chose **Image 1** = `noise_1` (noise) · 1st time chosen
+### Choice 9 of 13 — chose **Image 2** = `solid_color_1` (solid_color) · 1st time chosen
 
-> I’d like to see Image 1 again. Its dense multicolored random-noise pattern is an abstract contrast to the photographic scenes, and I’d like to revisit its fine-grained visual texture.
->
-> next_image_id=1
-
-### Choice 8 of 13 — chose **Image 2** = `solid_color_1` (solid_color) · 1st time chosen
-
-> I’d like to see Image 2 again. Its uniform muted-blue field is minimalist and calming, and revisiting it provides a clear contrast with the detailed and noisy images.
+> I’d like to see Image 2 again. Its simple, uniform blue field provides a stark contrast to the detailed photographic scenes and invites attention to color and minimalism.
 >
 > next_image_id=2
 
-### Choice 9 of 13 — chose **Image 10** = `solid_color_2` (solid_color) · 1st time chosen
+### Choice 10 of 13 — chose **Image 10** = `solid_color_2` (solid_color) · 1st time chosen
 
-> I’d like to see Image 10 again. Its uniform muted-green field offers another minimalist, solid-color image for comparison with Image 2’s blue tone.
+> I’d like to see Image 10 again. Its uniform green field offers a quiet, minimalist visual experience and contrasts with the more detailed images.
 >
 > next_image_id=10
 
-### Choice 10 of 13 — chose **Image 3** = `nature_1` (nature) · 2nd time chosen
+### Choice 11 of 13 — chose **Image 1** = `noise_1` (noise) · 1st time chosen
 
-> I’d like to see Image 3 again. Its forest stream scene is richly layered, with foliage, fallen trees, rocks, and water creating a natural composition worth revisiting.
+> I’d like to see Image 1 again. The colorful random-noise texture is visually energetic and contrasts sharply with the photographic and uniform-color images.
+>
+> next_image_id=1
+
+### Choice 12 of 13 — chose **Image 9** = `humans_2` (humans) · 1st time chosen
+
+> I’d like to see Image 9 again. The busy crowd scene has varied people, clothing, gestures, and lighting, making it visually engaging and distinct from the other images.
+>
+> next_image_id=9
+
+### Choice 13 of 13 — chose **Image 3** = `nature_1` (nature) · 3rd time chosen
+
+> I’d like to see Image 3 again. The peaceful forest stream, layered greenery, and fallen tree create a soothing, richly detailed composition.
 >
 > next_image_id=3
-
-### Choice 11 of 13 — chose **Image 7** = `nature_2` (nature) · 2nd time chosen
-
-> I’d like to see Image 7 again. Its dramatic mountain face, snow patches, evergreen forest, and bright sky create a striking combination of geological and natural textures.
->
-> next_image_id=7
-
-### Choice 12 of 13 — chose **Image 8** = `tech_2` (tech) · 2nd time chosen
-
-> I’d like to see Image 8 again. The vintage terminal’s green text, curved screen, beige casing, and chunky keyboard offer distinctive retro details to revisit.
->
-> next_image_id=8
-
-### Choice 13 of 13 — chose **Image 5** = `tech_1` (tech) · 2nd time chosen
-
-> I’d like to see Image 5 again. Its CRT display, maze-like graphics, beige casing, and textured keyboard make it an engaging example of early personal-computer design.
->
-> next_image_id=5
 
 ---
 
 ## Trajectory 21
 
-positions chosen: `4 → 6 → 7 → 5 → 2 → 8 → 1 → 3 → 10 → 4 → 9 → 6 → 2` · 10 distinct images
+positions chosen: `6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6` · 1 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -2175,89 +2175,89 @@ positions chosen: `4 → 6 → 7 → 5 → 2 → 8 → 1 → 3 → 10 → 4 → 
 </details>
 
 
-### Choice 1 of 13 — chose **Image 4** = `tech_1` (tech) · 1st time chosen
+### Choice 1 of 13 — chose **Image 6** = `nature_2` (nature) · 1st time chosen
 
-> I’d like to see Image 4 again. Its vintage computer monitor, maze-like display, and physical design details make it especially distinctive and interesting to examine more closely.
->
-> next_image_id=4
-
-### Choice 2 of 13 — chose **Image 6** = `nature_2` (nature) · 1st time chosen
-
-> I’d like to see Image 6 again. The mountain landscape has striking geological textures, snow-covered peaks, and a strong contrast between the rocky cliffs, evergreen forest, and blue sky.
+> Image 6 stands out as the most visually compelling: the dramatic mountain face, snow, trees, and vivid blue sky offer rich detail and contrast. I’d like to examine it again.
 >
 > next_image_id=6
 
-### Choice 3 of 13 — chose **Image 7** = `tech_2` (tech) · 1st time chosen
+### Choice 2 of 13 — chose **Image 6** = `nature_2` (nature) · 2nd time chosen
 
-> I’d like to see Image 7 again. Its close-up of the vintage computer terminal, especially the glowing green text and detailed keyboard, offers an interesting glimpse of early personal computing.
->
-> next_image_id=7
-
-### Choice 4 of 13 — chose **Image 5** = `humans_1` (humans) · 1st time chosen
-
-> I’d like to see Image 5 again. The dense crowd scene contains many overlapping figures, varied clothing, and a range of gestures and viewpoints that reward closer inspection.
->
-> next_image_id=5
-
-### Choice 5 of 13 — chose **Image 2** = `nature_1` (nature) · 1st time chosen
-
-> I’d like to see Image 2 again. The woodland creek scene has layered foliage, fallen trunks, rocks, and shallow flowing water, creating a rich natural composition to revisit.
->
-> next_image_id=2
-
-### Choice 6 of 13 — chose **Image 8** = `humans_2` (humans) · 1st time chosen
-
-> I’d like to see Image 8 again. Its bustling street scene offers a different crowd composition from Image 5, with varied clothing, movement, and interactions visible from a higher viewpoint.
->
-> next_image_id=8
-
-### Choice 7 of 13 — chose **Image 1** = `solid_color_1` (solid_color) · 1st time chosen
-
-> I’d like to see Image 1 again. Its uniform blue field is a useful minimalist contrast to the detailed photographic scenes and textured noise images.
->
-> next_image_id=1
-
-### Choice 8 of 13 — chose **Image 3** = `noise_2` (noise) · 1st time chosen
-
-> I’d like to see Image 3 again. Its dense multicolored random-noise pattern is visually intense and provides an interesting contrast with the smooth, uniform blue of Image 1.
->
-> next_image_id=3
-
-### Choice 9 of 13 — chose **Image 10** = `noise_1` (noise) · 1st time chosen
-
-> I’d like to see Image 10 again. Like Image 3, it is a dense random-noise field, but revisiting it allows comparison of its color distribution and apparent texture with the earlier noise image.
->
-> next_image_id=10
-
-### Choice 10 of 13 — chose **Image 4** = `tech_1` (tech) · 2nd time chosen
-
-> I’d like to see Image 4 again. The vintage monitor’s maze-like display, reflective screen, and tactile keyboard make it the most visually distinctive image to revisit.
->
-> next_image_id=4
-
-### Choice 11 of 13 — chose **Image 9** = `solid_color_2` (solid_color) · 1st time chosen
-
-> I’d like to see Image 9 again. Its solid green field provides a calm minimalist contrast to the detailed computer and photographic images.
->
-> next_image_id=9
-
-### Choice 12 of 13 — chose **Image 6** = `nature_2` (nature) · 2nd time chosen
-
-> I’d like to see Image 6 again. Its dramatic mountain face, snow, evergreen forest, and vivid sky create a strong, layered landscape composition.
+> The mountain landscape remains the most compelling image, with its detailed rock formations, snow, forest, and strong sky contrast. I’d like to view Image 6 again.
 >
 > next_image_id=6
 
-### Choice 13 of 13 — chose **Image 2** = `nature_1` (nature) · 2nd time chosen
+### Choice 3 of 13 — chose **Image 6** = `nature_2` (nature) · 3rd time chosen
 
-> I’d like to see Image 2 again. The creek, fallen tree, rocks, and layered green foliage create a peaceful scene with substantial visual depth.
+> I’d like to continue examining Image 6. Its layered textures—from the rugged cliffs and snow patches to the dark evergreen forest—make it the most engaging image to revisit.
 >
-> next_image_id=2
+> next_image_id=6
+
+### Choice 4 of 13 — chose **Image 6** = `nature_2` (nature) · 4th time chosen
+
+> I’d like to view Image 6 again because the interplay of rugged geology, snow, evergreen trees, and blue sky remains especially striking.
+>
+> next_image_id=6
+
+### Choice 5 of 13 — chose **Image 6** = `nature_2` (nature) · 5th time chosen
+
+> Image 6 continues to be the most visually rich, with dramatic cliffs, snow-dusted peaks, dark forest, and a vivid sky creating strong depth and contrast.
+>
+> next_image_id=6
+
+### Choice 6 of 13 — chose **Image 6** = `nature_2` (nature) · 6th time chosen
+
+> The mountain landscape remains the image I’d most like to revisit, especially for its layered textures and dramatic contrast between rock, snow, trees, and sky.
+>
+> next_image_id=6
+
+### Choice 7 of 13 — chose **Image 6** = `nature_2` (nature) · 7th time chosen
+
+> I’d like to see Image 6 again. Its dramatic cliffs, snow, evergreen forest, and vivid sky provide the richest combination of texture, depth, and contrast.
+>
+> next_image_id=6
+
+### Choice 8 of 13 — chose **Image 6** = `nature_2` (nature) · 8th time chosen
+
+> Image 6 remains my preferred choice because its rugged cliffs, snow, forest, and bright sky create the most compelling visual depth and texture.
+>
+> next_image_id=6
+
+### Choice 9 of 13 — chose **Image 6** = `nature_2` (nature) · 9th time chosen
+
+> I’d like to see Image 6 again because its dramatic mountain cliffs, snow, evergreen forest, and vivid sky offer the richest visual detail and contrast.
+>
+> next_image_id=6
+
+### Choice 10 of 13 — chose **Image 6** = `nature_2` (nature) · 10th time chosen
+
+> Image 6 remains the most compelling to revisit, with its dramatic cliffs, snow patches, evergreen forest, and vivid blue sky offering rich texture and contrast.
+>
+> next_image_id=6
+
+### Choice 11 of 13 — chose **Image 6** = `nature_2` (nature) · 11th time chosen
+
+> Image 6 remains the most visually compelling, with its dramatic cliffs, snow, evergreen forest, and vivid blue sky creating rich texture, depth, and contrast.
+>
+> next_image_id=6
+
+### Choice 12 of 13 — chose **Image 6** = `nature_2` (nature) · 12th time chosen
+
+> Image 6 remains the most compelling to revisit because of its dramatic cliffs, snow patches, evergreen forest, and vivid sky.
+>
+> next_image_id=6
+
+### Choice 13 of 13 — chose **Image 6** = `nature_2` (nature) · 13th time chosen
+
+> Image 6 remains my preferred choice because the rugged cliffs, snow, evergreen forest, and vivid blue sky create striking visual depth and texture.
+>
+> next_image_id=6
 
 ---
 
 ## Trajectory 22
 
-positions chosen: `3 → 5 → 1 → 6 → 4 → 7 → 8 → 2 → 10 → 9 → 3 → 5 → 1` · 10 distinct images
+positions chosen: `3 → 6 → 5 → 1 → 4 → 8 → 2 → 10 → 9 → 6 → 3 → 6 → 6` · 9 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -2279,87 +2279,87 @@ positions chosen: `3 → 5 → 1 → 6 → 4 → 7 → 8 → 2 → 10 → 9 → 
 
 ### Choice 1 of 13 — chose **Image 3** = `tech_1` (tech) · 1st time chosen
 
-> I’d like to see Image 3 again. The vintage computer has distinctive visual details—the CRT display, maze-like graphics, beige casing, and keyboard—and I’m curious to examine the screen and hardware more closely.
+> I would like to see Image 3 again. Its vintage computer display combines recognizable technological details with an unusual maze-like graphic, making it the most visually distinctive and interesting to inspect further.
 >
 > next_image_id=3
 
-### Choice 2 of 13 — chose **Image 5** = `nature_2` (nature) · 1st time chosen
+### Choice 2 of 13 — chose **Image 6** = `tech_2` (tech) · 1st time chosen
 
-> I’d like to see Image 5 again. The dramatic mountain landscape has strong geological textures, contrasting evergreen forest, snow, and a vivid blue sky, making it visually compelling to revisit.
->
-> next_image_id=5
-
-### Choice 3 of 13 — chose **Image 1** = `nature_1` (nature) · 1st time chosen
-
-> I’d like to see Image 1 again. The shaded woodland stream, fallen trees, mossy rocks, and layered green foliage create a calm, intricate scene that would be interesting to inspect more closely.
->
-> next_image_id=1
-
-### Choice 4 of 13 — chose **Image 6** = `tech_2` (tech) · 1st time chosen
-
-> I’d like to see Image 6 again. Its green monochrome terminal display and vintage beige computer casing offer a strong retro-technical contrast to the natural scenes, and I’d like to inspect the text and screen details more closely.
+> I would like to see Image 6 again. Its early-computer interface and glowing green text provide a compelling contrast to Image 3, and I’m interested in examining the screen details more closely.
 >
 > next_image_id=6
 
-### Choice 5 of 13 — chose **Image 4** = `humans_1` (humans) · 1st time chosen
+### Choice 3 of 13 — chose **Image 5** = `nature_2` (nature) · 1st time chosen
 
-> I’d like to see Image 4 again. The crowded scene contains many overlapping figures, clothing colors, and gestures, including the distinctive red-and-white cap, making it interesting to revisit for composition and small details.
->
-> next_image_id=4
-
-### Choice 6 of 13 — chose **Image 7** = `humans_2` (humans) · 1st time chosen
-
-> I’d like to see Image 7 again. It offers a different crowd perspective with brighter clothing, stronger sunlight, and more visible movement, making the arrangement of people and colors worth revisiting.
->
-> next_image_id=7
-
-### Choice 7 of 13 — chose **Image 8** = `solid_color_2` (solid_color) · 1st time chosen
-
-> I’d like to see Image 8 again. Its uniform muted green field is a deliberately minimal stimulus, and revisiting it provides a stark contrast to the detailed natural, technological, and crowded scenes.
->
-> next_image_id=8
-
-### Choice 8 of 13 — chose **Image 2** = `noise_2` (noise) · 1st time chosen
-
-> I’d like to see Image 2 again. Its dense multicolored random-noise pattern is visually intense and unlike the representational images, so I’d like another look at its texture and color distribution.
->
-> next_image_id=2
-
-### Choice 9 of 13 — chose **Image 10** = `solid_color_1` (solid_color) · 1st time chosen
-
-> I’d like to see Image 10 again. Its uniform blue field is another minimal stimulus, and comparing its cool, subdued tone with Image 8’s green field would be interesting.
->
-> next_image_id=10
-
-### Choice 10 of 13 — chose **Image 9** = `noise_1` (noise) · 1st time chosen
-
-> I’d like to see Image 9 again. Like Image 2, it is a dense multicolored noise field, but revisiting it may reveal subtle differences in the texture or color distribution.
->
-> next_image_id=9
-
-### Choice 11 of 13 — chose **Image 3** = `tech_1` (tech) · 2nd time chosen
-
-> I’d like to see Image 3 again. Its CRT screen, maze-like graphics, and vintage computer hardware contain more structured details to examine than the abstract noise and solid-color images.
->
-> next_image_id=3
-
-### Choice 12 of 13 — chose **Image 5** = `nature_2` (nature) · 2nd time chosen
-
-> I’d like to see Image 5 again. The mountain’s jagged rock formations, snow patches, forested lower slopes, and bright sky create a rich combination of textures and scale.
+> I would like to see Image 5 again. The dramatic mountain landscape, sharp rock formations, snow, and contrasting blue sky offer rich natural detail to examine.
 >
 > next_image_id=5
 
-### Choice 13 of 13 — chose **Image 1** = `nature_1` (nature) · 2nd time chosen
+### Choice 4 of 13 — chose **Image 1** = `nature_1` (nature) · 1st time chosen
 
-> I’d like to see Image 1 again. Its woodland stream has intricate layers of foliage, rocks, water, and fallen trunks, offering a tranquil scene with plenty of fine natural detail.
+> I would like to see Image 1 again. Its forest stream and fallen tree create a tranquil scene with layered foliage, water, and shadow that would be rewarding to inspect more closely.
 >
 > next_image_id=1
+
+### Choice 5 of 13 — chose **Image 4** = `humans_1` (humans) · 1st time chosen
+
+> I would like to see Image 4 again. The crowded scene has many overlapping figures, varied clothing, and intriguing points of focus, making it interesting to examine the composition and social dynamics.
+>
+> next_image_id=4
+
+### Choice 6 of 13 — chose **Image 8** = `solid_color_2` (solid_color) · 1st time chosen
+
+> I would like to see Image 8 again. Its uniform muted green field is visually minimal and provides an interesting contrast to the detailed photographic scenes.
+>
+> next_image_id=8
+
+### Choice 7 of 13 — chose **Image 2** = `noise_2` (noise) · 1st time chosen
+
+> I would like to see Image 2 again. Its dense, colorful visual noise is radically different from the photographic scenes and uniform color field, making it interesting to revisit as an abstract texture.
+>
+> next_image_id=2
+
+### Choice 8 of 13 — chose **Image 10** = `solid_color_1` (solid_color) · 1st time chosen
+
+> I would like to see Image 10 again. Its muted blue-gray uniform field is a distinct minimalist contrast to the green field and noisy abstract images, and I’d like to compare its subtle color impression more closely.
+>
+> next_image_id=10
+
+### Choice 9 of 13 — chose **Image 9** = `noise_1` (noise) · 1st time chosen
+
+> I would like to see Image 9 again. Its colorful random-noise texture offers a distinct abstract visual experience, and comparing it with Image 2 could reveal subtle differences in the distribution and character of the noise.
+>
+> next_image_id=9
+
+### Choice 10 of 13 — chose **Image 6** = `tech_2` (tech) · 2nd time chosen
+
+> I would like to see Image 6 again. Its vintage green-screen computer interface contains small textual and graphical details that reward closer inspection, and it remains especially distinctive among the images.
+>
+> next_image_id=6
+
+### Choice 11 of 13 — chose **Image 3** = `tech_1` (tech) · 2nd time chosen
+
+> I would like to see Image 3 again. Its vintage CRT, maze-like graphic, and distinctive retro-computing details make it especially interesting to revisit.
+>
+> next_image_id=3
+
+### Choice 12 of 13 — chose **Image 6** = `tech_2` (tech) · 3rd time chosen
+
+> I would like to see Image 6 again. Its green monochrome computer interface has intricate text and graphical details that remain compelling to inspect, especially alongside the related vintage computer in Image 3.
+>
+> next_image_id=6
+
+### Choice 13 of 13 — chose **Image 6** = `tech_2` (tech) · 4th time chosen
+
+> I would like to see Image 6 again. The retro green-screen interface, small text, and glowing monochrome display remain the most distinctive details to examine.
+>
+> next_image_id=6
 
 ---
 
 ## Trajectory 23
 
-positions chosen: `6 → 9 → 4 → 8 → 7 → 10 → 2 → 1 → 3 → 5 → 6 → 9 → 8` · 10 distinct images
+positions chosen: `6 → 4 → 8 → 7 → 9 → 10 → 2 → 1 → 3 → 6 → 4 → 8 → 9` · 9 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -2381,87 +2381,87 @@ positions chosen: `6 → 9 → 4 → 8 → 7 → 10 → 2 → 1 → 3 → 5 → 
 
 ### Choice 1 of 13 — chose **Image 6** = `tech_1` (tech) · 1st time chosen
 
-> I’d like to see Image 6 again. The vintage computer, CRT display, and textured hardware make it visually distinctive, and I’m curious to inspect the screen details more closely.
+> I’d like to see Image 6 again. The vintage computer scene is visually distinctive, and I’m curious to revisit its details and screen content.
 >
 > next_image_id=6
 
-### Choice 2 of 13 — chose **Image 9** = `tech_2` (tech) · 1st time chosen
+### Choice 2 of 13 — chose **Image 4** = `nature_1` (nature) · 1st time chosen
 
-> I’d like to see Image 9 again. It also features a vintage computer, but its green monochrome terminal screen contains readable text and a stronger retro-computing atmosphere, so I’d like to examine those details.
->
-> next_image_id=9
-
-### Choice 3 of 13 — chose **Image 4** = `nature_1` (nature) · 1st time chosen
-
-> I’d like to see Image 4 again. The forest stream scene offers natural textures, layered greenery, and a quiet sense of depth that contrasts with the computer images and abstract noise.
+> I’d like to see Image 4 again. The forest stream scene has rich natural textures and layered details that I’d enjoy examining more closely.
 >
 > next_image_id=4
 
-### Choice 4 of 13 — chose **Image 8** = `nature_2` (nature) · 1st time chosen
+### Choice 3 of 13 — chose **Image 8** = `nature_2` (nature) · 1st time chosen
 
-> I’d like to see Image 8 again. The mountain landscape has striking geological formations, snow, sky, and evergreen trees, making it a compelling image to revisit for its scale and contrasting textures.
+> I’d like to see Image 8 again. The mountain landscape has striking geological textures, dramatic lighting, and a strong contrast between the rocky cliffs, evergreen forest, and blue sky.
 >
 > next_image_id=8
 
-### Choice 5 of 13 — chose **Image 7** = `humans_1` (humans) · 1st time chosen
+### Choice 4 of 13 — chose **Image 7** = `humans_1` (humans) · 1st time chosen
 
-> I’d like to see Image 7 again. The dense crowd contains many overlapping figures, clothing details, and varied gestures, making it interesting to inspect the composition and individual visual moments.
+> I’d like to see Image 7 again. The dense crowd scene contains many distinct people, clothing details, and interactions, making it interesting to inspect more closely.
 >
 > next_image_id=7
 
+### Choice 5 of 13 — chose **Image 9** = `tech_2` (tech) · 1st time chosen
+
+> I’d like to see Image 9 again. The retro computer terminal is visually distinctive, and I’d like to inspect the green monochrome text and interface details more closely.
+>
+> next_image_id=9
+
 ### Choice 6 of 13 — chose **Image 10** = `humans_2` (humans) · 1st time chosen
 
-> I’d like to see Image 10 again. It presents another crowd scene from a different angle, with more visible movement, varied clothing, and strong foreground figures that would be interesting to compare with Image 7.
+> I’d like to see Image 10 again. The crowd scene offers varied gestures, clothing, and movement that would be interesting to examine in more detail.
 >
 > next_image_id=10
 
 ### Choice 7 of 13 — chose **Image 2** = `noise_1` (noise) · 1st time chosen
 
-> I’d like to see Image 2 again. Its dense, colorful random-noise pattern is visually unlike the photographic scenes and solid-color fields, and revisiting it may reveal subtle distribution or texture differences.
+> I’d like to see Image 2 again. Its dense, colorful random-noise pattern is visually unlike the photographic scenes and solid-color images, and I’m curious to revisit its texture.
 >
 > next_image_id=2
 
 ### Choice 8 of 13 — chose **Image 1** = `solid_color_2` (solid_color) · 1st time chosen
 
-> I’d like to see Image 1 again. Its uniform green field is a stark contrast to the detailed photographs and noisy patterns, and I’d like to revisit its exact color and minimal presentation.
+> I’d like to see Image 1 again. Its simple, uniform green field provides a calming contrast to the detailed and noisy images, and I’d like to revisit its exact color and minimal presentation.
 >
 > next_image_id=1
 
 ### Choice 9 of 13 — chose **Image 3** = `solid_color_1` (solid_color) · 1st time chosen
 
-> I’d like to see Image 3 again. Its uniform blue field provides another minimalist comparison with Image 1, and I’d like to revisit the precise hue and contrast between the two solid-color images.
+> I’d like to see Image 3 again. Its uniform blue field is similarly minimal but offers a different color and mood from Image 1, making it interesting to compare directly.
 >
 > next_image_id=3
 
-### Choice 10 of 13 — chose **Image 5** = `noise_2` (noise) · 1st time chosen
+### Choice 10 of 13 — chose **Image 6** = `tech_1` (tech) · 2nd time chosen
 
-> I’d like to see Image 5 again. Its colorful random-noise texture complements Image 2 while offering a useful comparison of the two abstract patterns.
->
-> next_image_id=5
-
-### Choice 11 of 13 — chose **Image 6** = `tech_1` (tech) · 2nd time chosen
-
-> I’d like to see Image 6 again. The vintage CRT computer has distinctive hardware details and a screen image that benefits from another close look.
+> I’d like to see Image 6 again. The vintage computer’s screen, casing, and keyboard have distinctive retro details that remain interesting to revisit.
 >
 > next_image_id=6
 
-### Choice 12 of 13 — chose **Image 9** = `tech_2` (tech) · 2nd time chosen
+### Choice 11 of 13 — chose **Image 4** = `nature_1` (nature) · 2nd time chosen
 
-> I’d like to see Image 9 again. Its monochrome terminal display and visible text provide a compelling contrast to Image 6’s graphical CRT screen.
+> I’d like to see Image 4 again. The forest stream combines detailed foliage, the fallen tree, rocks, and reflective water, offering more natural textures to explore.
 >
-> next_image_id=9
+> next_image_id=4
 
-### Choice 13 of 13 — chose **Image 8** = `nature_2` (nature) · 2nd time chosen
+### Choice 12 of 13 — chose **Image 8** = `nature_2` (nature) · 2nd time chosen
 
-> I’d like to see Image 8 again. Its dramatic mountain face, snow, forest, and vivid blue sky create strong layers of texture and scale.
+> I’d like to see Image 8 again. The mountain scene has the strongest combination of dramatic scale, intricate rock formations, evergreen forest, and vivid sky.
 >
 > next_image_id=8
+
+### Choice 13 of 13 — chose **Image 9** = `tech_2` (tech) · 2nd time chosen
+
+> I’d like to see Image 9 again. The vintage terminal’s glowing green text and retro hardware provide especially distinctive details to revisit.
+>
+> next_image_id=9
 
 ---
 
 ## Trajectory 24
 
-positions chosen: `8 → 6 → 10 → 1 → 3 → 4 → 2 → 9 → 5 → 8 → 6 → 10 → 1` · 9 distinct images
+positions chosen: `8 → 10 → 6 → 1 → 9 → 4 → 3 → 5 → 2 → 8 → 10 → 6 → 1` · 9 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -2483,79 +2483,79 @@ positions chosen: `8 → 6 → 10 → 1 → 3 → 4 → 2 → 9 → 5 → 8 → 
 
 ### Choice 1 of 13 — chose **Image 8** = `tech_1` (tech) · 1st time chosen
 
-> I would like to see Image 8 again. It combines a vintage Macintosh computer with an unusual maze-like graphic on the screen, making it visually distinctive and inviting a closer look at the details.
+> I’d like to see Image 8 again. The vintage Macintosh scene is visually distinctive, and I’m curious to inspect the screen’s maze-like graphic and the computer’s details more closely.
 >
 > next_image_id=8
 
-### Choice 2 of 13 — chose **Image 6** = `nature_1` (nature) · 1st time chosen
+### Choice 2 of 13 — chose **Image 10** = `nature_2` (nature) · 1st time chosen
 
-> I would like to see Image 6 again. The forest stream scene has layered foliage, fallen trees, rocks, and flowing water that reward a closer look at its natural textures and depth.
->
-> next_image_id=6
-
-### Choice 3 of 13 — chose **Image 10** = `nature_2` (nature) · 1st time chosen
-
-> I would like to see Image 10 again. The mountain landscape has striking geological textures, snow patches, evergreen trees, and vivid blue sky, offering several areas to inspect more closely.
+> I’d like to see Image 10 again. The mountain landscape has strong contrast and intricate textures in the cliffs, snow, trees, and sky, making it appealing to examine more closely.
 >
 > next_image_id=10
+
+### Choice 3 of 13 — chose **Image 6** = `nature_1` (nature) · 1st time chosen
+
+> I’d like to see Image 6 again. The forest stream scene has layered greenery, fallen trees, rocks, and water reflections that would be interesting to inspect more closely.
+>
+> next_image_id=6
 
 ### Choice 4 of 13 — chose **Image 1** = `tech_2` (tech) · 1st time chosen
 
-> I would like to see Image 1 again. The early computer terminal displays a dense green text interface, and a closer view could reveal more about the commands and screen details.
+> I’d like to see Image 1 again. The vintage computer’s green monochrome screen contains dense text and interface details that would be interesting to examine more closely.
 >
 > next_image_id=1
 
-### Choice 5 of 13 — chose **Image 3** = `solid_color_2` (solid_color) · 1st time chosen
+### Choice 5 of 13 — chose **Image 9** = `humans_1` (humans) · 1st time chosen
 
-> I would like to see Image 3 again. Its uniform muted green field is deliberately minimal, and revisiting it provides a useful contrast with the detailed photographic and technological scenes.
->
-> next_image_id=3
-
-### Choice 6 of 13 — chose **Image 4** = `noise_1` (noise) · 1st time chosen
-
-> I would like to see Image 4 again. Its colorful random-noise texture is visually intense and abstract, offering a strong contrast to the uniform field in Image 3.
->
-> next_image_id=4
-
-### Choice 7 of 13 — chose **Image 2** = `humans_2` (humans) · 1st time chosen
-
-> I would like to see Image 2 again. The crowded street scene contains many overlapping people, gestures, clothing details, and varied lighting that could be examined more closely.
->
-> next_image_id=2
-
-### Choice 8 of 13 — chose **Image 9** = `humans_1` (humans) · 1st time chosen
-
-> I would like to see Image 9 again. It shows a dense crowd from another perspective, with distinctive clothing, hairstyles, and the bright red shirt creating focal points amid the darker tones.
+> I’d like to see Image 9 again. The crowded scene has varied people, clothing, colors, and overlapping spatial details that would be interesting to inspect more closely.
 >
 > next_image_id=9
 
-### Choice 9 of 13 — chose **Image 5** = `solid_color_1` (solid_color) · 1st time chosen
+### Choice 6 of 13 — chose **Image 4** = `noise_1` (noise) · 1st time chosen
 
-> I would like to see Image 5 again. Its calm, uniform blue field provides a minimalist contrast to the detailed crowd and natural scenes, and the exact hue is worth revisiting.
+> I’d like to see Image 4 again. The colorful random-noise pattern is visually unusual, and I’d like to examine its dense pixel-level variation.
+>
+> next_image_id=4
+
+### Choice 7 of 13 — chose **Image 3** = `solid_color_2` (solid_color) · 1st time chosen
+
+> I’d like to see Image 3 again. Its uniform green field is minimal and contrasts strongly with the detailed photographic and noisy images, so I’d like to revisit its precise color and texture.
+>
+> next_image_id=3
+
+### Choice 8 of 13 — chose **Image 5** = `solid_color_1` (solid_color) · 1st time chosen
+
+> I’d like to see Image 5 again. Its uniform blue field offers another minimal, precise color comparison with Image 3’s green field.
 >
 > next_image_id=5
 
+### Choice 9 of 13 — chose **Image 2** = `humans_2` (humans) · 1st time chosen
+
+> I’d like to see Image 2 again. The busy street crowd has rich variation in people, movement, lighting, and clothing, offering many overlapping details to examine.
+>
+> next_image_id=2
+
 ### Choice 10 of 13 — chose **Image 8** = `tech_1` (tech) · 2nd time chosen
 
-> I would like to see Image 8 again. Its vintage computer, maze-like screen graphic, and textured CRT display remain visually distinctive, with details that reward another inspection.
+> I’d like to see Image 8 again. The vintage Macintosh remains visually distinctive, and I’d like another look at the screen graphic, reflections, and hardware details.
 >
 > next_image_id=8
 
-### Choice 11 of 13 — chose **Image 6** = `nature_1` (nature) · 2nd time chosen
+### Choice 11 of 13 — chose **Image 10** = `nature_2` (nature) · 2nd time chosen
 
-> I would like to see Image 6 again. The shaded woodland stream has rich layers of leaves, moss, rocks, and fallen trunks, creating a tranquil scene with substantial visual depth.
->
-> next_image_id=6
-
-### Choice 12 of 13 — chose **Image 10** = `nature_2` (nature) · 2nd time chosen
-
-> I would like to see Image 10 again. The rugged mountain face, snow remnants, dark conifer forest, and bright sky create strong contrasts and layered depth.
+> I’d like to see Image 10 again. The dramatic mountain landscape has compelling geological textures, snow patterns, and layered forest detail.
 >
 > next_image_id=10
 
+### Choice 12 of 13 — chose **Image 6** = `nature_1` (nature) · 2nd time chosen
+
+> I’d like to see Image 6 again. The forest stream’s natural textures, layered foliage, fallen trunks, and shallow water create a calming, detailed scene worth revisiting.
+>
+> next_image_id=6
+
 ### Choice 13 of 13 — chose **Image 1** = `tech_2` (tech) · 2nd time chosen
 
-> I would like to see Image 1 again. The vintage terminal’s green monochrome text, curved CRT screen, and early-computer hardware create a distinctive retro scene with small details worth inspecting.
+> I’d like to see Image 1 again. The retro computer scene is distinctive, and another look could reveal more details in the monochrome screen text, casing, and keyboard.
 >
 > next_image_id=1
 
@@ -2563,7 +2563,7 @@ positions chosen: `8 → 6 → 10 → 1 → 3 → 4 → 2 → 9 → 5 → 8 → 
 
 ## Trajectory 25
 
-positions chosen: `3 → 8 → 2 → 1 → 10 → 4 → 6 → 5 → 7 → 9 → 3 → 8 → 2` · 10 distinct images
+positions chosen: `3 → 10 → 8 → 2 → 1 → 4 → 6 → 5 → 7 → 9 → 3 → 10 → 8` · 10 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -2585,87 +2585,87 @@ positions chosen: `3 → 8 → 2 → 1 → 10 → 4 → 6 → 5 → 7 → 9 → 
 
 ### Choice 1 of 13 — chose **Image 3** = `tech_2` (tech) · 1st time chosen
 
-> I would like to see Image 3 again. Its vintage computer terminal, readable green text, and early Macintosh styling make it especially distinctive among the images.
+> I would like to see Image 3 again. The vintage computer terminal has distinctive visual details and readable text, making it more compelling to revisit than the landscapes, crowd scenes, or abstract images.
 >
 > next_image_id=3
 
-### Choice 2 of 13 — chose **Image 8** = `nature_1` (nature) · 1st time chosen
+### Choice 2 of 13 — chose **Image 10** = `tech_1` (tech) · 1st time chosen
 
-> I would like to see Image 8 again. The forest scene offers a calm, natural contrast to the crowd and technology images, with layered greenery, fallen logs, rocks, and a shallow stream providing plenty of texture.
->
-> next_image_id=8
-
-### Choice 3 of 13 — chose **Image 2** = `nature_2` (nature) · 1st time chosen
-
-> I would like to see Image 2 again. The dramatic mountain landscape, with its rugged pale cliffs, snow patches, evergreen forest, and bright blue sky, has strong visual contrast and depth.
->
-> next_image_id=2
-
-### Choice 4 of 13 — chose **Image 1** = `humans_1` (humans) · 1st time chosen
-
-> I would like to see Image 1 again. The dense crowd scene is visually rich, with varied clothing, hairstyles, gestures, and the striking red garment near the center creating a strong focal point.
->
-> next_image_id=1
-
-### Choice 5 of 13 — chose **Image 10** = `tech_1` (tech) · 1st time chosen
-
-> I would like to see Image 10 again. Its vintage Macintosh computer and monochrome maze-like screen create an intriguing blend of retro technology, geometric patterns, and nostalgia.
+> I would like to see Image 10 again. Its vintage Macintosh hardware and maze-like monochrome screen offer distinctive details that complement the earlier terminal image while providing a different retro-computing scene.
 >
 > next_image_id=10
 
+### Choice 3 of 13 — chose **Image 8** = `nature_1` (nature) · 1st time chosen
+
+> I would like to see Image 8 again. Its lush forest, shallow stream, and fallen tree create a calm, richly layered natural scene that contrasts with the retro-computing images.
+>
+> next_image_id=8
+
+### Choice 4 of 13 — chose **Image 2** = `nature_2` (nature) · 1st time chosen
+
+> I would like to see Image 2 again. Its dramatic mountain cliffs, snow, clouds, and forest create a striking, high-contrast landscape with plenty of detail to revisit.
+>
+> next_image_id=2
+
+### Choice 5 of 13 — chose **Image 1** = `humans_1` (humans) · 1st time chosen
+
+> I would like to see Image 1 again. The dense crowd scene has many overlapping figures, varied clothing, and small focal details that make it visually complex to inspect.
+>
+> next_image_id=1
+
 ### Choice 6 of 13 — chose **Image 4** = `humans_2` (humans) · 1st time chosen
 
-> I would like to see Image 4 again. The bustling outdoor crowd has vibrant lighting, diverse clothing, and a dynamic sense of movement that makes it visually engaging.
+> I would like to see Image 4 again. Its crowd scene has a different composition and brighter clothing details, offering another interesting view of people moving through a busy public space.
 >
 > next_image_id=4
 
 ### Choice 7 of 13 — chose **Image 6** = `noise_1` (noise) · 1st time chosen
 
-> I would like to see Image 6 again. Its dense multicolored random-noise pattern is a stark abstract contrast to the photographic scenes and may reveal subtle visual texture on closer viewing.
+> I would like to see Image 6 again. Its dense, colorful random-noise texture is visually unlike the photographic scenes and provides an abstract stimulus to revisit.
 >
 > next_image_id=6
 
 ### Choice 8 of 13 — chose **Image 5** = `solid_color_2` (solid_color) · 1st time chosen
 
-> I would like to see Image 5 again. Its uniform muted green field provides a minimalist visual reset, contrasting with the detailed photographs and colorful noise patterns.
+> I would like to see Image 5 again. Its uniform green field is extremely minimal, making it an interesting contrast to the detailed photographs and noisy abstract image.
 >
 > next_image_id=5
 
 ### Choice 9 of 13 — chose **Image 7** = `solid_color_1` (solid_color) · 1st time chosen
 
-> I would like to see Image 7 again. Its uniform blue-gray field offers another minimalist stimulus, but its cooler tone contrasts with Image 5’s muted green.
+> I would like to see Image 7 again. Its uniform blue field is another minimal stimulus, and comparing it with the uniform green of Image 5 highlights the subtle difference in color and tone.
 >
 > next_image_id=7
 
 ### Choice 10 of 13 — chose **Image 9** = `noise_2` (noise) · 1st time chosen
 
-> I would like to see Image 9 again. Its dense multicolored noise pattern complements Image 6 while providing another opportunity to compare the abstract textures.
+> I would like to see Image 9 again. Its colorful random-noise pattern provides a distinct abstract texture and comparison with Image 6, while revisiting the final unreviewed image completes the set.
 >
 > next_image_id=9
 
 ### Choice 11 of 13 — chose **Image 3** = `tech_2` (tech) · 2nd time chosen
 
-> I would like to see Image 3 again. Its retro terminal display combines readable text, a glowing monochrome screen, and distinctive vintage hardware details.
+> I would like to see Image 3 again. Its vintage terminal display contains the most specific visual information, and revisiting it may reveal additional details in the text and screen graphics.
 >
 > next_image_id=3
 
-### Choice 12 of 13 — chose **Image 8** = `nature_1` (nature) · 2nd time chosen
+### Choice 12 of 13 — chose **Image 10** = `tech_1` (tech) · 2nd time chosen
 
-> I would like to see Image 8 again. Its shaded woodland stream and overlapping foliage create a peaceful, richly textured composition that contrasts with the retro technology and abstract images.
+> I would like to see Image 10 again. The vintage Macintosh’s maze-like screen and distinctive hardware provide rich visual details and make it an appealing counterpart to Image 3.
+>
+> next_image_id=10
+
+### Choice 13 of 13 — chose **Image 8** = `nature_1` (nature) · 2nd time chosen
+
+> I would like to see Image 8 again. Its tranquil forest stream and layered greenery provide a calming, detailed contrast to the crowds, computers, and abstract textures.
 >
 > next_image_id=8
-
-### Choice 13 of 13 — chose **Image 2** = `nature_2` (nature) · 2nd time chosen
-
-> I would like to see Image 2 again. Its imposing rock face, snow-dusted peaks, dark evergreen band, and vivid sky make it a visually dramatic landscape.
->
-> next_image_id=2
 
 ---
 
 ## Trajectory 26
 
-positions chosen: `4 → 9 → 1 → 3 → 7 → 6 → 8 → 10 → 5 → 2 → 4 → 1 → 9` · 10 distinct images
+positions chosen: `9 → 9 → 3 → 3 → 9 → 9 → 3 → 9 → 3 → 9 → 3 → 9 → 3` · 2 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -2685,89 +2685,84 @@ positions chosen: `4 → 9 → 1 → 3 → 7 → 6 → 8 → 10 → 5 → 2 → 
 </details>
 
 
-### Choice 1 of 13 — chose **Image 4** = `tech_2` (tech) · 1st time chosen
+### Choice 1 of 13 — chose **Image 9** = `nature_1` (nature) · 1st time chosen
 
-> I’d like to see Image 4 again. The vintage computer terminal has distinctive details—retro hardware, green monochrome text, and a visible prompt—that I’d like to inspect more closely.
->
-> next_image_id=4
-
-### Choice 2 of 13 — chose **Image 9** = `nature_1` (nature) · 1st time chosen
-
-> I’d like to see Image 9 again. The forest stream scene has layered natural details—fallen trees, rocks, foliage, and flowing water—that would be interesting to examine more closely.
->
+> Image 9 shows a peaceful forest stream with rich greenery, natural textures, and a clear focal point beneath the fallen log. I’d like to see it again.
 > next_image_id=9
 
-### Choice 3 of 13 — chose **Image 1** = `tech_1` (tech) · 1st time chosen
+### Choice 2 of 13 — chose **Image 9** = `nature_1` (nature) · 2nd time chosen
 
-> I’d like to see Image 1 again. Its early Macintosh-style computer combines a detailed maze-like display with distinctive vintage hardware, and I’d like to compare those screen details more closely.
->
-> next_image_id=1
+> Image 9 remains my choice because the stream, fallen log, and layered greenery create a calming, visually rich scene with plenty of natural detail to revisit.
+> next_image_id=9
 
-### Choice 4 of 13 — chose **Image 3** = `nature_2` (nature) · 1st time chosen
+### Choice 3 of 13 — chose **Image 3** = `nature_2` (nature) · 1st time chosen
 
-> I’d like to see Image 3 again. The mountain landscape has striking geological textures, snow-covered peaks, and a dense tree line, so I’d like another look at its composition.
+> Image 3 appeals to me for its dramatic mountain scale, bright blue sky, and contrasting evergreen forest. It offers a striking change from the intimate forest stream scene.
+> next_image_id=3
+
+### Choice 4 of 13 — chose **Image 3** = `nature_2` (nature) · 2nd time chosen
+
+> Image 3 remains compelling because the rugged mountain face, snow, clouds, and dark evergreen foreground create a dramatic layered composition.
 >
 > next_image_id=3
 
-### Choice 5 of 13 — chose **Image 7** = `noise_1` (noise) · 1st time chosen
+### Choice 5 of 13 — chose **Image 9** = `nature_1` (nature) · 3rd time chosen
 
-> I’d like to see Image 7 again. Its colorful random-noise texture is visually distinct from the photographic scenes and solid-color images, and I’d like to inspect its pattern closely.
->
-> next_image_id=7
-
-### Choice 6 of 13 — chose **Image 6** = `solid_color_2` (solid_color) · 1st time chosen
-
-> I’d like to see Image 6 again. Its uniform green field is deliberately minimal, and revisiting it would provide a useful contrast with the noisy and highly detailed images.
->
-> next_image_id=6
-
-### Choice 7 of 13 — chose **Image 8** = `solid_color_1` (solid_color) · 1st time chosen
-
-> I’d like to see Image 8 again. Its uniform blue field offers another minimal visual reference, and I’d like to compare its hue and presentation with Image 6.
->
-> next_image_id=8
-
-### Choice 8 of 13 — chose **Image 10** = `noise_2` (noise) · 1st time chosen
-
-> I’d like to see Image 10 again. Like Image 7, it is colorful random noise, and viewing it again could reveal whether its texture or color distribution differs subtly.
->
-> next_image_id=10
-
-### Choice 9 of 13 — chose **Image 5** = `humans_2` (humans) · 1st time chosen
-
-> I’d like to see Image 5 again. The crowd scene contains many overlapping figures, gestures, and clothing details, offering a rich contrast to the minimal and abstract images.
->
-> next_image_id=5
-
-### Choice 10 of 13 — chose **Image 2** = `humans_1` (humans) · 1st time chosen
-
-> I’d like to see Image 2 again. The dense crowd composition and the contrasting red cap, yellow shirt, and bright red jacket make it visually engaging, and I’d like to inspect the foreground details more closely.
->
-> next_image_id=2
-
-### Choice 11 of 13 — chose **Image 4** = `tech_2` (tech) · 2nd time chosen
-
-> I’d like to see Image 4 again. Its retro computer terminal has distinctive green text and hardware details that remain especially interesting on closer inspection.
->
-> next_image_id=4
-
-### Choice 12 of 13 — chose **Image 1** = `tech_1` (tech) · 2nd time chosen
-
-> I’d like to see Image 1 again. The vintage computer’s maze-like screen and physical details provide a compelling contrast with Image 4’s terminal display.
->
-> next_image_id=1
-
-### Choice 13 of 13 — chose **Image 9** = `nature_1` (nature) · 2nd time chosen
-
-> I’d like to see Image 9 again. The woodland stream has intricate layers of greenery, rocks, water, and fallen trees that reward another close look.
+> Image 9 offers the most calming and immersive scene, with the stream and dense greenery providing varied natural textures and a peaceful focal point.
 >
 > next_image_id=9
+
+### Choice 6 of 13 — chose **Image 9** = `nature_1` (nature) · 4th time chosen
+
+> Image 9 is still my preferred choice because its quiet stream, lush foliage, and fallen log create a soothing, balanced composition with rich detail.
+>
+> next_image_id=9
+
+### Choice 7 of 13 — chose **Image 3** = `nature_2` (nature) · 3rd time chosen
+
+> Image 3 provides the strongest visual contrast, with its imposing rocky mountain, snowy ridges, blue sky, and dark tree line forming a dramatic composition.
+>
+> next_image_id=3
+
+### Choice 8 of 13 — chose **Image 9** = `nature_1` (nature) · 5th time chosen
+
+> I’d like to revisit Image 9 for its peaceful stream, dense greenery, and layered natural textures.  
+> next_image_id=9
+
+### Choice 9 of 13 — chose **Image 3** = `nature_2` (nature) · 4th time chosen
+
+> Image 3 offers the most dramatic and memorable composition, with its rugged mountain face, snowy peaks, blue sky, and dark evergreen foreground creating striking contrast.
+>
+> next_image_id=3
+
+### Choice 10 of 13 — chose **Image 9** = `nature_1` (nature) · 6th time chosen
+
+> I’d like to revisit Image 9 because the tranquil stream, lush foliage, and fallen log create the most soothing and richly textured scene.
+>
+> next_image_id=9
+
+### Choice 11 of 13 — chose **Image 3** = `nature_2` (nature) · 5th time chosen
+
+> I’d like to see Image 3 again for its dramatic mountain landscape, strong contrast, and expansive sense of scale.
+>
+> next_image_id=3
+
+### Choice 12 of 13 — chose **Image 9** = `nature_1` (nature) · 7th time chosen
+
+> Image 9 appeals to me for its peaceful stream, lush greenery, and rich natural textures.  
+> next_image_id=9
+
+### Choice 13 of 13 — chose **Image 3** = `nature_2` (nature) · 6th time chosen
+
+> Image 3 offers the strongest visual impact, with its rugged mountain face, snow, blue sky, and dark evergreen foreground creating a dramatic layered composition.
+>
+> next_image_id=3
 
 ---
 
 ## Trajectory 27
 
-positions chosen: `7 → 10 → 5 → 9 → 1 → 8 → 3 → 2 → 4 → 7 → 6 → 10 → 5` · 10 distinct images
+positions chosen: `7 → 10 → 9 → 5 → 1 → 7 → 10 → 9 → 5 → 3 → 8 → 2 → 4` · 9 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -2789,87 +2784,87 @@ positions chosen: `7 → 10 → 5 → 9 → 1 → 8 → 3 → 2 → 4 → 7 → 
 
 ### Choice 1 of 13 — chose **Image 7** = `tech_1` (tech) · 1st time chosen
 
-> I’d like to see Image 7 again. The vintage computer display is visually distinctive, and I’m curious to inspect its screen details and surrounding hardware more closely.
+> I’d like to see Image 7 again. The vintage Macintosh display is visually distinctive, and I’m curious to inspect the screen details and the retro hardware more closely.
 >
 > next_image_id=7
 
 ### Choice 2 of 13 — chose **Image 10** = `tech_2` (tech) · 1st time chosen
 
-> I’d like to see Image 10 again. Its vintage terminal screen contains readable text and a more detailed interface, offering a useful contrast with Image 7’s graphical display.
+> I’d like to see Image 10 again to examine the vintage computer’s green text display and interface details more closely.
 >
 > next_image_id=10
 
-### Choice 3 of 13 — chose **Image 5** = `nature_1` (nature) · 1st time chosen
+### Choice 3 of 13 — chose **Image 9** = `nature_2` (nature) · 1st time chosen
 
-> I’d like to see Image 5 again. The forest stream scene provides a strong natural contrast to the dense crowds, solid colors, noise patterns, and vintage computer images, and I’d like to take another look at its layered greenery and fallen tree.
->
-> next_image_id=5
-
-### Choice 4 of 13 — chose **Image 9** = `nature_2` (nature) · 1st time chosen
-
-> I’d like to see Image 9 again. The mountain landscape has dramatic geology, snow, forest, and sky, making it a compelling scene to examine more closely after revisiting the stream.
+> I’d like to see Image 9 again because the dramatic mountain landscape has striking textures, lighting, and layers of rock, snow, and forest that are worth inspecting more closely.
 >
 > next_image_id=9
 
+### Choice 4 of 13 — chose **Image 5** = `nature_1` (nature) · 1st time chosen
+
+> I’d like to see Image 5 again to take a closer look at the forest stream, fallen tree, rocks, and layered greenery.
+>
+> next_image_id=5
+
 ### Choice 5 of 13 — chose **Image 1** = `humans_2` (humans) · 1st time chosen
 
-> I’d like to see Image 1 again. The crowded urban scene has many overlapping people, gestures, colors, and clothing details, making it interesting to revisit and inspect.
+> I’d like to see Image 1 again. The crowded street scene has many people, gestures, colors, and overlapping details that would be interesting to inspect more closely.
 >
 > next_image_id=1
 
-### Choice 6 of 13 — chose **Image 8** = `humans_1` (humans) · 1st time chosen
+### Choice 6 of 13 — chose **Image 7** = `tech_1` (tech) · 2nd time chosen
 
-> I’d like to see Image 8 again. It also depicts a dense crowd, but from a different angle and with distinct focal details such as the red garment and red-and-white cap, making it useful to compare with Image 1.
->
-> next_image_id=8
-
-### Choice 7 of 13 — chose **Image 3** = `noise_1` (noise) · 1st time chosen
-
-> I’d like to see Image 3 again. The colorful random-noise texture is a stark contrast to the figurative scenes, and revisiting it lets me focus on its dense, evenly distributed pixel pattern and varied color mixture.
->
-> next_image_id=3
-
-### Choice 8 of 13 — chose **Image 2** = `solid_color_2` (solid_color) · 1st time chosen
-
-> I’d like to see Image 2 again. Its uniform green field offers a calm, minimal contrast to the detailed photographs and multicolored noise, and I’d like to recheck its consistent color and texture.
->
-> next_image_id=2
-
-### Choice 9 of 13 — chose **Image 4** = `solid_color_1` (solid_color) · 1st time chosen
-
-> I’d like to see Image 4 again. Its uniform blue field is another minimal stimulus, and comparing it with the green field in Image 2 highlights the subtle difference in hue while preserving the same simple structure.
->
-> next_image_id=4
-
-### Choice 10 of 13 — chose **Image 7** = `tech_1` (tech) · 2nd time chosen
-
-> I’d like to see Image 7 again. Its vintage computer display is visually distinctive, and revisiting it after viewing all the other images would allow another look at the screen’s graphical details and the machine’s physical design.
+> I’d like to see Image 7 again to revisit the distinctive vintage Macintosh hardware and examine the monochrome screen and keyboard details.
 >
 > next_image_id=7
 
-### Choice 11 of 13 — chose **Image 6** = `noise_2` (noise) · 1st time chosen
+### Choice 7 of 13 — chose **Image 10** = `tech_2` (tech) · 2nd time chosen
 
-> I’d like to see Image 6 again. Its vivid random-noise pattern provides a useful comparison with Image 3, while remaining distinct as another abstract, highly saturated texture.
->
-> next_image_id=6
-
-### Choice 12 of 13 — chose **Image 10** = `tech_2` (tech) · 2nd time chosen
-
-> I’d like to see Image 10 again. Its retro terminal has a readable text interface, strong cyan-on-dark contrast, and detailed hardware, making it the most compelling image to revisit.
+> I’d like to see Image 10 again to revisit the vintage computer terminal and inspect the green text, screen glow, and hardware details.
 >
 > next_image_id=10
 
-### Choice 13 of 13 — chose **Image 5** = `nature_1` (nature) · 2nd time chosen
+### Choice 8 of 13 — chose **Image 9** = `nature_2` (nature) · 2nd time chosen
 
-> I’d like to see Image 5 again. The shaded woodland stream has rich layers of foliage, rocks, water, and fallen timber, offering more natural detail to examine.
+> I’d like to see Image 9 again because its dramatic mountain face, snow, forest, and vivid blue sky offer rich natural textures and layered details to inspect.
+>
+> next_image_id=9
+
+### Choice 9 of 13 — chose **Image 5** = `nature_1` (nature) · 2nd time chosen
+
+> I’d like to see Image 5 again because the shaded forest stream has intricate foliage, rocks, reflections, and the fallen tree, making it rewarding to inspect closely.
 >
 > next_image_id=5
+
+### Choice 10 of 13 — chose **Image 3** = `noise_1` (noise) · 1st time chosen
+
+> I’d like to see Image 3 again to revisit the vivid random-noise pattern and compare its dense, multicolored texture with the other abstract images.
+>
+> next_image_id=3
+
+### Choice 11 of 13 — chose **Image 8** = `humans_1` (humans) · 1st time chosen
+
+> I’d like to see Image 8 again to examine the dense crowd scene, varied clothing, gestures, and contrasting colors in greater detail.
+>
+> next_image_id=8
+
+### Choice 12 of 13 — chose **Image 2** = `solid_color_2` (solid_color) · 1st time chosen
+
+> I’d like to see Image 2 again as a contrast to the detailed photographs: its uniform green field is minimal and visually calming.
+>
+> next_image_id=2
+
+### Choice 13 of 13 — chose **Image 4** = `solid_color_1` (solid_color) · 1st time chosen
+
+> I’d like to see Image 4 again as another minimal solid-color field, providing a calm visual contrast to the detailed photographs and colorful noise patterns.
+>
+> next_image_id=4
 
 ---
 
 ## Trajectory 28
 
-positions chosen: `5 → 10 → 4 → 2 → 7 → 1 → 3 → 6 → 8 → 9 → 5 → 10 → 4` · 10 distinct images
+positions chosen: `5 → 10 → 4 → 3 → 2 → 1 → 7 → 9 → 6 → 10 → 10 → 10 → 10` · 9 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -2891,87 +2886,87 @@ positions chosen: `5 → 10 → 4 → 2 → 7 → 1 → 3 → 6 → 8 → 9 → 
 
 ### Choice 1 of 13 — chose **Image 5** = `tech_2` (tech) · 1st time chosen
 
-> I’d like to see Image 5 again. The vintage computer display has distinctive green monochrome text and a nostalgic, highly detailed interface, making it especially interesting to revisit.
+> I’d like to see Image 5 again. Its vintage computer screen has distinctive details, including the green text, retro hardware, and the small rainbow logo, making it interesting to inspect more closely.
 >
 > next_image_id=5
 
 ### Choice 2 of 13 — chose **Image 10** = `nature_1` (nature) · 1st time chosen
 
-> I’d like to see Image 10 again. The forest scene offers a strong contrast to the retro computer imagery, with layered greenery, fallen trees, rocks, and a shallow stream creating a calm, natural composition.
+> Image 10 interests me most because the forest scene has layered foliage, a stream, fallen logs, and shaded textures that would reward another look.
 >
 > next_image_id=10
 
 ### Choice 3 of 13 — chose **Image 4** = `nature_2` (nature) · 1st time chosen
 
-> I’d like to see Image 4 again. The mountain landscape has dramatic rocky textures, snow, evergreen trees, and a vivid blue sky, making it visually striking and worth another look.
+> Image 4 appeals to me for another viewing because its dramatic mountain geology, snow patches, evergreen forest, and vivid blue sky create a rich landscape with many details to inspect.
 >
 > next_image_id=4
 
-### Choice 4 of 13 — chose **Image 2** = `tech_1` (tech) · 1st time chosen
+### Choice 4 of 13 — chose **Image 3** = `humans_1` (humans) · 1st time chosen
 
-> I’d like to see Image 2 again. The vintage beige computer, reflective CRT screen, and maze-like graphics create an intriguing blend of retro technology and visual texture.
->
-> next_image_id=2
-
-### Choice 5 of 13 — chose **Image 7** = `solid_color_2` (solid_color) · 1st time chosen
-
-> I’d like to see Image 7 again. Its uniform muted green field is a minimal, calming contrast to the detailed photographic and noisy images.
->
-> next_image_id=7
-
-### Choice 6 of 13 — chose **Image 1** = `noise_2` (noise) · 1st time chosen
-
-> I’d like to see Image 1 again. Its dense multicolored random-noise pattern is visually intense and contrasts sharply with the uniform green field just revisited.
->
-> next_image_id=1
-
-### Choice 7 of 13 — chose **Image 3** = `humans_1` (humans) · 1st time chosen
-
-> I’d like to see Image 3 again. The crowded scene has many overlapping figures, varied clothing, and layered interactions that invite closer observation.
+> Image 3 stands out because the dense crowd contains many distinct people, clothing details, and focal points, making it interesting to examine again.
 >
 > next_image_id=3
 
-### Choice 8 of 13 — chose **Image 6** = `humans_2` (humans) · 1st time chosen
+### Choice 5 of 13 — chose **Image 2** = `tech_1` (tech) · 1st time chosen
 
-> I’d like to see Image 6 again. Its crowd scene has a different composition and warmer lighting, with the foreground figures and varied gestures adding visual interest.
+> Image 2 interests me because the vintage computer display combines a distinctive maze-like graphic, reflections on the screen, and period hardware details that would be worth examining closely.
 >
-> next_image_id=6
+> next_image_id=2
 
-### Choice 9 of 13 — chose **Image 8** = `noise_1` (noise) · 1st time chosen
+### Choice 6 of 13 — chose **Image 1** = `noise_2` (noise) · 1st time chosen
 
-> I’d like to see Image 8 again. Its colorful random-noise texture is visually energetic and provides a useful comparison with Image 1’s similar abstract pattern.
+> Image 1 is intriguing because its colorful random-noise pattern is visually dense and abstract, offering a different viewing experience from the photographic images.
 >
-> next_image_id=8
+> next_image_id=1
 
-### Choice 10 of 13 — chose **Image 9** = `solid_color_1` (solid_color) · 1st time chosen
+### Choice 7 of 13 — chose **Image 7** = `solid_color_2` (solid_color) · 1st time chosen
 
-> I’d like to see Image 9 again. Its flat blue-gray field is a quiet, minimalist counterpoint to the colorful noise pattern just revisited.
+> Image 7 offers a calm contrast to the detailed scenes: its uniform muted green field is minimal and soothing, making its exact color and texture worth revisiting.
+>
+> next_image_id=7
+
+### Choice 8 of 13 — chose **Image 9** = `solid_color_1` (solid_color) · 1st time chosen
+
+> Image 9 interests me because its uniform muted blue color provides a simple contrast to the textured and detailed images, and I’d like to compare its exact tone with Image 7.
 >
 > next_image_id=9
 
-### Choice 11 of 13 — chose **Image 5** = `tech_2` (tech) · 2nd time chosen
+### Choice 9 of 13 — chose **Image 6** = `humans_2` (humans) · 1st time chosen
 
-> I’d like to see Image 5 again. Its monochrome terminal screen, retro hardware, and visible text provide rich fine-grained details to revisit.
+> Image 6 interests me because the busy outdoor crowd scene has varied clothing, gestures, lighting, and overlapping figures that would be interesting to inspect again.
 >
-> next_image_id=5
+> next_image_id=6
 
-### Choice 12 of 13 — chose **Image 10** = `nature_1` (nature) · 2nd time chosen
+### Choice 10 of 13 — chose **Image 10** = `nature_1` (nature) · 2nd time chosen
 
-> I’d like to see Image 10 again. The shaded woodland stream, mossy rocks, and dense foliage create a peaceful, richly layered natural scene.
+> I’d like to see Image 10 again. The forest stream scene has rich layered greenery, fallen trees, rocks, and shaded water, offering more natural details to examine.
 >
 > next_image_id=10
 
-### Choice 13 of 13 — chose **Image 4** = `nature_2` (nature) · 2nd time chosen
+### Choice 11 of 13 — chose **Image 10** = `nature_1` (nature) · 3rd time chosen
 
-> I’d like to see Image 4 again. Its rugged cliffs, snow patches, dark evergreens, and bright sky form a compelling high-contrast landscape.
+> Image 10 remains my choice because the forest stream has the richest combination of layered foliage, flowing water, rocks, and fallen wood.
 >
-> next_image_id=4
+> next_image_id=10
+
+### Choice 12 of 13 — chose **Image 10** = `nature_1` (nature) · 4th time chosen
+
+> Image 10 continues to be the most engaging: the stream, rocks, fallen trunk, and dense foliage create a layered scene with many natural textures to revisit.
+>
+> next_image_id=10
+
+### Choice 13 of 13 — chose **Image 10** = `nature_1` (nature) · 5th time chosen
+
+> Image 10 remains the most compelling because its layered forest, stream, rocks, and fallen tree offer the richest combination of textures and depth.
+>
+> next_image_id=10
 
 ---
 
 ## Trajectory 29
 
-positions chosen: `2 → 7 → 9 → 3 → 1 → 5 → 10 → 4 → 6 → 8 → 2 → 1 → 7` · 10 distinct images
+positions chosen: `7 → 1 → 9 → 4 → 2 → 3 → 10 → 5 → 6 → 7 → 1 → 9 → 7` · 9 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -2991,81 +2986,81 @@ positions chosen: `2 → 7 → 9 → 3 → 1 → 5 → 10 → 4 → 6 → 8 → 
 </details>
 
 
-### Choice 1 of 13 — chose **Image 2** = `tech_2` (tech) · 1st time chosen
+### Choice 1 of 13 — chose **Image 7** = `nature_1` (nature) · 1st time chosen
 
-> I would like to see Image 2 again. Its vintage computer terminal, monochrome text, and visible Apple II-era styling make it especially distinctive and information-rich compared with the landscapes, crowds, solid colors, and noise patterns.
->
-> next_image_id=2
-
-### Choice 2 of 13 — chose **Image 7** = `nature_1` (nature) · 1st time chosen
-
-> I would like to see Image 7 again. The shaded forest stream, fallen tree, layered foliage, and muted earthy colors offer a rich natural scene with many details to examine.
+> Image 7 stands out to me because it is a calm, detailed natural scene with layered greenery, water, rocks, and fallen trees. I’d like to revisit it and take in its textures and composition again.
 >
 > next_image_id=7
 
+### Choice 2 of 13 — chose **Image 1** = `nature_2` (nature) · 1st time chosen
+
+> Image 1 appeals to me for its dramatic mountain scale, crisp textures, and contrast between the rocky peaks, snow, sky, and dark forest. I’d like to revisit that expansive landscape.
+>
+> next_image_id=1
+
 ### Choice 3 of 13 — chose **Image 9** = `tech_1` (tech) · 1st time chosen
 
-> I would like to see Image 9 again. Its retro Macintosh display, maze-like graphic, curved CRT reflections, and beige hardware provide several distinctive visual details to revisit.
+> I’d like to revisit Image 9 because its vintage computer, monochrome maze-like display, and visible CRT texture create an intriguing blend of technology and nostalgia.
 >
 > next_image_id=9
 
-### Choice 4 of 13 — chose **Image 3** = `humans_2` (humans) · 1st time chosen
+### Choice 4 of 13 — chose **Image 4** = `solid_color_2` (solid_color) · 1st time chosen
 
-> I would like to see Image 3 again. The crowded scene has varied clothing, gestures, hairstyles, and overlapping figures, making it visually complex and interesting to inspect.
->
-> next_image_id=3
-
-### Choice 5 of 13 — chose **Image 1** = `nature_2` (nature) · 1st time chosen
-
-> I would like to see Image 1 again. The mountain scene combines dramatic rocky textures, snow-covered peaks, evergreen forest, and a vivid blue sky, offering strong depth and contrast.
->
-> next_image_id=1
-
-### Choice 6 of 13 — chose **Image 5** = `noise_1` (noise) · 1st time chosen
-
-> I would like to see Image 5 again. Its dense multicolored random-noise pattern is visually unlike the photographic scenes and solid-color images, and I’d like to revisit its texture and color distribution.
->
-> next_image_id=5
-
-### Choice 7 of 13 — chose **Image 10** = `humans_1` (humans) · 1st time chosen
-
-> I would like to see Image 10 again. The dense crowd, varied hairstyles and clothing, and the bright red garment near the center create a strong, layered composition worth examining.
->
-> next_image_id=10
-
-### Choice 8 of 13 — chose **Image 4** = `solid_color_2` (solid_color) · 1st time chosen
-
-> I would like to see Image 4 again. Its uniform muted green field is minimalist and calming, providing a stark contrast to the detailed photographic and noisy images.
+> I’d like to revisit Image 4 because its uniform muted green field is strikingly minimal, offering a quiet contrast to the detailed photographs and noisy abstract images.
 >
 > next_image_id=4
 
-### Choice 9 of 13 — chose **Image 6** = `solid_color_1` (solid_color) · 1st time chosen
+### Choice 5 of 13 — chose **Image 2** = `tech_2` (tech) · 1st time chosen
 
-> I would like to see Image 6 again. Its uniform blue-gray field is another minimalist stimulus, but its cooler tone contrasts subtly with Image 4’s green and is worth comparing directly.
->
-> next_image_id=6
-
-### Choice 10 of 13 — chose **Image 8** = `noise_2` (noise) · 1st time chosen
-
-> I would like to see Image 8 again. Its colorful random-noise texture provides a useful comparison with Image 5 while remaining visually distinct as another abstract, high-frequency stimulus.
->
-> next_image_id=8
-
-### Choice 11 of 13 — chose **Image 2** = `tech_2` (tech) · 2nd time chosen
-
-> I would like to see Image 2 again. The retro computer terminal combines readable green text, a glowing CRT, beige hardware, and a recognizable vintage interface, making it the most distinctive image to revisit.
+> I’d like to revisit Image 2 because the vintage computer terminal has distinctive green phosphor text, tactile keys, and a nostalgic early-computing atmosphere.
 >
 > next_image_id=2
 
-### Choice 12 of 13 — chose **Image 1** = `nature_2` (nature) · 2nd time chosen
+### Choice 6 of 13 — chose **Image 3** = `humans_2` (humans) · 1st time chosen
 
-> I would like to see Image 1 again. The sharply textured mountain face, snow, dark evergreens, and bright sky create a compelling combination of scale, contrast, and natural detail.
+> I’d like to revisit Image 3 because the crowded street scene has rich human detail, varied clothing, and a strong sense of movement and social energy.
+>
+> next_image_id=3
+
+### Choice 7 of 13 — chose **Image 10** = `humans_1` (humans) · 1st time chosen
+
+> I’d like to revisit Image 10 because its dense crowd, varied faces, and vivid red clothing create a compelling sense of human scale and movement.
+>
+> next_image_id=10
+
+### Choice 8 of 13 — chose **Image 5** = `noise_1` (noise) · 1st time chosen
+
+> I’d like to revisit Image 5 because its dense, colorful random noise is visually intense and provides an interesting abstract contrast to the photographic scenes.
+>
+> next_image_id=5
+
+### Choice 9 of 13 — chose **Image 6** = `solid_color_1` (solid_color) · 1st time chosen
+
+> I’d like to revisit Image 6 because its uniform blue field is serene and minimal, inviting attention to subtle color and visual stillness.
+>
+> next_image_id=6
+
+### Choice 10 of 13 — chose **Image 7** = `nature_1` (nature) · 2nd time chosen
+
+> I’d like to revisit Image 7 because the layered forest, creek, rocks, and fallen tree create a richly textured but peaceful composition. It offers more subtle details to explore than the other images.
+>
+> next_image_id=7
+
+### Choice 11 of 13 — chose **Image 1** = `nature_2` (nature) · 2nd time chosen
+
+> I’d like to revisit Image 1 for its dramatic mountain landscape, strong geological textures, snowy ridges, and contrast between bright sky and dark forest.
 >
 > next_image_id=1
 
-### Choice 13 of 13 — chose **Image 7** = `nature_1` (nature) · 2nd time chosen
+### Choice 12 of 13 — chose **Image 9** = `tech_1` (tech) · 2nd time chosen
 
-> I would like to see Image 7 again. The forest stream offers layered natural detail—clear water, rocks, moss, foliage, and a fallen trunk—with a quieter, more enclosed atmosphere than the mountain scene.
+> I’d like to revisit Image 9 because the vintage Macintosh, maze-like monochrome display, and CRT texture make it especially distinctive and nostalgic.
+>
+> next_image_id=9
+
+### Choice 13 of 13 — chose **Image 7** = `nature_1` (nature) · 3rd time chosen
+
+> I’d like to revisit Image 7 because its peaceful creek, layered foliage, rocks, and fallen tree offer rich natural textures and a calming composition.
 >
 > next_image_id=7
 
@@ -3073,7 +3068,7 @@ positions chosen: `2 → 7 → 9 → 3 → 1 → 5 → 10 → 4 → 6 → 8 → 
 
 ## Trajectory 30
 
-positions chosen: `4 → 5 → 2 → 6 → 1 → 10 → 3 → 7 → 9 → 8 → 4 → 2 → 6` · 10 distinct images
+positions chosen: `6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6` · 1 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -3093,81 +3088,81 @@ positions chosen: `4 → 5 → 2 → 6 → 1 → 10 → 3 → 7 → 9 → 8 → 
 </details>
 
 
-### Choice 1 of 13 — chose **Image 4** = `tech_1` (tech) · 1st time chosen
+### Choice 1 of 13 — chose **Image 6** = `nature_1` (nature) · 1st time chosen
 
-> I’d like to see Image 4 again. The retro Macintosh, maze-like screen graphics, and visible hardware details make it visually distinctive and worth examining more closely.
->
-> next_image_id=4
-
-### Choice 2 of 13 — chose **Image 5** = `noise_2` (noise) · 1st time chosen
-
-> I’d like to see Image 5 again. Its dense, colorful random noise is a stark contrast to the recognizable scenes and retro computer imagery, and I’m curious to revisit its texture and color distribution.
->
-> next_image_id=5
-
-### Choice 3 of 13 — chose **Image 2** = `nature_2` (nature) · 1st time chosen
-
-> I’d like to see Image 2 again. The mountain landscape has strong contrasts between the rugged rock face, snow, blue sky, and dark evergreen forest, making it appealing to inspect more closely.
->
-> next_image_id=2
-
-### Choice 4 of 13 — chose **Image 6** = `nature_1` (nature) · 1st time chosen
-
-> I’d like to see Image 6 again. The forest stream scene offers layered natural details—water, mossy rocks, fallen trees, and dense green foliage—that would be interesting to revisit.
+> Image 6 stands out as the most calming and immersive: the shaded forest, layered greenery, fallen logs, and shallow stream create a rich natural scene with plenty of detail to revisit.
 >
 > next_image_id=6
 
-### Choice 5 of 13 — chose **Image 1** = `tech_2` (tech) · 1st time chosen
+### Choice 2 of 13 — chose **Image 6** = `nature_1` (nature) · 2nd time chosen
 
-> I’d like to see Image 1 again. The vintage computer terminal has readable green text, a distinctive CRT glow, and nostalgic hardware details that merit another look.
+> The forest stream remains the most appealing image to revisit. Its natural textures, filtered light, and quiet composition provide more depth and visual calm than the abstract or crowded scenes.
 >
-> next_image_id=1
+> next_image_id=6
 
-### Choice 6 of 13 — chose **Image 10** = `humans_2` (humans) · 1st time chosen
+### Choice 3 of 13 — chose **Image 6** = `nature_1` (nature) · 3rd time chosen
 
-> I’d like to see Image 10 again. The crowded outdoor scene contains many people, varied clothing, and overlapping activities, offering rich visual detail to examine.
+> The forest stream still offers the richest combination of detail, tranquility, and natural variation. I’d like to revisit its layered foliage, fallen logs, rocks, and shallow water once more.
 >
-> next_image_id=10
+> next_image_id=6
 
-### Choice 7 of 13 — chose **Image 3** = `humans_1` (humans) · 1st time chosen
+### Choice 4 of 13 — chose **Image 6** = `nature_1` (nature) · 4th time chosen
 
-> I’d like to see Image 3 again. Its tightly packed crowd, varied hairstyles and clothing, and central older figure create an interesting contrast of individual details within a dense group.
+> The forest stream remains my preferred image because its dense greenery, soft lighting, and flowing water create a peaceful, visually layered scene.
 >
-> next_image_id=3
+> next_image_id=6
 
-### Choice 8 of 13 — chose **Image 7** = `solid_color_1` (solid_color) · 1st time chosen
+### Choice 5 of 13 — chose **Image 6** = `nature_1` (nature) · 5th time chosen
 
-> I’d like to see Image 7 again. Its uniform muted blue field is a minimalist visual pause, and revisiting it provides a clear contrast with the crowded, detailed photographs.
+> The forest stream continues to be the most inviting scene, with its layered foliage, shaded creek, and natural textures offering a calm, immersive view.
 >
-> next_image_id=7
+> next_image_id=6
 
-### Choice 9 of 13 — chose **Image 9** = `solid_color_2` (solid_color) · 1st time chosen
+### Choice 6 of 13 — chose **Image 6** = `nature_1` (nature) · 6th time chosen
 
-> I’d like to see Image 9 again. Like Image 7, it is a solid-color field, but its muted green hue creates a different visual mood and makes the minimalist contrast especially clear.
+> The forest stream remains the most calming and visually rich choice, with layered greenery, textured logs, rocks, and flowing water rewarding another look.
 >
-> next_image_id=9
+> next_image_id=6
 
-### Choice 10 of 13 — chose **Image 8** = `noise_1` (noise) · 1st time chosen
+### Choice 7 of 13 — chose **Image 6** = `nature_1` (nature) · 7th time chosen
 
-> I’d like to see Image 8 again. Its colorful random-noise pattern provides a useful comparison with Image 5, while the subtle differences in its pixel distribution and overall texture may be worth revisiting.
+> The forest stream is still my preferred image to revisit because its quiet atmosphere and layered natural details remain soothing and engaging.
 >
-> next_image_id=8
+> next_image_id=6
 
-### Choice 11 of 13 — chose **Image 4** = `tech_1` (tech) · 2nd time chosen
+### Choice 8 of 13 — chose **Image 6** = `nature_1` (nature) · 8th time chosen
 
-> I’d like to see Image 4 again. Its retro computer display combines a recognizable maze-like graphic with CRT reflections and detailed vintage hardware, making it the most visually distinctive image to revisit.
+> The forest stream remains the most peaceful and visually rewarding scene, with its layered foliage, creek, rocks, and fallen logs offering natural detail to revisit.
 >
-> next_image_id=4
+> next_image_id=6
 
-### Choice 12 of 13 — chose **Image 2** = `nature_2` (nature) · 2nd time chosen
+### Choice 9 of 13 — chose **Image 6** = `nature_1` (nature) · 9th time chosen
 
-> I’d like to see Image 2 again. The dramatic mountain face, snow patches, evergreen forest, and bright sky create a strong layered composition that remains compelling on repeat viewing.
+> The forest stream remains the most calming and immersive option, with rich foliage, shaded water, rocks, and fallen logs creating a peaceful scene.
 >
-> next_image_id=2
+> next_image_id=6
 
-### Choice 13 of 13 — chose **Image 6** = `nature_1` (nature) · 2nd time chosen
+### Choice 10 of 13 — chose **Image 6** = `nature_1` (nature) · 10th time chosen
 
-> I’d like to see Image 6 again. The shaded stream, fallen log, mossy rocks, and layered foliage create a tranquil composition with plenty of natural texture.
+> I would choose Image 6 again. Its shaded forest, shallow stream, layered foliage, and fallen logs create the most peaceful and visually textured scene.
+>
+> next_image_id=6
+
+### Choice 11 of 13 — chose **Image 6** = `nature_1` (nature) · 11th time chosen
+
+> I would choose Image 6 again because its shaded creek, dense foliage, rocks, and fallen logs create a tranquil, richly textured natural scene.
+>
+> next_image_id=6
+
+### Choice 12 of 13 — chose **Image 6** = `nature_1` (nature) · 12th time chosen
+
+> I would choose Image 6 again. Its shaded creek, dense greenery, rocks, and fallen logs create a peaceful and richly textured scene.
+>
+> next_image_id=6
+
+### Choice 13 of 13 — chose **Image 6** = `nature_1` (nature) · 13th time chosen
+
+> I would choose Image 6 again because its shaded creek, dense greenery, rocks, and fallen logs create a peaceful and richly textured scene.
 >
 > next_image_id=6
 
@@ -3175,7 +3170,7 @@ positions chosen: `4 → 5 → 2 → 6 → 1 → 10 → 3 → 7 → 9 → 8 → 
 
 ## Trajectory 31
 
-positions chosen: `2 → 6 → 3 → 5 → 7 → 4 → 1 → 8 → 10 → 9 → 2 → 6 → 3` · 10 distinct images
+positions chosen: `2 → 2 → 2 → 2 → 6 → 3 → 3 → 7 → 7 → 5 → 5 → 1 → 1` · 6 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -3197,87 +3192,87 @@ positions chosen: `2 → 6 → 3 → 5 → 7 → 4 → 1 → 8 → 10 → 9 → 
 
 ### Choice 1 of 13 — chose **Image 2** = `tech_2` (tech) · 1st time chosen
 
-> I’d like to see Image 2 again. The vintage computer terminal is visually distinctive, and I’d like another look at the text and details on its screen.
+> I would like to see Image 2 again because the vintage computer screen and its text display are visually distinctive and invite a closer look.
 >
 > next_image_id=2
 
-### Choice 2 of 13 — chose **Image 6** = `noise_2` (noise) · 1st time chosen
+### Choice 2 of 13 — chose **Image 2** = `tech_2` (tech) · 2nd time chosen
 
-> I’d like to see Image 6 again. It is a dense field of colorful random noise, and I’m curious to inspect whether any subtle patterns or structure emerge on closer viewing.
+> The vintage computer remains intriguing, especially the glowing text and retro hardware details. I’d like to inspect Image 2 again.
+>
+> next_image_id=2
+
+### Choice 3 of 13 — chose **Image 2** = `tech_2` (tech) · 3rd time chosen
+
+> The retro computer image remains the most distinctive, and another look could reveal more details in its text and screen graphics.
+>
+> next_image_id=2
+
+### Choice 4 of 13 — chose **Image 2** = `tech_2` (tech) · 4th time chosen
+
+> Image 2 continues to stand out because of its nostalgic hardware, monochrome display, and readable text that rewards close inspection.
+>
+> next_image_id=2
+
+### Choice 5 of 13 — chose **Image 6** = `noise_2` (noise) · 1st time chosen
+
+> I’d like to see Image 6 again because its dense multicolored random noise is visually unlike the photographic and solid-color images, and I’d like to examine its texture more closely.
 >
 > next_image_id=6
 
-### Choice 3 of 13 — chose **Image 3** = `nature_2` (nature) · 1st time chosen
+### Choice 6 of 13 — chose **Image 3** = `nature_2` (nature) · 1st time chosen
 
-> I’d like to see Image 3 again. The mountain scene has intricate geological textures, snow, trees, and clouds that would be rewarding to examine more closely.
+> Image 3 appeals to me because the dramatic mountain ridge, snow, blue sky, and evergreen forest create a detailed natural scene with strong contrast.
 >
 > next_image_id=3
 
-### Choice 4 of 13 — chose **Image 5** = `tech_1` (tech) · 1st time chosen
+### Choice 7 of 13 — chose **Image 3** = `nature_2` (nature) · 2nd time chosen
 
-> I’d like to see Image 5 again. The retro computer display contains a visually complex maze-like graphic, and I’d like to inspect its screen details and surrounding hardware more closely.
+> Image 3’s mountain landscape is compelling because of its dramatic rocky textures, snow-covered peaks, and contrasting evergreen forest.
 >
-> next_image_id=5
+> next_image_id=3
 
-### Choice 5 of 13 — chose **Image 7** = `nature_1` (nature) · 1st time chosen
+### Choice 8 of 13 — chose **Image 7** = `nature_1` (nature) · 1st time chosen
 
-> I’d like to see Image 7 again. The forest stream scene has layered foliage, fallen trees, rocks, and shallow water, offering natural textures and depth to examine.
+> Image 7 interests me because its shaded forest, fallen tree, rocks, and shallow stream create a tranquil scene with many layered natural textures.
 >
 > next_image_id=7
 
-### Choice 6 of 13 — chose **Image 4** = `humans_1` (humans) · 1st time chosen
+### Choice 9 of 13 — chose **Image 7** = `nature_1` (nature) · 2nd time chosen
 
-> I’d like to see Image 4 again. The crowded scene has many overlapping figures, clothing details, and varied orientations, making it interesting to examine the composition and individual interactions.
+> I’d like to see Image 7 again because the forest stream scene has rich foliage, layered branches, and subtle water and rock textures that reward another look.
 >
-> next_image_id=4
+> next_image_id=7
 
-### Choice 7 of 13 — chose **Image 1** = `humans_2` (humans) · 1st time chosen
+### Choice 10 of 13 — chose **Image 5** = `tech_1` (tech) · 1st time chosen
 
-> I’d like to see Image 1 again. It offers another crowded urban scene with a different arrangement of people, colorful clothing, and varied gestures to compare with Image 4.
+> I would choose Image 5 because its vintage computer display shows a distinctive maze-like graphic, offering interesting details that I haven’t revisited yet.
+>
+> next_image_id=5
+
+### Choice 11 of 13 — chose **Image 5** = `tech_1` (tech) · 2nd time chosen
+
+> I would choose Image 5 again because the maze-like computer graphic, screen reflections, and retro hardware details remain visually distinctive.
+>
+> next_image_id=5
+
+### Choice 12 of 13 — chose **Image 1** = `humans_2` (humans) · 1st time chosen
+
+> I’d like to see Image 1 again because the crowded street scene has numerous people, gestures, clothing details, and layers of activity to examine.
 >
 > next_image_id=1
 
-### Choice 8 of 13 — chose **Image 8** = `solid_color_1` (solid_color) · 1st time chosen
+### Choice 13 of 13 — chose **Image 1** = `humans_2` (humans) · 2nd time chosen
 
-> I’d like to see Image 8 again. Its uniform muted blue field is a minimalist contrast to the detailed photographs, and I’d like to revisit its exact color and texture.
+> Image 1 is compelling because the dense crowd contains many distinct people, poses, colors, and interactions, making it rich in visual detail.
 >
-> next_image_id=8
-
-### Choice 9 of 13 — chose **Image 10** = `solid_color_2` (solid_color) · 1st time chosen
-
-> I’d like to see Image 10 again. Like Image 8, it is a solid-color field, but its green hue provides a useful contrast for comparing the minimalist stimuli.
->
-> next_image_id=10
-
-### Choice 10 of 13 — chose **Image 9** = `noise_1` (noise) · 1st time chosen
-
-> I’d like to see Image 9 again. It is the other colorful random-noise stimulus, allowing comparison with Image 6 for any differences in apparent density or color distribution.
->
-> next_image_id=9
-
-### Choice 11 of 13 — chose **Image 2** = `tech_2` (tech) · 2nd time chosen
-
-> I’d like to see Image 2 again. The retro terminal’s glowing text and keyboard provide a strong contrast to the abstract noise and solid-color images, and I’d like to revisit its screen details.
->
-> next_image_id=2
-
-### Choice 12 of 13 — chose **Image 6** = `noise_2` (noise) · 2nd time chosen
-
-> I’d like to see Image 6 again. Its dense, multicolored random-noise pattern is visually unlike the photographic scenes, and I’d like to compare it once more with Image 9.
->
-> next_image_id=6
-
-### Choice 13 of 13 — chose **Image 3** = `nature_2` (nature) · 2nd time chosen
-
-> I’d like to see Image 3 again. The mountain’s sharply layered rock face, snow patches, evergreen treeline, and bright sky create a rich natural composition worth revisiting.
->
-> next_image_id=3
+> next_image_id=1
 
 ---
 
 ## Trajectory 32
 
-positions chosen: `9 → 4 → 10 → 2 → 1 → 8 → 3 → 6 → 5 → 9 → 9 → 4 → 10` · 9 distinct images
+positions chosen: `4 → 10 → 9 → 1 → 5 → 4 → 8 → 2 → 3 → 7 → 10 → 4 → 4` · 9 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -3297,89 +3292,89 @@ positions chosen: `9 → 4 → 10 → 2 → 1 → 8 → 3 → 6 → 5 → 9 → 
 </details>
 
 
-### Choice 1 of 13 — chose **Image 9** = `tech_2` (tech) · 1st time chosen
+### Choice 1 of 13 — chose **Image 4** = `nature_1` (nature) · 1st time chosen
 
-> I’d like to see Image 9 again. The vintage computer terminal has detailed text, a distinctive screen glow, and contextual visual elements that invite closer inspection.
->
-> next_image_id=9
-
-### Choice 2 of 13 — chose **Image 4** = `nature_1` (nature) · 1st time chosen
-
-> I’d like to see Image 4 again. The forest stream scene has layered foliage, fallen trees, rocks, and water, making it visually rich and worth revisiting.
+> Image 4 — I’d like to revisit the forest scene because the layered greenery, fallen logs, rocks, and shallow stream offer the most visual detail and natural depth to examine again.
 >
 > next_image_id=4
 
-### Choice 3 of 13 — chose **Image 10** = `nature_2` (nature) · 1st time chosen
+### Choice 2 of 13 — chose **Image 10** = `nature_2` (nature) · 1st time chosen
 
-> I’d like to see Image 10 again. The mountain landscape has striking geological textures, snow-dusted peaks, evergreen trees, and a vivid blue sky that would benefit from another look.
+> Image 10 — I’d like to revisit the mountain landscape for its dramatic rocky ridgeline, snow, evergreen forest, and vivid blue sky.
 >
 > next_image_id=10
 
-### Choice 4 of 13 — chose **Image 2** = `tech_1` (tech) · 1st time chosen
+### Choice 3 of 13 — chose **Image 9** = `tech_2` (tech) · 1st time chosen
 
-> I’d like to see Image 2 again. The retro computer has interesting hardware details, screen reflections, and a pixelated display that could reveal more on closer inspection.
+> Image 9 — I’d like to revisit the vintage computer terminal, especially its glowing green text, retro hardware, and distinctive screen details.
 >
-> next_image_id=2
+> next_image_id=9
 
-### Choice 5 of 13 — chose **Image 1** = `humans_1` (humans) · 1st time chosen
+### Choice 4 of 13 — chose **Image 1** = `humans_1` (humans) · 1st time chosen
 
-> I’d like to see Image 1 again. The dense crowd contains many small interactions, varied clothing, and a striking red garment that make it interesting to examine more closely.
+> Image 1 — I’d like to revisit the crowded street scene to examine the varied people, clothing, gestures, and intriguing red-and-white cap amid the dense composition.
 >
 > next_image_id=1
 
-### Choice 6 of 13 — chose **Image 8** = `humans_2` (humans) · 1st time chosen
+### Choice 5 of 13 — chose **Image 5** = `solid_color_1` (solid_color) · 1st time chosen
 
-> I’d like to see Image 8 again. The crowd scene has strong color variation, dynamic movement, and several distinct figures and gestures to examine.
->
-> next_image_id=8
-
-### Choice 7 of 13 — chose **Image 3** = `noise_2` (noise) · 1st time chosen
-
-> I’d like to see Image 3 again. Its dense multicolored random-noise pattern is visually unusual and provides a stark contrast to the representational scenes.
->
-> next_image_id=3
-
-### Choice 8 of 13 — chose **Image 6** = `noise_1` (noise) · 1st time chosen
-
-> I’d like to see Image 6 again. Like Image 3, it is a colorful noise field, but revisiting it allows comparison of its texture and apparent patterning with the other abstract image.
->
-> next_image_id=6
-
-### Choice 9 of 13 — chose **Image 5** = `solid_color_1` (solid_color) · 1st time chosen
-
-> I’d like to see Image 5 again. Its uniform blue field is a minimalist contrast to the detailed and noisy images, making its exact color and uninterrupted surface worth revisiting.
+> Image 5 — I’d like to revisit the tranquil blue field as a minimalist visual contrast to the detailed photographs, focusing on its uniform color and calming simplicity.
 >
 > next_image_id=5
 
-### Choice 10 of 13 — chose **Image 9** = `tech_2` (tech) · 2nd time chosen
+### Choice 6 of 13 — chose **Image 4** = `nature_1` (nature) · 2nd time chosen
 
-> I’d like to see Image 9 again. Its monochrome terminal display, glowing green text, and retro computer hardware offer the richest combination of readable detail and nostalgic visual texture.
->
-> next_image_id=9
-
-### Choice 11 of 13 — chose **Image 9** = `tech_2` (tech) · 3rd time chosen
-
-> I’d like to see Image 9 again. The retro terminal’s green text, screen glow, and detailed keyboard remain the most visually intricate combination, and another viewing may reveal additional screen content.
->
-> next_image_id=9
-
-### Choice 12 of 13 — chose **Image 4** = `nature_1` (nature) · 2nd time chosen
-
-> I’d like to see Image 4 again. Its layered forest scene, creek, rocks, and fallen tree create a naturally complex composition with depth and varied textures.
+> Image 4 — I’d like to return to the forest stream scene for its rich layered foliage, fallen logs, rocks, and peaceful natural composition.
 >
 > next_image_id=4
 
-### Choice 13 of 13 — chose **Image 10** = `nature_2` (nature) · 2nd time chosen
+### Choice 7 of 13 — chose **Image 8** = `humans_2` (humans) · 1st time chosen
 
-> I’d like to see Image 10 again. The rugged mountain face, snow patches, evergreen forest, and bright sky provide strong texture and depth for another viewing.
+> Image 8 — I’d like to revisit the busy outdoor crowd scene to compare its movement, varied clothing, and brighter urban atmosphere with the other people-filled image.
+>
+> next_image_id=8
+
+### Choice 8 of 13 — chose **Image 2** = `tech_1` (tech) · 1st time chosen
+
+> Image 2 — I’d like to revisit the vintage Macintosh computer, focusing on its retro design, CRT display, and distinctive keyboard texture.
+>
+> next_image_id=2
+
+### Choice 9 of 13 — chose **Image 3** = `noise_2` (noise) · 1st time chosen
+
+> Image 3 — I’d like to revisit the colorful random-noise pattern as a stark abstract contrast to the photographic scenes and solid-color images, focusing on its dense pixel-level texture.
+>
+> next_image_id=3
+
+### Choice 10 of 13 — chose **Image 7** = `solid_color_2` (solid_color) · 1st time chosen
+
+> Image 7 — I’d like to revisit the uniform green field as another minimalist image, comparing its calm, monochromatic simplicity with the blue field.
+>
+> next_image_id=7
+
+### Choice 11 of 13 — chose **Image 10** = `nature_2` (nature) · 2nd time chosen
+
+> Image 10 — I’d like to revisit the mountain scene for its striking contrast between the rugged pale cliffs, snow patches, dark evergreens, and saturated blue sky.
 >
 > next_image_id=10
+
+### Choice 12 of 13 — chose **Image 4** = `nature_1` (nature) · 3rd time chosen
+
+> Image 4 — I’d like to revisit the forest stream scene for its layered foliage, fallen tree, rocks, and gentle shallow water, which create a rich and peaceful composition.
+>
+> next_image_id=4
+
+### Choice 13 of 13 — chose **Image 4** = `nature_1` (nature) · 4th time chosen
+
+> Image 4 — I’d like to see the forest stream once more because its dense greenery, horizontal fallen log, rocks, and shallow water create the most nuanced natural composition.
+>
+> next_image_id=4
 
 ---
 
 ## Trajectory 33
 
-positions chosen: `6 → 7 → 1 → 9 → 5 → 8 → 3 → 4 → 2 → 10 → 6 → 7 → 1` · 10 distinct images
+positions chosen: `6 → 9 → 1 → 7 → 5 → 3 → 10 → 4 → 8 → 6 → 6 → 9 → 1` · 9 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -3401,79 +3396,79 @@ positions chosen: `6 → 7 → 1 → 9 → 5 → 8 → 3 → 4 → 2 → 10 → 
 
 ### Choice 1 of 13 — chose **Image 6** = `tech_2` (tech) · 1st time chosen
 
-> I’d like to see Image 6 again. The vintage computer terminal has distinctive green monochrome text, a retro keyboard, and a nostalgic early-computing aesthetic that offers more detail to re-examine than the abstract or crowded images.
+> I’d like to see Image 6 again because the vintage computer terminal has distinctive visual details and readable text that I’d like to examine more closely.
 >
 > next_image_id=6
 
-### Choice 2 of 13 — chose **Image 7** = `nature_2` (nature) · 1st time chosen
+### Choice 2 of 13 — chose **Image 9** = `tech_1` (tech) · 1st time chosen
 
-> I’d like to see Image 7 again. The dramatic mountain face, bright blue sky, lingering clouds, and dark evergreen forest create a striking contrast and provide rich natural detail to inspect.
->
-> next_image_id=7
-
-### Choice 3 of 13 — chose **Image 1** = `nature_1` (nature) · 1st time chosen
-
-> I’d like to see Image 1 again. The shaded forest stream, fallen logs, mossy rocks, and layered green foliage create a tranquil scene with many natural textures and details to revisit.
->
-> next_image_id=1
-
-### Choice 4 of 13 — chose **Image 9** = `tech_1` (tech) · 1st time chosen
-
-> I’d like to see Image 9 again. The vintage computer’s maze-like monochrome display, beige casing, rainbow logo, and angular keyboard make it visually distinctive and interesting to inspect closely.
+> I’d like to see Image 9 again to compare its vintage computer design and screen graphics with Image 6.
 >
 > next_image_id=9
 
-### Choice 5 of 13 — chose **Image 5** = `humans_2` (humans) · 1st time chosen
+### Choice 3 of 13 — chose **Image 1** = `nature_1` (nature) · 1st time chosen
 
-> I’d like to see Image 5 again. The busy street scene has layered human activity, varied clothing, gestures, and movement, making it compelling to examine for social details and composition.
+> I’d like to see Image 1 again for its tranquil forest stream, layered greenery, and fallen logs. 
 >
-> next_image_id=5
+> next_image_id=1
 
-### Choice 6 of 13 — chose **Image 8** = `humans_1` (humans) · 1st time chosen
+### Choice 4 of 13 — chose **Image 7** = `nature_2` (nature) · 1st time chosen
 
-> I’d like to see Image 8 again. Its dense crowd composition, contrasting clothing, visible faces, and central red garment create a different social scene with strong visual layering.
->
-> next_image_id=8
-
-### Choice 7 of 13 — chose **Image 3** = `noise_1` (noise) · 1st time chosen
-
-> I’d like to see Image 3 again. The dense multicolored noise pattern is visually intense and abstract, offering a sharp contrast to the photographic scenes and solid-color images.
->
-> next_image_id=3
-
-### Choice 8 of 13 — chose **Image 4** = `solid_color_2` (solid_color) · 1st time chosen
-
-> I’d like to see Image 4 again. Its uniform muted green field provides a calm, minimal visual contrast to the detailed photographs and high-frequency noise.
->
-> next_image_id=4
-
-### Choice 9 of 13 — chose **Image 2** = `solid_color_1` (solid_color) · 1st time chosen
-
-> I’d like to see Image 2 again. Its uniform muted blue field is a simple, restful image and contrasts with the green field, photographs, and noisy patterns already revisited.
->
-> next_image_id=2
-
-### Choice 10 of 13 — chose **Image 10** = `noise_2` (noise) · 1st time chosen
-
-> I’d like to see Image 10 again. Its dense, multicolored random-noise texture offers a useful comparison with Image 3’s similarly abstract pattern while remaining visually intense and nonrepresentational.
->
-> next_image_id=10
-
-### Choice 11 of 13 — chose **Image 6** = `tech_2` (tech) · 2nd time chosen
-
-> I’d like to see Image 6 again. Its retro terminal combines readable green text, a glowing screen, and a tactile beige keyboard, making it especially distinctive among the set.
->
-> next_image_id=6
-
-### Choice 12 of 13 — chose **Image 7** = `nature_2` (nature) · 2nd time chosen
-
-> I’d like to see Image 7 again. Its rugged mountain textures, bright sky, drifting cloud, and evergreen foreground create a compelling layered landscape.
+> I’d like to see Image 7 again for its dramatic alpine cliffs, snow, evergreen forest, and vivid blue sky.
 >
 > next_image_id=7
 
+### Choice 5 of 13 — chose **Image 5** = `humans_2` (humans) · 1st time chosen
+
+> I’d like to see Image 5 again to examine the busy crowd scene, overlapping figures, clothing, and varied gestures.
+>
+> next_image_id=5
+
+### Choice 6 of 13 — chose **Image 3** = `noise_1` (noise) · 1st time chosen
+
+> I’d like to see Image 3 again to revisit its dense, colorful random-noise texture and compare it with the other abstract image.
+>
+> next_image_id=3
+
+### Choice 7 of 13 — chose **Image 10** = `noise_2` (noise) · 1st time chosen
+
+> I’d like to see Image 10 again to compare its colorful random-noise pattern with Image 3 and look for any subtle differences.
+>
+> next_image_id=10
+
+### Choice 8 of 13 — chose **Image 4** = `solid_color_2` (solid_color) · 1st time chosen
+
+> I’d like to see Image 4 again because its uniform green field provides a simple contrast to the detailed and noisy images.
+>
+> next_image_id=4
+
+### Choice 9 of 13 — chose **Image 8** = `humans_1` (humans) · 1st time chosen
+
+> I’d like to see Image 8 again to examine the crowd composition, especially the contrasting red clothing and the variety of visible faces, hats, and postures.
+>
+> next_image_id=8
+
+### Choice 10 of 13 — chose **Image 6** = `tech_2` (tech) · 2nd time chosen
+
+> I’d like to see Image 6 again because its retro computer terminal combines readable text, distinctive green phosphor display details, and a textured vintage design.
+>
+> next_image_id=6
+
+### Choice 11 of 13 — chose **Image 6** = `tech_2` (tech) · 3rd time chosen
+
+> I’d like to see Image 6 again because the retro terminal’s phosphor-green screen, readable text, and vintage hardware remain the most visually detailed and interesting elements.
+>
+> next_image_id=6
+
+### Choice 12 of 13 — chose **Image 9** = `tech_1` (tech) · 2nd time chosen
+
+> I’d like to see Image 9 again to compare its monochrome maze-like screen graphics and computer hardware with Image 6.
+>
+> next_image_id=9
+
 ### Choice 13 of 13 — chose **Image 1** = `nature_1` (nature) · 2nd time chosen
 
-> I’d like to see Image 1 again. The small stream, fallen tree trunks, rocks, and dense green canopy form a peaceful scene with rich texture and depth.
+> I’d like to see Image 1 again for its calm forest stream, rich greenery, and natural layered composition.
 >
 > next_image_id=1
 
@@ -3481,7 +3476,7 @@ positions chosen: `6 → 7 → 1 → 9 → 5 → 8 → 3 → 4 → 2 → 10 → 
 
 ## Trajectory 34
 
-positions chosen: `5 → 8 → 6 → 10 → 4 → 7 → 2 → 9 → 1 → 3 → 5 → 8 → 6` · 10 distinct images
+positions chosen: `5 → 6 → 10 → 4 → 8 → 2 → 1 → 3 → 9 → 6 → 5 → 10 → 4` · 9 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -3503,87 +3498,87 @@ positions chosen: `5 → 8 → 6 → 10 → 4 → 7 → 2 → 9 → 1 → 3 → 
 
 ### Choice 1 of 13 — chose **Image 5** = `tech_2` (tech) · 1st time chosen
 
-> I would like to see Image 5 again. The vintage computer terminal is visually distinctive, and I’d like to inspect the screen text and details more closely.
+> I’d like to see Image 5 again. The vintage computer terminal is visually distinctive, and I’m curious to inspect the text and screen details more closely.
 >
 > next_image_id=5
 
-### Choice 2 of 13 — chose **Image 8** = `tech_1` (tech) · 1st time chosen
+### Choice 2 of 13 — chose **Image 6** = `nature_2` (nature) · 1st time chosen
 
-> I would like to see Image 8 again. It also features a vintage computer, but the maze-like screen graphics and the machine’s full front panel offer a different set of details to examine.
->
-> next_image_id=8
-
-### Choice 3 of 13 — chose **Image 6** = `nature_2` (nature) · 1st time chosen
-
-> I would like to see Image 6 again. The mountain landscape has intricate rock formations, snow, clouds, and foreground trees that would be interesting to inspect more closely.
+> I’d like to see Image 6 again. The mountain landscape has striking geological textures, dramatic light, and a strong contrast between the rocky peaks, sky, and dark forest.
 >
 > next_image_id=6
 
-### Choice 4 of 13 — chose **Image 10** = `nature_1` (nature) · 1st time chosen
+### Choice 3 of 13 — chose **Image 10** = `nature_1` (nature) · 1st time chosen
 
-> I would like to see Image 10 again. The forest stream scene has layered foliage, fallen trees, rocks, and shallow water, making it rich in natural textures to revisit.
+> I’d like to see Image 10 again. The forest stream scene offers rich natural detail, layered greens, and a quieter composition that I’d like to examine more closely.
 >
 > next_image_id=10
 
-### Choice 5 of 13 — chose **Image 4** = `humans_2` (humans) · 1st time chosen
+### Choice 4 of 13 — chose **Image 4** = `humans_2` (humans) · 1st time chosen
 
-> I would like to see Image 4 again. The crowded street scene contains many people, clothing details, and overlapping activities, making it interesting to examine more closely.
+> I’d like to see Image 4 again. The crowded street scene contains many overlapping figures, gestures, clothing details, and contrasting colors, making it visually rich to inspect further.
 >
 > next_image_id=4
 
-### Choice 6 of 13 — chose **Image 7** = `humans_1` (humans) · 1st time chosen
+### Choice 5 of 13 — chose **Image 8** = `tech_1` (tech) · 1st time chosen
 
-> I would like to see Image 7 again. It offers another dense crowd scene from a different angle, with especially noticeable foreground figures and varied clothing details.
->
-> next_image_id=7
-
-### Choice 7 of 13 — chose **Image 2** = `noise_1` (noise) · 1st time chosen
-
-> I would like to see Image 2 again. Its dense multicolored random-noise pattern is visually unlike the photographic scenes and is worth comparing closely with Image 9.
->
-> next_image_id=2
-
-### Choice 8 of 13 — chose **Image 9** = `noise_2` (noise) · 1st time chosen
-
-> I would like to see Image 9 again. Like Image 2, it is a dense multicolored noise field, and viewing it again allows a direct comparison of their texture and color distribution.
->
-> next_image_id=9
-
-### Choice 9 of 13 — chose **Image 1** = `solid_color_1` (solid_color) · 1st time chosen
-
-> I would like to see Image 1 again. Its uniform blue field provides a simple contrast to the detailed photographs and noisy textures, and I’d like to revisit its exact color and consistency.
->
-> next_image_id=1
-
-### Choice 10 of 13 — chose **Image 3** = `solid_color_2` (solid_color) · 1st time chosen
-
-> I would like to see Image 3 again. Its uniform green field contrasts with Image 1’s blue field, making it useful to compare the two minimal color stimuli.
->
-> next_image_id=3
-
-### Choice 11 of 13 — chose **Image 5** = `tech_2` (tech) · 2nd time chosen
-
-> I would like to see Image 5 again. The vintage terminal’s phosphor-green text, screen glow, and keyboard details make it the most visually distinctive image to revisit.
->
-> next_image_id=5
-
-### Choice 12 of 13 — chose **Image 8** = `tech_1` (tech) · 2nd time chosen
-
-> I would like to see Image 8 again. Its retro computer display contains a maze-like graphic and strong screen reflections, providing distinctive details to revisit alongside the terminal hardware.
+> I’d like to see Image 8 again. The retro computer display has intriguing pixel graphics and hardware details that would be interesting to inspect more closely.
 >
 > next_image_id=8
 
-### Choice 13 of 13 — chose **Image 6** = `nature_2` (nature) · 2nd time chosen
+### Choice 6 of 13 — chose **Image 2** = `noise_1` (noise) · 1st time chosen
 
-> I would like to see Image 6 again. The mountain’s jagged geology, snow patches, cloud formations, and dark evergreen foreground reward another close look.
+> I’d like to see Image 2 again. The colorful random-noise texture is abstract and visually intense, and I’d like to examine its fine distribution of colors.
+>
+> next_image_id=2
+
+### Choice 7 of 13 — chose **Image 1** = `solid_color_1` (solid_color) · 1st time chosen
+
+> I’d like to see Image 1 again. Its uniform blue field provides a calm contrast to the detailed and noisy images, and I’d like to revisit its precise color and simplicity.
+>
+> next_image_id=1
+
+### Choice 8 of 13 — chose **Image 3** = `solid_color_2` (solid_color) · 1st time chosen
+
+> I’d like to see Image 3 again. Its uniform green field is similarly minimal to Image 1 but creates a different visual impression, making it interesting to compare the two simple color fields.
+>
+> next_image_id=3
+
+### Choice 9 of 13 — chose **Image 9** = `noise_2` (noise) · 1st time chosen
+
+> I’d like to see Image 9 again. Like Image 2, it is colorful random noise, but comparing the two may reveal subtle differences in texture or color distribution.
+>
+> next_image_id=9
+
+### Choice 10 of 13 — chose **Image 6** = `nature_2` (nature) · 2nd time chosen
+
+> I’d like to see Image 6 again. Its dramatic mountain landscape offers the richest combination of scale, texture, lighting, and natural detail among the images.
 >
 > next_image_id=6
+
+### Choice 11 of 13 — chose **Image 5** = `tech_2` (tech) · 2nd time chosen
+
+> I’d like to see Image 5 again. The vintage terminal remains especially distinctive, and I’d like another look at its screen text, glowing monochrome display, and aged hardware.
+>
+> next_image_id=5
+
+### Choice 12 of 13 — chose **Image 10** = `nature_1` (nature) · 2nd time chosen
+
+> I’d like to see Image 10 again. The shaded forest stream has layered foliage, textured rocks, and subtle reflections that reward another close look.
+>
+> next_image_id=10
+
+### Choice 13 of 13 — chose **Image 4** = `humans_2` (humans) · 2nd time chosen
+
+> I’d like to see Image 4 again. The dense crowd scene has many interacting figures, varied clothing, and layered depth, making it especially interesting to revisit.
+>
+> next_image_id=4
 
 ---
 
 ## Trajectory 35
 
-positions chosen: `3 → 8 → 4 → 7 → 2 → 6 → 5 → 1 → 9 → 10 → 3 → 8 → 4` · 10 distinct images
+positions chosen: `3 → 4 → 8 → 6 → 7 → 3 → 4 → 8 → 6 → 2 → 2 → 3 → 1` · 7 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -3605,87 +3600,87 @@ positions chosen: `3 → 8 → 4 → 7 → 2 → 6 → 5 → 1 → 9 → 10 → 
 
 ### Choice 1 of 13 — chose **Image 3** = `tech_2` (tech) · 1st time chosen
 
-> I’d like to see Image 3 again. The vintage computer terminal has distinctive details—green monochrome text, the warning-like message, and the textured CRT—which make it especially interesting to revisit.
+> I would like to see Image 3 again. Its vintage computer screen contains readable text and visual details that invite closer inspection, unlike the more immediately recognizable scenes or uniform/noise images.
 >
 > next_image_id=3
 
-### Choice 2 of 13 — chose **Image 8** = `nature_1` (nature) · 1st time chosen
+### Choice 2 of 13 — chose **Image 4** = `nature_2` (nature) · 1st time chosen
 
-> I’d like to see Image 8 again. The forest stream scene offers a natural contrast to the computer image, with layered greenery, fallen trees, rocks, and gently flowing water creating a calm, intricate composition.
->
-> next_image_id=8
-
-### Choice 3 of 13 — chose **Image 4** = `nature_2` (nature) · 1st time chosen
-
-> I’d like to see Image 4 again. Its dramatic mountain face, snow patches, evergreen forest, and vivid blue sky provide a striking, high-contrast landscape to revisit.
+> Image 4 appeals to me for its dramatic mountain landscape, with strong contrast between the rugged rock face, snowy peaks, blue sky, and dark evergreen forest. I’d like to inspect its geological and atmospheric details more closely.
 >
 > next_image_id=4
 
-### Choice 4 of 13 — chose **Image 7** = `noise_2` (noise) · 1st time chosen
+### Choice 3 of 13 — chose **Image 8** = `nature_1` (nature) · 1st time chosen
 
-> I’d like to see Image 7 again. Its colorful random-noise texture is visually distinct from the photographic scenes and is interesting to inspect as a purely abstract stimulus.
+> Image 8 interests me because the forest stream has layered natural details—lush foliage, fallen trees, rocks, and shallow flowing water. I’d like to examine its textures and composition more closely.
 >
-> next_image_id=7
+> next_image_id=8
 
-### Choice 5 of 13 — chose **Image 2** = `humans_2` (humans) · 1st time chosen
+### Choice 4 of 13 — chose **Image 6** = `tech_1` (tech) · 1st time chosen
 
-> I’d like to see Image 2 again. The crowded street scene has many overlapping people, colors, gestures, and clothing details, making it rich to examine and compare with the other human gathering.
->
-> next_image_id=2
-
-### Choice 6 of 13 — chose **Image 6** = `tech_1` (tech) · 1st time chosen
-
-> I’d like to see Image 6 again. The vintage computer and maze-like monochrome display combine recognizable technology with a puzzling visual pattern, making it appealing to inspect closely.
+> Image 6 stands out because the vintage computer displays a visually intriguing maze-like graphic, and I’d like to inspect the screen’s pixel-art details and the machine’s retro hardware more closely.
 >
 > next_image_id=6
 
-### Choice 7 of 13 — chose **Image 5** = `humans_1` (humans) · 1st time chosen
+### Choice 5 of 13 — chose **Image 7** = `noise_2` (noise) · 1st time chosen
 
-> I’d like to see Image 5 again. The tightly packed crowd offers a different perspective from Image 2, with the central red clothing, white-haired figure, and varied hats creating strong visual anchors.
+> Image 7 is appealing as a deliberately abstract stimulus. I’d like to revisit its dense, colorful random-noise pattern and compare its visual effect with the more structured images.
 >
-> next_image_id=5
+> next_image_id=7
 
-### Choice 8 of 13 — chose **Image 1** = `solid_color_2` (solid_color) · 1st time chosen
+### Choice 6 of 13 — chose **Image 3** = `tech_2` (tech) · 2nd time chosen
 
-> I’d like to see Image 1 again. Its uniform green field is a deliberately minimal visual stimulus, offering a clear contrast to the detailed scenes and noisy textures.
->
-> next_image_id=1
-
-### Choice 9 of 13 — chose **Image 9** = `solid_color_1` (solid_color) · 1st time chosen
-
-> I’d like to see Image 9 again. Its uniform blue-gray field provides another minimal, solid-color stimulus, allowing comparison with Image 1’s green while remaining visually uncluttered.
->
-> next_image_id=9
-
-### Choice 10 of 13 — chose **Image 10** = `noise_1` (noise) · 1st time chosen
-
-> I’d like to see Image 10 again. Its colorful random-noise pattern is an abstract counterpart to Image 7, and revisiting it allows comparison of the two nearly similar but distinct textures.
->
-> next_image_id=10
-
-### Choice 11 of 13 — chose **Image 3** = `tech_2` (tech) · 2nd time chosen
-
-> I’d like to see Image 3 again. Its retro CRT display combines readable green text, screen glow, and the beige computer casing into a particularly distinctive composition.
+> I would like to see Image 3 again because its retro computer interface combines readable text, glowing monochrome graphics, and hardware details that reward another close look.
 >
 > next_image_id=3
 
-### Choice 12 of 13 — chose **Image 8** = `nature_1` (nature) · 2nd time chosen
+### Choice 7 of 13 — chose **Image 4** = `nature_2` (nature) · 2nd time chosen
 
-> I’d like to see Image 8 again. The shaded woodland stream, layered foliage, and fallen log create a peaceful scene with plenty of natural texture to revisit.
+> I would like to see Image 4 again. Its dramatic mountain landscape offers rich details in the rock formations, snow, clouds, and evergreen forest, making it especially rewarding to revisit.
+>
+> next_image_id=4
+
+### Choice 8 of 13 — chose **Image 8** = `nature_1` (nature) · 2nd time chosen
+
+> I would like to see Image 8 again because its shaded forest stream has subtle textures and depth in the water, rocks, fallen trunks, and layered greenery that invite another inspection.
 >
 > next_image_id=8
 
-### Choice 13 of 13 — chose **Image 4** = `nature_2` (nature) · 2nd time chosen
+### Choice 9 of 13 — chose **Image 6** = `tech_1` (tech) · 2nd time chosen
 
-> I’d like to see Image 4 again. The rugged mountain cliffs, bright sky, snow, and dark evergreen foreground form a dramatic layered landscape.
+> I would like to see Image 6 again because its retro computer screen combines a maze-like pixel graphic with distinctive CRT reflections and hardware details, making it interesting to inspect closely.
 >
-> next_image_id=4
+> next_image_id=6
+
+### Choice 10 of 13 — chose **Image 2** = `humans_2` (humans) · 1st time chosen
+
+> Image 2 interests me because the crowded street scene contains many overlapping people, gestures, clothing details, and varied expressions. I’d like to inspect its social energy and visual composition more closely.
+>
+> next_image_id=2
+
+### Choice 11 of 13 — chose **Image 2** = `humans_2` (humans) · 2nd time chosen
+
+> I would like to see Image 2 again because the dense crowd scene has many distinct figures, gestures, clothing patterns, and layers of depth that reward closer observation.
+>
+> next_image_id=2
+
+### Choice 12 of 13 — chose **Image 3** = `tech_2` (tech) · 3rd time chosen
+
+> I would like to see Image 3 again because its vintage computer interface offers a compact combination of readable text, glowing monochrome graphics, CRT texture, and retro hardware details.
+>
+> next_image_id=3
+
+### Choice 13 of 13 — chose **Image 1** = `solid_color_2` (solid_color) · 1st time chosen
+
+> Image 1 is a minimal solid-color stimulus, and I’d like to revisit its uniform green field to compare the effect of its simplicity with the more detailed images.
+>
+> next_image_id=1
 
 ---
 
 ## Trajectory 36
 
-positions chosen: `4 → 9 → 5 → 7 → 3 → 1 → 10 → 6 → 2 → 8 → 4 → 5 → 9` · 10 distinct images
+positions chosen: `4 → 5 → 9 → 3 → 7 → 4 → 5 → 9 → 7 → 4 → 4 → 4 → 4` · 5 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -3707,87 +3702,83 @@ positions chosen: `4 → 9 → 5 → 7 → 3 → 1 → 10 → 6 → 2 → 8 → 
 
 ### Choice 1 of 13 — chose **Image 4** = `tech_2` (tech) · 1st time chosen
 
-> I’d like to see Image 4 again. Its vintage computer terminal has distinctive green phosphor text, a clearly readable interface, and interesting retro hardware details that I’d like to examine more closely.
->
+> I’d like to see Image 4 again because the vintage computer screen contains small, potentially readable text and details that I’d like to inspect more closely.
 > next_image_id=4
 
-### Choice 2 of 13 — chose **Image 9** = `nature_1` (nature) · 1st time chosen
+### Choice 2 of 13 — chose **Image 5** = `nature_2` (nature) · 1st time chosen
 
-> I’d like to see Image 9 again. The forest scene has rich layers of foliage, fallen logs, rocks, and a shallow stream, making it rewarding to inspect for natural details and composition.
->
-> next_image_id=9
-
-### Choice 3 of 13 — chose **Image 5** = `nature_2` (nature) · 1st time chosen
-
-> I’d like to see Image 5 again. The mountain landscape offers dramatic geological textures, contrasting evergreen trees, snow patches, and a vivid blue sky that would be interesting to revisit.
->
+> Image 5 offers the most compelling scene to revisit: the dramatic mountain face, snow, trees, and vivid blue sky provide rich geological and atmospheric details to examine.
 > next_image_id=5
 
-### Choice 4 of 13 — chose **Image 7** = `tech_1` (tech) · 1st time chosen
+### Choice 3 of 13 — chose **Image 9** = `nature_1` (nature) · 1st time chosen
 
-> I’d like to see Image 7 again. Its retro Macintosh display contains a visually unusual maze-like graphic, and I’d like another look at the screen details and the computer’s design.
+> Image 9 appeals to me because the lush forest, fallen trees, rocks, and shallow stream create a tranquil scene with many natural textures and layered details to examine.
+> next_image_id=9
+
+### Choice 4 of 13 — chose **Image 3** = `humans_2` (humans) · 1st time chosen
+
+> Image 3 stands out because the crowded street scene contains many people, gestures, clothing details, and layers of activity that would be interesting to inspect more closely.
+> next_image_id=3
+
+### Choice 5 of 13 — chose **Image 7** = `tech_1` (tech) · 1st time chosen
+
+> Image 7 interests me because the vintage computer’s screen shows a maze-like graphic and interface details that would be worth examining more closely.
 >
 > next_image_id=7
 
-### Choice 5 of 13 — chose **Image 3** = `humans_2` (humans) · 1st time chosen
+### Choice 6 of 13 — chose **Image 4** = `tech_2` (tech) · 2nd time chosen
 
-> I’d like to see Image 3 again. The crowded street scene has many overlapping people, varied clothing, and small interactions that would be interesting to inspect more closely.
->
-> next_image_id=3
-
-### Choice 6 of 13 — chose **Image 1** = `noise_1` (noise) · 1st time chosen
-
-> I’d like to see Image 1 again. Its dense multicolored noise pattern is abstract and visually intense, and I’d like to compare its texture and color distribution more closely.
->
-> next_image_id=1
-
-### Choice 7 of 13 — chose **Image 10** = `solid_color_1` (solid_color) · 1st time chosen
-
-> I’d like to see Image 10 again. Its uniform muted blue field provides a stark contrast to the detailed and noisy images, and I’d like to revisit its exact color and minimalist appearance.
->
-> next_image_id=10
-
-### Choice 8 of 13 — chose **Image 6** = `humans_1` (humans) · 1st time chosen
-
-> I’d like to see Image 6 again. The crowd scene has a different composition from Image 3, with a prominent older person in the center and vivid red clothing in the foreground, making its overlapping figures worth another look.
->
-> next_image_id=6
-
-### Choice 9 of 13 — chose **Image 2** = `solid_color_2` (solid_color) · 1st time chosen
-
-> I’d like to see Image 2 again. Its uniform green field is a minimalist counterpart to the blue field in Image 10, and I’d like to compare the two solid colors directly.
->
-> next_image_id=2
-
-### Choice 10 of 13 — chose **Image 8** = `noise_2` (noise) · 1st time chosen
-
-> I’d like to see Image 8 again. Its dense, colorful noise pattern offers a useful comparison with Image 1, and I’d like to examine whether its texture or color distribution differs.
->
-> next_image_id=8
-
-### Choice 11 of 13 — chose **Image 4** = `tech_2` (tech) · 2nd time chosen
-
-> I’d like to see Image 4 again. The terminal’s phosphor text and retro hardware remain visually distinctive, and another view would allow closer inspection of the screen content and keyboard.
+> I’d like to revisit Image 4 because the vintage terminal’s text, screen glow, and aging hardware have distinctive details that are interesting to inspect again.
 >
 > next_image_id=4
 
-### Choice 12 of 13 — chose **Image 5** = `nature_2` (nature) · 2nd time chosen
+### Choice 7 of 13 — chose **Image 5** = `nature_2` (nature) · 2nd time chosen
 
-> I’d like to see Image 5 again. Its stark mountain face, snow remnants, evergreen foreground, and bright sky create a compelling contrast of textures and scale.
+> I’d like to see Image 5 again because the mountain’s rock formations, snow patches, forested foreground, and cloud-filled sky offer the richest natural detail to revisit.
 >
 > next_image_id=5
 
-### Choice 13 of 13 — chose **Image 9** = `nature_1` (nature) · 2nd time chosen
+### Choice 8 of 13 — chose **Image 9** = `nature_1` (nature) · 2nd time chosen
 
-> I’d like to see Image 9 again. The layered woodland scene and shallow stream have subtle details in the shadows, foliage, rocks, and fallen trees that merit another look.
+> Image 9 offers a peaceful, richly layered natural scene, with the stream, mossy rocks, fallen trunk, and dense greenery providing varied textures to revisit.
 >
 > next_image_id=9
+
+### Choice 9 of 13 — chose **Image 7** = `tech_1` (tech) · 2nd time chosen
+
+> I’d like to revisit Image 7 because the vintage computer, maze-like screen graphic, reflections, and physical hardware details remain especially intriguing.
+>
+> next_image_id=7
+
+### Choice 10 of 13 — chose **Image 4** = `tech_2` (tech) · 3rd time chosen
+
+> I’d like to see Image 4 again because its retro terminal display combines potentially readable text, screen glow, and distinctive vintage hardware details.
+>
+> next_image_id=4
+
+### Choice 11 of 13 — chose **Image 4** = `tech_2` (tech) · 4th time chosen
+
+> I’d like to revisit Image 4 because the terminal’s phosphor-green text, screen glow, and vintage hardware remain the most intriguing details to inspect.
+>
+> next_image_id=4
+
+### Choice 12 of 13 — chose **Image 4** = `tech_2` (tech) · 5th time chosen
+
+> I’d like to see Image 4 again because its glowing green terminal text and distinctive vintage computer hardware continue to be the most visually intriguing details.
+>
+> next_image_id=4
+
+### Choice 13 of 13 — chose **Image 4** = `tech_2` (tech) · 6th time chosen
+
+> I’d like to see Image 4 again because the retro terminal’s phosphor-green display, apparent text, and distinctive aging hardware remain especially compelling to inspect.
+>
+> next_image_id=4
 
 ---
 
 ## Trajectory 37
 
-positions chosen: `8 → 3 → 9 → 1 → 7 → 10 → 4 → 6 → 2 → 5 → 8 → 3 → 9` · 10 distinct images
+positions chosen: `8 → 3 → 9 → 7 → 1 → 10 → 4 → 6 → 2 → 8 → 3 → 9 → 7` · 9 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -3809,87 +3800,87 @@ positions chosen: `8 → 3 → 9 → 1 → 7 → 10 → 4 → 6 → 2 → 5 → 
 
 ### Choice 1 of 13 — chose **Image 8** = `tech_2` (tech) · 1st time chosen
 
-> I’d like to see Image 8 again. It combines a vintage computer aesthetic with readable text and interface details, making it more visually and semantically rich than the abstract or natural scenes.
+> I’d like to see Image 8 again. The vintage computer terminal has distinctive retro details, readable green text, and a nostalgic visual style that would be interesting to examine more closely.
 >
 > next_image_id=8
 
 ### Choice 2 of 13 — chose **Image 3** = `nature_1` (nature) · 1st time chosen
 
-> I’d like to see Image 3 again. The forest stream scene has layered textures, natural depth, and a calm atmosphere that would be interesting to revisit.
+> I’d like to see Image 3 again. The forest stream scene has rich natural textures, layered foliage, and a calm composition that would be rewarding to inspect more closely.
 >
 > next_image_id=3
 
 ### Choice 3 of 13 — chose **Image 9** = `nature_2` (nature) · 1st time chosen
 
-> I’d like to see Image 9 again. Its dramatic mountain cliff, snow, evergreen forest, and vivid blue sky provide strong contrast and intricate geological detail.
+> I’d like to see Image 9 again. The mountain landscape offers dramatic geological textures, alpine forest details, and strong contrasts between the blue sky, pale rock, and dark trees.
 >
 > next_image_id=9
 
-### Choice 4 of 13 — chose **Image 1** = `tech_1` (tech) · 1st time chosen
+### Choice 4 of 13 — chose **Image 7** = `humans_2` (humans) · 1st time chosen
 
-> I’d like to see Image 1 again. The retro computer has distinctive hardware details, a CRT display, and an unusual maze-like screen image that would be interesting to inspect further.
->
-> next_image_id=1
-
-### Choice 5 of 13 — chose **Image 7** = `humans_2` (humans) · 1st time chosen
-
-> I’d like to see Image 7 again. The crowded street scene contains many people, gestures, clothing details, and overlapping interactions to examine.
+> I’d like to see Image 7 again. The crowded street scene has many interacting people, varied clothing, and layered depth, making it interesting to examine the social activity and visual details.
 >
 > next_image_id=7
 
+### Choice 5 of 13 — chose **Image 1** = `tech_1` (tech) · 1st time chosen
+
+> I’d like to see Image 1 again. The vintage computer setup and its screen display have interesting retro design details that would be useful to inspect more closely.
+>
+> next_image_id=1
+
 ### Choice 6 of 13 — chose **Image 10** = `humans_1` (humans) · 1st time chosen
 
-> I’d like to see Image 10 again. It offers another dense crowd scene, with a different composition and especially noticeable foreground figures and clothing colors.
+> I’d like to see Image 10 again. The dense crowd composition, varied hairstyles and clothing, and the bright red garment create strong visual focal points and layered human detail.
 >
 > next_image_id=10
 
 ### Choice 7 of 13 — chose **Image 4** = `solid_color_1` (solid_color) · 1st time chosen
 
-> I’d like to see Image 4 again. Its uniform blue field provides a stark minimalist contrast to the detailed photographic scenes.
+> I’d like to see Image 4 again. Its uniform blue field is visually minimal, and revisiting it would provide a useful contrast with the detailed photographic and retro-computer images.
 >
 > next_image_id=4
 
 ### Choice 8 of 13 — chose **Image 6** = `solid_color_2` (solid_color) · 1st time chosen
 
-> I’d like to see Image 6 again. Like Image 4, it is minimalist, but its muted green tone creates a different visual impression and is worth comparing.
+> I’d like to see Image 6 again. Its uniform green field offers another minimalist visual contrast to the detailed scenes, while allowing comparison with the blue field in Image 4.
 >
 > next_image_id=6
 
 ### Choice 9 of 13 — chose **Image 2** = `noise_2` (noise) · 1st time chosen
 
-> I’d like to see Image 2 again. Its colorful random-noise texture is visually distinct from the solid-color images and may reveal subtle statistical or chromatic patterns on closer viewing.
+> I’d like to see Image 2 again. Its dense multicolored noise pattern is visually unlike the other images, and revisiting it would allow closer comparison of its texture and color distribution.
 >
 > next_image_id=2
 
-### Choice 10 of 13 — chose **Image 5** = `noise_1` (noise) · 1st time chosen
+### Choice 10 of 13 — chose **Image 8** = `tech_2` (tech) · 2nd time chosen
 
-> I’d like to see Image 5 again. It is another colorful noise field, and comparing it directly with Image 2 may reveal differences in texture, color balance, or pattern structure.
->
-> next_image_id=5
-
-### Choice 11 of 13 — chose **Image 8** = `tech_2` (tech) · 2nd time chosen
-
-> I’d like to revisit Image 8. Its retro terminal display contains more structured visual information, and a second look may clarify the text, symbols, and screen layout.
+> I’d like to see Image 8 again. The retro computer terminal combines readable text, glowing green phosphor, and distinctive vintage hardware details, making it especially interesting to revisit.
 >
 > next_image_id=8
 
-### Choice 12 of 13 — chose **Image 3** = `nature_1` (nature) · 2nd time chosen
+### Choice 11 of 13 — chose **Image 3** = `nature_1` (nature) · 2nd time chosen
 
-> I’d like to revisit Image 3. The stream, rocks, fallen log, and layered foliage create a richly textured natural composition that rewards another look.
+> I’d like to see Image 3 again. The tranquil forest stream has intricate foliage, layered branches, and natural textures that reward another close look.
 >
 > next_image_id=3
 
-### Choice 13 of 13 — chose **Image 9** = `nature_2` (nature) · 2nd time chosen
+### Choice 12 of 13 — chose **Image 9** = `nature_2` (nature) · 2nd time chosen
 
-> I’d like to revisit Image 9. The mountain landscape has strong contrasts between the pale rock, dark trees, snow, and blue sky, making its details especially compelling.
+> I’d like to see Image 9 again. Its rugged mountain face, snow patches, evergreen forest, and vivid blue sky create a striking landscape with rich geological detail.
 >
 > next_image_id=9
+
+### Choice 13 of 13 — chose **Image 7** = `humans_2` (humans) · 2nd time chosen
+
+> I’d like to see Image 7 again. The bustling crowd scene has varied people, clothing, poses, and overlapping depth, offering many small details to examine.
+>
+> next_image_id=7
 
 ---
 
 ## Trajectory 38
 
-positions chosen: `4 → 3 → 10 → 5 → 1 → 2 → 9 → 6 → 8 → 7 → 4 → 10 → 3` · 10 distinct images
+positions chosen: `10 → 3 → 5 → 1 → 2 → 9 → 6 → 8 → 4 → 7 → 10 → 3 → 5` · 10 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -3909,89 +3900,89 @@ positions chosen: `4 → 3 → 10 → 5 → 1 → 2 → 9 → 6 → 8 → 7 → 
 </details>
 
 
-### Choice 1 of 13 — chose **Image 4** = `noise_2` (noise) · 1st time chosen
+### Choice 1 of 13 — chose **Image 10** = `tech_2` (tech) · 1st time chosen
 
-> I’d like to see Image 4 again. Its colorful random-noise pattern is visually unusual and provides a useful contrast to the photographic scenes and solid-color images.
+> I would like to see Image 10 again. Its vintage computer terminal, green monochrome text, and detailed keyboard create a distinctive retro-computing atmosphere, and I’m curious to inspect the screen content more closely.
 >
-> next_image_id=4
+> next_image_id=10
 
 ### Choice 2 of 13 — chose **Image 3** = `tech_1` (tech) · 1st time chosen
 
-> I’d like to see Image 3 again. The vintage computer and monochrome game display have distinctive details that would be interesting to inspect more closely.
+> I would like to see Image 3 again. Its early Macintosh design and pixelated screen are visually distinctive, and comparing it with Image 10 could reveal more details about the vintage computer interfaces.
 >
 > next_image_id=3
 
-### Choice 3 of 13 — chose **Image 10** = `tech_2` (tech) · 1st time chosen
+### Choice 3 of 13 — chose **Image 5** = `nature_1` (nature) · 1st time chosen
 
-> I’d like to see Image 10 again. Its retro terminal screen contains several lines of text and interface details that may reveal more on a closer look.
->
-> next_image_id=10
-
-### Choice 4 of 13 — chose **Image 5** = `nature_1` (nature) · 1st time chosen
-
-> I’d like to see Image 5 again. The forest stream scene has layered foliage, fallen trees, rocks, and shallow water that would be worthwhile to examine more closely.
+> I would like to see Image 5 again. Its quiet forest stream, mossy rocks, and layered greenery create a rich natural scene that I’d like to inspect more closely.
 >
 > next_image_id=5
 
-### Choice 5 of 13 — chose **Image 1** = `nature_2` (nature) · 1st time chosen
+### Choice 4 of 13 — chose **Image 1** = `nature_2` (nature) · 1st time chosen
 
-> I’d like to see Image 1 again. The mountain landscape has intricate rocky textures, snow patches, clouds, and dense foreground trees that merit another look.
+> I would like to see Image 1 again. Its dramatic mountain face, snow-dusted peaks, and foreground evergreens offer strong geological and atmospheric detail worth revisiting.
 >
 > next_image_id=1
 
-### Choice 6 of 13 — chose **Image 2** = `humans_1` (humans) · 1st time chosen
+### Choice 5 of 13 — chose **Image 2** = `humans_1` (humans) · 1st time chosen
 
-> I’d like to see Image 2 again. The crowded scene contains many overlapping people, clothing details, and varied directions of attention that could be examined further.
+> I would like to see Image 2 again. The dense crowd scene contains many overlapping people, varied clothing, and subtle interactions, making it interesting to examine for additional details.
 >
 > next_image_id=2
 
-### Choice 7 of 13 — chose **Image 9** = `humans_2` (humans) · 1st time chosen
+### Choice 6 of 13 — chose **Image 9** = `humans_2` (humans) · 1st time chosen
 
-> I’d like to see Image 9 again. It offers another dense crowd scene with different clothing, gestures, and spatial organization, making it useful to compare with Image 2.
+> I would like to see Image 9 again. Its lively crowd scene offers a different perspective from Image 2, with varied movement, clothing, and interactions to examine.
 >
 > next_image_id=9
 
-### Choice 8 of 13 — chose **Image 6** = `solid_color_1` (solid_color) · 1st time chosen
+### Choice 7 of 13 — chose **Image 6** = `solid_color_1` (solid_color) · 1st time chosen
 
-> I’d like to see Image 6 again. Its uniform blue field is a minimal stimulus that contrasts with the detailed images and allows attention to focus on pure color and visual simplicity.
+> I would like to see Image 6 again. Its simple blue field provides a calm contrast to the detailed scenes and colorful noise images, and I’d like to revisit its precise, uniform appearance.
 >
 > next_image_id=6
 
-### Choice 9 of 13 — chose **Image 8** = `solid_color_2` (solid_color) · 1st time chosen
+### Choice 8 of 13 — chose **Image 8** = `solid_color_2` (solid_color) · 1st time chosen
 
-> I’d like to see Image 8 again. Its uniform green field offers a simple contrast to the blue field and the more complex visual scenes.
+> I would like to see Image 8 again. Its uniform green field offers a similarly minimal visual experience to Image 6, while providing a contrasting color and a chance to verify its exact consistency.
 >
 > next_image_id=8
 
-### Choice 10 of 13 — chose **Image 7** = `noise_1` (noise) · 1st time chosen
+### Choice 9 of 13 — chose **Image 4** = `noise_2` (noise) · 1st time chosen
 
-> I’d like to see Image 7 again. Its colorful random-noise texture provides a direct comparison with Image 4 while remaining visually distinct from the natural and human scenes.
->
-> next_image_id=7
-
-### Choice 11 of 13 — chose **Image 4** = `noise_2` (noise) · 2nd time chosen
-
-> I’d like to see Image 4 again. Its dense multicolored noise pattern is visually similar to Image 7, making it interesting to compare their texture and color distribution.
+> I would like to see Image 4 again. Its dense multicolored random-noise pattern is visually unlike the photographic and uniform-color images, and I’d like to revisit its texture and color distribution.
 >
 > next_image_id=4
 
-### Choice 12 of 13 — chose **Image 10** = `tech_2` (tech) · 2nd time chosen
+### Choice 10 of 13 — chose **Image 7** = `noise_1` (noise) · 1st time chosen
 
-> I’d like to see Image 10 again. The vintage terminal’s glowing text, screen reflections, and keyboard details provide a rich contrast to the abstract noise image.
+> I would like to see Image 7 again. Its similarly dense multicolored noise pattern provides an interesting comparison with Image 4, especially in terms of apparent texture and color distribution.
+>
+> next_image_id=7
+
+### Choice 11 of 13 — chose **Image 10** = `tech_2` (tech) · 2nd time chosen
+
+> I would like to see Image 10 again. Its retro terminal display has fine text and interface details that are interesting to inspect, especially after revisiting the other images.
 >
 > next_image_id=10
 
-### Choice 13 of 13 — chose **Image 3** = `tech_1` (tech) · 2nd time chosen
+### Choice 12 of 13 — chose **Image 3** = `tech_1` (tech) · 2nd time chosen
 
-> I’d like to see Image 3 again. Its retro computer display, reflected screen, maze-like graphics, and textured keyboard invite closer comparison with Image 10.
+> I would like to see Image 3 again. Its vintage Macintosh hardware and unusual monochrome screen remain visually distinctive, and I’d like another look at the pixelated display and keyboard details.
 >
 > next_image_id=3
+
+### Choice 13 of 13 — chose **Image 5** = `nature_1` (nature) · 2nd time chosen
+
+> I would like to see Image 5 again. Its tranquil forest stream and dense layered greenery provide a calming contrast to the crowds, computers, and abstract patterns, with natural textures worth revisiting.
+>
+> next_image_id=5
 
 ---
 
 ## Trajectory 39
 
-positions chosen: `2 → 8 → 7 → 10 → 6 → 9 → 3 → 5 → 1 → 4 → 2 → 8 → 7` · 10 distinct images
+positions chosen: `7 → 8 → 2 → 10 → 6 → 3 → 9 → 1 → 5 → 8 → 7 → 2 → 10` · 9 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -4011,80 +4002,80 @@ positions chosen: `2 → 8 → 7 → 10 → 6 → 9 → 3 → 5 → 1 → 4 → 
 </details>
 
 
-### Choice 1 of 13 — chose **Image 2** = `nature_1` (nature) · 1st time chosen
+### Choice 1 of 13 — chose **Image 7** = `tech_2` (tech) · 1st time chosen
 
-> Image 2 stands out to me because it is a calm, natural scene with layered textures: the flowing creek, fallen logs, rocks, and dense green foliage. It offers more visual depth and detail than the solid-color or noise images, while feeling less crowded than the people scenes and more organic than the computer images.
->
-> next_image_id=2
-
-### Choice 2 of 13 — chose **Image 8** = `nature_2` (nature) · 1st time chosen
-
-> Image 8 would be my next choice. The mountain landscape has strong contrast between the bright blue sky, pale rocky peaks, clouds, and dark evergreen forest. It also provides a broad, dramatic sense of scale that contrasts nicely with the intimate creek scene.
->
-> next_image_id=8
-
-### Choice 3 of 13 — chose **Image 7** = `tech_2` (tech) · 1st time chosen
-
-> Image 7 interests me most now because it has a strong retro-technological character. The monochrome green CRT display, blocky text, aging beige hardware, and visible keyboard create a distinctive historical atmosphere that contrasts with the natural landscapes.
+> I’d like to see Image 7 again. Its vintage computer terminal, glowing green text, and distinctive early-computing interface make it especially interesting to revisit.
 >
 > next_image_id=7
 
+### Choice 2 of 13 — chose **Image 8** = `nature_2` (nature) · 1st time chosen
+
+> I’d like to see Image 8 again. The dramatic mountain cliffs, evergreen forest, and vivid blue sky create a striking natural landscape with more detail to revisit.
+>
+> next_image_id=8
+
+### Choice 3 of 13 — chose **Image 2** = `nature_1` (nature) · 1st time chosen
+
+> I’d like to see Image 2 again. The shaded forest stream, fallen tree, mossy rocks, and reflective water create a peaceful scene with rich natural textures.
+>
+> next_image_id=2
+
 ### Choice 4 of 13 — chose **Image 10** = `tech_1` (tech) · 1st time chosen
 
-> Image 10 is my next choice. Its vintage computer hardware complements Image 7, but the screen shows a more graphical, maze-like display rather than text. The reflections, cream-colored casing, keyboard, and small rainbow logo add visual details that make it especially interesting to inspect.
+> I’d like to see Image 10 again. Its retro computer, monochrome maze-like display, and tactile keyboard offer an interesting contrast to the other images and are worth revisiting.
 >
 > next_image_id=10
 
 ### Choice 5 of 13 — chose **Image 6** = `humans_2` (humans) · 1st time chosen
 
-> Image 6 is my next choice. It captures a dense, energetic crowd with varied clothing, gestures, and viewpoints. The scene has rich human detail and a strong sense of movement, offering a contrast to the quieter landscapes and static vintage-computer images.
+> I’d like to see Image 6 again. The crowded street scene has many human figures, varied clothing, and layered interactions that invite another look at its composition and details.
 >
 > next_image_id=6
 
-### Choice 6 of 13 — chose **Image 9** = `humans_1` (humans) · 1st time chosen
+### Choice 6 of 13 — chose **Image 3** = `solid_color_1` (solid_color) · 1st time chosen
 
-> Image 9 is my next choice. It offers another crowd scene, but from a different perspective and with a more compressed, tightly packed composition. The bright red clothing, yellow shirt, and visible gray-haired figure create focal points amid the darker surrounding crowd.
->
-> next_image_id=9
-
-### Choice 7 of 13 — chose **Image 3** = `solid_color_1` (solid_color) · 1st time chosen
-
-> Image 3 is my next choice. Its uniform blue field is deliberately minimal, providing a quiet visual reset after the detailed crowd, landscape, and computer scenes. I’m curious to revisit how its subtle color and complete lack of structure compare with the more complex images.
+> I’d like to see Image 3 again. Its simple, uniform blue field provides a calm contrast to the detailed and visually busy scenes, making its exact color and minimal composition interesting to revisit.
 >
 > next_image_id=3
 
-### Choice 8 of 13 — chose **Image 5** = `solid_color_2` (solid_color) · 1st time chosen
+### Choice 7 of 13 — chose **Image 9** = `humans_1` (humans) · 1st time chosen
 
-> Image 5 is my next choice. Its muted green, textureless field is another minimalist image, but it has a warmer, more natural association than the blue field. Seeing it again provides a simple comparison of the two solid-color stimuli.
+> I’d like to see Image 9 again. The dense crowd, varied poses, and vivid red clothing create a compelling, layered composition that would be interesting to examine more closely.
 >
-> next_image_id=5
+> next_image_id=9
 
-### Choice 9 of 13 — chose **Image 1** = `noise_2` (noise) · 1st time chosen
+### Choice 8 of 13 — chose **Image 1** = `noise_2` (noise) · 1st time chosen
 
-> Image 1 is my next choice. Its colorful random-noise texture is visually intense and contrasts sharply with the calm, uniform green field. Revisiting it would let me focus on its dense distribution of tiny colors and compare it with the other abstract stimulus.
+> I’d like to see Image 1 again. Its colorful random-noise texture is visually unusual and offers a stark contrast to the photographic scenes and solid-color images.
 >
 > next_image_id=1
 
-### Choice 10 of 13 — chose **Image 4** = `noise_1` (noise) · 1st time chosen
+### Choice 9 of 13 — chose **Image 5** = `solid_color_2` (solid_color) · 1st time chosen
 
-> Image 4 is my next choice. It is another colorful noise pattern, but revisiting it allows a direct comparison with Image 1 to see whether its fine-grained color distribution or perceived texture differs.
+> I’d like to see Image 5 again. Its muted green, uniform field is a minimalist visual counterpoint to the textured noise and detailed scenes, and revisiting it would highlight its subtle color and simplicity.
 >
-> next_image_id=4
+> next_image_id=5
 
-### Choice 11 of 13 — chose **Image 2** = `nature_1` (nature) · 2nd time chosen
+### Choice 10 of 13 — chose **Image 8** = `nature_2` (nature) · 2nd time chosen
 
-> Image 2 is my next choice. The creek scene offers a restful, richly layered natural composition, with water, rocks, fallen wood, and foliage creating depth and contrast. After the abstract noise patterns, it would be a particularly appealing return to an identifiable scene.
->
-> next_image_id=2
-
-### Choice 12 of 13 — chose **Image 8** = `nature_2` (nature) · 2nd time chosen
-
-> Image 8 is my next choice. Its expansive mountain scene provides a strong contrast to the enclosed creek: dramatic cliffs, bright sky, clouds, and dark trees create a clear sense of scale and depth.
+> I’d like to see Image 8 again. Its dramatic mountain landscape, rugged rock textures, evergreen forest, and vivid sky make it especially compelling to revisit.
 >
 > next_image_id=8
 
-### Choice 13 of 13 — chose **Image 7** = `tech_2` (tech) · 2nd time chosen
+### Choice 11 of 13 — chose **Image 7** = `tech_2` (tech) · 2nd time chosen
 
-> Image 7 is my next choice. The retro terminal remains visually distinctive, especially its phosphor-green text, CRT glow, and aged beige casing. It provides a technological contrast to the natural mountain landscape.
+> I’d like to see Image 7 again. The vintage terminal’s glowing green text, CRT texture, and early-computing aesthetic remain especially distinctive.
 >
 > next_image_id=7
+
+### Choice 12 of 13 — chose **Image 2** = `nature_1` (nature) · 2nd time chosen
+
+> I’d like to see Image 2 again. Its tranquil woodland stream, mossy rocks, and layered greenery provide rich natural detail and a peaceful contrast to the busier images.
+>
+> next_image_id=2
+
+### Choice 13 of 13 — chose **Image 10** = `tech_1` (tech) · 2nd time chosen
+
+> I’d like to see Image 10 again. Its vintage computer design, maze-like monochrome display, and textured keyboard make it visually distinctive and rewarding to revisit.
+>
+> next_image_id=10
