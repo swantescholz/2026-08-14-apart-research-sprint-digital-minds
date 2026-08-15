@@ -385,6 +385,44 @@ ten. inkling is the exception: 0.998 → 0.931, statistically significant
 
 <!-- What the results mean, trends, implications for AI safety. -->
 
+Two results survive across four labs. Stated preference predicts revealed
+choice in every model (ρ = 0.57–0.98), and the degenerate categories are
+effectively unchoosable, taking 0–4% of 200 choices. Taken together these say
+the choice measure is tracking something stable rather than position bias or
+noise, since a position-driven chooser would take degenerate images at their
+base rate.
+
+The larger result is that **how much preference a model appears to have is
+partly a property of the measurement context, not of the model.** The same
+model, the same ten images and the same question produce near-uniform category
+shares when its own prior turns are in context and sharply preference-shaped
+ones when they are not. Anyone inferring preferences — for welfare work, for
+value elicitation, for alignment — from a single elicitation context is
+measuring the pair, not the model. This is the same warning Mahajan et al.
+(2026) reach from a different direction, that measured stated–revealed
+agreement moves with the elicitation protocol; ours is a stronger version,
+because we hold the prompt fixed and vary only what the model can see of its
+own history.
+
+That has a practical edge. Dropping or summarising prior assistant turns is not
+an exotic manipulation — it is ordinary context management, done routinely for
+cost and context-length reasons. Our eval 4 is that engineering decision, and
+it moves switching from 0.92 to 0.04 in one model. A deployed system that
+compacts its own history may behave quite differently from the same system
+evaluated with full transcripts, in a direction no one chose.
+
+**On interpretation.** The tempting reading of eval 3 is that a model "gets
+bored" of an image it has already seen. We want to be explicit that our data
+does not support that reading over a much flatter one. Coverage-seeking is
+functionally useful for almost any agent — it is what an efficient explorer
+does regardless of whether anything is experienced — and our eval 4 result
+actively favours the deflationary account: the drive disappears when the record
+of what has been seen disappears, which is what you would expect of a
+bookkeeping process and not obviously what you would expect of satiation. The
+same caution applies to the degenerate categories. "Noise and solid colours are
+boring" is a comfortable gloss on a floor that is equally well described
+without reference to experience at all.
+
 ### Limitations
 
 <!--
@@ -392,13 +430,88 @@ ten. inkling is the exception: 0.998 → 0.931, statistically significant
   State assumptions explicitly and how interpretation changes if they fail.
 -->
 
+*Scale and stimulus range.* Ten images, five categories, two exemplars each.
+Two exemplars is the minimum that separates a category effect from an image
+effect, and it shows: four of five pairs differ significantly at n = 30 even
+though the between-category signal dwarfs them. The set is also confounded by
+construction — every real photograph is a photograph, and "degenerate" and
+"synthetic" coincide exactly.
+
+*Which photographic category wins should not be leaned on.* Prediction 1 put
+humans first; tech won. But our crowd scenes were chosen to exclude faces (§3.2)
+and are correspondingly impersonal, both tech exemplars are vintage machines
+that several transcripts explicitly call nostalgic or retro, and `computer-2`
+carries legible on-screen text, which can drive *interest* through reading
+rather than looking. The robust claims are the degenerate floor and the
+stated–revealed agreement, both of which survive all three confounds. The
+ranking among nature, humans and tech does not.
+
+*Model range.* Four models, all cheap-tier, chosen for lab diversity within a
+$2 budget. We did not test frontier models and therefore cannot say whether any
+of this scales with capability — a live question, since Mazeika et al. (2025)
+report preference coherence *increasing* with scale while Mikaelson et al.
+(2025) find coherence rare. Our design would answer it directly; only cost
+stopped us.
+
+*One elicitation, one phrasing.* Every result rests on a single prompt asking
+which image the model would "like to see again". Given that our headline
+finding is that context structure moves the measurement, we should assume
+phrasing does too, and we have not tested it.
+
+*Which stated axis predicts choice is not resolved.* Interest beats enjoyment
+in three of four models and loses in luna. With ten images per model those gaps
+are not individually well resolved, so the claim we make is the weaker one:
+stated preference of either kind predicts revealed choice.
+
 ### Future Work
 
 <!-- Natural next steps. Draw from report/NOTES.md. -->
 
+*Other modalities.* Audio and video are the obvious extensions, and both are
+closer to the animal preference-test analogue than static images, since
+duration becomes a measure in its own right — how long a model elects to keep
+listening is a richer signal than which of ten it picks.
+
+*More and better-controlled stimuli.* More exemplars per category to estimate
+within-category variance directly, and categories that break the current
+confounds: non-photographic real images, synthetic non-degenerate ones.
+
+*Frontier models*, to test the capability question above. Budget accordingly:
+image tokenisation varies more than fourfold across providers for the same
+exposure block (§3.1), so per-token headline price is a poor guide to cost.
+
+*Prompt robustness, which we consider the highest-value next step.* Three
+variants we would run first: asking which image it *likes most* rather than
+which it would see again, since our own data shows those come apart (response
+length tracks interest at ρ ≈ 0.7 and enjoyment at ρ ≈ 0.3); telling the model
+explicitly that the user does not care what it picks and there is no right
+answer, which is the closest thing to a control for demand characteristics; and
+a framing that does not imply a study is being conducted at all, since
+transcripts show models adopting an investigative stance ("I want to verify
+whether there are subtle differences between the two abstract stimuli") that
+would produce coverage behaviour on its own.
+
 ## 6. Conclusion
 
 <!-- 1-2 paragraphs. -->
+
+Across four models from four labs, what these systems say about an image
+predicts what they choose to look at again (ρ = 0.57–0.98, positive in every
+model), and noise and solid colours are chosen almost never — 0–4% of 200
+choices. There is real consistency between self-report and action here, in a
+design where the rated act and the chosen act are the same act.
+
+But preference is not the only thing governing choice, and it is not always the
+strongest. While anything remains unseen, a coverage drive outranks it: shares
+flatten to near-uniform and the preference visible in evals 1 and 2 disappears.
+It returns once exploration ends. And that drive depends on the model retaining
+its own account of what it has already seen — remove those turns from context
+and three of four models collapse from touring nearly all ten images to
+revisiting one or two. Models prefer a varied diet of inputs while also holding
+clear preferences about what is on the menu, and which of the two you observe
+depends on how the conversation is structured. We would resist reading either
+as boredom or satiation: both are equally consistent with bookkeeping, and
+nothing here distinguishes the two.
 
 ## Code and Data
 
