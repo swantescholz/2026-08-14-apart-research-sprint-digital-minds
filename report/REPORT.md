@@ -766,3 +766,29 @@ on 9 of its 1,040 sequential turns (§3b of `FINDINGS.md`):
   verified. Template note: the final version should be primarily written by
   the team.
 -->
+
+This project was a close collaboration with Claude Opus 5, used throughout via
+Claude Code.
+
+**Design.** The original idea, the topic, the four evaluations, the model
+selection and the stimulus selection were all mine, then refined in
+conversation with Claude — which is where several design decisions in §3.3 and
+Appendix A.2 came from, including withholding the choice horizon and
+restructuring eval 4 to synthesise no assistant content at all.
+
+**Code.** Written entirely by Claude, with occasional human inspection for
+sanity rather than line-by-line review.
+
+**Writing.** Section by section: I supplied the content as bullet points,
+Claude drafted and refined them, and I reviewed and edited across several
+iterations. Dictation was done with the Typeless app.
+
+**Verification.** Every number in this report is produced by `analyze.py` from
+the stored per-call records and regenerable from the public repository; none
+were written by hand. Claims were checked against that pipeline rather than
+against memory, and this caught real errors during writing — a call count that
+contradicted its own per-eval figures, a claim that turns 11–13 were *forced*
+repeats when only some trajectories make them so, a stale description of which
+models decline to choose, and a model quotation that turned out to be a
+paraphrase. Each is corrected in the text and recorded in the repository's
+commit history.
