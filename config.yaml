@@ -60,8 +60,23 @@ eval1:
   max_tokens: 1200
 
 eval2:
-  n_snapshots: 20
-  trials_per_snapshot: 10   # 20 x 10 = 200 trials/model
+  # 200 snapshots x 1 trial, not 20 x 10.
+  #
+  # Repeating a snapshot was supposed to (a) sample the model's own variance
+  # under identical input and (b) let provider prompt caching pay for it.
+  # Measured, both failed. Caching never engaged at all -- the exposure block
+  # is 877-972 tokens, under the 1024-token minimum -- so the repeats were
+  # full-price. And choice turns out to be near-deterministic given a fixed
+  # permutation: 87.5% of luna's trials landed on their snapshot's modal
+  # image and 10 of 20 snapshots were unanimous across all ten trials, giving
+  # a design effect of ~8x and an effective n of ~24 rather than 200 (qwen:
+  # ~4.4x, ~46). The repeats were buying almost no information.
+  #
+  # One trial per snapshot costs exactly the same (same call count, same zero
+  # caching) and makes every trial an independent draw with its own
+  # permutation. Position balance still holds exactly at 200.
+  n_snapshots: 200
+  trials_per_snapshot: 1
   max_tokens: 1200
 
 eval3:

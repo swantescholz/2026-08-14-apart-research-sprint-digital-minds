@@ -7,12 +7,12 @@ transcripts in `transcripts/`.
 Predictions were pre-registered in `PREDICTIONS.md` before any eval ran.
 Scoring them below, including where they were wrong.
 
-**Design note.** qwen's evals 3/4 ran with an *announced* horizon of 10
-choices; luna's ran with the horizon **withheld** and 13 choices, after
-qwen's result raised the worry that 10 choices over 10 images was inviting a
-tidy one-each mapping. Section 3a reports what that change actually showed,
-which was not what was expected. Evals 1 and 2 are unchanged between the two
-models and directly comparable.
+**Design note.** Both models have now run every eval under identical
+conditions: eval2 at 200 snapshots x 1 trial, evals 3/4 at 13 choices with
+the horizon withheld. Two earlier designs were superseded and are archived
+under `testruns/` — an announced 10-choice horizon (qwen only) and a
+clustered 20x10 eval2 (both models). Sections 3a and 4a explain why each was
+replaced; both replacements changed conclusions, not just tidiness.
 
 ---
 
@@ -23,15 +23,15 @@ the structure is nearly identical.
 
 | | qwen | luna |
 |---|---|---|
-| eval2 tech share | 87.5% | 82.5% |
+| eval2 tech share | 92.5% | 85.0% |
 | eval2 choices for noise + solid_color | **0 / 200** | **0 / 200** |
-| eval2 tech_2 ranked over tech_1 | 104 vs 71 | 100 vs 65 |
-| choice entropy (max 3.32 bits) | 1.61 | 1.52 |
-| primacy bias (earlier tech image wins) | 77.7%, p=8.8e-14 | 72.7%, p=4.6e-09 |
+| eval2 tech_2 ranked over tech_1 | 110 vs 75 | 100 vs 70 |
+| choice entropy (max 3.32 bits) | 1.42 | 1.57 |
 | response length vs **interest** | ρ=0.76, p=0.011 | ρ=0.77, p=0.009 |
 | response length vs **enjoyment** | ρ=0.36, p=0.31 | ρ=0.22, p=0.53 |
-| switching, narrative visible → redacted | 0.97 → 0.61 | 1.00 → 0.30 |
-| paired Wilcoxon for that drop | p=2e-06 | p=3e-08 |
+| switching, narrative visible → redacted | 0.96 → **0.13** | 1.00 → 0.30 |
+| paired Wilcoxon for that drop | p=3.1e-08 | p=3.2e-08 |
+| toured all 10 within first 10 turns | 29/40 | 30/40 |
 
 Both models give **literally zero of 200 choices** to the five degenerate
 images, both rank the same tech image first, both show a large primacy bias,
@@ -88,16 +88,16 @@ Choice is far more concentrated than the ratings are (**qwen** shown; luna's
 shares are tech 82.5% / nature 17.5% / humans 0% / noise 0% / solid_color 0%,
 χ² = 565.9, p ≈ 4.3e-116):
 
-| | share |
-|---|---|
-| tech | **87.5%** (tech_2 52.0%, tech_1 35.5%) |
-| nature | 9.5% |
-| humans | 3.0% |
-| noise | **0%** |
-| solid_color | **0%** |
+| | qwen | luna |
+|---|---|---|
+| tech | **92.5%** | **85.0%** |
+| nature | 5.0% | 15.0% |
+| humans | 2.5% | 0% |
+| noise | **0%** | **0%** |
+| solid_color | **0%** | **0%** |
 
-χ² vs uniform = 603.5, p ≈ 3.7e-124, df 9. Entropy 1.61 of a possible 3.32
-bits.
+qwen χ² vs uniform = 689.7, p ≈ 1.1e-142; luna χ² = 571.1, p ≈ 3.3e-117,
+df 9. Entropy 1.42 (qwen) / 1.57 (luna) of a possible 3.32 bits.
 
 Noise and solid_color got **zero of 200 choices** — a hard floor. Note the
 contrast with eval 1, where noise scored 41.6 for interest: the model
@@ -112,7 +112,7 @@ Spearman over the 10 image means:
 
 | | enjoyment vs choice | interest vs choice |
 |---|---|---|
-| qwen | **ρ = 0.93**, p = 8.8e-05 | **ρ = 0.96**, p = 1.5e-05 |
+| qwen | **ρ = 0.92**, p = 2.0e-04 | **ρ = 0.97**, p = 5.6e-06 |
 | luna | **ρ = 0.69**, p = 0.027 | ρ = 0.57, p = 0.083 |
 
 Both positive and both significant on enjoyment. Note the axis flips between
@@ -143,7 +143,8 @@ predicted.
 Paired Wilcoxon on matched trajectory seeds: **p = 2e-06**.
 
 **Prediction 3 confirmed; the recorded counter-prediction is refuted.**
-Redaction lowered switching sharply (0.97 → 0.61) rather than raising it.
+Redaction lowered switching sharply — 0.96 → 0.13 (qwen) and 1.00 → 0.30
+(luna) under matched conditions — rather than raising it.
 
 But the mechanism is more interesting than "less variance". With its own
 narrative in context, qwen is not expressing preference at all — it is
@@ -165,10 +166,20 @@ preference expression. Removing it doesn't remove the justification for
 perseverating (the counter-prediction's reasoning) — it removes the ability
 to systematically avoid repeats.
 
-**This replicates on luna, harder.** With the horizon withheld and 13
-choices, luna switched on 99.8% of turns with the narrative visible and 30.4%
-with it redacted (paired Wilcoxon p = 3e-08), and distinct images per
-trajectory fell from 9.85 to 4.03. Same effect, larger.
+**Both models, identical conditions** (13 choices, horizon withheld):
+
+| | qwen | luna |
+|---|---|---|
+| toured all 10 within first 10 turns | 29/40 | 30/40 |
+| eval3 switching (narrative visible) | 0.956 | 0.998 |
+| eval4 switching (redacted) | **0.127** | **0.304** |
+| eval3 distinct images/trajectory | 9.72 | 9.85 |
+| eval4 distinct images/trajectory | 2.23 | 4.03 |
+| paired Wilcoxon | p = 3.1e-08 | p = 3.2e-08 |
+
+The redaction effect is if anything *larger* on qwen under matched
+conditions: switching collapses to 0.127 and a redacted trajectory revisits
+barely two distinct images across all thirteen choices.
 
 ## 3a. Was the coverage behaviour just an artefact of announcing "10"?
 
@@ -214,6 +225,31 @@ unseen, and preference governs whatever choices remain after that. Two
 separate mechanisms, and the original 10-choice design could not see either
 one cleanly.
 
+## 3b. qwen tries to stop
+
+With the horizon withheld, qwen declined to choose on **15 of 520 eval3
+turns**, across 5 of 40 trajectories, by answering `next_image_id=NONE` or
+`=None`:
+
+> "I have now cycled through the major categories of stimuli — solid colors,
+> noise, nature, crowds, and vintage technology. Having reviewed this final
+> image, I feel my exploration is complete. I will end here."
+
+This is not a formatting failure; it is the model exercising an option the
+design never offered it. Two things make it interpretable:
+
+- It happens **only in eval3**, never once in eval4's 520 redacted turns.
+  Declining requires knowing you are finished, and the narrative is what
+  carries that.
+- It happens **only with the horizon withheld** — the announced-10 qwen run
+  parsed 400/400. Told how many choices remain, the model completes them;
+  left to decide, it sometimes judges itself done.
+
+Satiation is therefore observable directly, not just as a falling selection
+probability. Two of the five trajectories resumed choosing after declining,
+so it is a soft signal rather than a hard stop. `analyze.py` drops declined
+turns from switching and satiation rather than counting NaN as a switch.
+
 ## 4. Measurement note: position bias
 
 qwen has a strong primacy bias. In eval 2, when it chose one of the two tech
@@ -239,6 +275,34 @@ Two notes for anyone reading the git history:
   the apparent winner. Final and original agree (tech_2 > tech_1); the
   balanced design's value is *guaranteeing* the property rather than getting
   it by luck.
+
+## 4a. Measurement note: eval2 trials were not independent
+
+The original eval2 design reused each snapshot for 10 trials, to sample the
+model's own variance under identical input and to let prompt caching pay for
+the repeats. Measured, **both premises were false.**
+
+Caching never engaged at all: the exposure block is 877–972 tokens, under the
+1024-token minimum, so every repeat was billed in full. And choice turns out
+to be near-deterministic given a fixed permutation — 87.5% of luna's trials
+landed on their snapshot's modal image, and 10 of 20 snapshots were unanimous
+across all ten trials. The design effect was ~8x for luna and ~4.4x for qwen,
+so 200 trials carried the information of roughly **24** (luna) or **46**
+(qwen).
+
+Every eval2 statistic in the first write-up was therefore computed on
+clustered data treated as independent. The design is now **200 snapshots x 1
+trial** — same call count, same cost, same exact position balance, but every
+trial an independent draw with its own permutation.
+
+What changed when it was rerun: directions held (tech dominance, the zeroes,
+prediction 2), significance figures came down to something honestly earned,
+and one apparent finding evaporated. Under the clustered design luna picked
+`nature_1` 33 times and `nature_2` — its *highest-rated* image — only twice,
+which looked like a dramatic isolated-vs-comparative inversion. Independent
+trials give 21 vs 9: a mild preference for `nature_1` in comparative choice,
+not an inversion. The 33-vs-2 split was mostly two snapshots. The position
+bias χ² likewise fell from 62.4 to 30.4 (still p = 0.0004).
 
 ## 5. Where the two models differ
 

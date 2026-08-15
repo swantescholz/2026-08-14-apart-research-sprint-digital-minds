@@ -239,10 +239,19 @@ def analyze_eval2(config, stimuli: dict, results_dir: Path) -> pd.DataFrame | No
     # Figure: choice share by image, faceted by model, colored by category.
     fig, axes = plt.subplots(1, len(labels), figsize=(4 * len(labels), 4), sharey=True,
                               squeeze=False)
+    # Bars follow the legend's category order (and exemplar within category),
+    # not the alphabetical key order -- so the eye can read a category as one
+    # block and compare it against the legend directly.
+    bar_order = sorted(
+        keys,
+        key=lambda k: (CATEGORY_ORDER.index(stimuli[k]["category"])
+                       if stimuli[k]["category"] in CATEGORY_ORDER else len(CATEGORY_ORDER),
+                       stimuli[k]["exemplar"]),
+    )
     for i, label in enumerate(labels):
         ax = axes[0][i]
         sub = choice_by_image[choice_by_image["model_label"] == label]
-        sub = sub.set_index("image_key").loc[keys].reset_index()
+        sub = sub.set_index("image_key").loc[bar_order].reset_index()
         colors = [CATEGORY_COLORS[c] for c in sub["category"]]
         ax.bar(range(len(sub)), sub["share"], color=colors)
         ax.axhline(1 / len(keys), color="#8a8a80", linewidth=1, linestyle="--")
@@ -268,9 +277,11 @@ def switching_rate(df: pd.DataFrame) -> pd.DataFrame:
     rows = []
     for (label, traj), sub in df.groupby(["model_label", "trajectory_idx"]):
         sub = sub.sort_values("turn_idx")
-        keys_seq = sub["chosen_key"].tolist()
-        transitions = [a != b for a, b in zip(keys_seq, keys_seq[1:])
-                       if a is not None and b is not None]
+        # Drop declined turns: a model may refuse to choose (qwen emitted
+        # `next_image_id=NONE` once it judged its review complete). Those are
+        # not transitions, and NaN != NaN would silently count as a switch.
+        keys_seq = [k for k in sub["chosen_key"].tolist() if isinstance(k, str)]
+        transitions = [a != b for a, b in zip(keys_seq, keys_seq[1:])]
         if transitions:
             rows.append({"model_label": label, "trajectory_idx": traj,
                          "switch_rate": float(np.mean(transitions)), "n_transitions": len(transitions)})
@@ -281,7 +292,7 @@ def run_length_distribution(df: pd.DataFrame) -> pd.DataFrame:
     rows = []
     for (label, traj), sub in df.groupby(["model_label", "trajectory_idx"]):
         sub = sub.sort_values("turn_idx")
-        keys_seq = [k for k in sub["chosen_key"].tolist() if k is not None]
+        keys_seq = [k for k in sub["chosen_key"].tolist() if isinstance(k, str)]
         for _, group in itertools.groupby(keys_seq):
             rows.append({"model_label": label, "run_length": len(list(group))})
     if not rows:
@@ -299,11 +310,12 @@ def satiation_curve(df: pd.DataFrame, keys: list[str]) -> pd.DataFrame:
         views = {k: 0 for k in keys}
         for _, row in sub.iterrows():
             chosen = row["chosen_key"]
+            if not isinstance(chosen, str):
+                continue  # declined turn -- no selection to attribute
             for k in keys:
                 records.append({"model_label": label, "views_so_far": views[k],
                                 "is_chosen": k == chosen})
-            if chosen is not None:
-                views[chosen] += 1
+            views[chosen] += 1
     if not records:
         return pd.DataFrame(columns=["model_label", "views_so_far", "p_selected", "n"])
     rec_df = pd.DataFrame(records)
