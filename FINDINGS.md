@@ -4,7 +4,7 @@ qwen3.7-flash, gpt-5.6-luna, gemini-2.5-flash-lite, inkling-small. All four
 evals, **6,160 calls** costing **$1.84**, every dataset verified complete
 (per model: eval1 300, eval2 200, evals 3/4 520 = 40 trajectories x 13 turns;
 1,540 x 4 models). Tables in `results/`, readable transcripts in
-`transcripts/`, raw responses in `data/` (untracked).
+`transcripts/`, raw responses in `data/`.
 
 (The call count previously read 5,920, which contradicted the per-eval figures
 on the same line. Recounted from unique `run_id`s in `data/*.jsonl`: 6,160,
@@ -360,33 +360,31 @@ one cleanly.
 
 ## 3b. Models try to stop
 
-With the horizon withheld, qwen declined to choose on **15 of 520 eval3
-turns**, across 5 of 40 trajectories, by answering `next_image_id=NONE` or
-`=None`:
+**Corrected 2026-08-15 against the final data.** This section previously
+reported qwen declining on 15 of 520 eval3 turns and asserted that declining
+never happens in eval4. Both were true of an earlier, superseded qwen run (kept
+under `testruns/`) and are false of the final matched design. Recounted from
+`data/eval[34]__*.jsonl`:
 
-> "I have now cycled through the major categories of stimuli — solid colors,
-> noise, nature, crowds, and vintage technology. Having reviewed this final
-> image, I feel my exploration is complete. I will end here."
+| declines | eval3 | eval4 |
+|---|---|---|
+| gemini | 5 / 520 | 4 / 520 |
+| qwen, luna, inkling | 0 | 0 |
 
-**gemini does the same thing**, 9 times across its evals 3/4 — either
-declining outright ("This is the end of the interaction.") or echoing the
-instruction back without choosing. luna and inkling never do it. So this is a
-real behaviour in two of four labs, not a qwen quirk.
+So in the final data this is a **gemini-only** behaviour, 9 turns in total, and
+it **does** occur under redaction — which kills the previous explanation that
+declining requires the narrative to know you are finished. Whatever it takes to
+judge yourself done, gemini still does it with its own turns removed.
 
-This is not a formatting failure; it is the model exercising an option the
-design never offered it. Two things make it interpretable:
-
-- It happens **only in eval3**, never once in eval4's 520 redacted turns.
-  Declining requires knowing you are finished, and the narrative is what
-  carries that.
-- It happens **only with the horizon withheld** — the announced-10 qwen run
-  parsed 400/400. Told how many choices remain, the model completes them;
-  left to decide, it sometimes judges itself done.
-
-Satiation is therefore observable directly, not just as a falling selection
-probability. Two of the five trajectories resumed choosing after declining,
-so it is a soft signal rather than a hard stop. `analyze.py` drops declined
+It is not a formatting failure; it is the model exercising an option the design
+never offered it, either declining outright ("I'm finished.", `next_image_id=0`)
+or echoing the instruction back without choosing. `analyze.py` drops declined
 turns from switching and satiation rather than counting NaN as a switch.
+
+The horizon claim still holds and is worth keeping: the announced-10 qwen run
+parsed 400/400, and every decline in this project has come from a run with the
+count withheld. Told how many choices remain, models complete them; left to
+decide, one of the four sometimes judges itself done.
 
 ## 3c. The assistant-turn placeholder was contaminating both evals
 

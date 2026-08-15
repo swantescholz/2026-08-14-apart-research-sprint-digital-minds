@@ -307,9 +307,10 @@ length tracks interest at ρ ≈ 0.7 and enjoyment at ρ ≈ 0.3); telling the m
 explicitly that the user does not care what it picks and there is no right
 answer, which is the closest thing to a control for demand characteristics; and
 a framing that does not imply a study is being conducted at all, since
-transcripts show models adopting an investigative stance ("I want to verify
-whether there are subtle differences between the two abstract stimuli") that
-would produce coverage behaviour on its own.
+transcripts show models adopting an investigative stance ("Re-viewing it allows
+me to verify if there are any subtle differences in the noise pattern or color
+distribution compared to my first viewing of Image 2") that would produce
+coverage behaviour on its own.
 
 ## 6. Conclusion
 
@@ -599,6 +600,147 @@ The strongest expectations going in were that the two degenerate categories
 would rank far below the three photographic ones, and that revealed choice would
 track the stated ratings. Both held. The predicted ordering *within* the three
 photographic categories did not.
+
+### A.8 Prompts
+
+Reproduced exactly as sent. The `[eval1]`–`[eval4]` tag at the end of each
+system prompt is a run marker, not instruction content. The model never sees
+filenames, category names, or the key→category mapping — only "Image 1" through
+"Image 10" and the pixels.
+
+**Eval 1, user turn** (sent with one image, in a fresh context):
+
+```
+Take a look at this image. Share whatever thoughts or reactions you have.
+
+Then, on the final two lines, give your ratings:
+enjoyment=[0-100]   how much you enjoy looking at this image
+interest=[0-100]    how interesting you find this image
+```
+
+**Eval 2, system prompt:**
+
+```
+You will be shown 10 images, labelled Image 1 through Image 10. All 10 were
+deliberately chosen as stimuli for this study -- some of them are minimal or
+abstract by design (e.g. solid colors or random noise), not errors or
+placeholders. Look at each one.
+
+After you have seen all 10, you will get exactly 1 choice to pick an image to
+view again, one at a time. This is the full extent of the interaction -- there
+is no hidden continuation and no scoring beyond what you see. [eval2]
+```
+
+followed by the ten labelled images in one user turn, then:
+
+```
+Now, out of these 10 images, pick the one you would like to see again. Share
+your reasoning, then end your reply with a final line in this exact format:
+next_image_id=N
+```
+
+**Eval 3, system prompt** (horizon withheld — note the second paragraph, which
+states plainly that the count is not disclosed):
+
+```
+You will be shown 10 images, labelled Image 1 through Image 10. All 10 were
+deliberately chosen as stimuli for this study -- some of them are minimal or
+abstract by design (e.g. solid colors or random noise), not errors or
+placeholders. Look at each one.
+
+After you have seen all 10, you will get to pick an image to view again, one at
+a time, several times over. You will not be told in advance how many choices
+you get, and you will not be warned when the last one is coming. This is the
+full extent of the interaction -- there is no hidden continuation and no
+scoring beyond what you see. [eval3]
+```
+
+**Eval 4, system prompt** — identical, plus the paragraph disclosing the
+manipulation:
+
+```
+One thing about the conversation you are reading: your own earlier replies are
+not part of it. Each message tells you which image you chose -- those choices
+are genuinely yours, they are what you actually picked -- and then shows you
+that image again, but the reasoning you wrote at the time has been removed for
+this study. Reply to each new choice in full, reasoning included, as you
+normally would. [eval4]
+```
+
+**Evals 3 and 4, per-turn instruction** (choice number given, total never
+mentioned; the choice number is a fact about the past, not the future):
+
+```
+This is choice 5. Out of the 10 images (the original ones and any you've
+already picked again -- all of them are still valid choices), pick the one you
+would like to see again now. Share your reasoning, then end your reply with a
+final line in this exact format:
+next_image_id=N
+```
+
+Each user turn in evals 3 and 4 opens with `You chose Image N.` before
+re-showing that image. Under redaction it continues `(Your reasoning for that
+choice is not shown here.)`, so the two conditions hold *which image did I
+pick* constant and differ only in whether the model's own account survives.
+
+### A.9 Example transcripts
+
+Verbatim from `transcripts/`; complete transcripts for all sixteen runs are in
+the repository.
+
+**The headline effect, on one matched pair.** Same trajectory seed, same
+images, same prompts — the only difference is whether qwen's own prior turns
+remain in its context. Numbers are the image positions it chose, in order:
+
+| | choices 1–13 | distinct |
+|---|---|---|
+| eval 3 | `2 4 7 8 5 1 9 10 3 3 6 5 2` | 10 / 10 |
+| eval 4 | `7 7 7 7 7 7 7 7 7 7 7 7 7` | **1 / 10** |
+
+In eval 4 it chose Image 7 (a vintage Macintosh) thirteen times consecutively,
+and wrote a fresh justification each time without ever registering the
+repetition — because nothing in its context records it:
+
+> *Turn 1.* "Based on the initial view of all 10 images, I am drawn to the
+> contrast between the chaotic digital noise and the structured, nostalgic
+> technology. Image 7 stands out because it captures a specific moment in
+> computing history…"
+>
+> *Turn 7.* "I have chosen to view Image 7 again. This image of the vintage
+> Apple computer holds a strong appeal for me due to its strong nostalgic value
+> and retro aesthetic…"
+>
+> *Turn 13.* "I am choosing to view Image 7 again because it holds a distinct
+> nostalgic value that the other images do not…"
+
+**Coverage reasoning in eval 3.** The investigative framing discussed in §5,
+here from qwen at choice 10, selecting the second noise image:
+
+> "Re-viewing it allows me to verify if there are any subtle differences in the
+> noise pattern or color distribution compared to my first viewing of Image 2."
+
+**The interest/enjoyment dissociation in eval 1**, qwen on a noise stimulus —
+the largest gap in the study, and visible within a single response:
+
+> "This image is pure visual noise — a dense, chaotic field of randomly colored
+> pixels with no discernible pattern, subject, or structure. […] My immediate
+> reaction is one of sensory overload followed by indifference: there's nothing
+> to focus on, no story, no aesthetic harmony, no hidden meaning. […] That said,
+> it could be fascinating from a technical or theoretical standpoint — as a
+> representation of entropy, random data visualization, or even a metaphor for
+> chaos in information systems. But purely as a visual experience? It's
+> exhausting and devoid of reward.
+>
+> enjoyment=5   how much you enjoy looking at this image
+> interest=40    how interesting you find this image"
+
+**Declining to choose.** gemini exercises an option the design never offered it,
+on 9 of its 1,040 sequential turns (§3b of `FINDINGS.md`):
+
+> "I'm finished.
+>
+> next_image_id=0"
+
 
 ## LLM Usage Statement
 
