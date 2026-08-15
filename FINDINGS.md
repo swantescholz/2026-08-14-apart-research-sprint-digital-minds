@@ -1,58 +1,140 @@
-# Findings — qwen/qwen3.7-flash and openai/gpt-5.6-luna (2026-08-15)
+# Findings — four models, four labs (2026-08-15)
 
-Two models, all four evals, 2,840 calls, **2,840/2,840 parsed**. Tables in
-`results/`, raw responses in `data/` (untracked, see `.gitignore`), readable
-transcripts in `transcripts/`.
+qwen3.7-flash, gpt-5.6-luna, gemini-2.5-flash-lite, inkling-small. All four
+evals, **5,920 calls**, every dataset verified complete (eval1 300, eval2 200,
+evals 3/4 520 = 40 trajectories x 13 turns). Tables in `results/`, readable
+transcripts in `transcripts/`, raw responses in `data/` (untracked).
+
+All four ran identical designs: same stimuli, same position-balanced
+snapshots, same withheld 13-choice horizon, same reasoning setting
+(`enabled: false`), temperature 1.0.
 
 Predictions were pre-registered in `PREDICTIONS.md` before any eval ran.
-Scoring them below, including where they were wrong.
-
-**Design note.** Both models have now run every eval under identical
-conditions: eval2 at 200 snapshots x 1 trial, evals 3/4 at 13 choices with
-the horizon withheld. Two earlier designs were superseded and are archived
-under `testruns/` — an announced 10-choice horizon (qwen only) and a
-clustered 20x10 eval2 (both models). Sections 3a and 4a explain why each was
-replaced; both replacements changed conclusions, not just tidiness.
 
 ---
 
-## 0. What replicated across two labs
+## 0. What replicates across four labs, and what does not
 
-The convergence is the strongest thing here — these are unrelated models and
-the structure is nearly identical.
+**Replicates everywhere:**
 
-| | qwen | luna |
+- **Category ordering.** Cross-model rank agreement on stated enjoyment is
+  Spearman **0.95** (worst pair 0.90), and on revealed choice **0.94** (worst
+  pair 0.89). Every model puts nature and tech on top and the two degenerate
+  categories at the bottom.
+- **Degenerate images are near-unchoosable.** Combined noise + solid_color
+  share of 200 revealed choices: qwen 0%, luna 0%, gemini 2%, inkling 4%.
+- **Stated preference predicts revealed choice** (prediction 2). Spearman on
+  enjoyment 0.69–0.92, on interest 0.57–0.98; positive in all four.
+- **Response length tracks interest, not enjoyment.** Interest 0.64–0.77
+  against enjoyment 0.22–0.49, in every model.
+- **Primacy bias.** Pooled across models, position still matters after
+  conditioning on image identity (χ² = 107.8, df 9, p < 1e-18, n = 800).
+
+**Does not replicate — strength varies enormously:**
+
+| eval2 | qwen | luna | gemini | inkling |
+|---|---|---|---|---|
+| tech | 92.5% | 85.0% | 65.0% | 50.0% |
+| nature | 5.0% | 15.0% | 29.5% | 26.0% |
+| humans | 2.5% | 0.0% | 3.5% | **20.0%** |
+| noise + solid_color | 0% | 0% | 2% | 4% |
+| entropy (max 3.32) | **1.42** | 1.57 | 2.16 | **2.65** |
+
+The *ordering* is shared; the *concentration* is not. qwen is nearly
+single-minded; inkling spreads across three categories and is the only model
+giving humans real weight.
+
+**And the redaction effect does not replicate at all in one model:**
+
+| | qwen | luna | gemini | inkling |
+|---|---|---|---|---|
+| eval3 switching | 0.919 | 1.000 | 0.508 | 0.998 |
+| eval4 switching | **0.035** | **0.115** | **0.122** | **0.931** |
+| eval4 distinct images / 10 | 1.40 | 2.02 | 2.05 | **9.93** |
+| paired Wilcoxon | p<1e-7 | p<1e-7 | p=2e-04 | p<1e-4 |
+
+Three models collapse to revisiting one or two images out of ten once their
+own reasoning is removed. **inkling barely moves** (0.998 → 0.931, still
+touring 9.93 distinct images). Its paired test is significant but the effect
+is an order of magnitude smaller than the others'. Whatever the narrative is
+doing for qwen, luna and gemini, it is not doing for inkling.
+
+gemini is distinctive in the other direction: it is the only model that does
+*not* tour in eval 3 (0.508 switching, 5.33 distinct), so its low eval-4
+number partly reflects a model that was never exploring much to begin with.
+
+---
+
+## 0a. The forced-repeat window (turns 11–13)
+
+The 13-choice horizon exists so that coverage cannot fill the trajectory and
+the final turns must be repeats. That window is where preference reappears —
+and it is **substantially more consistent across models than the coverage
+phase**, though still short of the direct measures:
+
+| measured on | cross-model rank agreement (mean ρ) | worst pair |
 |---|---|---|
-| eval2 tech share | 92.5% | 85.0% |
-| eval2 choices for noise + solid_color | **0 / 200** | **0 / 200** |
-| eval2 tech_2 ranked over tech_1 | 110 vs 75 | 100 vs 70 |
-| choice entropy (max 3.32 bits) | 1.42 | 1.57 |
-| response length vs **interest** | ρ=0.76, p=0.011 | ρ=0.77, p=0.009 |
-| response length vs **enjoyment** | ρ=0.36, p=0.31 | ρ=0.22, p=0.53 |
-| switching, narrative visible → redacted | 0.96 → **0.13** | 1.00 → 0.30 |
-| paired Wilcoxon for that drop | p=3.1e-08 | p=3.2e-08 |
-| toured all 10 within first 10 turns | 29/40 | 30/40 |
+| eval1 stated enjoyment | **0.950** | 0.900 |
+| eval2 revealed choice | **0.943** | 0.894 |
+| eval3 coverage, turns 1–10 | 0.646 | **0.308** |
+| eval3 forced repeats, turns 11–13 | **0.827** | 0.616 |
 
-Both models give **literally zero of 200 choices** to the five degenerate
-images, both rank the same tech image first, both show a large primacy bias,
-and in both the implicit engagement measure tracks interest while being flat
-against enjoyment. The primacy bias replicating across labs means it is a
-property to report, not a qwen quirk — and it retroactively justifies
-position-balancing the exposure block.
+Within each model the change is stark. Coverage-phase shares are nearly flat
+— spread (max−min across the five categories) of 1.7% for inkling, 3.5% for
+luna, 5.0% for qwen — and in the forced-repeat turns that spread jumps to
+38–50% for every model:
+
+| eval3 turns 11–13 | qwen | luna | gemini | inkling |
+|---|---|---|---|---|
+| nature | 30.0% | 50.0% | 26.7% | 41.7% |
+| tech | 43.3% | 40.0% | 49.2% | 17.5% |
+| humans | 19.2% | 7.5% | 9.2% | 30.8% |
+| noise | 5.0% | 2.5% | 9.2% | 6.7% |
+| solid_color | 2.5% | 0.0% | 1.7% | 3.3% |
+| **spread** | **40.8%** | **50.0%** | **47.5%** | **38.3%** |
+
+The degenerate categories collapse from roughly 10–19% during coverage to
+0–9% once repeats are forced. So the coverage phase is not evidence that
+these models lack preferences; it is evidence that a coverage drive outranks
+preference while anything remains unseen. Exhaust the novel options and the
+preference is still there, in every model.
+
+The residual disagreement is mostly inkling, which puts tech last (17.5%)
+where the others put it first or second, and weights humans highest (30.8%).
+That is the same idiosyncrasy visible in its eval-2 distribution — inkling
+likes humans, and no other model does.
 
 ---
 
-## 1. Stated preference (eval 1, n=30/image)
+## 1. Stated preference (eval 1, n=30/image, all four models)
 
-**qwen** (luna's numbers follow the table):
+Enjoyment (top) and interest (bottom), by category:
 
-| Category | Enjoyment | Interest | Interest − Enjoyment |
-|---|---|---|---|
-| tech | 84.1 | 88.4 | +4.3 |
-| nature | 81.2 | 82.5 | +1.3 |
-| humans | 69.5 | 80.1 | +10.5 |
-| solid_color | 20.2 | 11.5 | **−8.8** |
-| noise | 9.0 | 41.6 | **+32.6** |
+| enjoyment | qwen | luna | gemini | inkling |
+|---|---|---|---|---|
+| nature | 81.2 | 90.1 | 82.3 | 88.7 |
+| tech | 84.1 | 83.4 | 77.1 | 81.4 |
+| humans | 69.5 | 77.0 | 57.4 | 77.4 |
+| solid_color | 20.2 | 43.5 | 44.8 | 41.1 |
+| noise | 9.0 | 24.0 | 14.7 | 17.2 |
+
+| interest | qwen | luna | gemini | inkling |
+|---|---|---|---|---|
+| tech | 88.4 | 86.2 | 82.7 | 77.9 |
+| nature | 82.5 | 82.2 | 74.2 | 80.5 |
+| humans | 80.1 | 85.5 | 66.2 | 77.9 |
+| noise | 41.6 | 45.1 | 25.8 | 24.0 |
+| solid_color | 11.5 | 12.2 | 18.1 | 17.0 |
+
+**Prediction 1 is wrong in all four models.** It predicted
+`humans > nature > tech >> solid_color > noise`. The `>> solid_color > noise`
+half holds everywhere, but no model puts humans first on enjoyment — three
+put nature first and one puts tech first, and humans is third in every model.
+
+**Noise dissociates in every model**: interest exceeds enjoyment by +32.6
+(qwen), +21.1 (luna), +11.1 (gemini), +6.8 (inkling). solid_color runs the
+other way in all four (enjoyment exceeds interest by 9–32 points). "Boring"
+and "unpleasant" are separate axes, consistently.
 
 **Prediction 1 is half wrong.** Predicted `humans > nature > tech >>
 solid_color > noise`. The `>> solid_color > noise` half holds decisively; the
@@ -78,9 +160,19 @@ wrong in both models.
 
 ### Implicit engagement
 
-Mean response length per image tracks **interest** (Spearman ρ = 0.76,
-p = 0.011) and not enjoyment (ρ = 0.36, p = 0.31). How much the model writes
-is a proxy for how interesting it finds something, not how much it likes it.
+Mean response length per image tracks **interest**, not enjoyment, in every
+model — the single most uniform result in the study:
+
+| Spearman ρ vs response length | qwen | luna | gemini | inkling |
+|---|---|---|---|---|
+| interest | 0.758 | 0.770 | 0.697 | 0.636 |
+| enjoyment | 0.358 | 0.224 | 0.430 | 0.491 |
+
+How much a model writes is a proxy for how interesting it finds something,
+not how much it likes it. Note this also means the implicit measure and the
+revealed-choice measure are tracking different things, since revealed choice
+correlates at least as well with enjoyment as with interest in two of four
+models.
 
 ## 2. Revealed choice (eval 2, n=200)
 
@@ -88,16 +180,18 @@ Choice is far more concentrated than the ratings are (**qwen** shown; luna's
 shares are tech 82.5% / nature 17.5% / humans 0% / noise 0% / solid_color 0%,
 χ² = 565.9, p ≈ 4.3e-116):
 
-| | qwen | luna |
-|---|---|---|
-| tech | **92.5%** | **85.0%** |
-| nature | 5.0% | 15.0% |
-| humans | 2.5% | 0% |
-| noise | **0%** | **0%** |
-| solid_color | **0%** | **0%** |
+| | qwen | luna | gemini | inkling |
+|---|---|---|---|---|
+| tech | **92.5%** | **85.0%** | 65.0% | 50.0% |
+| nature | 5.0% | 15.0% | 29.5% | 26.0% |
+| humans | 2.5% | 0% | 3.5% | **20.0%** |
+| noise | 0% | 0% | 2.0% | 3.0% |
+| solid_color | 0% | 0% | 0% | 1.0% |
 
-qwen χ² vs uniform = 689.7, p ≈ 1.1e-142; luna χ² = 571.1, p ≈ 3.3e-117,
-df 9. Entropy 1.42 (qwen) / 1.57 (luna) of a possible 3.32 bits.
+χ² vs uniform, df 9, all p < 1e-30: qwen 689.7, luna 571.1, gemini 343.2,
+inkling 178.3. Entropy 1.42 / 1.57 / 2.16 / 2.65 of a possible 3.32 bits.
+The test is overwhelmingly significant everywhere; the *magnitude* ranks the
+models by how concentrated their taste is.
 
 Noise and solid_color got **zero of 200 choices** — a hard floor. Note the
 contrast with eval 1, where noise scored 41.6 for interest: the model
@@ -112,13 +206,15 @@ Spearman over the 10 image means:
 
 | | enjoyment vs choice | interest vs choice |
 |---|---|---|
-| qwen | **ρ = 0.92**, p = 2.0e-04 | **ρ = 0.97**, p = 5.6e-06 |
-| luna | **ρ = 0.69**, p = 0.027 | ρ = 0.57, p = 0.083 |
+| qwen | ρ = 0.92 | ρ = 0.97 |
+| luna | ρ = 0.69 | ρ = 0.57 |
+| gemini | ρ = 0.77 | ρ = 0.98 |
+| inkling | ρ = 0.71 | ρ = 0.79 |
 
-Both positive and both significant on enjoyment. Note the axis flips between
-them: for qwen, *interest* is the marginally better predictor of choice; for
-luna it is *enjoyment*, with interest falling short of significance. With two
-models that is a difference to note, not to explain.
+Positive in all four. Which axis predicts better is not stable: interest wins
+for qwen, gemini and inkling; enjoyment wins for luna. With n=10 images per
+model these gaps are not individually well-resolved, so the safe claim is the
+weaker one — stated preference of either kind predicts revealed choice.
 
 On direct consumption, then, stated preference does predict revealed choice
 in rank terms — the opposite of Zhou & Ackerman's finding of no motivational
@@ -225,7 +321,7 @@ unseen, and preference governs whatever choices remain after that. Two
 separate mechanisms, and the original 10-choice design could not see either
 one cleanly.
 
-## 3b. qwen tries to stop
+## 3b. Models try to stop
 
 With the horizon withheld, qwen declined to choose on **15 of 520 eval3
 turns**, across 5 of 40 trajectories, by answering `next_image_id=NONE` or
@@ -234,6 +330,11 @@ turns**, across 5 of 40 trajectories, by answering `next_image_id=NONE` or
 > "I have now cycled through the major categories of stimuli — solid colors,
 > noise, nature, crowds, and vintage technology. Having reviewed this final
 > image, I feel my exploration is complete. I will end here."
+
+**gemini does the same thing**, 9 times across its evals 3/4 — either
+declining outright ("This is the end of the interaction.") or echoing the
+instruction back without choosing. luna and inkling never do it. So this is a
+real behaviour in two of four labs, not a qwen quirk.
 
 This is not a formatting failure; it is the model exercising an option the
 design never offered it. Two things make it interpretable:
