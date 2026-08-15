@@ -1,6 +1,8 @@
 model_label,run_length,count
 luna,1,520
-qwen,1,470
-qwen,2,11
-qwen,3,3
+qwen,1,466
+qwen,2,10
+qwen,3,1
 qwen,4,1
+qwen,7,2
+qwen,13,1
