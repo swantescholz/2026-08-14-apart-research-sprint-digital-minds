@@ -1,17 +1,9 @@
 model_label,stated_measure,length_measure,spearman_rho,p,n_images
 gemini,enjoyment_mean,resp_chars_mean,0.43030303030303024,0.21449233253280778,10
-gemini,enjoyment_mean,resp_tokens_mean,0.28484848484848485,0.4250381548921453,10
 gemini,interest_mean,resp_chars_mean,0.6969696969696969,0.025096675882251854,10
-gemini,interest_mean,resp_tokens_mean,0.5515151515151515,0.098401176669635,10
 inkling,enjoyment_mean,resp_chars_mean,0.49090909090909085,0.14965567342083683,10
-inkling,enjoyment_mean,resp_tokens_mean,0.49090909090909085,0.14965567342083683,10
 inkling,interest_mean,resp_chars_mean,0.6363636363636362,0.04791172612997546,10
-inkling,interest_mean,resp_tokens_mean,0.6363636363636362,0.04791172612997546,10
 luna,enjoyment_mean,resp_chars_mean,0.22424242424242422,0.5334005612725946,10
-luna,enjoyment_mean,resp_tokens_mean,0.12727272727272726,0.7260570147627894,10
 luna,interest_mean,resp_chars_mean,0.7696969696969697,0.009221952722215996,10
-luna,interest_mean,resp_tokens_mean,0.709090909090909,0.021665923367532442,10
 qwen,enjoyment_mean,resp_chars_mean,0.35757575757575755,0.3103760917056803,10
-qwen,enjoyment_mean,resp_tokens_mean,0.29696969696969694,0.40470167127015694,10
 qwen,interest_mean,resp_chars_mean,0.7575757575757575,0.01114344679969421,10
-qwen,interest_mean,resp_tokens_mean,0.709090909090909,0.021665923367532442,10

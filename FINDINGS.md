@@ -11,6 +11,20 @@ on the same line. Recounted from unique `run_id`s in `data/*.jsonl`: 6,160,
 with no duplicates in any file. Cost is summed from the `cost` field on each
 stored response; $2.27 including the superseded runs under `testruns/`.)
 
+**Provenance of `data/` (2026-08-15).** The original raw logs were lost during
+the move to this repository and were rebuilt from `transcripts/` by
+`rebuild_data_from_transcripts.py`. The rebuild reproduces every table in
+`results/` exactly, with one exception: `response_completion_tokens` was never
+rendered into a transcript and is gone, so `resp_tokens_mean` in
+`eval1_by_image.csv` is now empty and the four `resp_tokens_mean` rows of
+`eval1_implicit_engagement.csv` are absent. Nothing in this document or in the
+report cites that measure — the response-length correlations quoted in section
+1 are the `resp_chars_mean` ones, which reproduce to the digit. The rebuild is
+validated against three archived runs whose raw logs survive (891 rows, every
+recoverable field identical); the per-call `usage`/`cost` payloads are also
+gone, so the $1.84 above is no longer independently recomputable from `data/`
+and stands on this record and the per-model figures in `transcripts/`.
+
 All four ran identical designs: same stimuli, same position-balanced
 snapshots, same withheld 13-choice horizon, same reasoning setting
 (`enabled: false`), temperature 1.0.

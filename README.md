@@ -7,9 +7,15 @@ Does an LLM show structured preferences over visual stimuli, and does what it
 4 models from 4 labs, via OpenRouter.
 
 The write-up is in `report/` (`REPORT.md` is the submission draft, and
-`FINDINGS.md` at the root is the underlying evidence). The raw API responses
-under `data/` are not in git — see "Running the evals" below to regenerate
-them, or the readable Markdown renderings in `transcripts/`, which are.
+`FINDINGS.md` at the root is the underlying evidence). `data/` holds the parsed
+per-call records, `transcripts/` the readable rendering of the same runs, and
+`results/` the analysis tables and figures — all tracked.
+
+One caveat on `data/`: those files were rebuilt from `transcripts/` after the
+originals were lost on 2026-08-15, so they carry the parsed fields and the full
+response text but not the raw API `usage`/`cost`/`raw_response` payloads. See
+`rebuild_data_from_transcripts.py` for what that does and does not recover, and
+run it with `--check` against any directory under `testruns/` to verify it.
 
 See `PREDICTIONS.md` (written and committed before any eval ran) for the
 pre-registered predictions this is testing.

@@ -16,10 +16,17 @@ __pycache__/
 *.pyc
 .venv/
 
-# Raw API responses: ~2MB per eval per model, and the bulk of it is the full
-# response dump each row carries. Over the 1MB-per-file line in the root
-# CLAUDE.md, so it stays out of history unless deliberately added.
-data/*.jsonl
+# data/*.jsonl IS tracked, as of 2026-08-15. It used not to be: the original
+# files carried the full `raw_response` dump on every row, which put them at
+# ~1-1.5MB each, over the 1MB-per-file line in CLAUDE.md.
+#
+# That decision cost us the originals. They were deleted during the move to
+# this repository and, being untracked, existed nowhere else -- rebuilt from
+# transcripts/ by rebuild_data_from_transcripts.py. The rebuilt rows drop
+# raw_response and usage, which brings the largest file to 596KB, comfortably
+# under the line. There is no longer a reason to keep the record of record out
+# of version control.
+data/*.jsonl.bak
 
 # results/ (analysis tables + figures) IS tracked -- small, and it is the
 # actual deliverable. testruns/ likewise.
