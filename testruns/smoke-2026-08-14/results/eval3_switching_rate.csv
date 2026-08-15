@@ -1,0 +1,5 @@
+model_label,trajectory_idx,switch_rate,n_transitions
+gemini,0,1.0,2
+inkling,0,1.0,2
+luna,0,1.0,2
+qwen,0,1.0,2

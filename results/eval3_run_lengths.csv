@@ -1,0 +1,17 @@
+model_label,run_length,count
+gemini,1,255
+gemini,2,3
+gemini,3,1
+gemini,7,1
+gemini,11,1
+gemini,12,1
+gemini,13,17
+inkling,1,518
+inkling,2,1
+luna,1,520
+qwen,1,466
+qwen,2,10
+qwen,3,1
+qwen,4,1
+qwen,7,2
+qwen,13,1

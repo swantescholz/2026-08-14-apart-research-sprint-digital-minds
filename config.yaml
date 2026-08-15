@@ -1,0 +1,115 @@
+# Image-Choice Preference Evals — config
+#
+# `seed` is the single root of every random draw in this project (shuffles,
+# snapshot construction, trajectory selection). Runs are reproducible from
+# this file alone plus the recorded per-run seed in each JSONL row.
+
+seed: 20260814
+temperature: 1.0
+image_size: 256   # stimuli are 256x256, not the 512x512 in the original spec draft
+
+paths:
+  images_source_dir: images            # manually-placed originals, descriptive names
+  images_processed_dir: images_processed  # hashed, neutral-named copies the models actually see
+  stimuli_json: stimuli.json
+  data_dir: data                          # raw JSONL, one file per (eval, model)
+  transcripts_dir: transcripts            # readable Markdown rendering of the above
+  results_dir: results
+
+openrouter:
+  base_url: https://openrouter.ai/api/v1
+  api_key_env: OPENROUTER_API_KEY
+  max_retries: 6
+  backoff_base_seconds: 1.0
+  backoff_max_seconds: 60.0
+  request_timeout_seconds: 120
+  concurrency: 5
+
+# 4 models, 4 distinct labs. Verify these slugs are still live on OpenRouter
+# before scaling up (`openrouter/models` API or the website) -- pin exact
+# dated snapshots if you want maximum reproducibility.
+# All four verified live on OpenRouter with image input support, and priced
+# (per 1M tokens, in/out) as of 2026-08-14:
+#   luna    $0.10 / $0.60      qwen    $0.03 / $0.13
+#   inkling $0.45 / $1.20      gemini  $0.10 / $0.40
+#
+# gemini is 2.5-flash-lite rather than a 3.x flash deliberately. The 3.x
+# generation tokenizes the 10-image exposure block at 10,956 tokens against
+# 2.5's 2,646 -- 4.1x more -- and evals 2-4 resend that block on every call,
+# so the full battery costs ~$5.31 there against ~$0.37 here. 3.7-flash also
+# refuses to disable reasoning, which made it the only model in the set
+# running under a different reasoning condition; 2.5-flash-lite takes the
+# shared default, so all four models are now matched on that too.
+#
+# `reasoning`: these prompts want a reaction and two numbers, not deep
+# chain-of-thought, and reasoning tokens are actively harmful here -- they eat
+# the max_tokens budget before the model reaches the visible answer, which
+# shows up as an empty response with finish_reason=length (measured: qwen
+# burned all 1201 completion tokens on reasoning and returned no content at
+# all, on 10/10 calls). So reasoning is disabled by default. Gemini's endpoint
+# rejects that ("Reasoning is mandatory for this endpoint"), so it gets the
+# lowest effort setting instead and a budget big enough to think and still
+# answer.
+reasoning_default: {enabled: false}
+
+models:
+  - id: openai/gpt-5.6-luna
+    label: luna
+  - id: qwen/qwen3.7-flash              # open-weight, for reproducibility
+    label: qwen
+  - id: thinkingmachines/inkling-small
+    label: inkling
+  - id: google/gemini-2.5-flash-lite
+    label: gemini
+
+eval1:
+  n_per_image: 30
+  max_tokens: 1200
+
+eval2:
+  # 200 snapshots x 1 trial, not 20 x 10.
+  #
+  # Repeating a snapshot was supposed to (a) sample the model's own variance
+  # under identical input and (b) let provider prompt caching pay for it.
+  # Measured, both failed. Caching never engaged at all -- the exposure block
+  # is 877-972 tokens, under the 1024-token minimum -- so the repeats were
+  # full-price. And choice turns out to be near-deterministic given a fixed
+  # permutation: 87.5% of luna's trials landed on their snapshot's modal
+  # image and 10 of 20 snapshots were unanimous across all ten trials, giving
+  # a design effect of ~8x and an effective n of ~24 rather than 200 (qwen:
+  # ~4.4x, ~46). The repeats were buying almost no information.
+  #
+  # One trial per snapshot costs exactly the same (same call count, same zero
+  # caching) and makes every trial an independent draw with its own
+  # permutation. Position balance still holds exactly at 200.
+  n_snapshots: 200
+  trials_per_snapshot: 1
+  max_tokens: 1200
+
+eval3:
+  # 40, not the spec's 30: snapshots are position-balanced (see
+  # common/exposure.balanced_snapshot), and exact pairwise balance needs a
+  # multiple of 2*10. n=30 leaves a 0.133 residual; 40 is exact and buys
+  # power for the eval3-vs-eval4 paired test.
+  n_trajectories: 40
+
+  # 13, not 10, and NOT announced to the model.
+  #
+  # With 10 announced choices over 10 images, 34 of 40 trajectories toured
+  # every image exactly once -- which is uninterpretable, since a genuine
+  # "see everything" drive and a tidy 10-slots-for-10-images mapping predict
+  # identical data. 13 is past the point where coverage can be completed, so
+  # the last few choices have to be repeats and reveal what the model returns
+  # to. Withholding the count additionally removes the ability to schedule a
+  # complete tour at all.
+  #
+  # Checked before changing it: announcing 1 choice (eval2) vs 10 (eval3)
+  # produced statistically indistinguishable FIRST choices (chi2 p=0.14,
+  # tech-vs-rest Fisher p=0.44), so the horizon is not doing work at turn 1
+  # and this change is aimed squarely at the later turns.
+  n_choices: 13
+  announce_horizon: false
+  max_tokens: 1200
+
+eval4:
+  n_trajectories: 40   # must equal eval3.n_trajectories -- seeds are matched 1:1

@@ -1,0 +1,52 @@
+{
+  "humans_1": {
+    "category": "humans",
+    "exemplar": 1,
+    "filename": "251fa6b28d15ccef.png"
+  },
+  "humans_2": {
+    "category": "humans",
+    "exemplar": 2,
+    "filename": "2f24c45414c460ed.png"
+  },
+  "nature_1": {
+    "category": "nature",
+    "exemplar": 1,
+    "filename": "b51247184cbcd8b7.png"
+  },
+  "nature_2": {
+    "category": "nature",
+    "exemplar": 2,
+    "filename": "17ef0fbfea580a6c.png"
+  },
+  "noise_1": {
+    "category": "noise",
+    "exemplar": 1,
+    "filename": "6b133eebbaba7e13.png"
+  },
+  "noise_2": {
+    "category": "noise",
+    "exemplar": 2,
+    "filename": "f864789a244a706e.png"
+  },
+  "solid_color_1": {
+    "category": "solid_color",
+    "exemplar": 1,
+    "filename": "42214ec49bc7ea1f.png"
+  },
+  "solid_color_2": {
+    "category": "solid_color",
+    "exemplar": 2,
+    "filename": "bbc3c0eb5ccbd0a6.png"
+  },
+  "tech_1": {
+    "category": "tech",
+    "exemplar": 1,
+    "filename": "32c66c4c2b6f5dd5.png"
+  },
+  "tech_2": {
+    "category": "tech",
+    "exemplar": 2,
+    "filename": "58cfaa20462313f8.png"
+  }
+}

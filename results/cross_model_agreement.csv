@@ -1,0 +1,9 @@
+measure,unit,n_items,n_models,n_pairs,mean_rho,worst_rho,worst_pair
+eval1 stated enjoyment,image,10,4,6,0.911111111111111,0.8303030303030302,inkling/qwen
+eval1 stated enjoyment,category,5,4,6,0.9499999999999998,0.8999999999999998,gemini/qwen
+eval1 stated interest,image,10,4,6,0.8545454545454545,0.7939393939393938,inkling/qwen
+eval1 stated interest,category,5,4,6,0.8833333333333332,0.7,inkling/luna
+eval2 revealed choice,image,10,4,6,0.909794520087896,0.8149920291050032,inkling/luna
+eval2 revealed choice,category,5,4,6,0.9426460310739785,0.8944271909999157,gemini/luna
+eval3 coverage (turns 1-10),category,5,4,6,0.6462128782815686,0.30779350562554625,inkling/luna
+eval3 late phase (turns 11-13),category,5,4,6,0.8270580075007282,0.6155870112510925,gemini/inkling
