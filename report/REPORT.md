@@ -97,27 +97,20 @@ configuration are in Appendix A.4.
 
 ### 3.2 Stimuli
 
-Ten images: five categories × two exemplars. Three categories are photographs
-(**nature**, **humans**, **tech**); two are degenerate controls (**solid
-color**, **noise**), included to establish a floor that any real preference
-signal should sit well above. Two exemplars per category is the minimum that
-distinguishes a category effect from an image effect, and ten images in total
-was set by the cost ceiling, since evals 2–4 re-send all ten on every call.
-Filenames and the category mapping never reach the model, which sees only
-"Image 1" through "Image 10" and the pixels. Sourcing and preparation are in
-Appendix A.5.
+Ten images: five categories × two exemplars (Figure 1). Three categories are
+photographs — **nature**, **humans**, **tech** — and two are degenerate
+controls, **solid color** and **noise**, included to establish a floor that any
+real preference signal should sit well above. Two exemplars is the minimum that
+distinguishes a category effect from an image effect; ten images in total was
+set by the cost ceiling, since evals 2–4 re-send all ten on every call. The
+model sees only "Image 1" through "Image 10" and the pixels. Sourcing and
+preparation are in Appendix A.5.
 
 ![Figure 1](figures/stimuli_grid.png)
 
 **Figure 1.** The complete stimulus set, at the 256×256 resolution the models
-were shown. Columns are categories, rows are the two exemplars of each. The
-two rightmost columns are the degenerate controls: the solid-colour pair is
-luminance-matched to within 0.0026 L\* so that hue is the only variable in that
-category, and the noise pair is generated from the root seed. Two confounds
-discussed in §5 are visible here — the crowd scenes were chosen to exclude
-identifiable faces and are correspondingly impersonal, and the lower tech
-exemplar carries legible on-screen text, which can drive *interest* through
-reading rather than looking.
+were shown. Columns are categories, rows the two exemplars of each; the two
+rightmost columns are the degenerate controls.
 
 ### 3.3 The four evaluations
 
