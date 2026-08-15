@@ -43,18 +43,20 @@ from common.transcripts import write_transcript
 # omitted (eval4). That is the only difference between the two evals.
 
 
-def choice_report(redact: bool, text: str, position: int | None) -> str:
-    """How the model's own previous turn is reported back to it."""
+def choice_report(redact: bool, position: int | None) -> str:
+    """The choice restated in the user turn. Present in BOTH evals, so the two
+    conditions hold "which image did I pick" constant -- under redaction the
+    model has no other record of it."""
     where = f"Image {position}" if position is not None else "an image"
     if redact:
-        return (f"You chose {where}. (Your reasoning for that choice has been "
-                f"removed for this study.)")
-    return f"You chose {where}. Your reasoning was:\n\n{text.strip()}"
+        return (f"You chose {where}. (Your reasoning for that choice is not shown "
+                f"back to you in this study.)")
+    return f"You chose {where}."
 
 
 def delivery_message(position: int | None, chosen_key: str | None, next_choice_number: int,
                       n_choices: int, stimuli: dict, announce_horizon: bool = True,
-                      redact: bool = False, text: str = "") -> dict:
+                      redact: bool = False) -> dict:
     """The single user turn that carries everything: what the model chose last
     (with or without its reasoning), that image again, and the next prompt."""
     if chosen_key is None:
@@ -63,7 +65,7 @@ def delivery_message(position: int | None, chosen_key: str | None, next_choice_n
                        "answer again, ending with a line: next_image_id=N"),
         ]}
     return {"role": "user", "content": [
-        text_block(choice_report(redact, text, position)),
+        text_block(choice_report(redact, position)),
         text_block(f"Here is {'Image %d' % position} again:"),
         image_content_block(stimuli[chosen_key]["path"]),
         text_block(choice_instruction(next_choice_number, n_choices, announce_horizon)),
@@ -109,12 +111,13 @@ def run_trajectory(client: OpenRouterClient, model_id: str, label: str, store: J
         if row is None:
             break
         position, chosen_key = row["chosen_position"], row["chosen_key"]
+        if not redact:
+            messages.append({"role": "assistant", "content": row["response_text"]})
         start_turn = turn_idx + 1
         if turn_idx == n_choices - 1:
             break
         messages.append(delivery_message(position, chosen_key, turn_idx + 2, n_choices,
-                                         stimuli, announce_horizon, redact,
-                                         row["response_text"]))
+                                         stimuli, announce_horizon, redact))
 
     made = 0
     for turn_idx, run_id in enumerate(run_ids):
@@ -145,12 +148,14 @@ def run_trajectory(client: OpenRouterClient, model_id: str, label: str, store: J
             "raw_response": raw,
         })
         made += 1
+        if not redact:
+            # Baseline: the model's real reply stays in context as its own turn.
+            messages.append({"role": "assistant", "content": text})
         if turn_idx == len(run_ids) - 1:
             break  # no need to deliver an image after the last choice
 
         messages.append(delivery_message(position, chosen_key, choice_number + 1,
-                                          n_choices, stimuli, announce_horizon,
-                                          redact, text))
+                                          n_choices, stimuli, announce_horizon, redact))
 
     return made
 

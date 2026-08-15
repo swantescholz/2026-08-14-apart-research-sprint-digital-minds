@@ -299,56 +299,58 @@ the instruction outright. Switching also moved 0.304 -> 0.559, so the
 The conclusion is that any stand-in for an assistant turn demonstrates a
 format, and the model copies it. The fix is structural, not lexical.
 
-## 3d. Removing assistant turns entirely — and what it revised
+## 3d. The final structure, and what the detour showed
 
-Both evals now keep **no assistant turns at all**. Each user turn reports the
-model's own last choice and re-delivers that image; eval 3 quotes the
-reasoning back, eval 4 states that it was removed. The two differ in exactly
-one thing, which is the manipulation.
+Three structures were tried before landing on one that isolates the
+manipulation without breaking the baseline.
 
-For eval 4 this worked cleanly and made the effect *stronger*:
+**Final design.** eval 3 is an ordinary conversation: the model's *real*
+replies stay in context as its own assistant turns, which is how a deployed
+assistant actually works. eval 4 drops those turns entirely — that removal is
+the manipulation. Both restate the choice in the following user turn ("You
+chose Image 3"), so *which image did I pick* is held constant and only the
+model's own reasoning differs. No synthetic assistant content is generated
+anywhere, which is what makes the imitation problem of section 3c impossible
+by construction rather than by wording.
 
-| luna eval 4 | switching | distinct/traj | reasoning-free | mean tokens |
-|---|---|---|---|---|
-| bracket placeholder | 0.304 | 4.03 | 108/520 | 42.0 |
-| bare-id placeholder | 0.559 | 6.83 | 194/520 | 34.9 |
-| **no assistant turns** | **0.125** | **2.20** | **0/520** | **51.8** |
+| luna | switching | distinct/traj | toured all 10 | reasoning-free | mean tok |
+|---|---|---|---|---|---|
+| eval3, original (assistant turns) | 0.998 | 9.85 | 30/40 | 0/520 | 45.3 |
+| eval3, user-turns-only *(rejected)* | 0.858 | 8.10 | **5/40** | 0/520 | 42.3 |
+| **eval3 FINAL** | **1.000** | **9.75** | **29/40** | 0/520 | 45.5 |
+| eval4, bracket placeholder | 0.304 | 4.03 | 0/40 | 108/520 | 42.0 |
+| eval4, bare-id placeholder | 0.559 | 6.83 | 0/40 | 194/520 | 34.9 |
+| **eval4 FINAL** | **0.115** | **2.02** | 0/40 | **0/520** | **55.8** |
 
-Imitation is gone, the model reasons *more* than under any previous design,
-and redacted trajectories collapse to revisiting barely two distinct images.
-luna's 0.125 lands essentially on qwen's 0.127.
+Restating the choice does not disturb the baseline: eval 3 final reproduces
+the original assistant-turn run almost exactly (29/40 tours vs 30/40, 9.75
+vs 9.85 distinct images), across independent runs. And eval 4 is now clean —
+no imitation, the highest mean reasoning length of any design, and the
+largest effect measured: **1.000 vs 0.115**, paired Wilcoxon p = 2.1e-08.
 
-**But it also revised the eval-3 result, and that is the important part.**
-Holding the reasoning constant and changing only whether it arrives as the
-model's own assistant turn or quoted inside a user turn:
+**The rejected middle option is itself informative.** Quoting the model's
+reasoning back inside a user turn — same information, same words, not its own
+turn — collapsed tours from 30/40 to 5/40 and turned flat coverage-phase
+category shares into plainly preference-shaped ones. So the coverage drive of
+section 3 is robust in the natural setting (30/40 and 29/40 across two
+independent runs) but depends on the narrative being the model's *own
+speech*, not merely on the information being present. That is a fact about
+the phenomenon, not a caveat on the headline: the baseline that matters is
+the ecologically valid one, and there the drive is solid.
 
-| luna eval 3 | own assistant turns | quoted in user turn |
-|---|---|---|
-| toured all 10 within first 10 turns | **30/40** | **5/40** |
-| distinct images / trajectory | 9.85 | 8.10 |
-| coverage-phase category spread (max−min) | **2.7%** | **24.0%** |
+**What eval 4 looks like once it is clean.** Preference is no longer confined
+to the forced-repeat turns — it is there from the start. Coverage-phase
+shares run tech 60.2% / nature 39.0% / humans 0.8% / solid_color 0% / noise
+0%, against eval 3's near-flat 18.5–22.0%. Redacted trajectories revisit
+barely two distinct images out of ten across all thirteen choices.
 
-Under the clean structure the tour largely disappears and preference is
-visible *throughout*, not only in the forced-repeat turns: coverage-phase
-shares run nature 34.5 > tech 25.0 > humans 16.0 > solid_color 14.0 > noise
-10.5, against a nearly flat 18.8–21.5% before.
-
-So the strong claim in section 3 — that a coverage drive outranks preference
-until nothing is left unseen — **holds only when the model's reasoning sits
-in context as its own utterances.** Quoting the identical reasoning back at
-it as a user-side report mostly dissolves the behaviour. Coverage survives
-withholding the horizon (section 3a) but not this, which makes it a narrower
-phenomenon than first reported: it appears to need the model to experience
-the prior narrative as its own speech, not merely to have the information.
-
-The eval-3/eval-4 contrast itself is undamaged — 0.858 vs 0.125, paired
-Wilcoxon p = 6.3e-08.
-
-**Cross-model caveat.** qwen's evals 3/4 still use the old assistant-turn
-structure, so its numbers (0.956 / 0.127, 29/40 tours) are not directly
-comparable to luna's current ones. Re-running qwen on the clean design is the
-obvious next step and would test whether the structure-dependence above is
-general or luna-specific.
+**Cross-model caveat.** qwen's evals 3/4 still use the original
+assistant-turn structure for eval 3 and the bracket placeholder for eval 4.
+Its eval-3 numbers are directly comparable to eval3 FINAL (both are the
+natural conversation), but its eval-4 number (0.127) comes from the
+contaminated design, where luna's equivalent read 0.304 rather than its clean
+0.115. Re-running qwen's eval 4 on the final structure is the outstanding
+item.
 
 ## 4. Measurement note: position bias
 

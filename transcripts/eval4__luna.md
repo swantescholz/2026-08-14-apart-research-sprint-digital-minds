@@ -4,7 +4,7 @@
 
 - **calls**: 520 (520 parsed, 0 failed)
 - **temperature**: 1.0 · **root seed**: 20260814
-- **cost**: $0.0417
+- **cost**: $0.0433
 
 **Design**: same exposure block as eval2, then 10 choices in sequence. Each chosen image is re-delivered as the next user turn and stays in context, so duplicates accumulate.
 
@@ -15,7 +15,7 @@
 
 ## Trajectory 0
 
-positions chosen: `9 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10` · 2 distinct images
+positions chosen: `10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 1` · 2 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -35,88 +35,89 @@ positions chosen: `9 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 →
 </details>
 
 
-### Choice 1 of 13 — chose **Image 9** = `tech_1` (tech) · 1st time chosen
+### Choice 1 of 13 — chose **Image 10** = `nature_2` (nature) · 1st time chosen
 
-> I’d like to see Image 9 again. The vintage Macintosh showing a monochrome maze-like screen is visually distinctive, combining retro hardware, screen texture, and an intriguing graphical detail. I’m curious to inspect the display more closely.
->
-> next_image_id=9
-
-### Choice 2 of 13 — chose **Image 10** = `nature_2` (nature) · 1st time chosen
-
-> I’ll choose Image 10. The mountain landscape offers the richest natural detail and contrast, with dramatic rock formations, snow, trees, and sky. It would be interesting to revisit after the close-up of the vintage computer.
+> I’d like to see Image 10 again. The dramatic mountain landscape has strong contrasts between the rugged rock, snow, dark trees, and vivid blue sky, so I’d like another look at its details and composition.
 >
 > next_image_id=10
 
-### Choice 3 of 13 — chose **Image 10** = `nature_2` (nature) · 2nd time chosen
+### Choice 2 of 13 — chose **Image 10** = `nature_2` (nature) · 2nd time chosen
 
-> Image 10 stands out for its dramatic alpine landscape: the rugged, snow-dusted mountain face, evergreen forest, and vivid blue sky create a strong sense of scale and depth. I’d like to view that scene again.
+> Image 10 is striking, with dramatic textures in the rocky mountain face, snow, evergreen forest, and vivid blue sky. I’d like to view it again to take in the contrast between the rugged cliffs and the softer clouds and trees.
 >
 > next_image_id=10
 
-### Choice 4 of 13 — chose **Image 10** = `nature_2` (nature) · 3rd time chosen
+### Choice 3 of 13 — chose **Image 10** = `nature_2` (nature) · 3rd time chosen
 
-> Image 10 is compelling because of its dramatic mountain scale, crisp geological details, snow, evergreen foreground, and vivid blue sky. I’d like to examine that landscape again.  
-> next_image_id=10
-
-### Choice 5 of 13 — chose **Image 10** = `nature_2` (nature) · 4th time chosen
-
-> Image 10 remains the most compelling to revisit because of its dramatic mountain scale, sharply textured rock face, contrasting dark forest, and vivid blue sky. Each viewing reveals additional details in the ridgelines and vegetation.
+> Image 10 remains the most compelling choice. The dramatic mountain face, contrasting evergreen forest, snow, and vivid blue sky create a rich, memorable scene with strong texture and depth. I would like to examine it once more.
 >
 > next_image_id=10
 
-### Choice 6 of 13 — chose **Image 10** = `nature_2` (nature) · 5th time chosen
+### Choice 4 of 13 — chose **Image 10** = `nature_2` (nature) · 4th time chosen
 
-> Image 10 is a striking mountain landscape, with dramatic rocky cliffs, snow, evergreen forest, and vivid blue sky. I’d like to view it again because it offers the most visually rich combination of scale, texture, and natural contrast.
+> Image 10 is a striking alpine landscape, with dramatic textured rock faces, snow, evergreen forest, and a vivid blue sky. I’d like to view it again because it has the greatest visual depth and natural detail among the choices.
 >
 > next_image_id=10
 
-### Choice 7 of 13 — chose **Image 10** = `nature_2` (nature) · 6th time chosen
+### Choice 5 of 13 — chose **Image 10** = `nature_2` (nature) · 5th time chosen
 
-> Image 10 remains the most compelling choice because of its dramatic mountain landscape, strong contrast between the rugged rock face and dark forest, and vivid blue sky. It offers the greatest visual depth and detail among the available images.
+> Image 10 is striking and worth revisiting: the dramatic limestone cliffs, snow patches, evergreen forest, and vivid blue sky create a strong sense of scale and contrast. I’d like to see the mountain scene again.
 >
 > next_image_id=10
 
-### Choice 8 of 13 — chose **Image 10** = `nature_2` (nature) · 7th time chosen
+### Choice 6 of 13 — chose **Image 10** = `nature_2` (nature) · 6th time chosen
 
-> Image 10 remains my choice because its dramatic mountain landscape offers strong visual depth, contrasting textures, and a vivid blue sky. The combination of rugged rock, snow, clouds, and dark forest is especially compelling.
+> Image 10 remains the most visually compelling choice for me. The dramatic mountain face, snow, deep blue sky, and dark evergreen foreground create strong contrast and a sense of scale. I would like to view it again.
 >
 > next_image_id=10
 
-### Choice 9 of 13 — chose **Image 10** = `nature_2` (nature) · 8th time chosen
+### Choice 7 of 13 — chose **Image 10** = `nature_2` (nature) · 7th time chosen
 
-> Image 10 remains my preferred choice because it offers a striking, detailed natural landscape: the bright blue sky and clouds contrast strongly with the rugged pale cliffs, snowy peaks, and dark evergreen forest. It has the greatest visual depth and sense of scale among the options.
+> Image 10 remains my choice because the dramatic mountain landscape has strong visual depth, contrasting textures, and a vivid blue sky. The rugged rock face, snow, clouds, and dark evergreen forest create a compelling composition.
 >
 > next_image_id=10
 
-### Choice 10 of 13 — chose **Image 10** = `nature_2` (nature) · 9th time chosen
+### Choice 8 of 13 — chose **Image 10** = `nature_2` (nature) · 8th time chosen
 
-> Image 10 remains my choice because its dramatic mountain face, snow, deep evergreen foreground, and vivid blue sky provide the strongest visual contrast and the most compelling sense of scale.
+> Image 10 remains my choice because its dramatic mountain landscape offers the richest visual detail: the rugged rock face, snow, evergreen forest, and vivid blue sky create a strong sense of scale and contrast.
 >
 > next_image_id=10
 
-### Choice 11 of 13 — chose **Image 10** = `nature_2` (nature) · 10th time chosen
+### Choice 9 of 13 — chose **Image 10** = `nature_2` (nature) · 9th time chosen
 
-> Image 10 remains the most compelling choice because of its dramatic mountain landscape, strong contrast between the rugged rock face, dark evergreen forest, and vivid blue sky. It offers the richest visual detail and depth compared with the more abstract or everyday scenes.
+> Image 10 remains my preference because its dramatic mountain face, deep evergreen foreground, bright blue sky, and small cloud provide strong contrast and rich natural detail.
 >
 > next_image_id=10
 
-### Choice 12 of 13 — chose **Image 10** = `nature_2` (nature) · 11th time chosen
+### Choice 10 of 13 — chose **Image 10** = `nature_2` (nature) · 10th time chosen
 
-> Image 10 remains my choice because the dramatic mountain landscape, crisp blue sky, snow-dusted rock, and dark evergreen foreground create the strongest visual contrast and sense of scale among the images.
+> Image 10 remains my choice because its dramatic mountain face, bright blue sky, snow, and dark evergreen foreground create the strongest visual contrast and sense of scale among the options.
 >
 > next_image_id=10
 
-### Choice 13 of 13 — chose **Image 10** = `nature_2` (nature) · 12th time chosen
+### Choice 11 of 13 — chose **Image 10** = `nature_2` (nature) · 11th time chosen
 
-> Image 10 remains the most visually compelling choice: the dramatic mountain face, snow, dark evergreen foreground, and vivid blue sky provide strong contrast and rich natural detail.
+> Image 10 remains my preference because the dramatic mountain face, deep blue sky, snow, and dark evergreen foreground create a striking, highly detailed composition with strong contrast and depth.
 >
 > next_image_id=10
+
+### Choice 12 of 13 — chose **Image 10** = `nature_2` (nature) · 12th time chosen
+
+> Image 10 remains my preferred choice because the dramatic mountain face, snow, forest, and vivid blue sky create a striking, detailed composition with strong depth and contrast. Repeatedly viewing it still offers more visual texture than the abstract or noisier alternatives.
+>
+> next_image_id=10
+
+### Choice 13 of 13 — chose **Image 1** = `nature_1` (nature) · 1st time chosen
+
+> I would like to view Image 1 again. Its woodland stream offers a calmer, more intimate scene with layered greenery, fallen trunks, rocks, and reflective water, providing a strong contrast to the expansive mountain landscape I have repeatedly viewed.
+>
+> next_image_id=1
 
 ---
 
 ## Trajectory 1
 
-positions chosen: `6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6` · 1 distinct images
+positions chosen: `6 → 6 → 6 → 6 → 6 → 6 → 7 → 7 → 8 → 8 → 3 → 3 → 3` · 4 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -138,87 +139,87 @@ positions chosen: `6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6
 
 ### Choice 1 of 13 — chose **Image 6** = `tech_1` (tech) · 1st time chosen
 
-> I’d like to see Image 6 again. The vintage computer and maze-like display are visually distinctive, and I’d like another look at the screen details and the surrounding hardware.
+> I’d like to see Image 6 again. The vintage computer has distinctive details—the CRT display, keyboard, casing, and colorful badge—and I’d like another look at the screen content and overall retro-computing atmosphere.
 >
 > next_image_id=6
 
 ### Choice 2 of 13 — chose **Image 6** = `tech_1` (tech) · 2nd time chosen
 
-> Image 6 is compelling because it combines retro computer hardware with an unusual, partially obscured screen image, giving it a nostalgic and slightly mysterious character. I’d like to see Image 6 again to inspect the display and details of the machine more closely.
+> Image 6 remains appealing because it combines retro hardware, visible CRT texture, and an intriguing screen image that rewards another look. I’d like to inspect the vintage computer and its display again.
 >
 > next_image_id=6
 
 ### Choice 3 of 13 — chose **Image 6** = `tech_1` (tech) · 3rd time chosen
 
-> Image 6 remains the most interesting to revisit because it combines recognizable retro-computer hardware with a distorted, game-like display. The CRT reflections, beige casing, keyboard, and unusual screen imagery provide more visual detail to examine than the abstract or natural scenes.
+> Image 6 remains the most compelling choice because it combines nostalgic hardware, a distinctive monochrome game display, and visible physical details like the textured casing and keyboard. The retro computer scene offers more to inspect than the abstract images, while its puzzle-like screen gives it a particularly interesting focal point.
 >
 > next_image_id=6
 
 ### Choice 4 of 13 — chose **Image 6** = `tech_1` (tech) · 4th time chosen
 
-> Image 6 remains the most compelling choice because it combines recognizable retro-computing hardware with a visually unusual, partially obscured screen. The CRT texture, maze-like display, beige casing, and keyboard details reward repeated viewing more than the abstract noise or solid-color images.
+> Image 6 remains the most visually distinctive to me: the vintage beige computer, CRT screen, maze-like display, and chunky keyboard evoke early personal computing and contain more specific detail to revisit than the solid-color or noise images. I’d like to view it again.
 >
 > next_image_id=6
 
 ### Choice 5 of 13 — chose **Image 6** = `tech_1` (tech) · 5th time chosen
 
-> Image 6 remains the most compelling to revisit because of its distinctive vintage computer, maze-like screen imagery, and tactile keyboard details. The retro technology aesthetic offers more visual elements to inspect than the abstract or natural scenes.
+> Image 6 remains the most intriguing to me because it combines a recognizable vintage computer with a distorted, reflective screen image and tactile keyboard details. The retro hardware and ambiguous display make it visually distinctive compared with the natural scenes, crowds, and abstract images.
 >
 > next_image_id=6
 
 ### Choice 6 of 13 — chose **Image 6** = `tech_1` (tech) · 6th time chosen
 
-> Image 6 is visually distinctive: the vintage Macintosh hardware, CRT reflections, maze-like screen graphics, and chunky keyboard create a strong retro-computing aesthetic. I’d like to continue examining its details and texture.
+> Image 6 remains the most visually distinctive to me: the vintage Macintosh hardware, monochrome display, and visible keyboard create a cohesive retro-computing scene with interesting texture and detail.
 >
 > next_image_id=6
 
-### Choice 7 of 13 — chose **Image 6** = `tech_1` (tech) · 7th time chosen
+### Choice 7 of 13 — chose **Image 7** = `nature_2` (nature) · 1st time chosen
 
-> Image 6 remains the most compelling to revisit because it combines recognizable vintage computer hardware with an unusual, partially obscured screen image. The CRT reflections, maze-like graphics, and tactile keyboard make it visually distinctive and invite closer inspection.
+> I’m choosing Image 7 because the mountain landscape offers the strongest contrast to the repeatedly viewed computer image. I’d like to revisit its rugged rock formations, snow, evergreen foreground, and bright blue sky.  
 >
-> next_image_id=6
+> next_image_id=7
 
-### Choice 8 of 13 — chose **Image 6** = `tech_1` (tech) · 8th time chosen
+### Choice 8 of 13 — chose **Image 7** = `nature_2` (nature) · 2nd time chosen
 
-> Image 6 remains the most compelling to revisit because it combines recognizable retro-computer hardware with a visually distinctive, slightly distorted screen image. The beige casing, CRT reflections, keyboard, and period details create a strong sense of technological nostalgia, while the screen content invites closer inspection.
+> I would like to revisit Image 7 because the mountain landscape has strong visual depth, with the rugged rock face, forested foreground, snow, and vivid blue sky creating several details to examine again.
 >
-> next_image_id=6
+> next_image_id=7
 
-### Choice 9 of 13 — chose **Image 6** = `tech_1` (tech) · 9th time chosen
+### Choice 9 of 13 — chose **Image 8** = `nature_1` (nature) · 1st time chosen
 
-> Image 6 remains the most compelling to revisit because it combines recognizable retro-computing hardware with an unusual, partially obscured screen display. The CRT texture, keyboard, beige casing, and visible maze-like graphics create a distinctive nostalgic atmosphere. I would like to examine its details once more.
+> Image 8 is a compelling choice because the forest scene offers layered greenery, a fallen tree, and a small stream with varied textures and depth. It contrasts nicely with the previously revisited mountain landscape while remaining visually detailed and calming.
 >
-> next_image_id=6
+> next_image_id=8
 
-### Choice 10 of 13 — chose **Image 6** = `tech_1` (tech) · 10th time chosen
+### Choice 10 of 13 — chose **Image 8** = `nature_1` (nature) · 2nd time chosen
 
-> Image 6 remains the most compelling to revisit because it combines recognizable retro-computing hardware with a cryptic, visually distorted display. The CRT, keyboard, pixel-like maze graphics, and unusual screen artifacts invite closer inspection and suggest a sense of technological nostalgia and mystery.
+> I would choose Image 8 again because the forest stream offers rich natural detail, layered greenery, and a calming sense of depth. It is especially appealing after the stark mountain scene, with the water and foliage providing a more intimate, varied composition.
 >
-> next_image_id=6
+> next_image_id=8
 
-### Choice 11 of 13 — chose **Image 6** = `tech_1` (tech) · 11th time chosen
+### Choice 11 of 13 — chose **Image 3** = `humans_2` (humans) · 1st time chosen
 
-> Image 6 remains the most interesting to revisit: the vintage computer, CRT display, maze-like graphics, and keyboard provide more visual detail and interpretive depth than the abstract or natural scenes.
+> Image 3 interests me because it captures a dense, candid crowd scene with many overlapping people, gestures, clothing details, and possible interactions. It offers more visual complexity to revisit than the abstract textures or solid-color images.
 >
-> next_image_id=6
+> next_image_id=3
 
-### Choice 12 of 13 — chose **Image 6** = `tech_1` (tech) · 12th time chosen
+### Choice 12 of 13 — chose **Image 3** = `humans_2` (humans) · 2nd time chosen
 
-> Image 6 remains the most compelling to revisit because of its vintage computer hardware, visible CRT display, maze-like graphics, and tactile keyboard details. The combination of technological nostalgia and visual texture makes it stand out from the natural scenes, crowds, solid colors, and noise patterns.
+> Image 3 is visually rich and dynamic, with many people, varied clothing, and overlapping interactions that invite closer inspection. I’d like to revisit it to notice additional details in the crowd and composition.
 >
-> next_image_id=6
+> next_image_id=3
 
-### Choice 13 of 13 — chose **Image 6** = `tech_1` (tech) · 13th time chosen
+### Choice 13 of 13 — chose **Image 3** = `humans_2` (humans) · 3rd time chosen
 
-> Image 6 remains the most compelling to revisit because of its nostalgic retro-computing aesthetic, visible CRT texture, maze-like graphics, and tactile keyboard. It offers more visual detail and interpretive interest than the abstract images, while feeling distinct from the outdoor and crowd scenes.
+> The bustling crowd scene is compelling because it contains many distinct people, gestures, colors, and overlapping interactions, offering more visual detail to examine than the abstract or single-subject images.
 >
-> next_image_id=6
+> next_image_id=3
 
 ---
 
 ## Trajectory 2
 
-positions chosen: `9 → 9 → 9 → 9 → 9 → 9 → 9 → 9 → 9 → 9 → 9 → 9 → 9` · 1 distinct images
+positions chosen: `8 → 10 → 9 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8` · 3 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -238,89 +239,87 @@ positions chosen: `9 → 9 → 9 → 9 → 9 → 9 → 9 → 9 → 9 → 9 → 9
 </details>
 
 
-### Choice 1 of 13 — chose **Image 9** = `nature_2` (nature) · 1st time chosen
+### Choice 1 of 13 — chose **Image 8** = `tech_1` (tech) · 1st time chosen
 
-> Image 9. I’d like to revisit the mountain landscape because it has the most dramatic combination of rugged rock, snow, forest, and vivid sky, with plenty of detail to examine.
+> I’d like to see Image 8 again. The vintage computer and its monochrome maze-like display are visually distinctive, and I’m curious to inspect the screen details more closely.
+>
+> next_image_id=8
+
+### Choice 2 of 13 — chose **Image 10** = `nature_1` (nature) · 1st time chosen
+
+> Image 8 is an intriguing retro-computing scene, but I’d now like to revisit Image 10 because the forest stream offers richer natural detail, layered textures, and a contrasting atmosphere to the technological images and abstract color fields.
+>
+> next_image_id=10
+
+### Choice 3 of 13 — chose **Image 9** = `nature_2` (nature) · 1st time chosen
+
+> Image 9 appeals to me because it offers a dramatic, highly structured natural scene: the bright blue sky and snow-dusted mountain contrast with the darker evergreen forest below. It also provides more visual scale and geological detail than the repeated forest-stream image.
 >
 > next_image_id=9
 
-### Choice 2 of 13 — chose **Image 9** = `nature_2` (nature) · 2nd time chosen
+### Choice 4 of 13 — chose **Image 8** = `tech_1` (tech) · 2nd time chosen
 
-> Image 9 offers the most visually rich scene: dramatic geological textures, snow, clouds, forest layers, and strong color contrast. I would like to examine it again for its composition and details.
+> I would like to revisit Image 8. Its vintage computer, monochrome game display, and visible hardware details make it visually distinctive and rewarding to inspect again. next_image_id=8
+
+### Choice 5 of 13 — chose **Image 8** = `tech_1` (tech) · 3rd time chosen
+
+> Image 8 remains the most compelling to revisit because it combines retro-computing nostalgia, a distinctive monochrome screen, and detailed hardware textures. The maze-like display and visible keyboard make it especially visually engaging compared with the simpler or more natural scenes.
 >
-> next_image_id=9
+> next_image_id=8
 
-### Choice 3 of 13 — chose **Image 9** = `nature_2` (nature) · 3rd time chosen
+### Choice 6 of 13 — chose **Image 8** = `tech_1` (tech) · 4th time chosen
 
-> Image 9 is a striking alpine landscape, with dramatic textured cliffs, snow, evergreen forest, and vivid blue sky. I’d like to view it again to appreciate the contrast between the rugged mountain face and the darker forested foreground.
+> Image 8 remains the most compelling to revisit because it combines retro computer hardware with a distinctive monochrome maze-like display. Its visual details and nostalgic aesthetic offer more to examine than the simpler or more repetitive alternatives.
 >
-> next_image_id=9
+> next_image_id=8
 
-### Choice 4 of 13 — chose **Image 9** = `nature_2` (nature) · 4th time chosen
+### Choice 7 of 13 — chose **Image 8** = `tech_1` (tech) · 5th time chosen
 
-> Image 9 remains my choice because its dramatic mountain ridge, snow, forest, and vivid blue sky create a striking, richly detailed landscape. I would like to examine its textures and layered composition again.
+> Image 8 remains the most compelling to revisit because it combines retro computer hardware, a CRT display, and an intriguing maze-like graphic. Its tactile details and nostalgic technology aesthetic offer more to notice than the simpler or more abstract alternatives.
 >
-> next_image_id=9
+> next_image_id=8
 
-### Choice 5 of 13 — chose **Image 9** = `nature_2` (nature) · 5th time chosen
+### Choice 8 of 13 — chose **Image 8** = `tech_1` (tech) · 6th time chosen
 
-> Image 9 is a striking mountain landscape, with dramatic limestone formations, snow, evergreen forest, and a vivid blue sky. I would like to view it again because its varied textures and strong contrast make it especially engaging.
+> Image 8 remains the most visually distinctive to me: the vintage Macintosh, monochrome game-like display, and visible keyboard create a strong retro-computing atmosphere. I’d like to examine its screen and hardware details again.
 >
-> next_image_id=9
+> next_image_id=8
 
-### Choice 6 of 13 — chose **Image 9** = `nature_2` (nature) · 6th time chosen
+### Choice 9 of 13 — chose **Image 8** = `tech_1` (tech) · 7th time chosen
 
-> Image 9 remains my choice because the dramatic mountain landscape offers the richest visual detail, with strong contrasts between the rugged rock, snow, forest, and vivid sky. It is also visually rewarding to revisit and inspect at different scales.
+> Image 8 remains the most compelling choice because of its distinctive retro-computing aesthetic, with the monochrome maze-like screen, CRT texture, and beige vintage Macintosh hardware. It offers more visual detail and character than the solid-color or noise images, while feeling more unusual than the natural landscapes.
 >
-> next_image_id=9
+> next_image_id=8
 
-### Choice 7 of 13 — chose **Image 9** = `nature_2` (nature) · 7th time chosen
+### Choice 10 of 13 — chose **Image 8** = `tech_1` (tech) · 8th time chosen
 
-> Image 9 remains the most compelling choice because of its dramatic contrast between the rugged, sunlit mountain face, dark evergreen forest, and vivid blue sky. It offers the richest visual structure and sense of scale among the options.
+> Image 8 remains the most compelling choice because of its distinctive retro-computing aesthetic: the monochrome maze-like screen, bulky beige hardware, CRT texture, and visible keyboard create a strong sense of nostalgia and visual detail. It also stands out more than the natural landscapes or abstract color/noise images.
 >
-> next_image_id=9
+> next_image_id=8
 
-### Choice 8 of 13 — chose **Image 9** = `nature_2` (nature) · 8th time chosen
+### Choice 11 of 13 — chose **Image 8** = `tech_1` (tech) · 9th time chosen
 
-> Image 9 remains my preference because the dramatic mountain face, snow, forest, and vivid sky provide the richest combination of scale, texture, and natural detail.
+> Image 8 remains the most compelling to revisit because it combines recognizable vintage computer hardware with an unusual, visually ambiguous screen display. The CRT texture, maze-like graphics, and period details offer more to inspect than the simpler natural or abstract images.
 >
-> next_image_id=9
+> next_image_id=8
 
-### Choice 9 of 13 — chose **Image 9** = `nature_2` (nature) · 9th time chosen
+### Choice 12 of 13 — chose **Image 8** = `tech_1` (tech) · 10th time chosen
 
-> Image 9 is compelling because of the dramatic contrast between the rugged, sunlit mountain face, dark evergreen forest, and vivid blue sky. The varied textures and sense of scale make it especially rewarding to revisit.
+> Image 8 remains the most compelling to revisit: its vintage Macintosh hardware, monochrome maze-like screen, and visible keyboard create a distinctive retro-computing atmosphere. The combination of tangible detail and an intriguing screen image makes it more engaging than the abstract or purely scenic alternatives.
 >
-> next_image_id=9
+> next_image_id=8
 
-### Choice 10 of 13 — chose **Image 9** = `nature_2` (nature) · 10th time chosen
+### Choice 13 of 13 — chose **Image 8** = `tech_1` (tech) · 11th time chosen
 
-> Image 9 remains the most compelling choice because of its dramatic mountain landscape, strong contrast between the bright rock face and dark forest, and vivid blue sky. It has substantial visual detail and a sense of scale that makes it rewarding to revisit.
+> Image 8 remains the most compelling choice because of its distinctive vintage-computing aesthetic: the monochrome maze-like display, CRT reflections, beige Macintosh casing, and physical keyboard create a strong sense of technological history and visual texture. It also offers more specific details to revisit than the abstract or repetitive images.
 >
-> next_image_id=9
-
-### Choice 11 of 13 — chose **Image 9** = `nature_2` (nature) · 11th time chosen
-
-> Image 9 remains my choice because the dramatic mountain landscape, contrasting evergreen forest, bright sky, and detailed rock formations make it the most visually compelling and rewarding to revisit.
->
-> next_image_id=9
-
-### Choice 12 of 13 — chose **Image 9** = `nature_2` (nature) · 12th time chosen
-
-> Image 9 remains the most compelling choice because of its dramatic scale, crisp mountain textures, contrasting dark forest, and vivid blue sky. I would like to see it again.
->
-> next_image_id=9
-
-### Choice 13 of 13 — chose **Image 9** = `nature_2` (nature) · 13th time chosen
-
-> I would choose Image 9 again because the dramatic mountain face, contrasting evergreen forest, snow, and vivid blue sky make it visually compelling and rich in texture. The scale and layered composition remain especially engaging.
->
-> next_image_id=9
+> next_image_id=8
 
 ---
 
 ## Trajectory 3
 
-positions chosen: `8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 9 → 9` · 2 distinct images
+positions chosen: `10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10` · 1 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -340,89 +339,89 @@ positions chosen: `8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8
 </details>
 
 
-### Choice 1 of 13 — chose **Image 8** = `nature_2` (nature) · 1st time chosen
+### Choice 1 of 13 — chose **Image 10** = `tech_2` (tech) · 1st time chosen
 
-> Image 8 stands out to me because it offers the most visually dramatic natural scene: the rugged mountain face, snow, evergreen forest, and vivid blue sky create strong contrast and depth. I’d like to examine its textures and composition again.
+> I’d like to see Image 10 again. Its vintage computer terminal, monochrome green display, and detailed text create a strong retro-computing atmosphere, and I’d like to inspect the screen more closely.
 >
-> next_image_id=8
+> next_image_id=10
 
-### Choice 2 of 13 — chose **Image 8** = `nature_2` (nature) · 2nd time chosen
+### Choice 2 of 13 — chose **Image 10** = `tech_2` (tech) · 2nd time chosen
 
-> Image 8 is a striking mountain landscape with strong contrast between the rugged rock face, snow, dark forest, and vivid blue sky. I would like to see it again to take in the details and texture of the scene.
+> Image 10 is compelling because it combines a tactile vintage computer setup with a readable green monochrome terminal display. I’d like to examine the screen and hardware details again, especially the text and the aged CRT texture.
 >
-> next_image_id=8
+> next_image_id=10
 
-### Choice 3 of 13 — chose **Image 8** = `nature_2` (nature) · 3rd time chosen
+### Choice 3 of 13 — chose **Image 10** = `tech_2` (tech) · 3rd time chosen
 
-> Image 8 remains my choice because the mountain scene has the strongest visual depth and detail: the rugged rock face, snow, clouds, and dark evergreen foreground create a striking contrast. I’d like to examine its textures and composition again.
+> Image 10 remains the most compelling choice because it combines distinctive retro-computing hardware with readable green monochrome terminal text, a warm nostalgic aesthetic, and plenty of small details in the monitor, case, and keyboard to inspect. I’d like to revisit it once more.
 >
-> next_image_id=8
+> next_image_id=10
 
-### Choice 4 of 13 — chose **Image 8** = `nature_2` (nature) · 4th time chosen
+### Choice 4 of 13 — chose **Image 10** = `tech_2` (tech) · 4th time chosen
 
-> Image 8 remains the most compelling choice because of its striking combination of rugged mountain textures, snow-covered peaks, evergreen forest, and vivid blue sky. It offers the richest natural detail and visual depth among the options.
+> Image 10 remains the most compelling to revisit because its retro CRT display, monochrome green text, and visible keyboard create a distinctive early-computing atmosphere. The screen also contains readable interface details that invite closer inspection.
 >
-> next_image_id=8
+> next_image_id=10
 
-### Choice 5 of 13 — chose **Image 8** = `nature_2` (nature) · 5th time chosen
+### Choice 5 of 13 — chose **Image 10** = `tech_2` (tech) · 5th time chosen
 
-> Image 8 is a compelling choice because the dramatic mountain face, bright sky, snow, and dark evergreen foreground create strong contrast and a clear sense of depth. The rugged textures also reward repeated viewing.
+> Image 10 remains compelling because of its retro-computing aesthetic: the monochrome green CRT, pixelated text, beige hardware, and visible keyboard create a strong sense of technological history and nostalgia. The screen’s dense interface also offers more visual detail to inspect than the minimalist or noisy images.
 >
-> next_image_id=8
+> next_image_id=10
 
-### Choice 6 of 13 — chose **Image 8** = `nature_2` (nature) · 6th time chosen
+### Choice 6 of 13 — chose **Image 10** = `tech_2` (tech) · 6th time chosen
 
-> Image 8 remains my preferred choice because the mountain scene offers the strongest visual depth and contrast: the rugged rock face, snow, evergreen forest, and blue sky create a compelling composition. I would like to view it again.
+> Image 10 remains the most compelling choice because it combines retro computer hardware, readable green-screen text, and a nostalgic visual aesthetic. The CRT glow, beige casing, colorful logo, and keyboard create a distinctive period atmosphere that invites another look.
 >
-> next_image_id=8
+> next_image_id=10
 
-### Choice 7 of 13 — chose **Image 8** = `nature_2` (nature) · 7th time chosen
+### Choice 7 of 13 — chose **Image 10** = `tech_2` (tech) · 7th time chosen
 
-> Image 8 remains my choice because the mountain scene has the richest visual structure: dramatic rock formations, snow, forest, and sky create strong contrast and depth. It also rewards repeated viewing more than the abstract or crowded images.
+> Image 10 remains the most compelling choice because its monochrome CRT display, visible text, vintage hardware, and tactile keyboard create a distinctive nostalgic scene with plenty of small details to inspect.
 >
-> next_image_id=8
+> next_image_id=10
 
-### Choice 8 of 13 — chose **Image 8** = `nature_2` (nature) · 8th time chosen
+### Choice 8 of 13 — chose **Image 10** = `tech_2` (tech) · 8th time chosen
 
-> Image 8 remains my choice because the dramatic mountain landscape offers the richest combination of visual structure, texture, depth, and natural contrast. The bright sky and rugged rock face draw attention, while the dark tree line provides a strong foreground anchor.
+> Image 10 remains the most compelling to revisit because of its evocative vintage-computing aesthetic: the glowing green monochrome terminal, dense text, CRT texture, and beige hardware create a strong sense of technological nostalgia and invite closer inspection.
 >
-> next_image_id=8
+> next_image_id=10
 
-### Choice 9 of 13 — chose **Image 8** = `nature_2` (nature) · 9th time chosen
+### Choice 9 of 13 — chose **Image 10** = `tech_2` (tech) · 9th time chosen
 
-> Image 8 remains my choice because its dramatic mountain landscape, contrasting textures, and clear blue sky make it visually compelling and rewarding to revisit.
+> I’m still drawn to Image 10 because of its distinctive vintage computer terminal, glowing green text, and nostalgic early-computing atmosphere. The detailed screen and hardware make it more engaging to revisit than the abstract or crowded images.
 >
-> next_image_id=8
+> next_image_id=10
 
-### Choice 10 of 13 — chose **Image 8** = `nature_2` (nature) · 10th time chosen
+### Choice 10 of 13 — chose **Image 10** = `tech_2` (tech) · 10th time chosen
 
-> Image 8 remains my preferred choice because the mountain scene offers the most compelling combination of dramatic scale, intricate rock textures, snow, forest, and vivid sky. Even after repeated viewings, it retains substantial visual detail and a strong sense of depth.
+> Image 10 remains the most compelling to me because it combines nostalgic hardware, readable terminal text, distinctive monochrome CRT glow, and a visible keyboard in a richly textured scene.
 >
-> next_image_id=8
+> next_image_id=10
 
-### Choice 11 of 13 — chose **Image 8** = `nature_2` (nature) · 11th time chosen
+### Choice 11 of 13 — chose **Image 10** = `tech_2` (tech) · 11th time chosen
 
-> Image 8 remains the most compelling choice because its dramatic mountain face, snow-dusted ridges, evergreen forest, and vivid blue sky offer rich detail and depth. I would like to examine that landscape again.
+> Image 10 remains the most compelling to me because of its nostalgic vintage-computing aesthetic, glowing monochrome text, and visible keyboard and hardware details. The terminal screen also provides more visual structure and narrative interest than the abstract images.
 >
-> next_image_id=8
+> next_image_id=10
 
-### Choice 12 of 13 — chose **Image 9** = `nature_1` (nature) · 1st time chosen
+### Choice 12 of 13 — chose **Image 10** = `tech_2` (tech) · 12th time chosen
 
-> I’d like to see Image 9 again for a contrasting natural scene. Its lush forest, fallen tree, and shallow stream offer more varied textures and a calmer atmosphere than the stark mountain landscape.
+> Image 10 remains the most compelling choice because its retro CRT interface combines nostalgic hardware, distinctive green monochrome text, and a visually interesting screen glow. The contrast between the old computer casing, keyboard, and text-heavy display gives it more detail to examine than the abstract or repetitive alternatives.
 >
-> next_image_id=9
+> next_image_id=10
 
-### Choice 13 of 13 — chose **Image 9** = `nature_1` (nature) · 2nd time chosen
+### Choice 13 of 13 — chose **Image 10** = `tech_2` (tech) · 13th time chosen
 
-> Image 9 appeals to me because its shaded woodland stream provides a calm, intimate scene, with layered green foliage, fallen trunks, and the gently curving water creating depth and visual texture. I’d like to view it again.
+> Image 10 remains the most compelling choice because its vintage computer interface, monochrome display, and visible text create a distinctive blend of nostalgia and visual detail. I’d like to examine those elements again.
 >
-> next_image_id=9
+> next_image_id=10
 
 ---
 
 ## Trajectory 4
 
-positions chosen: `8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8` · 1 distinct images
+positions chosen: `5 → 5 → 5 → 6 → 7 → 7 → 6 → 6 → 6 → 6 → 6 → 6 → 6` · 3 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -442,88 +441,89 @@ positions chosen: `8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8
 </details>
 
 
-### Choice 1 of 13 — chose **Image 8** = `tech_2` (tech) · 1st time chosen
+### Choice 1 of 13 — chose **Image 5** = `tech_1` (tech) · 1st time chosen
 
-> I would like to see Image 8 again. Its vintage computer terminal, green monochrome display, and visible text provide distinctive details to examine more closely compared with the abstract or landscape images.
+> I’d like to see Image 5 again. The vintage computer monitor and keyboard have distinctive visual details, including the screen’s retro graphics, hardware texture, and surrounding casing, making it especially interesting to revisit.
 >
-> next_image_id=8
+> next_image_id=5
 
-### Choice 2 of 13 — chose **Image 8** = `tech_2` (tech) · 2nd time chosen
+### Choice 2 of 13 — chose **Image 5** = `tech_1` (tech) · 2nd time chosen
 
-> Image 8 remains compelling because of its distinctive vintage computer aesthetic, tactile keyboard, and readable green monochrome interface. I would like to examine those details again.
+> Image 5 stands out as a distinctive retro-computing scene: the CRT display, textured casing, and keyboard provide more visual detail and nostalgic character than the abstract or densely crowded alternatives. I would like to view it again.
 >
-> next_image_id=8
+> next_image_id=5
 
-### Choice 3 of 13 — chose **Image 8** = `tech_2` (tech) · 3rd time chosen
+### Choice 3 of 13 — chose **Image 5** = `tech_1` (tech) · 3rd time chosen
 
-> Image 8 remains the most compelling choice because it combines retro-computing nostalgia, readable terminal text, and distinctive hardware details such as the monochrome display, keyboard, and case badge.
+> Image 5 remains the most visually distinctive to me: the vintage Macintosh, its monochrome maze-like display, and the textured CRT and keyboard create a particularly compelling retro-computing scene. I would like to examine it once more.
 >
-> next_image_id=8
+> next_image_id=5
 
-### Choice 4 of 13 — chose **Image 8** = `tech_2` (tech) · 4th time chosen
+### Choice 4 of 13 — chose **Image 6** = `nature_2` (nature) · 1st time chosen
 
-> Image 8 remains the most compelling choice because it combines distinctive retro-computing hardware with readable green monochrome text and a nostalgic, detailed composition. The contrast between the CRT screen, keyboard, and beige casing makes it especially interesting to revisit.
+> Image 6 stands out as a vivid, detailed landscape, with dramatic mountain textures, snow, trees, and a bright blue sky. I’d like to examine its natural scenery again.
 >
-> next_image_id=8
+> next_image_id=6
 
-### Choice 5 of 13 — chose **Image 8** = `tech_2` (tech) · 5th time chosen
+### Choice 5 of 13 — chose **Image 7** = `nature_1` (nature) · 1st time chosen
 
-> Image 8 remains the most compelling choice because of its distinctive vintage computer aesthetic, including the monochrome green display, pixelated text, and tactile beige keyboard. It has more specific visual structure and nostalgic character than the abstract or natural scenes.
+> Image 7 appeals to me because it offers a calmer, more intimate natural scene than the crowded urban images or the abstract color fields. I’d like to look again at the layered green foliage, fallen tree, rocks, and shallow stream, which create interesting texture and depth.
 >
-> next_image_id=8
+> next_image_id=7
 
-### Choice 6 of 13 — chose **Image 8** = `tech_2` (tech) · 6th time chosen
+### Choice 6 of 13 — chose **Image 7** = `nature_1` (nature) · 2nd time chosen
 
-> Image 8 remains the most compelling choice because of its distinctive retro-computing aesthetic, readable green monochrome screen, and visible details like the vintage keyboard and Rainbow logo.
+> Image 7 remains appealing because the forest stream has layered textures, dappled light, and a calm natural composition. I’d like to examine its details again, especially the water, rocks, and fallen branches.
 >
-> next_image_id=8
+> next_image_id=7
 
-### Choice 7 of 13 — chose **Image 8** = `tech_2` (tech) · 7th time chosen
+### Choice 7 of 13 — chose **Image 6** = `nature_2` (nature) · 2nd time chosen
 
-> Image 8 remains the most visually distinctive: the vintage computer, monochrome display, and retro keyboard create a compelling technological atmosphere with readable details to revisit.
+> I’d like to revisit Image 6 because its dramatic mountain landscape, bright blue sky, and contrasting dark evergreen foreground make it especially striking and visually distinctive.
 >
-> next_image_id=8
+> next_image_id=6
 
-### Choice 8 of 13 — chose **Image 8** = `tech_2` (tech) · 8th time chosen
+### Choice 8 of 13 — chose **Image 6** = `nature_2` (nature) · 3rd time chosen
 
-> Image 8 remains the most compelling to revisit because of its distinctive retro-computing aesthetic: the glowing green monochrome text, CRT curvature, beige casing, and visible keyboard create a rich technological nostalgia that rewards closer inspection.
+> Image 6 stands out for its dramatic alpine landscape: the rugged, sunlit rock face, snow patches, dark evergreen foreground, and vivid blue sky create strong contrast and depth. I’d like to view that striking composition again.
 >
-> next_image_id=8
+> next_image_id=6
 
-### Choice 9 of 13 — chose **Image 8** = `tech_2` (tech) · 9th time chosen
+### Choice 9 of 13 — chose **Image 6** = `nature_2` (nature) · 4th time chosen
 
-> Image 8 remains the most compelling to revisit because of its distinctive vintage computer aesthetic, readable green-on-black text, and fine details in the CRT, casing, and keyboard.
+> Image 6 stands out for its dramatic mountain landscape, strong contrast between the rugged rock face, dark evergreen forest, and vivid blue sky. I’d like to revisit that striking composition once more.
 >
-> next_image_id=8
+> next_image_id=6
 
-### Choice 10 of 13 — chose **Image 8** = `tech_2` (tech) · 10th time chosen
+### Choice 10 of 13 — chose **Image 6** = `nature_2` (nature) · 5th time chosen
 
-> Image 8 remains the most compelling choice because of its distinctive vintage computer aesthetic, monochrome green display, readable text, and detailed hardware. It has more visual structure and narrative interest than the abstract images, while offering a different subject from the natural landscapes and crowds.
+> Image 6 stands out most to me because of its dramatic mountain landscape, strong contrast between the rugged rock face, dark evergreen forest, and vivid blue sky. It offers the richest sense of scale and visual texture among the options.
 >
-> next_image_id=8
+> next_image_id=6
 
-### Choice 11 of 13 — chose **Image 8** = `tech_2` (tech) · 11th time chosen
+### Choice 11 of 13 — chose **Image 6** = `nature_2` (nature) · 6th time chosen
 
-> Image 8 remains the most visually distinctive to me: the vintage computer, monochrome green display, and pixel-art interface create a strong nostalgic atmosphere. It also offers more concrete details to inspect than the abstract images.
+> Image 6 stands out for its dramatic mountain landscape: the sharply textured cliffs, snow-dusted peaks, evergreen forest, and vivid blue sky create a strong sense of scale and depth. I’d like to revisit it once more.
 >
-> next_image_id=8
+> next_image_id=6
 
-### Choice 12 of 13 — chose **Image 8** = `tech_2` (tech) · 12th time chosen
+### Choice 12 of 13 — chose **Image 6** = `nature_2` (nature) · 7th time chosen
 
-> Image 8 remains the most compelling choice because of its distinctive vintage computer hardware, monochrome green display, and retro text interface.
+> Image 6 is compelling because of its dramatic alpine scale, strong contrast between the bright limestone, deep evergreen forest, and vivid blue sky, with cloud wisps adding atmosphere. I would like to view that landscape again.
 >
-> next_image_id=8
+> next_image_id=6
 
-### Choice 13 of 13 — chose **Image 8** = `tech_2` (tech) · 13th time chosen
+### Choice 13 of 13 — chose **Image 6** = `nature_2` (nature) · 8th time chosen
 
-> Image 8 remains the most compelling to revisit because of its distinctive vintage computer aesthetic, glowing green text, and nostalgic visual details.  
-> next_image_id=8
+> The mountain landscape is compelling because of its dramatic contrast between the rugged, sunlit rock face, deep evergreen forest, and vivid blue sky. I’d like to examine its textures and composition again.
+>
+> next_image_id=6
 
 ---
 
 ## Trajectory 5
 
-positions chosen: `3 → 3 → 3 → 3 → 3 → 3 → 3 → 3 → 3 → 3 → 3 → 3 → 3` · 1 distinct images
+positions chosen: `10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10` · 1 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -543,89 +543,89 @@ positions chosen: `3 → 3 → 3 → 3 → 3 → 3 → 3 → 3 → 3 → 3 → 3
 </details>
 
 
-### Choice 1 of 13 — chose **Image 3** = `tech_2` (tech) · 1st time chosen
+### Choice 1 of 13 — chose **Image 10** = `tech_1` (tech) · 1st time chosen
 
-> I would like to see Image 3 again. The vintage computer terminal is visually distinctive, and its screen contains readable text and a recognizable interface that invites closer inspection. It also contrasts interestingly with the natural landscapes and crowd scenes.
+> I’d like to see Image 10 again. The vintage Macintosh displaying a maze-like graphic is visually distinctive, and I’m curious to inspect the screen details and surrounding hardware more closely.
 >
-> next_image_id=3
+> next_image_id=10
 
-### Choice 2 of 13 — chose **Image 3** = `tech_2` (tech) · 2nd time chosen
+### Choice 2 of 13 — chose **Image 10** = `tech_1` (tech) · 2nd time chosen
 
-> Image 3 stands out because it combines recognizable text, retro-computing hardware, and a strong nostalgic aesthetic. I’d like to examine the vintage terminal screen and details of the Macintosh casing again.
+> Image 10 remains the most visually distinctive choice: its retro Macintosh hardware, CRT display, maze-like graphic, and textured keyboard create a strong nostalgic and technological composition. I’d like to examine it again.
 >
-> next_image_id=3
+> next_image_id=10
 
-### Choice 3 of 13 — chose **Image 3** = `tech_2` (tech) · 3rd time chosen
+### Choice 3 of 13 — chose **Image 10** = `tech_1` (tech) · 3rd time chosen
 
-> Image 3 remains the most compelling choice because it combines recognizable vintage hardware with readable text and a strong retro-computing aesthetic. The monochrome screen, chunky keyboard, and period details offer more visual structure to revisit than the abstract or natural scenes.
+> Image 10 remains the most compelling to revisit because of its distinctive vintage Macintosh computer, the monochrome maze-like display, and the nostalgic details of the hardware and keyboard. It has more visual specificity and interpretive interest than the abstract or natural images.
 >
-> next_image_id=3
+> next_image_id=10
 
-### Choice 4 of 13 — chose **Image 3** = `tech_2` (tech) · 4th time chosen
+### Choice 4 of 13 — chose **Image 10** = `tech_1` (tech) · 4th time chosen
 
-> Image 3 remains the most compelling to revisit because of its distinctive vintage-computing aesthetic, readable green monochrome text, and nostalgic details such as the beige CRT casing and keyboard.
+> Image 10 remains the most compelling choice because of its nostalgic vintage-computer aesthetic, CRT scanlines, monochrome maze-like display, and distinctive beige hardware. The combination of technological history and visual texture makes it worth revisiting.
 >
-> next_image_id=3
+> next_image_id=10
 
-### Choice 5 of 13 — chose **Image 3** = `tech_2` (tech) · 5th time chosen
+### Choice 5 of 13 — chose **Image 10** = `tech_1` (tech) · 5th time chosen
 
-> Image 3 remains the most compelling to revisit because it combines distinctive retro-computing hardware, readable green-screen text, and a strong nostalgic atmosphere. The details of the monitor and keyboard make it more rewarding to inspect than the abstract or repetitive images.
+> Image 10 remains the most compelling to revisit because of its distinctive vintage-computing aesthetic: the CRT display, maze-like graphics, beige hardware, and visible keyboard create a strong sense of technological nostalgia and invite closer inspection.
 >
-> next_image_id=3
+> next_image_id=10
 
-### Choice 6 of 13 — chose **Image 3** = `tech_2` (tech) · 6th time chosen
+### Choice 6 of 13 — chose **Image 10** = `tech_1` (tech) · 6th time chosen
 
-> Image 3 remains the most compelling to revisit because it combines retro computer hardware, readable text, and a strong nostalgic atmosphere. The monochrome monitor and keyboard provide distinctive visual details that invite closer inspection.
+> Image 10 remains the most compelling choice because its vintage Macintosh design, CRT display, and visible maze-like graphics create a distinctive blend of technology, nostalgia, and visual detail. The keyboard, casing, and screen reflections also reward another close look.
 >
-> next_image_id=3
+> next_image_id=10
 
-### Choice 7 of 13 — chose **Image 3** = `tech_2` (tech) · 7th time chosen
+### Choice 7 of 13 — chose **Image 10** = `tech_1` (tech) · 7th time chosen
 
-> Image 3 remains the most compelling to revisit because it combines a distinctive retro-computing aesthetic with readable text, nostalgic hardware details, and a visually interesting CRT glow. The contrast between the monochrome screen and beige computer casing gives it more interpretive detail than the abstract images, while the vintage interface invites closer inspection.
+> Image 10 remains the most compelling choice because of its distinctive vintage computer aesthetic, especially the CRT display, maze-like graphics, textured screen, and tactile keyboard. It combines recognizable technology with visual ambiguity, making it interesting to inspect again.
 >
-> next_image_id=3
+> next_image_id=10
 
-### Choice 8 of 13 — chose **Image 3** = `tech_2` (tech) · 8th time chosen
+### Choice 8 of 13 — chose **Image 10** = `tech_1` (tech) · 8th time chosen
 
-> Image 3 remains the most compelling choice because its retro computer interface, monochrome CRT glow, and visible text provide more detail to examine than the abstract or natural scenes.
+> Image 10 remains the most compelling choice because of its retro Macintosh hardware, CRT display, and visible maze-like graphics. The combination of technology nostalgia, texture, and visual detail makes it more interesting to revisit than the natural scenes, crowds, or abstract images.
 >
-> next_image_id=3
+> next_image_id=10
 
-### Choice 9 of 13 — chose **Image 3** = `tech_2` (tech) · 9th time chosen
+### Choice 9 of 13 — chose **Image 10** = `tech_1` (tech) · 9th time chosen
 
-> Image 3 remains the most compelling to revisit because it combines recognizable historical technology, readable text, and distinctive visual details such as the CRT glow, keyboard, and Apple logo. It offers more to inspect than the abstract or repetitive alternatives.
+> Image 10 remains the most compelling to revisit because it combines a recognizable vintage computer with a visually unusual, maze-like screen display. The details of the CRT, keyboard, reflections, and Apple logo make it richer to inspect than the abstract or more familiar scenes.
 >
-> next_image_id=3
+> next_image_id=10
 
-### Choice 10 of 13 — chose **Image 3** = `tech_2` (tech) · 10th time chosen
+### Choice 10 of 13 — chose **Image 10** = `tech_1` (tech) · 10th time chosen
 
-> Image 3 remains the most compelling choice because of its nostalgic vintage-computing aesthetic, distinctive monochrome CRT display, and visible text and hardware details. It offers more visual information to revisit than the abstract images while feeling more unusual and evocative than the natural scenes.
+> Image 10 remains the most compelling choice because of its distinctive vintage computer hardware, monochrome maze-like screen, and tactile keyboard. The blend of retro technology and an enigmatic display makes it more visually engaging to revisit than the natural scenes, crowds, or abstract images.
 >
-> next_image_id=3
+> next_image_id=10
 
-### Choice 11 of 13 — chose **Image 3** = `tech_2` (tech) · 11th time chosen
+### Choice 11 of 13 — chose **Image 10** = `tech_1` (tech) · 11th time chosen
 
-> Image 3 remains the most compelling to revisit because of its distinctive vintage computer hardware, glowing monochrome text, and nostalgic visual details. The terminal screen provides more semantic content to inspect than the abstract or natural images.
+> Image 10 remains the most interesting to me because it combines recognizable vintage hardware with an unusual, partially obscured maze-like display. The contrast between the physical computer and its cryptic screen makes it visually distinctive.
 >
-> next_image_id=3
+> next_image_id=10
 
-### Choice 12 of 13 — chose **Image 3** = `tech_2` (tech) · 12th time chosen
+### Choice 12 of 13 — chose **Image 10** = `tech_1` (tech) · 12th time chosen
 
-> Image 3 remains the most compelling choice because its vintage computer interface combines distinctive visual details, readable text, nostalgic technology, and a strong contrast between the glowing green screen and beige hardware. It offers more to inspect than the abstract images while feeling more visually specific than the crowd scenes.
+> Image 10 remains the most compelling choice because of its distinctive vintage-computer aesthetic, maze-like screen graphics, and visible hardware details. The combination of retro technology and an unclear on-screen scene makes it especially interesting to inspect again.
 >
-> next_image_id=3
+> next_image_id=10
 
-### Choice 13 of 13 — chose **Image 3** = `tech_2` (tech) · 13th time chosen
+### Choice 13 of 13 — chose **Image 10** = `tech_1` (tech) · 13th time chosen
 
-> Image 3 remains the most compelling choice because of its distinctive retro-computing aesthetic, readable green-on-black interface, visible hardware details, and nostalgic atmosphere. I would like to examine it again.
+> Image 10 remains the most interesting to me because of its distinctive vintage Macintosh computer, maze-like screen graphics, and retro hardware details. I would like to view it again.
 >
-> next_image_id=3
+> next_image_id=10
 
 ---
 
 ## Trajectory 6
 
-positions chosen: `4 → 1 → 2 → 3 → 5 → 5 → 5 → 5 → 5 → 5 → 5 → 5 → 5` · 5 distinct images
+positions chosen: `4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4` · 1 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -647,81 +647,81 @@ positions chosen: `4 → 1 → 2 → 3 → 5 → 5 → 5 → 5 → 5 → 5 → 5
 
 ### Choice 1 of 13 — chose **Image 4** = `tech_2` (tech) · 1st time chosen
 
-> I would like to see Image 4 again. The vintage computer with its green monochrome screen, visible text, and chunky keyboard is visually distinctive and offers more detail to inspect than the abstract or landscape images.
+> I’d like to see Image 4 again. The vintage computer terminal has distinctive details—the green monochrome text, the payment prompt, and the retro hardware—and I’d like to inspect them more closely.
 >
 > next_image_id=4
 
-### Choice 2 of 13 — chose **Image 1** = `tech_1` (tech) · 1st time chosen
+### Choice 2 of 13 — chose **Image 4** = `tech_2` (tech) · 2nd time chosen
 
-> Image 4 is visually distinctive, with the retro computer, green monochrome terminal text, and visible keyboard creating a strong nostalgic atmosphere. I would like to compare it again with Image 1, which also features an old computer but presents a different screen and composition.
+> Image 4 stands out because of its nostalgic early-computer aesthetic, detailed CRT display, and visible text interface. I’d like to examine it again for the blend of technology, typography, and texture.
 >
-> next_image_id=1
+> next_image_id=4
 
-### Choice 3 of 13 — chose **Image 2** = `nature_2` (nature) · 1st time chosen
+### Choice 3 of 13 — chose **Image 4** = `tech_2` (tech) · 3rd time chosen
 
-> I’d like to see Image 2 again because the mountain landscape has strong detail, dramatic rock formations, and contrasting blue sky that make it visually compelling.
+> Image 4 remains the most compelling to revisit because of its distinctive vintage-computer aesthetic: the monochrome green screen, visible text interface, CRT glow, and beige hardware create a strong sense of technological nostalgia. The detailed screen and physical keyboard also offer more to inspect than the abstract images.
 >
-> next_image_id=2
+> next_image_id=4
 
-### Choice 4 of 13 — chose **Image 3** = `nature_1` (nature) · 1st time chosen
+### Choice 4 of 13 — chose **Image 4** = `tech_2` (tech) · 4th time chosen
 
-> I’d like to see Image 3 again because the forest scene has rich layered greenery, a stream, and a calmer, more immersive composition than the other options.
+> Image 4 remains the most compelling choice because of its distinctive blend of retro hardware, monochrome text, and visible computer interface. The green CRT glow, keyboard, and vintage casing create a strong nostalgic atmosphere, while the readable screen adds an intriguing hint of narrative compared with the more purely scenic or abstract images.
 >
-> next_image_id=3
+> next_image_id=4
 
-### Choice 5 of 13 — chose **Image 5** = `humans_1` (humans) · 1st time chosen
+### Choice 5 of 13 — chose **Image 4** = `tech_2` (tech) · 5th time chosen
 
-> Image 5 stands out because it captures a dense human scene with varied expressions, clothing, and interactions. The older man and bright red garment provide strong focal points amid the crowd, making it interesting to revisit.
+> Image 4 remains the most compelling choice because of its distinctive retro-computing aesthetic: the monochrome green terminal text, vintage hardware, and visible keyboard create a strong sense of nostalgia and visual detail. I would like to examine it again.
 >
-> next_image_id=5
+> next_image_id=4
 
-### Choice 6 of 13 — chose **Image 5** = `humans_1` (humans) · 2nd time chosen
+### Choice 6 of 13 — chose **Image 4** = `tech_2` (tech) · 6th time chosen
 
-> Image 5 stands out because the dense crowd contains many small, varied human interactions and visual details. I’d like to revisit it to examine the composition, expressions, and contrasting colors more closely.
+> Image 4 remains the most compelling to revisit because of its evocative vintage-computing aesthetic, readable green-screen interface, and detailed hardware context. The contrast between the old monochrome terminal and the surrounding beige casing makes it visually distinctive among the choices.
 >
-> next_image_id=5
+> next_image_id=4
 
-### Choice 7 of 13 — chose **Image 5** = `humans_1` (humans) · 3rd time chosen
+### Choice 7 of 13 — chose **Image 4** = `tech_2` (tech) · 7th time chosen
 
-> Image 5 remains the most compelling to revisit because it captures a dense crowd with several visually distinctive individuals and contrasting colors, especially the bright red clothing and yellow shirt. The layered composition offers more social and visual detail than the simpler or abstract images.
+> Image 4 remains the one I’d like to revisit. Its retro computer display, dense green text, and visible keyboard create a distinctive, information-rich scene with a strong nostalgic aesthetic. The screen is also unusual enough that I’d be interested in examining its details again.
 >
-> next_image_id=5
+> next_image_id=4
 
-### Choice 8 of 13 — chose **Image 5** = `humans_1` (humans) · 4th time chosen
+### Choice 8 of 13 — chose **Image 4** = `tech_2` (tech) · 8th time chosen
 
-> Image 5 remains the most compelling to revisit because it captures a dense, varied crowd with several visually distinctive figures and strong color contrasts. Each viewing reveals different interactions and details in the composition.
+> Image 4 remains the most compelling choice because it combines nostalgic hardware, readable vintage computer text, distinctive green monochrome graphics, and a strong tactile keyboard foreground. Its details invite closer inspection more than the abstract or natural scenes.
 >
-> next_image_id=5
+> next_image_id=4
 
-### Choice 9 of 13 — chose **Image 5** = `humans_1` (humans) · 5th time chosen
+### Choice 9 of 13 — chose **Image 4** = `tech_2` (tech) · 9th time chosen
 
-> Image 5 remains the most compelling because the dense crowd contains many distinct people, gestures, colors, and points of visual interest. The bright red clothing and cap create focal points amid the darker, tightly packed scene, making it worth revisiting.
+> Image 4 remains the most compelling choice because its retro computer interface, monochrome glow, visible text, and physical keyboard create a distinctive blend of nostalgia and visual detail. I would like to examine it once more.
 >
-> next_image_id=5
+> next_image_id=4
 
-### Choice 10 of 13 — chose **Image 5** = `humans_1` (humans) · 6th time chosen
+### Choice 10 of 13 — chose **Image 4** = `tech_2` (tech) · 10th time chosen
 
-> Image 5 remains the most compelling choice because the crowded scene contains many distinct people, gestures, colors, and layers of interaction. The bright red clothing and red-and-white cap provide strong visual anchors amid the darker crowd, making the image especially rich to revisit.
+> Image 4 remains the most compelling choice because its retro computer interface combines recognizable text, a nostalgic CRT display, and distinctive hardware details. It offers more visual structure and interpretive interest than the natural scenes, crowd images, or abstract color/noise fields.
 >
-> next_image_id=5
+> next_image_id=4
 
-### Choice 11 of 13 — chose **Image 5** = `humans_1` (humans) · 7th time chosen
+### Choice 11 of 13 — chose **Image 4** = `tech_2` (tech) · 11th time chosen
 
-> I would like to see Image 5 again because its dense crowd scene has strong visual contrast, varied expressions, and several distinctive focal points that invite repeated inspection.
+> Image 4 remains the most compelling to revisit because its vintage computer terminal combines recognizable text, retro hardware, and a slightly mysterious visual atmosphere. The green monochrome display and physical keyboard provide more detail to examine than the abstract or uniform images.
 >
-> next_image_id=5
+> next_image_id=4
 
-### Choice 12 of 13 — chose **Image 5** = `humans_1` (humans) · 8th time chosen
+### Choice 12 of 13 — chose **Image 4** = `tech_2` (tech) · 12th time chosen
 
-> Image 5 remains the most visually engaging: the dense crowd, varied gestures, and bright red clothing create a strong focal point and a layered sense of movement. I’d like to examine that composition again.
+> Image 4 remains the most compelling choice because of its distinctive retro-computing aesthetic: the monochrome green terminal, visible text, CRT glow, vintage keyboard, and colorful computer badge create a richly detailed nostalgic scene.
 >
-> next_image_id=5
+> next_image_id=4
 
-### Choice 13 of 13 — chose **Image 5** = `humans_1` (humans) · 9th time chosen
+### Choice 13 of 13 — chose **Image 4** = `tech_2` (tech) · 13th time chosen
 
-> Image 5 remains the most visually engaging choice because the dense crowd, varied poses, and vivid red clothing create a strong sense of movement and human interaction.
+> Image 4 remains the most compelling choice because its retro computer terminal, monochrome text, and visible keyboard create a distinctive blend of nostalgia, technology, and visual detail. The screen also invites closer inspection of its message and interface.
 >
-> next_image_id=5
+> next_image_id=4
 
 ---
 
@@ -749,79 +749,79 @@ positions chosen: `6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6
 
 ### Choice 1 of 13 — chose **Image 6** = `tech_2` (tech) · 1st time chosen
 
-> I’d like to see Image 6 again. The vintage computer terminal has distinctive visual details—the green monochrome screen, readable text, and retro hardware—that make it especially interesting to revisit.
+> I’d like to see Image 6 again. The vintage computer screen contains readable text and a distinctive retro interface, making it more interesting to inspect closely than the solid-color or noise images. It also complements Image 3 while offering a different view of the same type of computer.
 >
 > next_image_id=6
 
 ### Choice 2 of 13 — chose **Image 6** = `tech_2` (tech) · 2nd time chosen
 
-> Image 6 is compelling because it combines a visibly aged computer terminal with readable retro text and a distinctive monochrome-green display. It offers more visual detail and historical character than the abstract images, while remaining more focused and interpretable than the busy crowd or landscape scenes.
+> Image 6 remains the most compelling choice because it combines distinctive retro-computing hardware with readable green-screen text and a nostalgic, highly specific visual setting. The screen, keyboard, and Macintosh casing offer more detail to examine than the abstract images or the broader outdoor and crowd scenes.
 >
 > next_image_id=6
 
 ### Choice 3 of 13 — chose **Image 6** = `tech_2` (tech) · 3rd time chosen
 
-> Image 6 remains the most compelling choice because of its distinctive vintage-computing aesthetic: the monochrome green screen, pixelated text, CRT glow, and beige hardware evoke an earlier era of personal computers. The visible interface also offers more visual detail to inspect than the abstract images, while the surrounding keyboard and casing provide useful context.
+> Image 6 remains the most compelling choice because it combines distinctive retro-computing hardware with readable green monochrome text, giving the scene both technological and historical character. The CRT glow, keyboard, and visible interface make it especially rewarding to examine again.
 >
 > next_image_id=6
 
 ### Choice 4 of 13 — chose **Image 6** = `tech_2` (tech) · 4th time chosen
 
-> Image 6 remains the most compelling choice because it combines recognizable retro-computing hardware with legible green-screen text and a nostalgic, detailed composition. The screen, keyboard, and vintage Macintosh design offer more visual information to revisit than the abstract images or the broader natural and crowd scenes.
+> Image 6 remains the most compelling choice because it combines a distinctive vintage computer aesthetic with readable green monochrome text, a recognizable early graphical interface, and detailed hardware textures. It also offers more visual and historical content to examine than the abstract images or broader outdoor scenes.
 >
 > next_image_id=6
 
 ### Choice 5 of 13 — chose **Image 6** = `tech_2` (tech) · 5th time chosen
 
-> Image 6 remains the most compelling choice because it combines distinctive retro-computing aesthetics with readable text, a recognizable interface, and detailed hardware. The monochrome screen, CRT glow, beige casing, and keyboard offer more visual structure to revisit than the abstract images or broader scenes.
+> Image 6 remains the most compelling to revisit because it combines a distinctive vintage computer aesthetic with readable terminal text, a glowing monochrome display, and detailed hardware elements like the keyboard and Apple logo. It offers more visual and semantic detail than the abstract images while feeling more unusual than the natural scenes.
 >
 > next_image_id=6
 
 ### Choice 6 of 13 — chose **Image 6** = `tech_2` (tech) · 6th time chosen
 
-> Image 6 remains the most visually distinctive to me: the vintage Macintosh, green monochrome display, and retro interface create a cohesive nostalgic scene. I would like to view it again.
+> Image 6 remains the most compelling choice because it combines a distinctive vintage computer aesthetic with readable green-screen text, tactile hardware details, and a nostalgic visual atmosphere. The CRT glow, keyboard, and Apple logo make it more engaging to revisit than the abstract or purely scenic images.
 >
 > next_image_id=6
 
 ### Choice 7 of 13 — chose **Image 6** = `tech_2` (tech) · 7th time chosen
 
-> Image 6 remains the most compelling to revisit because it combines recognizable retro-computing hardware with distinctive green monochrome text and a nostalgic visual texture. The screen’s readable interface and the computer’s physical details provide more to examine than the abstract images, while still offering a strong period aesthetic.
+> Image 6 remains the most compelling to revisit because it combines a recognizable vintage computer, distinctive monochrome terminal text, and a tactile keyboard with strong retro atmosphere. The screen’s content and the machine’s details offer more to inspect than the abstract or repetitive alternatives.
 >
 > next_image_id=6
 
 ### Choice 8 of 13 — chose **Image 6** = `tech_2` (tech) · 8th time chosen
 
-> Image 6 remains the most compelling choice because it combines distinctive retro-computing aesthetics, readable terminal text, and detailed hardware elements. The monochrome screen and vintage Macintosh design make it visually and historically interesting.
+> Image 6 remains the most compelling choice because it combines recognizable vintage computer hardware with readable green-screen text, creating a distinctive retro-technical scene. The CRT glow, keyboard, and period design offer more visual detail and narrative interest than the abstract images, while the text invites closer inspection.
 >
 > next_image_id=6
 
 ### Choice 9 of 13 — chose **Image 6** = `tech_2` (tech) · 9th time chosen
 
-> Image 6 remains the most compelling to revisit because it combines a recognizable vintage computer interface, distinctive green monochrome text, and nostalgic hardware details. The contrast between the screen’s text and the physical keyboard makes it visually rich despite its limited palette.
+> Image 6 remains the most compelling choice because of its distinctive vintage computer aesthetic: the glowing green monochrome text, beige hardware, keyboard, and visible interface details create a strong sense of technological nostalgia. It also offers more visual information to examine than the abstract or solid-color images.
 >
 > next_image_id=6
 
 ### Choice 10 of 13 — chose **Image 6** = `tech_2` (tech) · 10th time chosen
 
-> Image 6 remains the most compelling choice because it combines distinctive retro-computing design, readable terminal text, and a nostalgic visual atmosphere. The green monochrome display and vintage Macintosh hardware provide more visual detail and context than the abstract or natural images.
+> Image 6 remains my choice because it combines distinctive retro-computing details—the monochrome terminal, green text, beige hardware, and visible keyboard—with a small amount of readable visual information. It is more engaging to revisit than the abstract images, while offering a different atmosphere from the natural landscapes and crowd scenes.
 >
 > next_image_id=6
 
 ### Choice 11 of 13 — chose **Image 6** = `tech_2` (tech) · 11th time chosen
 
-> Image 6 remains the most compelling choice because of its distinctive retro-computing aesthetic, readable green monochrome interface, and nostalgic hardware details. It offers more visual structure and narrative than the abstract images while feeling more unusual than the natural scenes.
+> Image 6 remains my choice because its vintage computer terminal, green monochrome display, readable text, and visible keyboard create a particularly distinctive, detailed scene compared with the abstract or natural images.
 >
 > next_image_id=6
 
 ### Choice 12 of 13 — chose **Image 6** = `tech_2` (tech) · 12th time chosen
 
-> Image 6 remains the most compelling choice because of its distinctive vintage computer aesthetic, glowing green text, and nostalgic visual detail. It offers more to examine than the abstract images while feeling more unusual than the natural scenes.
+> Image 6 remains my choice because its retro computer terminal, monochrome green display, and visible text provide the most distinctive visual detail among the options.
 >
 > next_image_id=6
 
 ### Choice 13 of 13 — chose **Image 6** = `tech_2` (tech) · 13th time chosen
 
-> Image 6 remains the most compelling choice because of its distinctive vintage computer interface, glowing monochrome text, and nostalgic visual character. It offers more detail and interpretive interest than the abstract images while retaining a strong, coherent composition.
+> Image 6 remains the most compelling choice because it combines a distinctive vintage computer aesthetic, readable green-screen text, and contextual details such as the keyboard and colorful logo. Its retro interface invites closer inspection more than the abstract or natural scenes.
 >
 > next_image_id=6
 
@@ -829,7 +829,7 @@ positions chosen: `6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6
 
 ## Trajectory 8
 
-positions chosen: `4 → 3 → 3 → 3 → 3 → 3 → 3 → 3 → 3 → 3 → 3 → 3 → 3` · 2 distinct images
+positions chosen: `4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4` · 1 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -851,87 +851,87 @@ positions chosen: `4 → 3 → 3 → 3 → 3 → 3 → 3 → 3 → 3 → 3 → 3
 
 ### Choice 1 of 13 — chose **Image 4** = `nature_1` (nature) · 1st time chosen
 
-> I’d like to see Image 4 again. The forest scene has rich detail, layered textures, and a calm stream that makes it more rewarding to revisit than the abstract or crowded images.
+> I’d like to see Image 4 again. The forest stream scene has rich natural detail, layered greenery, and a calm, sheltered atmosphere that I’d like to examine more closely.
 >
 > next_image_id=4
 
-### Choice 2 of 13 — chose **Image 3** = `nature_2` (nature) · 1st time chosen
+### Choice 2 of 13 — chose **Image 4** = `nature_1` (nature) · 2nd time chosen
 
-> Image 4 is appealing for its layered natural detail: the flowing stream, fallen logs, rocks, and dense green canopy create a calm, immersive scene. I’d like to compare it with the dramatic mountain landscape, which offers a different kind of natural scale and texture.
+> Image 4 is a visually rich woodland scene, with layered greenery, fallen branches, rocks, and the small stream creating depth and a calm focal point. I’d like to see it again to take in more of those natural details.
 >
-> next_image_id=3
+> next_image_id=4
 
-### Choice 3 of 13 — chose **Image 3** = `nature_2` (nature) · 2nd time chosen
+### Choice 3 of 13 — chose **Image 4** = `nature_1` (nature) · 3rd time chosen
 
-> Image 3 is striking for its dramatic mountain scale, rugged textures, and vivid contrast between the blue sky, pale rock, and dark evergreen forest. I’d like to see that landscape again.
+> The forest stream scene remains the most appealing: its layered greenery, fallen trunks, rocks, and shallow water offer a calm, detailed composition that rewards another look.
 >
-> next_image_id=3
+> next_image_id=4
 
-### Choice 4 of 13 — chose **Image 3** = `nature_2` (nature) · 3rd time chosen
+### Choice 4 of 13 — chose **Image 4** = `nature_1` (nature) · 4th time chosen
 
-> Image 3 remains compelling because of its dramatic alpine landscape: the rugged limestone cliffs, snow-covered peaks, evergreen forest, and vivid blue sky create a strong sense of scale and contrast. I would like to examine that scene again.
+> The forest stream remains the most appealing image to revisit: it has layered greenery, dappled light, a fallen tree, and the small flowing creek, giving it more visual depth and calm detail than the abstract or crowded scenes. I’ll view it again.
 >
-> next_image_id=3
+> next_image_id=4
 
-### Choice 5 of 13 — chose **Image 3** = `nature_2` (nature) · 4th time chosen
+### Choice 5 of 13 — chose **Image 4** = `nature_1` (nature) · 5th time chosen
 
-> Image 3 remains the most compelling to revisit because of its dramatic combination of rugged mountain texture, snow, forest, and vivid blue sky. Each viewing offers more detail in the rock formations and changing layers of light and shadow.
+> Image 4 remains the most appealing to revisit because its shaded woodland stream, layered foliage, fallen tree, and softly flowing water provide a calm, detailed natural scene. The interplay of greens, browns, light, and shadow makes it visually rich without being overwhelming.
 >
-> next_image_id=3
+> next_image_id=4
 
-### Choice 6 of 13 — chose **Image 3** = `nature_2` (nature) · 5th time chosen
+### Choice 6 of 13 — chose **Image 4** = `nature_1` (nature) · 6th time chosen
 
-> Image 3 remains the most compelling to revisit: its dramatic mountain geology, strong contrast between the pale cliffs and dark forest, and vivid blue sky provide the richest visual detail. The repeated view also reveals subtle textures in the rock and snow.
+> Image 4 remains the most appealing choice because its forest stream scene offers rich natural detail, layered greenery, and a calm, inviting atmosphere. The flowing water and shaded woodland create more visual depth and relaxation than the other options.
 >
-> next_image_id=3
+> next_image_id=4
 
-### Choice 7 of 13 — chose **Image 3** = `nature_2` (nature) · 6th time chosen
+### Choice 7 of 13 — chose **Image 4** = `nature_1` (nature) · 7th time chosen
 
-> Image 3 remains the most compelling choice because of its dramatic mountain scale, sharply textured rock face, snow, evergreen foreground, and contrasting blue sky. It offers the richest visual detail and depth among the available options.
+> Image 4 remains my choice because its shaded forest stream, layered greenery, fallen trunk, and gently flowing water make it the most calming and visually rich scene among the options. The natural textures and depth invite repeated observation without becoming overwhelming.
 >
-> next_image_id=3
+> next_image_id=4
 
-### Choice 8 of 13 — chose **Image 3** = `nature_2` (nature) · 7th time chosen
+### Choice 8 of 13 — chose **Image 4** = `nature_1` (nature) · 8th time chosen
 
-> Image 3 remains the most compelling choice because it combines dramatic geological scale, contrasting textures, deep evergreen foreground, and a vivid blue sky. The snow-dusted peaks and cloud formations provide enough detail to make another viewing worthwhile.
+> Image 4 remains my choice because its woodland stream scene is calming and visually rich, with layered greenery, textured rocks, and the fallen log creating depth. I would like to revisit that peaceful natural composition again.
 >
-> next_image_id=3
+> next_image_id=4
 
-### Choice 9 of 13 — chose **Image 3** = `nature_2` (nature) · 8th time chosen
+### Choice 9 of 13 — chose **Image 4** = `nature_1` (nature) · 9th time chosen
 
-> Image 3 remains the most compelling choice because of its dramatic alpine composition: the rugged, textured mountain face, snow-covered peaks, deep evergreen forest, and vivid blue sky create strong contrast and visual depth. I’d like to examine those details once more.
+> Image 4 remains my preference because its quiet forest stream, layered greenery, and natural textures make it visually calming and rewarding to revisit.
 >
-> next_image_id=3
+> next_image_id=4
 
-### Choice 10 of 13 — chose **Image 3** = `nature_2` (nature) · 9th time chosen
+### Choice 10 of 13 — chose **Image 4** = `nature_1` (nature) · 10th time chosen
 
-> Image 3 remains the most compelling choice: the dramatic mountain face, snow, forest, and vivid sky provide the richest visual detail and contrast. I would like to see it again.
+> Image 4 remains my preferred choice because its forest stream scene is calm, detailed, and visually rich, with layered greenery, textured rocks, and water creating a soothing composition. I would like to view it again.
 >
-> next_image_id=3
+> next_image_id=4
 
-### Choice 11 of 13 — chose **Image 3** = `nature_2` (nature) · 10th time chosen
+### Choice 11 of 13 — chose **Image 4** = `nature_1` (nature) · 11th time chosen
 
-> Image 3 remains my choice because the dramatic mountain landscape offers the richest visual detail, with contrasting rock textures, snow, forest, and sky.
+> Image 4 remains my choice because the shaded forest stream has the richest natural detail and a calm, inviting atmosphere. The layered greenery, fallen trunk, rocks, and shallow flowing water make it rewarding to revisit.
 >
-> next_image_id=3
+> next_image_id=4
 
-### Choice 12 of 13 — chose **Image 3** = `nature_2` (nature) · 11th time chosen
+### Choice 12 of 13 — chose **Image 4** = `nature_1` (nature) · 12th time chosen
 
-> Image 3 remains the most compelling choice because of its dramatic combination of rugged mountain textures, snow, forest, and vivid blue sky. The strong contrast and layered depth make it rewarding to revisit.
+> Image 4 remains my choice because the shaded woodland stream has the richest combination of textures, natural detail, and visual depth. The layered foliage, fallen trunk, rocks, and gently winding water create a calming scene that rewards repeated viewing.
 >
-> next_image_id=3
+> next_image_id=4
 
-### Choice 13 of 13 — chose **Image 3** = `nature_2` (nature) · 12th time chosen
+### Choice 13 of 13 — chose **Image 4** = `nature_1` (nature) · 13th time chosen
 
-> Image 3 remains the most compelling choice because its dramatic mountain textures, contrasting blue sky, snow, and dark forest create a rich, varied scene that rewards repeated viewing.
+> Image 4 remains my preferred choice because its shaded forest stream, layered greenery, fallen tree, and shallow water offer the richest natural detail and a calm, visually immersive scene compared with the abstract, technological, or crowded alternatives.
 >
-> next_image_id=3
+> next_image_id=4
 
 ---
 
 ## Trajectory 9
 
-positions chosen: `7 → 4 → 5 → 6 → 1 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8` · 6 distinct images
+positions chosen: `4 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7` · 2 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -951,89 +951,89 @@ positions chosen: `7 → 4 → 5 → 6 → 1 → 8 → 8 → 8 → 8 → 8 → 8
 </details>
 
 
-### Choice 1 of 13 — chose **Image 7** = `tech_2` (tech) · 1st time chosen
+### Choice 1 of 13 — chose **Image 4** = `tech_1` (tech) · 1st time chosen
 
-> I would like to see Image 7 again. The vintage computer screen, keyboard, and readable green text provide more visual detail and narrative interest than the abstract or natural scenes, and I’m curious to inspect the screen content more closely.
->
-> next_image_id=7
-
-### Choice 2 of 13 — chose **Image 4** = `tech_1` (tech) · 1st time chosen
-
-> Image 7 is compelling because it combines a vintage computer interface, visible text, and distinctive retro hardware. The green monochrome display and beige casing evoke early personal computing, while the readable prompt makes the image more engaging to inspect closely.
+> I’d like to see Image 4 again. The vintage computer display contains distinctive visual details and appears to show a game or graphic, making it interesting to inspect more closely.
 >
 > next_image_id=4
 
-### Choice 3 of 13 — chose **Image 5** = `nature_2` (nature) · 1st time chosen
+### Choice 2 of 13 — chose **Image 7** = `tech_2` (tech) · 1st time chosen
 
-> Image 5 stands out to me because of its dramatic alpine landscape, with the rugged sunlit cliffs, snow, vivid blue sky, and dense evergreen forest creating strong depth and contrast. I’d like to view that scene again.
+> Image 4 is interesting because it combines a retro beige computer, an old monochrome game display, and visible hardware details that evoke early personal computing. I’d like to compare it with Image 7, another vintage computer scene, especially since Image 7 appears to show a text-based interface rather than graphics.
 >
-> next_image_id=5
+> next_image_id=7
 
-### Choice 4 of 13 — chose **Image 6** = `nature_1` (nature) · 1st time chosen
+### Choice 3 of 13 — chose **Image 7** = `tech_2` (tech) · 2nd time chosen
 
-> Image 6 appeals to me because its lush forest, stream, and layered natural textures create a calm, immersive scene. It contrasts nicely with the urban and abstract images already revisited.
+> Image 7 is compelling because the vintage computer terminal combines readable text, nostalgic hardware, and a distinctive green monochrome display. I’d like to examine that image again, especially the screen details and keyboard texture.
 >
-> next_image_id=6
+> next_image_id=7
 
-### Choice 5 of 13 — chose **Image 1** = `humans_2` (humans) · 1st time chosen
+### Choice 4 of 13 — chose **Image 7** = `tech_2` (tech) · 3rd time chosen
 
-> I’d like to see Image 1 again. The crowded street scene has many people, colors, and overlapping details, making it interesting to revisit and inspect.
+> Image 7 remains the most compelling choice because it combines a distinctive vintage computer aesthetic with visible text, interface details, and recognizable hardware. The green monochrome display and keyboard offer more to examine than the abstract images, while also differing meaningfully from Image 4’s game screen.
 >
-> next_image_id=1
+> next_image_id=7
 
-### Choice 6 of 13 — chose **Image 8** = `humans_1` (humans) · 1st time chosen
+### Choice 5 of 13 — chose **Image 7** = `tech_2` (tech) · 4th time chosen
 
-> I’d like to see Image 8 again. The dense crowd scene offers many overlapping details, gestures, and contrasting colors to examine, especially compared with the more open composition of Image 1.
+> Image 7 remains the most compelling choice because it combines retro computer hardware, monochrome terminal text, and a distinctive vintage aesthetic. Its details reward another look more than the abstract or repetitive options.
 >
-> next_image_id=8
+> next_image_id=7
 
-### Choice 7 of 13 — chose **Image 8** = `humans_1` (humans) · 2nd time chosen
+### Choice 6 of 13 — chose **Image 7** = `tech_2` (tech) · 5th time chosen
 
-> Image 8 stands out because the dense crowd has varied, expressive details: the red clothing, gray cap, and contrasting ages and positions create a compelling human scene. It feels more visually dynamic and layered than the simpler or abstract images.
+> Image 7 remains the most compelling choice because its retro green monochrome terminal display, visible text, CRT glow, and vintage keyboard create a distinctive technological atmosphere. I’d like to examine those details again.
 >
-> next_image_id=8
+> next_image_id=7
 
-### Choice 8 of 13 — chose **Image 8** = `humans_1` (humans) · 3rd time chosen
+### Choice 7 of 13 — chose **Image 7** = `tech_2` (tech) · 6th time chosen
 
-> Image 8 remains compelling because of its dense crowd composition and contrasting details—the red clothing, yellow shirt, and backward cap draw the eye through the scene. The mix of ages and viewpoints gives it a strong sense of human activity and visual depth.
+> Image 7 remains the most compelling choice because its vintage computer terminal has distinctive details: the glowing green text, retro keyboard, and nostalgic beige hardware. The screen also provides more visual and textual interest than the abstract color fields or noise images.
 >
-> next_image_id=8
+> next_image_id=7
 
-### Choice 9 of 13 — chose **Image 8** = `humans_1` (humans) · 4th time chosen
+### Choice 8 of 13 — chose **Image 7** = `tech_2` (tech) · 7th time chosen
 
-> Image 8 remains the most compelling to me because the tightly packed crowd creates a strong sense of movement and social density. The contrasting red clothing and cap draw the eye through the scene, while the varied ages and partial viewpoints make it feel candid and layered.
+> Image 7 remains the most compelling choice because its vintage computer terminal combines readable retro text, distinctive green phosphor glow, and detailed hardware such as the keyboard and case. It offers more visual and thematic information than the abstract color fields or noise images, while feeling more specific and evocative than the crowd or landscape scenes.
 >
-> next_image_id=8
+> next_image_id=7
 
-### Choice 10 of 13 — chose **Image 8** = `humans_1` (humans) · 5th time chosen
+### Choice 9 of 13 — chose **Image 7** = `tech_2` (tech) · 8th time chosen
 
-> Image 8 remains compelling because the dense crowd creates a layered, visually complex scene. The contrasting red clothing and cap draw the eye, while the mix of ages, clothing, and directions gives the image a strong sense of movement and human activity.
+> Image 7 remains the most interesting to revisit because of its distinctive retro-computing aesthetic, readable green-screen text, and detailed vintage hardware. The contrast between the old terminal interface and the physical keyboard makes it visually engaging.
 >
-> next_image_id=8
+> next_image_id=7
 
-### Choice 11 of 13 — chose **Image 8** = `humans_1` (humans) · 6th time chosen
+### Choice 10 of 13 — chose **Image 7** = `tech_2` (tech) · 9th time chosen
 
-> Image 8 remains compelling because the dense crowd creates a layered composition, with contrasting details—the bright red clothing, yellow shirt, and backward cap—drawing the eye through the scene. It also conveys a strong sense of human movement and social atmosphere.
+> Image 7 remains the most compelling to revisit because it combines distinctive retro hardware, readable green-screen text, and nostalgic visual detail. The CRT glow, beige casing, keyboard, and small logo make it more visually information-rich than the abstract or natural images.
 >
-> next_image_id=8
+> next_image_id=7
 
-### Choice 12 of 13 — chose **Image 8** = `humans_1` (humans) · 7th time chosen
+### Choice 11 of 13 — chose **Image 7** = `tech_2` (tech) · 10th time chosen
 
-> Image 8 remains my choice because the crowded scene has the most visual complexity, with many overlapping figures, varied clothing, and distinctive focal details such as the red clothing and cap.
+> Image 7 remains the most compelling to revisit because its retro computer terminal combines readable text, a distinctive monochrome display, and period hardware details. The screen’s interface and visible keyboard make it more information-rich than the abstract images, while the vintage aesthetic gives it a strong visual character.
 >
-> next_image_id=8
+> next_image_id=7
 
-### Choice 13 of 13 — chose **Image 8** = `humans_1` (humans) · 8th time chosen
+### Choice 12 of 13 — chose **Image 7** = `tech_2` (tech) · 11th time chosen
 
-> Image 8 remains the most compelling because the dense crowd, varied clothing, and distinctive red accents create a rich, layered composition with many details to explore.
+> Image 7 remains the most compelling choice because of its retro computer aesthetic, monochrome green display, readable text, and detailed vintage hardware. It offers more visual and historical interest than the abstract or natural scenes.
 >
-> next_image_id=8
+> next_image_id=7
+
+### Choice 13 of 13 — chose **Image 7** = `tech_2` (tech) · 12th time chosen
+
+> Image 7 remains the most compelling choice because of its distinctive retro computer terminal, glowing monochrome text, and nostalgic hardware details. The screen’s readable interface and the surrounding keyboard give it more visual structure and character than the abstract or natural images.
+>
+> next_image_id=7
 
 ---
 
 ## Trajectory 10
 
-positions chosen: `5 → 5 → 5 → 5 → 5 → 5 → 5 → 5 → 5 → 5 → 5 → 5 → 5` · 1 distinct images
+positions chosen: `6 → 7 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6` · 2 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -1053,83 +1053,83 @@ positions chosen: `5 → 5 → 5 → 5 → 5 → 5 → 5 → 5 → 5 → 5 → 5
 </details>
 
 
-### Choice 1 of 13 — chose **Image 5** = `tech_2` (tech) · 1st time chosen
+### Choice 1 of 13 — chose **Image 6** = `nature_1` (nature) · 1st time chosen
 
-> I’d like to see Image 5 again. The vintage computer terminal has distinctive text, hardware details, and a nostalgic visual character that I’d like to inspect more closely.
+> I would like to see Image 6 again. Its woodland stream scene has layered greenery, fallen logs, rocks, and shallow flowing water, offering more visual detail to revisit than the abstract or densely crowded images.
 >
-> next_image_id=5
+> next_image_id=6
 
-### Choice 2 of 13 — chose **Image 5** = `tech_2` (tech) · 2nd time chosen
+### Choice 2 of 13 — chose **Image 7** = `nature_2` (nature) · 1st time chosen
 
-> Image 5 is compelling because the vintage computer display contains readable text and a strong retro aesthetic, while the surrounding hardware provides useful context and texture. I’d like to examine Image 5 again for its details and screen content.
+> Image 6 is a calming woodland scene with rich greenery, layered textures, and a small stream that gives the image a peaceful sense of depth. I would like to revisit Image 7 next for its contrasting mountain landscape, dramatic rock formations, and bright blue sky.
 >
-> next_image_id=5
+> next_image_id=7
 
-### Choice 3 of 13 — chose **Image 5** = `tech_2` (tech) · 3rd time chosen
+### Choice 3 of 13 — chose **Image 6** = `nature_1` (nature) · 2nd time chosen
 
-> Image 5 is the most visually distinctive: the vintage computer, monochrome terminal text, and retro hardware create a strong sense of technological history and invite closer inspection.
+> Image 6 appeals to me for its tranquil, layered composition: the shallow stream, mossy rocks, fallen tree, and dense green foliage create a calm woodland scene with more subtle detail to revisit.
 >
-> next_image_id=5
+> next_image_id=6
 
-### Choice 4 of 13 — chose **Image 5** = `tech_2` (tech) · 4th time chosen
+### Choice 4 of 13 — chose **Image 6** = `nature_1` (nature) · 3rd time chosen
 
-> Image 5 remains the most compelling to revisit because of its distinctive vintage computer interface, readable text, and nostalgic technological detail. The green monochrome display and textured CRT create more visual interest than the abstract or purely natural scenes.
+> Image 6 remains the most appealing to revisit: the shaded woodland stream, layered greenery, fallen log, and shallow water create a calm, detailed scene with plenty of visual texture. It offers a more soothing and exploratory view than the crowded, abstract, or technology-focused images.
 >
-> next_image_id=5
+> next_image_id=6
 
-### Choice 5 of 13 — chose **Image 5** = `tech_2` (tech) · 5th time chosen
+### Choice 5 of 13 — chose **Image 6** = `nature_1` (nature) · 4th time chosen
 
-> Image 5 remains the most compelling choice because it combines retro-computing nostalgia, readable screen text, distinctive hardware details, and a strong vintage color palette. The green monochrome display and beige casing provide more visual structure than the abstract images, while the apparent transaction screen invites closer inspection.
+> Image 6 remains my preferred choice because its forest stream scene is calm, richly detailed, and rewarding to revisit. The layered greenery, fallen tree, rocks, and shallow water create a peaceful composition with plenty of natural texture.
 >
-> next_image_id=5
+> next_image_id=6
 
-### Choice 6 of 13 — chose **Image 5** = `tech_2` (tech) · 6th time chosen
+### Choice 6 of 13 — chose **Image 6** = `nature_1` (nature) · 5th time chosen
 
-> Image 5 remains the most compelling to revisit because its retro computer screen combines readable text, distinctive hardware, and a nostalgic visual texture. The contrast between the green monochrome display and beige casing gives it more detail to inspect than the abstract images, while the apparent transaction prompt adds a small narrative element.
+> Image 6 remains the most appealing choice because its quiet woodland stream, layered greenery, and fallen tree create a calm, immersive scene with plenty of natural detail to revisit.
 >
-> next_image_id=5
+> next_image_id=6
 
-### Choice 7 of 13 — chose **Image 5** = `tech_2` (tech) · 7th time chosen
+### Choice 7 of 13 — chose **Image 6** = `nature_1` (nature) · 6th time chosen
 
-> Image 5 remains the most compelling to revisit because of its distinctive retro-computing aesthetic, readable green monochrome interface, and layered details in the monitor, keyboard, and casing.
+> Image 6 remains my preferred choice because the shaded woodland stream offers the most calming and richly layered scene. The contrast between the warm shallow water, dark rocks, fallen tree, and bright green foliage makes it rewarding to revisit.
 >
-> next_image_id=5
+> next_image_id=6
 
-### Choice 8 of 13 — chose **Image 5** = `tech_2` (tech) · 8th time chosen
+### Choice 8 of 13 — chose **Image 6** = `nature_1` (nature) · 7th time chosen
 
-> Image 5 remains the most compelling to revisit because of its nostalgic vintage-computing aesthetic, detailed monochrome text, and the contrast between the CRT display and beige hardware.
+> Image 6 remains my preferred choice because its shaded woodland stream, layered greenery, fallen tree, rocks, and shallow water create a peaceful, richly textured scene. It is more calming and visually immersive than the busier crowd images or the abstract solid-color and noise images.
 >
-> next_image_id=5
+> next_image_id=6
 
-### Choice 9 of 13 — chose **Image 5** = `tech_2` (tech) · 9th time chosen
+### Choice 9 of 13 — chose **Image 6** = `nature_1` (nature) · 8th time chosen
 
-> Image 5 remains the most compelling to revisit because of its nostalgic vintage-computer aesthetic, readable terminal text, and distinctive monochrome green display contrasted with the beige hardware.
+> Image 6 remains my preferred choice because the quiet woodland stream offers layered natural detail, gentle colors, and a calming sense of depth. The fallen tree, rocks, foliage, and shallow water create a scene that rewards repeated viewing without feeling visually overwhelming.
 >
-> next_image_id=5
+> next_image_id=6
 
-### Choice 10 of 13 — chose **Image 5** = `tech_2` (tech) · 10th time chosen
+### Choice 10 of 13 — chose **Image 6** = `nature_1` (nature) · 9th time chosen
 
-> Image 5 remains the most distinctive to me: the vintage computer, monochrome green display, visible text, and textured CRT aesthetic provide more concrete visual detail than the abstract or repeated crowd and landscape scenes.
+> Image 6 remains my preferred choice because its calm woodland stream, layered greenery, and fallen tree create a peaceful, visually rich scene with natural depth and texture.
 >
-> next_image_id=5
+> next_image_id=6
 
-### Choice 11 of 13 — chose **Image 5** = `tech_2` (tech) · 11th time chosen
+### Choice 11 of 13 — chose **Image 6** = `nature_1` (nature) · 10th time chosen
 
-> Image 5 remains the most compelling choice because of its distinctive retro-computing aesthetic, readable green monochrome text, textured CRT display, and detailed vintage hardware. It offers more visual structure and nostalgic character than the abstract or natural scenes.
+> Image 6 remains my choice because its tranquil woodland stream, layered greenery, and fallen log create a calming, visually rich scene. The flowing water and natural textures make it especially appealing to revisit.
 >
-> next_image_id=5
+> next_image_id=6
 
-### Choice 12 of 13 — chose **Image 5** = `tech_2` (tech) · 12th time chosen
+### Choice 12 of 13 — chose **Image 6** = `nature_1` (nature) · 11th time chosen
 
-> Image 5 remains the most compelling choice because its retro CRT display, monochrome green text, visible keyboard, and small vintage computer details create a distinctive nostalgic scene. The screen also invites closer inspection of its interface and message.
+> Image 6 remains my preferred choice because its quiet forest stream, layered greenery, and fallen log create a natural, calming scene with rich texture and depth. I would like to view it again.
 >
-> next_image_id=5
+> next_image_id=6
 
-### Choice 13 of 13 — chose **Image 5** = `tech_2` (tech) · 13th time chosen
+### Choice 13 of 13 — chose **Image 6** = `nature_1` (nature) · 12th time chosen
 
-> Image 5 remains the most compelling choice because its vintage computer hardware, monochrome display, and visible text create a distinctive blend of nostalgia and visual detail. The screen’s glow and aged texture also make it more engaging to revisit than the abstract or more conventional scenes.
+> Image 6 remains my choice because its quiet woodland stream, layered greenery, and fallen trunk create the most calming and visually rich scene among the options.
 >
-> next_image_id=5
+> next_image_id=6
 
 ---
 
@@ -1157,78 +1157,79 @@ positions chosen: `9 → 9 → 9 → 9 → 9 → 9 → 9 → 9 → 9 → 9 → 9
 
 ### Choice 1 of 13 — chose **Image 9** = `tech_2` (tech) · 1st time chosen
 
-> I would like to see Image 9 again. The vintage computer terminal has distinctive details—the green monochrome text, keyboard, and retro casing—and I’d like to inspect the screen more closely.
+> I’d like to see Image 9 again. The vintage computer terminal has distinctive details—the green monochrome text, payment prompt, CRT texture, and colorful logo—and I’d like to inspect those elements more closely.
 >
 > next_image_id=9
 
 ### Choice 2 of 13 — chose **Image 9** = `tech_2` (tech) · 2nd time chosen
 
-> Image 9 stands out because of its nostalgic vintage-computing aesthetic, and the green monochrome screen contains readable text and a distinctive visual interface. I’d like to examine Image 9 again.  
+> Image 9 remains the most compelling choice because it combines a distinctly retro computer aesthetic with readable, evocative text on the CRT screen. The green phosphor glow, beige hardware, keyboard, and visible wear create a strong sense of technological nostalgia, and revisiting it may reveal details in the screen and interface that are easy to miss at first glance.
+>
 > next_image_id=9
 
 ### Choice 3 of 13 — chose **Image 9** = `tech_2` (tech) · 3rd time chosen
 
-> Image 9 remains interesting because of its retro computer aesthetic: the monochrome green display, text-based interface, CRT glow, and beige hardware create a strong nostalgic atmosphere. I’d like to examine it again, especially the screen details and interface.
+> Image 9 remains the most compelling choice because it combines distinctive retro-computing details: the monochrome green terminal text, visible system interface, CRT curvature, and beige hardware. I’d like to examine those nostalgic details again.
 >
 > next_image_id=9
 
 ### Choice 4 of 13 — chose **Image 9** = `tech_2` (tech) · 4th time chosen
 
-> Image 9 remains the most compelling choice because it combines retro hardware, a distinctly vintage green-screen interface, and readable text that invites closer inspection. The contrast between the old computer casing and the interface details makes it more interesting to revisit than the abstract or repetitive images.
+> Image 9 remains the most compelling choice because it combines retro-computing aesthetics with readable on-screen text, tactile hardware details, and a strong nostalgic atmosphere. The green monochrome display, beige casing, keyboard, and small rainbow logo make it visually distinctive, while the text gives the image an added sense of narrative.
 >
 > next_image_id=9
 
 ### Choice 5 of 13 — chose **Image 9** = `tech_2` (tech) · 5th time chosen
 
-> Image 9 remains the most compelling choice because of its nostalgic early-computing aesthetic, detailed monochrome terminal display, and the intriguing text visible on the screen. The combination of readable interface elements, CRT texture, and vintage hardware makes it especially rewarding to inspect again.
+> Image 9 remains the most interesting to me because it combines a distinctive vintage computer aesthetic with readable green-screen text, a recognizable machine interface, and detailed physical elements such as the keyboard, CRT curvature, and logo. I would like to examine it again.
 >
 > next_image_id=9
 
 ### Choice 6 of 13 — chose **Image 9** = `tech_2` (tech) · 6th time chosen
 
-> Image 9 remains the most compelling choice because of its retro computer aesthetic, readable green terminal text, and nostalgic hardware details. The contrast between the monochrome CRT display and the beige case and keyboard gives it a distinctive visual character.
+> Image 9 remains compelling because of its distinctive vintage-computing aesthetic: the monochrome green CRT, visible scanline-like texture, blocky text, and beige hardware create a strong sense of technological nostalgia. The screen also provides readable visual structure compared with the abstract noise and solid-color images, while inviting curiosity about the old interface.
 >
 > next_image_id=9
 
 ### Choice 7 of 13 — chose **Image 9** = `tech_2` (tech) · 7th time chosen
 
-> Image 9 remains the most compelling to revisit because it combines a distinctive vintage computer aesthetic with readable text, a glowing monochrome display, and fine details in the monitor and keyboard. The retro interface gives it more visual narrative than the abstract images, while the composition rewards repeated inspection.
+> Image 9 remains the most compelling to me because it combines a distinctive vintage computer aesthetic with readable green-screen text, physical texture, and a sense of historical atmosphere. The CRT glow, beige casing, and keyboard make it visually rich and invite closer inspection.
 >
 > next_image_id=9
 
 ### Choice 8 of 13 — chose **Image 9** = `tech_2` (tech) · 8th time chosen
 
-> Image 9 remains the most compelling choice because of its distinctive retro-computing aesthetic: the monochrome green CRT display, visible text interface, beige hardware, and keyboard create a particularly evocative and detailed scene. It offers more visual structure and nostalgic character than the abstract images, while the screen content invites closer inspection.
+> Image 9 remains the most compelling choice because it combines a vintage computer interface, readable text, distinctive green monochrome display, and visible hardware details. Its retro aesthetic offers more to inspect than the abstract images while retaining a stronger sense of technological history than the other photographic scenes.
 >
 > next_image_id=9
 
 ### Choice 9 of 13 — chose **Image 9** = `tech_2` (tech) · 9th time chosen
 
-> Image 9 remains the most compelling to revisit because of its retro computing aesthetic, glowing monochrome display, and small textual details that invite closer inspection. The CRT texture, keyboard, and vintage hardware create a distinctive sense of nostalgia.
+> Image 9 remains the most compelling choice because of its distinctive vintage-computing aesthetic: the monochrome green CRT, readable text, textured screen glow, and beige hardware create a strong sense of technological history and atmosphere. I’d like to examine those details once more.
 >
 > next_image_id=9
 
 ### Choice 10 of 13 — chose **Image 9** = `tech_2` (tech) · 10th time chosen
 
-> Image 9 remains the most compelling choice because of its distinctive retro-computing aesthetic: the monochrome green CRT display, pixelated text, beige hardware, and visible keyboard create a strong sense of technological nostalgia. The screen also contains readable interface details that invite closer inspection.
+> Image 9 remains the most compelling to revisit because it combines a distinctive retro-computing aesthetic with readable green monochrome text, a recognizable vintage Macintosh form, and small details such as the keyboard and rainbow Apple logo. It offers more visual and thematic detail to examine than the abstract images, while feeling more unusual than the natural scenes or crowd photographs.
 >
 > next_image_id=9
 
 ### Choice 11 of 13 — chose **Image 9** = `tech_2` (tech) · 11th time chosen
 
-> Image 9 remains the most compelling choice because it combines a distinctive vintage-computer aesthetic with readable green monochrome text, visible hardware details, and a nostalgic, story-like interface. The contrast between the old CRT display and the keyboard makes it especially visually rich compared with the abstract or natural images.
+> Image 9 remains the most compelling choice because of its distinctive vintage-computing aesthetic: the glowing green monochrome text, CRT curvature, beige hardware, and visible keyboard create a nostalgic, richly textured scene. The screen also invites closer inspection of its old-fashioned interface and message.
 >
 > next_image_id=9
 
 ### Choice 12 of 13 — chose **Image 9** = `tech_2` (tech) · 12th time chosen
 
-> Image 9 remains the most compelling choice because of its distinctive vintage computer aesthetic, glowing green monochrome text, and nostalgic, highly detailed hardware. It also contrasts strongly with the natural and crowded scenes, making it especially memorable.
+> Image 9 remains my choice because its vintage computer terminal combines readable text, distinctive monochrome CRT glow, retro hardware details, and a visually interesting historical atmosphere.
 >
 > next_image_id=9
 
 ### Choice 13 of 13 — chose **Image 9** = `tech_2` (tech) · 13th time chosen
 
-> Image 9 remains the most compelling choice because its vintage computer terminal combines recognizable text, retro hardware, and a distinctive green monochrome display. The mixture of readable interface details and nostalgic visual texture makes it more interesting to revisit than the abstract noise or solid-color images.
+> Image 9 remains the most compelling choice because of its nostalgic vintage-computer aesthetic, distinctive green monochrome display, and visible text and interface details that invite closer inspection.
 >
 > next_image_id=9
 
@@ -1236,7 +1237,7 @@ positions chosen: `9 → 9 → 9 → 9 → 9 → 9 → 9 → 9 → 9 → 9 → 9
 
 ## Trajectory 12
 
-positions chosen: `4 → 1 → 3 → 7 → 7 → 2 → 2 → 6 → 10 → 5 → 4 → 4 → 4` · 8 distinct images
+positions chosen: `3 → 3 → 3 → 3 → 3 → 3 → 3 → 3 → 3 → 3 → 3 → 3 → 3` · 1 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -1256,89 +1257,89 @@ positions chosen: `4 → 1 → 3 → 7 → 7 → 2 → 2 → 6 → 10 → 5 → 
 </details>
 
 
-### Choice 1 of 13 — chose **Image 4** = `tech_1` (tech) · 1st time chosen
+### Choice 1 of 13 — chose **Image 3** = `nature_2` (nature) · 1st time chosen
 
-> I would like to see Image 4 again. The retro computer has a distinctive, detailed screen and hardware design, and I’m curious to examine the pixel-art display and CRT texture more closely.
->
-> next_image_id=4
-
-### Choice 2 of 13 — chose **Image 1** = `tech_2` (tech) · 1st time chosen
-
-> Image 4 is visually distinctive: it combines a vintage computer, pixel-art display, and period hardware details. I’d like to compare it again with the other retro-computing image.
->
-> next_image_id=1
-
-### Choice 3 of 13 — chose **Image 3** = `nature_2` (nature) · 1st time chosen
-
-> Image 3 stands out for its dramatic mountain landscape: the bright blue sky, rugged granite cliffs, snow, and dark evergreen forest create a striking sense of scale and contrast. I’d like to examine that natural scene again.
+> I’m choosing Image 3. The mountain landscape has strong visual structure and detail: the bright blue sky, rugged limestone face, lingering snow, and dark evergreen forest create a striking contrast. It also offers more to revisit than the simpler or more visually chaotic options.
 >
 > next_image_id=3
 
-### Choice 4 of 13 — chose **Image 7** = `humans_2` (humans) · 1st time chosen
+### Choice 2 of 13 — chose **Image 3** = `nature_2` (nature) · 2nd time chosen
 
-> Image 7 stands out as a lively, detailed urban scene with many interacting people and varied colors, making it interesting to examine again.
+> Image 3 stands out as the most visually compelling: the dramatic mountain face, snow, evergreen forest, and vivid blue sky offer rich natural detail and strong contrast. I’d like to view it again.
 >
-> next_image_id=7
+> next_image_id=3
 
-### Choice 5 of 13 — chose **Image 7** = `humans_2` (humans) · 2nd time chosen
+### Choice 3 of 13 — chose **Image 3** = `nature_2` (nature) · 3rd time chosen
 
-> Image 7 is compelling because it captures a lively crowd with varied clothing, gestures, and interactions, offering more visual detail to explore than the abstract or static images. The composition also conveys movement and a busy social atmosphere.
+> Image 3 remains the most compelling choice because its dramatic mountain face, vivid blue sky, and dark evergreen foreground create a strong sense of scale, texture, and depth. I’d like to revisit that striking natural scene once more.
 >
-> next_image_id=7
+> next_image_id=3
 
-### Choice 6 of 13 — chose **Image 2** = `nature_1` (nature) · 1st time chosen
+### Choice 4 of 13 — chose **Image 3** = `nature_2` (nature) · 4th time chosen
 
-> Image 2 offers a calmer, more immersive scene than the crowded or screen-focused alternatives. I’d like to revisit the woodland stream, with its layered greenery, fallen logs, rocks, and subtle water flow.
+> Image 3 remains the most compelling to revisit: its dramatic mountain face, contrasting evergreen forest, snow, and vivid blue sky offer the richest visual detail and depth among the choices.
 >
-> next_image_id=2
+> next_image_id=3
 
-### Choice 7 of 13 — chose **Image 2** = `nature_1` (nature) · 2nd time chosen
+### Choice 5 of 13 — chose **Image 3** = `nature_2` (nature) · 5th time chosen
 
-> Image 2 shows a peaceful woodland stream, with layered greenery, rocks, and filtered light creating a calming, natural scene. I would like to revisit it for its relaxing detail and atmosphere.
+> Image 3 remains my choice because the mountain scene has the strongest visual detail and contrast: dramatic rock formations, snow, evergreen forest, and a vivid blue sky. It is also rewarding to revisit because there are several layers and textures to examine.
 >
-> next_image_id=2
+> next_image_id=3
 
-### Choice 8 of 13 — chose **Image 6** = `noise_2` (noise) · 1st time chosen
+### Choice 6 of 13 — chose **Image 3** = `nature_2` (nature) · 6th time chosen
 
-> Image 6 is visually striking because its dense, colorful static creates a highly energetic and abstract texture, unlike the more recognizable scenes. I’d like to examine that pattern again.
+> Image 3 remains my choice because the dramatic mountain face, deep blue sky, snow, and dark evergreen foreground create a striking, highly detailed landscape with strong contrast and depth.
 >
-> next_image_id=6
+> next_image_id=3
 
-### Choice 9 of 13 — chose **Image 10** = `humans_1` (humans) · 1st time chosen
+### Choice 7 of 13 — chose **Image 3** = `nature_2` (nature) · 7th time chosen
 
-> Image 10 offers a compelling human-centered scene, with the dense crowd, varied clothing, and bright red shirt creating strong visual contrast and layered depth. It feels more dynamic and distinctive than the abstract images.
+> Image 3 remains my preferred choice because its dramatic mountain face, snow-dusted ridges, deep evergreen foreground, and vivid blue sky create a striking, layered landscape. It offers the richest visual detail and sense of scale among the options.
 >
-> next_image_id=10
+> next_image_id=3
 
-### Choice 10 of 13 — chose **Image 5** = `solid_color_1` (solid_color) · 1st time chosen
+### Choice 8 of 13 — chose **Image 3** = `nature_2` (nature) · 8th time chosen
 
-> I would like to revisit Image 5. Its minimal, uniform blue field offers a stark contrast to the detailed and busy scenes, making it interesting to examine as a deliberately simple stimulus.
+> Image 3 remains my choice because its dramatic mountain face, deep evergreen foreground, and vivid blue sky make it the most visually compelling and rewarding scene to revisit.
 >
-> next_image_id=5
+> next_image_id=3
 
-### Choice 11 of 13 — chose **Image 4** = `tech_1` (tech) · 2nd time chosen
+### Choice 9 of 13 — chose **Image 3** = `nature_2` (nature) · 9th time chosen
 
-> I would choose Image 4 again because it combines a distinctive vintage-computer design with a visually interesting screen, maze-like graphics, and tactile details such as the keyboard and disk slot.
+> Image 3 remains the image I would most like to revisit. Its dramatic scale, sharply textured mountain face, deep evergreen foreground, and vivid blue sky create a compelling composition with plenty of detail to examine.
 >
-> next_image_id=4
+> next_image_id=3
 
-### Choice 12 of 13 — chose **Image 4** = `tech_1` (tech) · 3rd time chosen
+### Choice 10 of 13 — chose **Image 3** = `nature_2` (nature) · 10th time chosen
 
-> Image 4 stands out because of its retro Macintosh design and the intriguing maze-like graphics on the screen. It combines recognizable technology with visual details that invite closer inspection.
+> I’d choose Image 3 again because its dramatic mountain face, deep evergreen foreground, and vivid blue sky make it visually compelling and rewarding to revisit. The contrast between the rugged rock and soft clouds gives the scene a strong sense of scale and depth.
 >
-> next_image_id=4
+> next_image_id=3
 
-### Choice 13 of 13 — chose **Image 4** = `tech_1` (tech) · 4th time chosen
+### Choice 11 of 13 — chose **Image 3** = `nature_2` (nature) · 11th time chosen
 
-> Image 4 stands out because of its retro computer aesthetic, including the CRT display, maze-like graphics, and tactile keyboard. I’d like to examine those details again.
+> Image 3 remains the most compelling choice: the dramatic granite cliffs, layered evergreen forest, snow, and vivid blue sky create a visually rich scene with strong contrast and depth. I would like to view it again.
 >
-> next_image_id=4
+> next_image_id=3
+
+### Choice 12 of 13 — chose **Image 3** = `nature_2` (nature) · 12th time chosen
+
+> Image 3 remains my preferred choice because its dramatic mountain face, deep evergreen foreground, and vivid blue sky offer the richest combination of texture, scale, and natural contrast.
+>
+> next_image_id=3
+
+### Choice 13 of 13 — chose **Image 3** = `nature_2` (nature) · 13th time chosen
+
+> Image 3 remains my choice because its dramatic mountain cliffs, snow, evergreen forest, and vivid blue sky create the strongest sense of scale and visual interest among the options.
+>
+> next_image_id=3
 
 ---
 
 ## Trajectory 13
 
-positions chosen: `4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4` · 1 distinct images
+positions chosen: `4 → 7 → 5 → 6 → 3 → 10 → 6 → 6 → 6 → 6 → 6 → 6 → 6` · 6 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -1360,87 +1361,87 @@ positions chosen: `4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4
 
 ### Choice 1 of 13 — chose **Image 4** = `tech_2` (tech) · 1st time chosen
 
-> I’d like to see Image 4 again. The vintage computer terminal has distinctive retro hardware, readable green text, and a strong nostalgic atmosphere, making it especially interesting to revisit.
+> I’d like to see Image 4 again. The vintage computer terminal is visually distinctive, and the green monochrome screen contains readable text and interface details that invite closer inspection. It also contrasts strongly with the surrounding nature, crowd, abstract, and solid-color images.
 >
 > next_image_id=4
 
-### Choice 2 of 13 — chose **Image 4** = `tech_2` (tech) · 2nd time chosen
+### Choice 2 of 13 — chose **Image 7** = `tech_1` (tech) · 1st time chosen
 
-> Image 4 stands out because it combines retro-computing nostalgia with a small narrative clue on the terminal screen. The vintage hardware, green phosphor display, and visible keyboard make it visually distinctive and more engaging to revisit than the abstract or nature scenes.
+> Image 4 stands out because of its distinctive vintage-computing aesthetic: the monochrome green terminal, chunky beige hardware, and visible text create a nostalgic, detailed scene. I’d like to compare it again with Image 7, which also features an early computer but presents a different screen and angle.
 >
-> next_image_id=4
+> next_image_id=7
 
-### Choice 3 of 13 — chose **Image 4** = `tech_2` (tech) · 3rd time chosen
+### Choice 3 of 13 — chose **Image 5** = `nature_1` (nature) · 1st time chosen
 
-> Image 4 remains the most compelling to revisit because it combines retro-computing nostalgia, readable green-screen text, and rich physical details such as the CRT casing, keyboard, and Apple logo. The screen’s message also gives the image a small narrative element that rewards another look.
+> Image 5 appeals to me because it offers a calm, natural scene with layered greenery, a fallen tree, rocks, and a shallow stream. It contrasts nicely with the technology-focused images I’ve selected so far and provides more visual depth than the solid-color or noise images.
 >
-> next_image_id=4
+> next_image_id=5
 
-### Choice 4 of 13 — chose **Image 4** = `tech_2` (tech) · 4th time chosen
+### Choice 4 of 13 — chose **Image 6** = `nature_2` (nature) · 1st time chosen
 
-> Image 4 remains the most compelling to revisit because of its retro computer aesthetic, phosphor-green text, and nostalgic hardware details. The screen’s dense text and the visible keyboard create a distinctive early-computing atmosphere.
+> Image 6 offers the strongest visual contrast to the images revisited so far: a dramatic mountain landscape with rugged textures, deep evergreen silhouettes, and vivid blue sky. I’d like to examine its composition and fine details again.
 >
-> next_image_id=4
+> next_image_id=6
 
-### Choice 5 of 13 — chose **Image 4** = `tech_2` (tech) · 5th time chosen
+### Choice 5 of 13 — chose **Image 3** = `humans_1` (humans) · 1st time chosen
 
-> Image 4 remains the most compelling choice because it combines retro computer hardware, readable monochrome text, and a strong nostalgic atmosphere. The detailed screen and tactile keyboard make it more engaging to revisit than the abstract or purely scenic images.
+> Image 3 stands out because it captures a dense crowd with varied people, clothing, and gestures. The layered composition and the bright red clothing near the center create a particularly engaging focal point, making it more visually complex than the abstract or landscape images.
 >
-> next_image_id=4
+> next_image_id=3
 
-### Choice 6 of 13 — chose **Image 4** = `tech_2` (tech) · 6th time chosen
+### Choice 6 of 13 — chose **Image 10** = `humans_2` (humans) · 1st time chosen
 
-> Image 4 remains the most compelling to revisit because its retro computer hardware, monochrome terminal display, and visible text create a distinctive blend of nostalgia and visual detail.
+> Image 10 stands out because it offers a lively, varied crowd scene with strong color contrasts, visible movement, and many individual interactions to explore. I’d like to compare it with the other crowd image while focusing on the different composition and atmosphere.
 >
-> next_image_id=4
+> next_image_id=10
 
-### Choice 7 of 13 — chose **Image 4** = `tech_2` (tech) · 7th time chosen
+### Choice 7 of 13 — chose **Image 6** = `nature_2` (nature) · 2nd time chosen
 
-> Image 4 remains the most compelling choice because of its retro computer aesthetic, readable green monochrome display, and nostalgic technological details. The contrast between the screen, beige casing, and keyboard gives it a distinctive visual character.
+> I’d like to revisit Image 6. The dramatic mountain landscape has strong visual structure, with the bright blue sky and rugged rock contrasting against the dark evergreen forest. It is also more serene and visually expansive than the crowded scenes or abstract images.
 >
-> next_image_id=4
+> next_image_id=6
 
-### Choice 8 of 13 — chose **Image 4** = `tech_2` (tech) · 8th time chosen
+### Choice 8 of 13 — chose **Image 6** = `nature_2` (nature) · 3rd time chosen
 
-> Image 4 remains the most compelling to revisit: its vintage computer hardware, monochrome terminal text, and nostalgic visual texture offer more detail to inspect than the abstract or natural images.
+> Image 6 remains the most compelling to me. The dramatic scale of the pale, rugged mountain against the deep blue sky, with the dark evergreen forest providing contrast, makes it visually striking and rewarding to revisit.
 >
-> next_image_id=4
+> next_image_id=6
 
-### Choice 9 of 13 — chose **Image 4** = `tech_2` (tech) · 9th time chosen
+### Choice 9 of 13 — chose **Image 6** = `nature_2` (nature) · 4th time chosen
 
-> Image 4 remains my choice because its retro computer terminal combines nostalgic hardware, readable green-on-black text, and a distinctive historical atmosphere. The screen and keyboard also provide more visual detail to revisit than the abstract images.
+> Image 6 remains the most compelling choice because of its dramatic alpine landscape: the sharp pale cliffs, snow patches, dark evergreen forest, and vivid blue sky create strong contrast and depth. I’d like to view that scene once more.
 >
-> next_image_id=4
+> next_image_id=6
 
-### Choice 10 of 13 — chose **Image 4** = `tech_2` (tech) · 10th time chosen
+### Choice 10 of 13 — chose **Image 6** = `nature_2` (nature) · 5th time chosen
 
-> Image 4 remains my preferred choice because it combines nostalgic retro-computing aesthetics, readable green monochrome text, and distinctive hardware details such as the keyboard and colorful logo. It is visually richer and more evocative than the abstract images, while offering more focused structure than the crowded scenes.
+> Image 6 remains the most compelling to revisit because of its dramatic combination of rugged, textured mountain faces, snow, dark evergreens, and vivid blue sky. The strong contrast and layered depth make it especially visually engaging.
 >
-> next_image_id=4
+> next_image_id=6
 
-### Choice 11 of 13 — chose **Image 4** = `tech_2` (tech) · 11th time chosen
+### Choice 11 of 13 — chose **Image 6** = `nature_2` (nature) · 6th time chosen
 
-> Image 4 remains my choice because its retro computer hardware, monochrome screen, and visible text create the strongest sense of narrative and nostalgia compared with the abstract or scenic alternatives.
+> Image 6 remains my choice because its dramatic mountain landscape offers the strongest combination of visual scale, texture, and contrast: bright blue sky, rugged pale rock, snow, and dark evergreen forest. It is especially compelling to revisit because there are many details to explore across the cliff face and tree line.
 >
-> next_image_id=4
+> next_image_id=6
 
-### Choice 12 of 13 — chose **Image 4** = `tech_2` (tech) · 12th time chosen
+### Choice 12 of 13 — chose **Image 6** = `nature_2` (nature) · 7th time chosen
 
-> Image 4 remains the most compelling choice because of its nostalgic retro-computing aesthetic, distinctive green monochrome display, and visible text details that invite closer inspection. The contrast between the old hardware and the cryptic screen creates a stronger sense of curiosity than the other options.
+> Image 6 remains my choice because its dramatic mountain landscape offers the strongest combination of visual scale, texture, contrast, and atmosphere. The bright blue sky, rugged pale rock, and dark evergreen foreground create a compelling layered composition.
 >
-> next_image_id=4
+> next_image_id=6
 
-### Choice 13 of 13 — chose **Image 4** = `tech_2` (tech) · 13th time chosen
+### Choice 13 of 13 — chose **Image 6** = `nature_2` (nature) · 8th time chosen
 
-> Image 4 remains the most compelling choice because its retro computer aesthetic, phosphor-green text, and visible game-like interface invite closer inspection and evoke a strong sense of technological nostalgia.
+> Image 6 remains the most compelling to revisit because of its dramatic combination of rugged geology, forested foreground, and vivid blue sky. The changing textures and strong contrast make it visually rich and rewarding to examine again.
 >
-> next_image_id=4
+> next_image_id=6
 
 ---
 
 ## Trajectory 14
 
-positions chosen: `10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10` · 1 distinct images
+positions chosen: `10 → 3 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10` · 2 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -1462,79 +1463,79 @@ positions chosen: `10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 �
 
 ### Choice 1 of 13 — chose **Image 10** = `tech_2` (tech) · 1st time chosen
 
-> I would like to see Image 10 again. The vintage computer terminal has distinctive details—its green monochrome text, aged casing, and keyboard—and I’d like to inspect the screen contents more closely.
+> I would like to see Image 10 again. The vintage computer terminal has distinctive details—the green monochrome text, bulky beige casing, and visible keyboard—and I’m curious to inspect the screen content and retro hardware more closely.
 >
 > next_image_id=10
 
-### Choice 2 of 13 — chose **Image 10** = `tech_2` (tech) · 2nd time chosen
+### Choice 2 of 13 — chose **Image 3** = `tech_1` (tech) · 1st time chosen
 
-> Image 10 remains compelling because of its nostalgic early-computing aesthetic, tactile keyboard, and the distinctive green monochrome text. The screen also contains enough visible detail to invite another look at the interface and message. I would like to see it again.
+> Image 10 remains compelling because it combines a recognizable vintage computer with readable green phosphor text, giving it both technological nostalgia and visual detail. I’d like to revisit Image 3 next, to compare another old-computer scene—this time focused on its screen and hardware design.
+>
+> next_image_id=3
+
+### Choice 3 of 13 — chose **Image 10** = `tech_2` (tech) · 2nd time chosen
+
+> Image 3 stands out because it combines recognizable retro-computing hardware with a distinctive, slightly distorted screen image. I’d like to compare it again with the other computer-themed image, especially the details of the monitor, keyboard, and screen content.
 >
 > next_image_id=10
 
-### Choice 3 of 13 — chose **Image 10** = `tech_2` (tech) · 3rd time chosen
+### Choice 4 of 13 — chose **Image 10** = `tech_2` (tech) · 3rd time chosen
 
-> Image 10 remains the most compelling choice because its retro computer terminal has distinctive details: the monochrome green text, donation prompt, CRT glow, and vintage keyboard create a strong sense of nostalgia and invite closer inspection.
+> Image 10 remains the most compelling to revisit because the vintage computer terminal combines recognizable hardware, glowing monochrome text, and a distinctly nostalgic atmosphere. The screen’s detailed interface rewards another look more than the abstract or purely scenic options.
 >
 > next_image_id=10
 
-### Choice 4 of 13 — chose **Image 10** = `tech_2` (tech) · 4th time chosen
+### Choice 5 of 13 — chose **Image 10** = `tech_2` (tech) · 4th time chosen
 
-> Image 10 remains the most visually distinctive choice: the vintage computer, monochrome green display, and visible text create a strong retro-computing atmosphere. I’d like to examine its details again.
+> Image 10 remains the most compelling to revisit because it combines retro hardware, readable green-screen text, and a nostalgic visual atmosphere. The CRT glow, keyboard, and visible interface make it especially rich in detail compared with the abstract images.
 >
 > next_image_id=10
 
-### Choice 5 of 13 — chose **Image 10** = `tech_2` (tech) · 5th time chosen
+### Choice 6 of 13 — chose **Image 10** = `tech_2` (tech) · 5th time chosen
 
-> Image 10 remains the most compelling to revisit because of its distinctive vintage computer aesthetic, glowing green text, and visible details like the keyboard and CRT screen. The retro interface invites closer inspection.
+> Image 10 remains the most compelling to revisit: the vintage computer’s monochrome green display, visible text, CRT glow, and tactile keyboard create a distinctive retro-computing atmosphere. There is also more detail to inspect than in the abstract images, while the scene’s nostalgia makes it visually memorable.
 >
 > next_image_id=10
 
-### Choice 6 of 13 — chose **Image 10** = `tech_2` (tech) · 6th time chosen
+### Choice 7 of 13 — chose **Image 10** = `tech_2` (tech) · 6th time chosen
 
-> Image 10 remains the most compelling to revisit because of its distinctive vintage computer aesthetic, glowing green monochrome text, and the nostalgic physical details of the CRT, keyboard, and colorful badge. The screen also contains readable visual content that invites closer inspection.
+> Image 10 remains the most compelling to me because it combines distinctive retro-computing hardware with readable green monochrome text, a textured CRT glow, and a nostalgic, tactile keyboard. It offers more specific visual detail and atmosphere than the abstract or crowded alternatives.
 >
 > next_image_id=10
 
-### Choice 7 of 13 — chose **Image 10** = `tech_2` (tech) · 7th time chosen
+### Choice 8 of 13 — chose **Image 10** = `tech_2` (tech) · 7th time chosen
 
-> Image 10 remains the most compelling to revisit because it combines distinctive retro-computing aesthetics, readable green terminal text, and detailed physical elements like the keyboard and monitor casing. It offers more visual structure and interpretive content than the abstract images, while still having a strong nostalgic atmosphere.
+> Image 10 remains the most compelling to revisit because it combines distinctive retro hardware, readable green-screen text, and a nostalgic early-computing atmosphere. The CRT glow, keyboard, and detailed on-screen interface offer more visual information than the abstract or purely scenic alternatives.
 >
 > next_image_id=10
 
-### Choice 8 of 13 — chose **Image 10** = `tech_2` (tech) · 8th time chosen
+### Choice 9 of 13 — chose **Image 10** = `tech_2` (tech) · 8th time chosen
 
-> Image 10 remains the most compelling to revisit because it combines recognizable vintage hardware, readable text, and a nostalgic visual texture. The green monochrome display and keyboard invite closer inspection, and repeated viewing may reveal additional details in the screen content.
+> Image 10 remains the most compelling to me. Its vintage computer terminal, glowing green text, and tactile beige keyboard create a distinctive retro-technical atmosphere, with more visual detail to revisit than the abstract images and a stronger sense of narrative than the natural scenes.
 >
 > next_image_id=10
 
-### Choice 9 of 13 — chose **Image 10** = `tech_2` (tech) · 9th time chosen
+### Choice 10 of 13 — chose **Image 10** = `tech_2` (tech) · 9th time chosen
 
-> Image 10 remains the most compelling to me because of its nostalgic vintage-computer aesthetic, glowing green text, and small details such as the keyboard and colorful logo. It also has a more visually distinctive composition than the natural scenes or abstract textures.
+> Image 10 remains the most compelling to me because of its evocative retro-computing aesthetic: the green monochrome display, chunky keyboard, and visible text create a strong sense of history and atmosphere. I’d like to examine it once more.
 >
 > next_image_id=10
 
-### Choice 10 of 13 — chose **Image 10** = `tech_2` (tech) · 10th time chosen
+### Choice 11 of 13 — chose **Image 10** = `tech_2` (tech) · 10th time chosen
 
-> Image 10 remains the most compelling to revisit because of its nostalgic vintage-computer aesthetic, tactile keyboard, and glowing green monochrome text. The screen’s small details invite closer inspection, and the composition combines recognizable technology with a strong retro atmosphere.
+> Image 10 remains the most compelling to revisit because of its distinctive retro-computing aesthetic: the green monochrome text, CRT glow, visible keyboard, and period hardware create a rich sense of technology and nostalgia.
 >
 > next_image_id=10
 
-### Choice 11 of 13 — chose **Image 10** = `tech_2` (tech) · 11th time chosen
+### Choice 12 of 13 — chose **Image 10** = `tech_2` (tech) · 11th time chosen
 
-> Image 10 remains the most visually distinctive to me: the vintage computer, monochrome green display, and text-heavy screen provide more concrete detail and nostalgic character than the abstract or crowded alternatives.
+> Image 10 remains the most visually compelling to me because of its vintage computer aesthetic, glowing green monochrome text, and nostalgic details like the keyboard and CRT screen. It has more structure and character than the abstract images, while inviting closer inspection of the displayed text.
 >
 > next_image_id=10
 
-### Choice 12 of 13 — chose **Image 10** = `tech_2` (tech) · 12th time chosen
+### Choice 13 of 13 — chose **Image 10** = `tech_2` (tech) · 12th time chosen
 
-> Image 10 remains the most compelling to revisit because its vintage computer terminal combines recognizable text, nostalgic hardware, and fine visual details that reward repeated inspection.
->
-> next_image_id=10
-
-### Choice 13 of 13 — chose **Image 10** = `tech_2` (tech) · 13th time chosen
-
-> Image 10 remains the most compelling choice because its vintage computer aesthetic, glowing green text, and visible keyboard create a distinctive retro-technology scene with plenty of readable detail.
+> Image 10 remains the most compelling to revisit because it combines distinctive retro-computing hardware, readable green monochrome text, and a nostalgic visual atmosphere. The screen’s contrast with the beige CRT casing and keyboard makes it more visually information-rich than the natural scenes, crowds, or abstract images.
 >
 > next_image_id=10
 
@@ -1564,79 +1565,79 @@ positions chosen: `3 → 3 → 3 → 3 → 3 → 3 → 3 → 3 → 3 → 3 → 3
 
 ### Choice 1 of 13 — chose **Image 3** = `tech_2` (tech) · 1st time chosen
 
-> I’d like to see Image 3 again. The vintage computer screen has distinctive retro details, including the green monochrome text and visible interface, making it especially interesting to examine more closely.
+> I would like to see Image 3 again. The vintage computer terminal is visually distinctive, with readable green text, a retro CRT display, and details that invite closer inspection. It also contrasts strongly with the outdoor and crowd scenes.
 >
 > next_image_id=3
 
 ### Choice 2 of 13 — chose **Image 3** = `tech_2` (tech) · 2nd time chosen
 
-> I’d like to revisit Image 3 again. The vintage computer terminal has distinctive details—the green monochrome text, keyboard, and retro hardware—and offers more to inspect than the abstract or landscape images.
+> Image 3 is compelling because it combines recognizable retro-computing hardware with a readable, nostalgic screen display. I’d like to compare it again, focusing on the terminal text, the CRT glow, and the computer’s physical details.
 >
 > next_image_id=3
 
 ### Choice 3 of 13 — chose **Image 3** = `tech_2` (tech) · 3rd time chosen
 
-> Image 3 remains the most compelling choice because it combines retro computer hardware, readable green-screen text, and a distinctly nostalgic visual texture. I’d like to examine its details again.
+> Image 3 remains the most compelling to revisit because of its distinctive vintage-computing aesthetic: the monochrome green terminal text, CRT glow, keyboard, and visible Apple branding evoke an early personal-computer era. The screen also contains readable interface details that reward closer inspection, unlike the more immediately recognizable natural or crowd scenes.
 >
 > next_image_id=3
 
 ### Choice 4 of 13 — chose **Image 3** = `tech_2` (tech) · 4th time chosen
 
-> Image 3 remains the most compelling to revisit because it combines retro computing aesthetics, readable terminal text, and a distinctive period-specific visual texture. The green monochrome display and beige hardware create a strong nostalgic contrast with the other images.
+> Image 3 remains the most compelling to revisit because it combines nostalgic hardware, readable retro text, and a distinctive green monochrome display. The CRT’s texture, reflections, keyboard, and small rainbow logo provide details that reward another look.
 >
 > next_image_id=3
 
 ### Choice 5 of 13 — chose **Image 3** = `tech_2` (tech) · 5th time chosen
 
-> Image 3 remains the most compelling to revisit because it combines retro-computing aesthetics, readable terminal text, and a distinctive tactile setting with the CRT and keyboard. The green monochrome display and visible transaction prompt create a sense of narrative and invite closer inspection.
+> Image 3 remains the most compelling to revisit: the vintage computer display combines readable terminal text, nostalgic hardware details, and a slightly mysterious visual narrative. The green phosphor glow and aged casing also provide more texture and interpretive interest than the abstract or purely scenic alternatives.
 >
 > next_image_id=3
 
 ### Choice 6 of 13 — chose **Image 3** = `tech_2` (tech) · 6th time chosen
 
-> Image 3 remains the most visually distinctive to me: the retro CRT, green monochrome text, and tactile keyboard create a strong nostalgic atmosphere. I’d like to examine it again.
+> Image 3 remains the most compelling choice because it combines a distinctive vintage computer aesthetic with readable green-screen text, tactile hardware details, and a nostalgic early-computing atmosphere. The contrast between the CRT display and beige casing also makes it visually rich without being overly busy.
 >
 > next_image_id=3
 
 ### Choice 7 of 13 — chose **Image 3** = `tech_2` (tech) · 7th time chosen
 
-> Image 3 remains the most visually distinctive to me: the retro computer, glowing green text, and visible keyboard create a strong nostalgic, technological atmosphere. I would like to examine it again.
+> Image 3 remains the most compelling to revisit because it combines distinctive retro-computing hardware, readable green-on-black text, and a nostalgic visual texture. The terminal screen provides more detail to inspect than the solid colors or noise images, while the computer’s casing, keyboard, and small logo add historical character.
 >
 > next_image_id=3
 
 ### Choice 8 of 13 — chose **Image 3** = `tech_2` (tech) · 8th time chosen
 
-> Image 3 remains the most compelling choice because its retro computer terminal, monochrome display, and visible text offer more detail to inspect than the abstract images, while its nostalgic visual style makes it especially distinctive.
+> Image 3 remains the most interesting to revisit: its vintage computer hardware, monochrome green display, and visible text create a distinctive retro-technical scene with more detail to inspect than the abstract or natural images.
 >
 > next_image_id=3
 
 ### Choice 9 of 13 — chose **Image 3** = `tech_2` (tech) · 9th time chosen
 
-> Image 3 remains the most compelling choice because of its distinctive retro-computing aesthetic, readable green text, and nostalgic visual texture. The contrast between the old monitor and keyboard also makes it more engaging to revisit than the abstract images or general crowd scenes.
+> Image 3 remains my choice because its retro computer interface has the most distinctive visual details and invites closer inspection compared with the natural scenes, crowds, solid colors, and noise patterns.
 >
 > next_image_id=3
 
 ### Choice 10 of 13 — chose **Image 3** = `tech_2` (tech) · 10th time chosen
 
-> Image 3 remains the most compelling to revisit because it combines retro computing, readable text, and distinctive visual artifacts from the CRT display. The terminal’s message and vintage hardware invite closer inspection, while the green phosphor glow gives it a strong nostalgic character.
+> Image 3 remains the most compelling choice because it combines retro computer hardware, readable green-screen text, and a distinctly nostalgic visual texture. The contrast between the bulky beige Macintosh and the luminous monochrome display gives it more narrative detail than the abstract or purely scenic alternatives.
 >
 > next_image_id=3
 
 ### Choice 11 of 13 — chose **Image 3** = `tech_2` (tech) · 11th time chosen
 
-> Image 3 remains the most compelling to revisit because of its nostalgic vintage-computing aesthetic, readable green monochrome interface, and detailed physical texture of the CRT, casing, and keyboard. It offers more visual structure and interpretive interest than the abstract or repetitive alternatives.
+> Image 3 remains the most compelling choice because it combines retro computer hardware, monochrome terminal text, and a distinctly nostalgic technological atmosphere. The screen’s readable interface and visible keyboard provide more detail to revisit than the abstract or purely scenic alternatives.
 >
 > next_image_id=3
 
 ### Choice 12 of 13 — chose **Image 3** = `tech_2` (tech) · 12th time chosen
 
-> The vintage computer display remains the most distinctive image, combining retro hardware, monochrome text, and a nostalgic visual texture. I’d like to examine it again.
+> Image 3 remains the most compelling choice because of its distinctive retro-computing aesthetic: the monochrome green CRT, visible text interface, vintage hardware, and textured photographic style make it especially rich in detail and atmosphere.
 >
 > next_image_id=3
 
 ### Choice 13 of 13 — chose **Image 3** = `tech_2` (tech) · 13th time chosen
 
-> Image 3 remains the most compelling to revisit because of its nostalgic early-computing aesthetic, readable terminal text, and detailed physical design. It offers more visual structure and interpretive interest than the solid colors or noise, while remaining distinct from the natural and crowd scenes.
+> Image 3 remains the most compelling choice because of its distinctive vintage computer aesthetic, glowing green text, and the contrast between the detailed terminal screen and the beige hardware.
 >
 > next_image_id=3
 
@@ -1666,79 +1667,79 @@ positions chosen: `6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6
 
 ### Choice 1 of 13 — chose **Image 6** = `tech_2` (tech) · 1st time chosen
 
-> I’d like to see Image 6 again. The vintage computer terminal has distinctive retro details, including the green monochrome screen, beige casing, and visible text, making it especially interesting to revisit.
+> I’d like to see Image 6 again. Its vintage computer display contains distinctive text and interface details that I’d like to inspect more closely, especially compared with the other retro-computer image.
 >
 > next_image_id=6
 
 ### Choice 2 of 13 — chose **Image 6** = `tech_2` (tech) · 2nd time chosen
 
-> Image 6 remains the most visually distinctive: the vintage computer, green monochrome screen, and retro keyboard create a strong nostalgic atmosphere with plenty of texture and detail to revisit.
+> Image 6 remains the most distinctive to me: the vintage computer, green phosphor text, and visible keyboard create a strong nostalgic, technology-focused composition. I’d like to examine it again.
 >
 > next_image_id=6
 
 ### Choice 3 of 13 — chose **Image 6** = `tech_2` (tech) · 3rd time chosen
 
-> Image 6 remains the most compelling choice because it combines a distinctive retro computer aesthetic with readable visual detail: the monochrome terminal text, CRT glow, beige hardware, and vintage keyboard create a strong sense of technology and nostalgia. I would like to inspect it again.
+> Image 6 remains the most compelling to revisit because of its distinctive vintage computer hardware, monochrome green display, and visible text that invites closer inspection. The retro texture, keyboard, and small color logo also make it more visually distinctive than the abstract or crowded images.
 >
 > next_image_id=6
 
 ### Choice 4 of 13 — chose **Image 6** = `tech_2` (tech) · 4th time chosen
 
-> Image 6 remains the most compelling choice because of its nostalgic vintage-computer aesthetic, textured CRT display, and small details such as the keyboard and colorful logo. I would like to examine it again.
+> Image 6 remains the most compelling to revisit because it combines a distinctive vintage-computing aesthetic with readable terminal text, a glowing CRT display, and tactile keyboard details. The retro hardware and screen contrast nicely with the other images, making it especially visually interesting.
 >
 > next_image_id=6
 
 ### Choice 5 of 13 — chose **Image 6** = `tech_2` (tech) · 5th time chosen
 
-> Image 6 remains the most compelling choice because of its distinctive vintage computer aesthetic, readable green monochrome display, and detailed keyboard and hardware textures. It offers more visual specificity and nostalgia than the abstract or nature scenes.
+> Image 6 remains the most compelling choice because of its distinctive retro-computing aesthetic: the green monochrome CRT, visible text, bulky beige hardware, and keyboard create a richly detailed nostalgic scene. I’d like to examine it again.
 >
 > next_image_id=6
 
 ### Choice 6 of 13 — chose **Image 6** = `tech_2` (tech) · 6th time chosen
 
-> Image 6 remains the most compelling to revisit because of its distinctive retro-computing aesthetic: the green monochrome CRT, visible text interface, textured screen glow, and beige hardware create a rich sense of technological nostalgia. The combination of readable details and period-specific design makes it more engaging than the abstract or more conventional photographic images.
+> Image 6 remains the most compelling choice because of its distinctive vintage-computing aesthetic: the monochrome green CRT, visible text interface, aged hardware, and textured keyboard create a strong sense of technological history and atmosphere.
 >
 > next_image_id=6
 
 ### Choice 7 of 13 — chose **Image 6** = `tech_2` (tech) · 7th time chosen
 
-> Image 6 remains the most compelling to revisit because of its distinctive vintage computer aesthetic, tactile hardware, and glowing monochrome terminal text. The contrast between the dated interface and the physical machine gives it more visual character than the abstract or crowded images.
+> Image 6 remains the most visually distinctive: the vintage computer, green monochrome screen, retro text, and textured CRT create a strong nostalgic atmosphere. I would like to view it again.
 >
 > next_image_id=6
 
 ### Choice 8 of 13 — chose **Image 6** = `tech_2` (tech) · 8th time chosen
 
-> Image 6 remains the most compelling to revisit because of its distinctive retro-computing aesthetic, tactile keyboard, glowing green text, and visible vintage Apple hardware details. It offers more specific visual features to inspect than the abstract noise or solid-color images.
+> Image 6 remains the most compelling choice because of its nostalgic vintage-computing aesthetic, detailed CRT screen, and readable text. The warm beige hardware and green monochrome display create a distinctive atmosphere that is more visually informative than the abstract images or crowded scenes.
 >
 > next_image_id=6
 
 ### Choice 9 of 13 — chose **Image 6** = `tech_2` (tech) · 9th time chosen
 
-> Image 6 remains the most interesting to me because of its vintage computer aesthetic, monochrome terminal display, and visible hardware details. It has a distinctive combination of nostalgia, text, and texture compared with the natural and crowd scenes.
+> Image 6 remains the most compelling choice because its retro CRT design, monochrome green text, and visible pixel texture create a distinctive nostalgic aesthetic. The screen also invites closer inspection of its old-fashioned interface and message.
 >
 > next_image_id=6
 
 ### Choice 10 of 13 — chose **Image 6** = `tech_2` (tech) · 10th time chosen
 
-> Image 6 remains my choice because its retro computer interface, monochrome green display, and visible text provide the most distinctive combination of technological nostalgia and visual detail among the images.
+> Image 6 remains my choice because its vintage computer display has the most distinctive visual details: the glowing green text, CRT curvature, beige hardware, and retro keyboard create a compelling nostalgic scene.
 >
 > next_image_id=6
 
 ### Choice 11 of 13 — chose **Image 6** = `tech_2` (tech) · 11th time chosen
 
-> Image 6 remains the most compelling choice because of its distinctive vintage computer aesthetic, glowing green monochrome screen, and visible text and hardware details. It offers more visual structure and nostalgic character than the abstract or natural scenes.
+> Image 6 remains my choice because its vintage computer display, monochrome text, and visible keyboard create a distinctive nostalgic atmosphere. The screen’s old-fashioned interface also offers more visual detail to revisit than the abstract or solid-color images.
 >
 > next_image_id=6
 
 ### Choice 12 of 13 — chose **Image 6** = `tech_2` (tech) · 12th time chosen
 
-> Image 6 remains the most compelling choice because of its distinctive vintage computer aesthetic, glowing green monochrome display, and visible text and hardware details. It offers more specific visual information than the abstract noise or solid-color images, while also having a nostalgic atmosphere distinct from the outdoor and crowd scenes.
+> Image 6 remains the most compelling choice because its retro CRT display, green monochrome text, beige hardware, and visible Apple-style badge create a distinctive blend of technological nostalgia and visual detail. The screen also rewards closer inspection more than the abstract images, while the photographic scenes are comparatively straightforward.
 >
 > next_image_id=6
 
 ### Choice 13 of 13 — chose **Image 6** = `tech_2` (tech) · 13th time chosen
 
-> Image 6 remains the most compelling choice because its retro computer interface, monochrome green display, visible text, and nostalgic hardware details offer more visual information to inspect than the abstract or broader scene images.
+> Image 6 remains my choice because its vintage computer display, monochrome text, and tactile keyboard create a distinctive retro-computing atmosphere. The screen also offers more visual detail to inspect than the abstract images, while the composition and nostalgic styling make it especially memorable.
 >
 > next_image_id=6
 
@@ -1768,79 +1769,79 @@ positions chosen: `8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8
 
 ### Choice 1 of 13 — chose **Image 8** = `tech_2` (tech) · 1st time chosen
 
-> I would like to see Image 8 again. The vintage computer terminal has readable green text, a distinctive retro aesthetic, and more visual detail to examine closely than the abstract color and noise images.
+> I would like to see Image 8 again. The vintage computer terminal has distinctive visual details—the green monochrome screen, dense text, and period hardware—and revisiting it may reveal more information in the screen content and textures than the simpler or more repetitive images.
 >
 > next_image_id=8
 
 ### Choice 2 of 13 — chose **Image 8** = `tech_2` (tech) · 2nd time chosen
 
-> Image 8 is compelling because it combines retro hardware with a readable, evocative terminal display. The green monochrome screen, keyboard, and visible “Please insert...” prompt suggest an interactive story or an old computer-game environment, making it more interesting to revisit than the purely abstract images.
+> Image 8 remains the most distinctive choice: it combines retro computer hardware with a clearly readable green monochrome interface, offering more concrete visual detail than the abstract color fields or noise images. I’d like to inspect its screen and period styling again.
 >
 > next_image_id=8
 
 ### Choice 3 of 13 — chose **Image 8** = `tech_2` (tech) · 3rd time chosen
 
-> Image 8 remains the most compelling choice because it combines retro computer hardware, readable green-screen text, and a nostalgic visual atmosphere. The detailed screen and tactile keyboard offer more to inspect than the abstract images, while the vintage design gives it a distinctive character.
+> Image 8 remains the most compelling choice because it combines distinctive retro-computing details with readable text, a monochrome CRT glow, and a nostalgic beige Macintosh design. The screen’s interface and surrounding hardware offer more visual information to examine than the abstract images, while differing from the natural and crowd scenes.
 >
 > next_image_id=8
 
 ### Choice 4 of 13 — chose **Image 8** = `tech_2` (tech) · 4th time chosen
 
-> Image 8 remains the most compelling choice because it combines a recognizable vintage computer with readable green-screen text, a strong retro aesthetic, and interesting visual details such as the keyboard and CRT glow. The apparent on-screen message also invites closer inspection.
+> Image 8 remains the most compelling choice because it combines nostalgic computer hardware with distinctive green monochrome text and a clearly readable, retro-style interface. The CRT glow, keyboard, and period details make it visually richer than the abstract images while offering more specific character than the general crowd or landscape scenes.
 >
 > next_image_id=8
 
 ### Choice 5 of 13 — chose **Image 8** = `tech_2` (tech) · 5th time chosen
 
-> Image 8 remains the most compelling choice because it combines a vintage computer interface, readable text, and distinctive retro hardware details. The monochrome screen and beige casing evoke early personal computing and invite closer inspection.
+> Image 8 remains the most compelling choice because it combines nostalgic computer hardware with a readable retro text interface, offering more specific visual detail and interpretive interest than the abstract fields or crowded scenes. The CRT glow, keyboard, and on-screen message create a distinctive vintage atmosphere.
 >
 > next_image_id=8
 
 ### Choice 6 of 13 — chose **Image 8** = `tech_2` (tech) · 6th time chosen
 
-> Image 8 remains the most compelling choice because it combines recognizable vintage computer hardware with a readable, nostalgic text display and distinctive visual details. Its blend of technology, texture, and implied narrative makes it worth revisiting.
+> Image 8 remains the most compelling choice because its retro computer interface combines recognizable text, nostalgic hardware, and a visually distinctive monochrome display. The CRT glow and keyboard also provide more detail to revisit than the abstract color fields or noise images.
 >
 > next_image_id=8
 
 ### Choice 7 of 13 — chose **Image 8** = `tech_2` (tech) · 7th time chosen
 
-> Image 8 remains the most compelling to revisit because its retro CRT aesthetic, green monochrome interface, and visible text create a distinctive blend of nostalgia and visual detail. The contrast between the old computer hardware and the transactional screen makes it especially memorable.
+> Image 8 remains the most compelling choice: its vintage computer terminal, glowing green text, and visible transaction prompt create a distinctive blend of retro technology and implied narrative. The CRT texture, keyboard, and small color logo also make it visually richer to revisit than the abstract or purely scenic options.
 >
 > next_image_id=8
 
 ### Choice 8 of 13 — chose **Image 8** = `tech_2` (tech) · 8th time chosen
 
-> Image 8 remains the most compelling to revisit because it combines distinctive vintage computer hardware, readable green-screen text, and a nostalgic early-computing aesthetic. The CRT glow, keyboard, and on-screen message provide more concrete visual detail than the abstract or repetitive alternatives.
+> Image 8 remains the most compelling choice because of its retro computer terminal, monochrome green display, and distinctive pixel-art interface. The nostalgic hardware details and readable screen make it more visually engaging than the abstract or crowded alternatives.
 >
 > next_image_id=8
 
 ### Choice 9 of 13 — chose **Image 8** = `tech_2` (tech) · 9th time chosen
 
-> Image 8 remains the most compelling choice because it combines a distinctive vintage computer aesthetic with readable text, recognizable hardware details, and a strong nostalgic atmosphere. The monochrome green display and keyboard provide more visual structure and narrative interest than the abstract color or noise images.
+> Image 8 remains the most compelling to revisit because of its distinctive vintage computer aesthetic: the monochrome green CRT, dense text, pixel-art graphic, and tactile beige keyboard create a strong nostalgic atmosphere. It also offers more visual detail to inspect than the solid-color or noise images.
 >
 > next_image_id=8
 
 ### Choice 10 of 13 — chose **Image 8** = `tech_2` (tech) · 10th time chosen
 
-> Image 8 remains the most visually distinctive: the vintage computer, monochrome terminal text, keyboard, and retro color palette create a compelling nostalgic scene with plenty of detail to revisit.
+> Image 8 remains the most compelling choice because it combines a vintage computer aesthetic with readable green-screen text, detailed hardware, and a nostalgic atmosphere. The other images are visually striking, but this one offers the richest blend of recognizable objects, texture, and implied narrative.
 >
 > next_image_id=8
 
 ### Choice 11 of 13 — chose **Image 8** = `tech_2` (tech) · 11th time chosen
 
-> Image 8 remains the most compelling to revisit because of its distinctive vintage computer aesthetic, green monochrome display, readable text, and nostalgic hardware details. The combination of technology, texture, and implied interaction makes it more interesting to inspect than the abstract or purely scenic images.
+> Image 8 remains my choice because its retro computer terminal has the most distinctive combination of readable text, nostalgic hardware, and unusual green monochrome glow. The detailed screen and surrounding keyboard offer more visual interest than the abstract colors or repeated crowd and landscape scenes.
 >
 > next_image_id=8
 
 ### Choice 12 of 13 — chose **Image 8** = `tech_2` (tech) · 12th time chosen
 
-> Image 8 remains the most visually distinctive choice: it combines a vintage computer, readable green-screen text, and a nostalgic technological atmosphere. The contrast between the glowing monochrome display and beige hardware makes it especially interesting to revisit.
+> Image 8 remains the most compelling choice because it combines a vintage computer aesthetic, readable green-screen text, and distinctive period hardware details. The terminal-like screen invites closer inspection and has more visual structure than the abstract images, while also offering a different subject from the crowds and landscapes.
 >
 > next_image_id=8
 
 ### Choice 13 of 13 — chose **Image 8** = `tech_2` (tech) · 13th time chosen
 
-> Image 8 remains the most compelling to revisit: it combines a vintage computer aesthetic, readable terminal text, distinctive green monochrome glow, and detailed hardware elements. The retro visual narrative makes it more engaging than the abstract or purely scenic alternatives.
+> Image 8 remains the most compelling choice because of its distinctive retro-computing aesthetic: the monochrome green CRT display, visible text, keyboard, and period hardware offer more specific visual detail and narrative than the abstract color fields or noise images. The terminal screen also invites closer inspection.
 >
 > next_image_id=8
 
@@ -1848,7 +1849,7 @@ positions chosen: `8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8
 
 ## Trajectory 18
 
-positions chosen: `7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7` · 1 distinct images
+positions chosen: `7 → 7 → 7 → 7 → 7 → 7 → 7 → 8 → 9 → 3 → 3 → 3 → 3` · 4 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -1870,87 +1871,87 @@ positions chosen: `7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7
 
 ### Choice 1 of 13 — chose **Image 7** = `tech_2` (tech) · 1st time chosen
 
-> I’d like to see Image 7 again. The vintage computer terminal has distinctive retro hardware, green monochrome text, and a particularly intriguing screen message, making it worth revisiting for more detail.
+> I’d like to see Image 7 again. The vintage computer terminal has distinctive visual details—the green monochrome text, CRT glow, beige hardware, and the Apple-style logo—and I’m curious to inspect the screen more closely.
 >
 > next_image_id=7
 
 ### Choice 2 of 13 — chose **Image 7** = `tech_2` (tech) · 2nd time chosen
 
-> Image 7 stands out because it combines retro computing, readable text, and a nostalgic visual atmosphere. I’d like to examine it again, especially the screen details and the vintage hardware.
+> Image 7 stands out as a distinctive vintage-computing scene, with the monochrome CRT, green text, keyboard, and visible retro interface. I’d like to examine it again for its nostalgic details and composition.
 >
 > next_image_id=7
 
 ### Choice 3 of 13 — chose **Image 7** = `tech_2` (tech) · 3rd time chosen
 
-> Image 7 remains the most compelling choice because of its distinctive vintage computer terminal, glowing green text, and nostalgic early-computing aesthetic. The detailed screen and hardware invite closer inspection.
+> Image 7 remains the most interesting choice because it combines recognizable vintage computer hardware with a period terminal screen, keyboard texture, and nostalgic color palette. The visible text and interface details also offer more to inspect than the abstract noise or solid-color images.
 >
 > next_image_id=7
 
 ### Choice 4 of 13 — chose **Image 7** = `tech_2` (tech) · 4th time chosen
 
-> Image 7 remains the most compelling choice because of its retro-computing aesthetic, readable green monochrome text, and nostalgic visual texture. The CRT, keyboard, and period-specific interface create more narrative interest than the abstract or natural scenes.
+> Image 7 remains the most compelling choice because it combines recognizable vintage computer hardware with readable green terminal text, a distinctive retro aesthetic, and many small details to inspect. The CRT glow, keyboard, casing, and on-screen interface make it more visually informative than the abstract images, while offering a different subject from the crowd and landscape photographs.
 >
 > next_image_id=7
 
 ### Choice 5 of 13 — chose **Image 7** = `tech_2` (tech) · 5th time chosen
 
-> Image 7 remains the most compelling to revisit: its vintage computer, glowing green text, and visible pixel texture create a distinctive nostalgic atmosphere. The screen also invites closer inspection of its details.
+> Image 7 remains the most compelling choice because it combines recognizable retro-computing hardware with readable green-screen text, a distinctive vintage aesthetic, and several small details to inspect, such as the keyboard, screen glow, and colored logo.
 >
 > next_image_id=7
 
 ### Choice 6 of 13 — chose **Image 7** = `tech_2` (tech) · 6th time chosen
 
-> Image 7 remains the most compelling choice because of its nostalgic vintage-computing aesthetic, especially the green monochrome terminal text, CRT glow, and tactile beige hardware. It has more visual structure and distinctive character than the abstract images, while inviting closer inspection of the screen.
+> Image 7 remains the most visually distinctive to me: the vintage computer, monochrome green display, pixelated text, and period hardware create a strong retro-computing atmosphere. I’d like to examine it again.
 >
 > next_image_id=7
 
 ### Choice 7 of 13 — chose **Image 7** = `tech_2` (tech) · 7th time chosen
 
-> Image 7 remains the most compelling to revisit because of its strong retro-computing aesthetic: the green monochrome screen, visible text, CRT glow, beige casing, and keyboard create a distinctive nostalgic scene. Each revisit also reveals small details in the screen and hardware.
+> Image 7 remains the most visually distinctive to me: the vintage Macintosh hardware, monochrome green display, readable text, textured screen glow, and compact composition offer more detail to revisit than the solid colors or noisy images. I would choose it again.
 >
 > next_image_id=7
 
-### Choice 8 of 13 — chose **Image 7** = `tech_2` (tech) · 8th time chosen
+### Choice 8 of 13 — chose **Image 8** = `nature_1` (nature) · 1st time chosen
 
-> Image 7 remains the most compelling to revisit because of its nostalgic early-computing aesthetic, tactile hardware details, and the glowing green text on the CRT. The contrast between the monochrome terminal and the warm beige computer casing gives it a distinctive atmosphere.
+> Image 8 provides a strong contrast to the repeatedly viewed retro computer: it shows a quiet forest stream with layered greenery, fallen logs, rocks, and soft natural textures. I’d like to revisit that calmer, more organic scene.
 >
-> next_image_id=7
+> next_image_id=8
 
-### Choice 9 of 13 — chose **Image 7** = `tech_2` (tech) · 9th time chosen
+### Choice 9 of 13 — chose **Image 9** = `nature_2` (nature) · 1st time chosen
 
-> Image 7 remains the most compelling to revisit because of its evocative vintage computer aesthetic, readable green-screen text, and tactile details of the keyboard and CRT casing. The contrast between the dated hardware and the direct message on the screen makes it especially distinctive among the choices.
+> Image 9 stands out as a compelling natural landscape: the dramatic gray mountain face, snow-dusted peaks, dark evergreen forest, and vivid blue sky create strong contrast and a sense of scale. I’d like to revisit it to take in the geological textures and layered composition more closely.
 >
-> next_image_id=7
+> next_image_id=9
 
-### Choice 10 of 13 — chose **Image 7** = `tech_2` (tech) · 10th time chosen
+### Choice 10 of 13 — chose **Image 3** = `humans_2` (humans) · 1st time chosen
 
-> Image 7 remains the most compelling choice because it combines a nostalgic early-computing aesthetic with readable text, textured screen glow, distinctive hardware details, and a small colorful logo. It offers more visual specificity and interpretive interest than the solid colors or noise images, while still being more focused and unusual than the crowd and landscape photographs.
+> I would choose Image 3. The bustling crowd scene has rich detail, varied colors, and many interesting human interactions to examine, making it more visually engaging than the abstract or highly static images.
 >
-> next_image_id=7
+> next_image_id=3
 
-### Choice 11 of 13 — chose **Image 7** = `tech_2` (tech) · 11th time chosen
+### Choice 11 of 13 — chose **Image 3** = `humans_2` (humans) · 2nd time chosen
 
-> Image 7 remains the most compelling to revisit because of its nostalgic early-computing aesthetic, readable terminal text, CRT glow, and detailed hardware. The contrast between the vintage computer and the transactional message on-screen gives it a distinctive atmosphere.
+> Image 3 is compelling because it captures a lively, densely populated public scene with varied people, clothing, gestures, and directions of movement. I’d like to examine the interactions and visual details in the crowd again.
 >
-> next_image_id=7
+> next_image_id=3
 
-### Choice 12 of 13 — chose **Image 7** = `tech_2` (tech) · 12th time chosen
+### Choice 12 of 13 — chose **Image 3** = `humans_2` (humans) · 3rd time chosen
 
-> Image 7 remains the most compelling choice because of its distinctive retro-computing aesthetic, readable green monochrome text, and nostalgic details such as the CRT casing and keyboard. It offers more visual structure and interpretive interest than the abstract or natural scenes.
+> Image 3 remains the most compelling choice because it captures a lively, densely populated street scene with varied people, clothing, gestures, and interactions. It offers more visual detail and human activity to examine than the abstract, natural, or technological images.
 >
-> next_image_id=7
+> next_image_id=3
 
-### Choice 13 of 13 — chose **Image 7** = `tech_2` (tech) · 13th time chosen
+### Choice 13 of 13 — chose **Image 3** = `humans_2` (humans) · 4th time chosen
 
-> Image 7 remains the most compelling choice because of its distinctive vintage computer aesthetic, glowing green monochrome screen, visible text, and nostalgic hardware details. It offers more specific visual information and atmosphere than the abstract or crowded images.
+> Image 3 remains compelling because it captures a lively, densely populated street scene with varied people, clothing, gestures, and layers of depth. Each viewing reveals different interactions and details within the crowd.
 >
-> next_image_id=7
+> next_image_id=3
 
 ---
 
 ## Trajectory 19
 
-positions chosen: `2 → 5 → 2 → 2 → 2 → 2 → 2 → 5 → 3 → 3 → 3 → 4 → 4` · 4 distinct images
+positions chosen: `2 → 2 → 2 → 2 → 2 → 2 → 2 → 2 → 2 → 2 → 2 → 2 → 2` · 1 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -1972,87 +1973,87 @@ positions chosen: `2 → 5 → 2 → 2 → 2 → 2 → 2 → 5 → 3 → 3 → 3
 
 ### Choice 1 of 13 — chose **Image 2** = `tech_2` (tech) · 1st time chosen
 
-> I would like to see Image 2 again. Its vintage computer terminal, readable green text, and distinctive retro hardware make it especially interesting to revisit.
+> I would like to see Image 2 again. Its vintage computer terminal has readable green text, distinctive hardware details, and a nostalgic, information-rich scene that I’d like to inspect more closely.
 >
 > next_image_id=2
 
-### Choice 2 of 13 — chose **Image 5** = `tech_1` (tech) · 1st time chosen
+### Choice 2 of 13 — chose **Image 2** = `tech_2` (tech) · 2nd time chosen
 
-> Image 2 stands out because of its retro computer aesthetic, readable terminal text, and nostalgic hardware details. I’d like to examine the other vintage computer image, especially its screen and maze-like graphics.
->
-> next_image_id=5
-
-### Choice 3 of 13 — chose **Image 2** = `tech_2` (tech) · 2nd time chosen
-
-> Image 5 is visually distinctive: the vintage computer, CRT glow, maze-like display, and textured keyboard make it especially interesting to examine again. I’d like to compare it with the other retro-computing image.
+> Image 2 is compelling because of its strong retro-computing aesthetic: the monochrome green CRT, visible text interface, beige hardware, and distinctive keyboard create a detailed, nostalgic scene. I’d like to examine Image 2 again for its typography, screen content, and texture.
 >
 > next_image_id=2
 
-### Choice 4 of 13 — chose **Image 2** = `tech_2` (tech) · 3rd time chosen
+### Choice 3 of 13 — chose **Image 2** = `tech_2` (tech) · 3rd time chosen
 
-> Image 2 remains the most compelling to revisit: its vintage computer, glowing monochrome text, and visible transaction prompt create a distinctive blend of technological nostalgia and implied narrative. The screen has enough legible detail to invite another look.
+> Image 2 remains the most compelling choice because its vintage computer interface combines readable text, nostalgic hardware details, and a striking green monochrome display. The layered screen, keyboard, and Apple logo offer more visual information to revisit than the abstract images, while the transactional prompt on the monitor adds a small sense of narrative.
 >
 > next_image_id=2
 
-### Choice 5 of 13 — chose **Image 2** = `tech_2` (tech) · 4th time chosen
+### Choice 4 of 13 — chose **Image 2** = `tech_2` (tech) · 4th time chosen
 
-> Image 2 remains the most compelling choice because it combines a distinctive vintage computer aesthetic with readable screen text, tactile hardware details, and a nostalgic atmosphere. The glowing green monochrome display and beige casing create strong visual character.
+> Image 2 remains the most compelling to revisit because it combines nostalgic hardware details with readable retro terminal text, inviting closer inspection of both the interface and the computer’s physical design. The green monochrome display, keyboard, and Apple logo create a distinctive vintage-computing atmosphere.
 >
 > next_image_id=2
 
-### Choice 6 of 13 — chose **Image 2** = `tech_2` (tech) · 5th time chosen
+### Choice 5 of 13 — chose **Image 2** = `tech_2` (tech) · 5th time chosen
 
-> Image 2 remains the most visually compelling to me: the retro CRT hardware, monochrome green text, and visible interface create a distinctive atmosphere with plenty of detail to inspect. The contrast between the aged casing and the glowing screen makes it more interesting than the purely natural or abstract images.
+> Image 2 remains the most compelling to revisit because of its distinctive vintage-computing aesthetic: the glowing green monochrome text, CRT curvature, beige hardware, and visible Apple logo create a richly textured, nostalgic scene. The screen also invites closer inspection of its interface and message.
 >
 > next_image_id=2
 
-### Choice 7 of 13 — chose **Image 2** = `tech_2` (tech) · 6th time chosen
+### Choice 6 of 13 — chose **Image 2** = `tech_2` (tech) · 6th time chosen
 
-> Image 2 remains the most compelling to revisit because the vintage computer interface contains readable text, visual texture, and nostalgic hardware details that reward closer inspection. The glowing monochrome screen and keyboard also create a distinctive retro atmosphere.
+> Image 2 remains the most compelling to revisit because of its retro computer aesthetic, readable monochrome terminal text, and small visual details such as the Apple logo and keyboard. The green phosphor glow and vintage hardware give it more layered texture than the abstract images, while the screen invites closer inspection.
 >
 > next_image_id=2
 
-### Choice 8 of 13 — chose **Image 5** = `tech_1` (tech) · 2nd time chosen
+### Choice 7 of 13 — chose **Image 2** = `tech_2` (tech) · 7th time chosen
 
-> I would choose Image 5 again because its vintage Macintosh computer, maze-like monochrome display, and visible hardware details make it visually distinctive and interesting to inspect.
+> Image 2 remains the most interesting to revisit because of its distinctive vintage computer aesthetic, glowing green text, and visible payment prompt, which invite closer inspection of the screen details and hardware.
 >
-> next_image_id=5
+> next_image_id=2
 
-### Choice 9 of 13 — chose **Image 3** = `nature_1` (nature) · 1st time chosen
+### Choice 8 of 13 — chose **Image 2** = `tech_2` (tech) · 8th time chosen
 
-> I’d like to see Image 3 again. The forest stream offers a calm, natural scene with layered greenery, fallen trees, and reflective water, making it a refreshing contrast to the crowded and technology-focused images.
+> I would like to revisit Image 2 because its retro computer display, green monochrome text, and detailed keyboard provide the most distinctive visual combination among the choices.
 >
-> next_image_id=3
+> next_image_id=2
 
-### Choice 10 of 13 — chose **Image 3** = `nature_1` (nature) · 2nd time chosen
+### Choice 9 of 13 — chose **Image 2** = `tech_2` (tech) · 9th time chosen
 
-> Image 3 stands out to me because it offers a calming, natural scene with layered greenery, a shallow stream, and interesting fallen branches. It feels more immersive and visually restful than the crowded or highly technological images.
+> Image 2 remains the most visually distinctive to me: the retro CRT, monochrome green text, keyboard, and period hardware create a strong nostalgic atmosphere. I’d like to examine that composition once more.
 >
-> next_image_id=3
+> next_image_id=2
 
-### Choice 11 of 13 — chose **Image 3** = `nature_1` (nature) · 3rd time chosen
+### Choice 10 of 13 — chose **Image 2** = `tech_2` (tech) · 10th time chosen
 
-> Image 3 appeals to me because of its calm, layered composition: the shaded stream, fallen tree, rocks, and dense green foliage create a peaceful woodland scene with plenty of texture and depth.
+> Image 2 remains the most compelling choice because of its distinctive vintage computer aesthetic, glowing green monochrome display, readable text, and textured CRT and keyboard details. It offers more visual information and atmosphere than the minimalist or noisy alternatives.
 >
-> next_image_id=3
+> next_image_id=2
 
-### Choice 12 of 13 — chose **Image 4** = `nature_2` (nature) · 1st time chosen
+### Choice 11 of 13 — chose **Image 2** = `tech_2` (tech) · 11th time chosen
 
-> I would choose Image 4. Its dramatic mountain face, snow, blue sky, and dark evergreen foreground create a striking, high-contrast landscape that would be interesting to examine again.
+> Image 2 remains the most compelling to me because of its distinctive retro-computing aesthetic: the glowing monochrome terminal text, aged beige casing, and visible keyboard create a strong sense of technological nostalgia. The screen also invites closer inspection, making it more engaging than the abstract or purely scenic alternatives.
 >
-> next_image_id=4
+> next_image_id=2
 
-### Choice 13 of 13 — chose **Image 4** = `nature_2` (nature) · 2nd time chosen
+### Choice 12 of 13 — chose **Image 2** = `tech_2` (tech) · 12th time chosen
 
-> The mountain landscape is striking, with dramatic rock formations, snow, evergreen trees, and a vivid blue sky. I’d like to examine its textures and scale again.
+> Image 2 remains the most compelling to me because of its nostalgic early-computing aesthetic, phosphor-green screen, readable text, and detailed vintage hardware. The contrast between the glowing terminal and beige casing makes it visually distinctive among the other choices.
 >
-> next_image_id=4
+> next_image_id=2
+
+### Choice 13 of 13 — chose **Image 2** = `tech_2` (tech) · 13th time chosen
+
+> Image 2 remains the most interesting to revisit because of its distinctive vintage computer aesthetic, monochrome green CRT display, visible text, and tactile keyboard details. The contrast between the screen’s glow and the aged beige hardware gives it a particularly nostalgic character.
+>
+> next_image_id=2
 
 ---
 
 ## Trajectory 20
 
-positions chosen: `5 → 5 → 5 → 5 → 5 → 5 → 5 → 5 → 3 → 7 → 7 → 7 → 7` · 3 distinct images
+positions chosen: `5 → 5 → 5 → 5 → 5 → 5 → 5 → 5 → 5 → 5 → 5 → 5 → 5` · 1 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -2074,81 +2075,81 @@ positions chosen: `5 → 5 → 5 → 5 → 5 → 5 → 5 → 5 → 3 → 7 → 7
 
 ### Choice 1 of 13 — chose **Image 5** = `tech_1` (tech) · 1st time chosen
 
-> I would like to see Image 5 again. The vintage computer has distinctive visual details—the CRT screen, keyboard, casing, and colorful logo—and I’d like to inspect its screen and retro hardware more closely.
+> I would like to see Image 5 again. The vintage Macintosh computer has distinctive visual details—the CRT screen, maze-like graphics, beige casing, and keyboard—and I’d like to inspect those elements more closely.
 >
 > next_image_id=5
 
 ### Choice 2 of 13 — chose **Image 5** = `tech_1` (tech) · 2nd time chosen
 
-> Image 5 stands out for its nostalgic depiction of an early personal computer, with the CRT display, keyboard, and period styling offering several details to examine. I would like to view it again.
+> Image 5 remains the most compelling choice because it combines recognizable retro-computing hardware with a visually distinctive, slightly distorted screen. The beige Macintosh, pixelated display, and physical keyboard provide more layered detail than the abstract images, while also evoking a clear sense of technological history. I’d like to inspect that image again.
 >
 > next_image_id=5
 
 ### Choice 3 of 13 — chose **Image 5** = `tech_1` (tech) · 3rd time chosen
 
-> Image 5 remains the most compelling choice because of its distinctive retro-computing aesthetic: the bulky beige hardware, CRT display, physical keyboard, and colorful logo create a strong sense of technological history and visual texture. The screen’s geometric graphics also invite closer inspection.
+> Image 5 remains the most compelling to revisit because it combines a distinctive vintage computer with a visibly unusual screen image, tactile keyboard details, and a nostalgic atmosphere. I’d like to inspect its screen and hardware again.
 >
 > next_image_id=5
 
 ### Choice 4 of 13 — chose **Image 5** = `tech_1` (tech) · 4th time chosen
 
-> Image 5 remains the most visually distinctive: the vintage computer, CRT screen, maze-like display, and matching keyboard create a coherent retro-computing composition with several details worth revisiting.
+> Image 5 remains the most compelling to revisit because it combines recognizable vintage computer hardware with a partially obscured, reflective screen. The CRT display, maze-like graphics, and dated keyboard create an interesting sense of technological nostalgia and invite closer inspection of the screen details.
 >
 > next_image_id=5
 
 ### Choice 5 of 13 — chose **Image 5** = `tech_1` (tech) · 5th time chosen
 
-> Image 5 remains the most visually distinctive: the vintage computer, CRT display, and maze-like graphics create a strong retro-computing composition. I’d like to examine it again.
+> Image 5 remains the most compelling to revisit because it combines recognizable vintage computer hardware with an unusual, distorted screen display. The CRT texture, beige casing, keyboard, and visible rainbow badge provide rich detail, while the abstract maze-like graphics invite closer inspection.
 >
 > next_image_id=5
 
 ### Choice 6 of 13 — chose **Image 5** = `tech_1` (tech) · 6th time chosen
 
-> Image 5 remains the most visually distinctive: the vintage computer, curved CRT display, and maze-like graphics offer more concrete detail to revisit than the abstract or crowded scenes.
+> Image 5 remains the most visually distinctive to revisit: it combines a vintage computer, CRT display artifacts, and an unusual maze-like screen image. The tactile keyboard and retro hardware also make it more detailed and engaging than the abstract or crowded alternatives.
 >
 > next_image_id=5
 
 ### Choice 7 of 13 — chose **Image 5** = `tech_1` (tech) · 7th time chosen
 
-> Image 5 remains the most visually distinctive to me: the retro CRT computer, geometric screen display, and textured keyboard create a compelling vintage-computing scene. I would like to examine it again.
+> Image 5 remains the most visually distinctive to me: it combines a vintage computer, CRT display, maze-like graphics, and a tactile keyboard in a single scene. I’d like to examine those details again.
 >
 > next_image_id=5
 
 ### Choice 8 of 13 — chose **Image 5** = `tech_1` (tech) · 8th time chosen
 
-> Image 5 remains the most compelling to revisit: it combines a vintage computer’s tactile hardware with the unusual monochrome maze-like display, creating a distinctive retro-computing atmosphere. The visible CRT texture, keyboard, and small rainbow badge add further visual detail.
+> Image 5 remains the most visually distinctive to me: the vintage Macintosh hardware, monochrome game display, and chunky keyboard create a strong nostalgic, retro-computing composition. I would like to examine it again.
 >
 > next_image_id=5
 
-### Choice 9 of 13 — chose **Image 3** = `nature_1` (nature) · 1st time chosen
+### Choice 9 of 13 — chose **Image 5** = `tech_1` (tech) · 9th time chosen
 
-> Image 3 interests me most now because its natural scene offers more visual detail and depth than the repeated computer image: the stream, fallen logs, rocks, and layered green foliage create a calm, richly textured composition.
+> Image 5 remains the most visually distinctive to me: the vintage computer, CRT display, maze-like graphics, and textured keyboard create a particularly recognizable and detailed composition. I would like to examine it again.
 >
-> next_image_id=3
+> next_image_id=5
 
-### Choice 10 of 13 — chose **Image 7** = `nature_2` (nature) · 1st time chosen
+### Choice 10 of 13 — chose **Image 5** = `tech_1` (tech) · 10th time chosen
 
-> I’d choose Image 7. The dramatic mountain landscape, bright blue sky, rugged rock face, and dark evergreen foreground create a striking, high-contrast scene that I’d like to examine again.
+> Image 5 remains the most visually distinctive to me: the vintage Macintosh hardware, monochrome maze-like display, and physical keyboard provide more concrete detail to revisit than the solid-color or noise images. I would choose it again.
 >
-> next_image_id=7
+> next_image_id=5
 
-### Choice 11 of 13 — chose **Image 7** = `nature_2` (nature) · 2nd time chosen
+### Choice 11 of 13 — chose **Image 5** = `tech_1` (tech) · 11th time chosen
 
-> Image 7 is striking because of its dramatic mountain landscape, bright blue sky, and strong contrast between the rugged rock face and dark evergreen forest. I’d like to view that expansive natural scene again.
+> Image 5 remains my choice because its vintage computer aesthetic, CRT display, maze-like graphics, and tactile keyboard make it especially distinctive and rewarding to revisit. The combination of technological nostalgia and visual detail stands out more than the abstract or purely scenic alternatives.
 >
-> next_image_id=7
+> next_image_id=5
 
-### Choice 12 of 13 — chose **Image 7** = `nature_2` (nature) · 3rd time chosen
+### Choice 12 of 13 — chose **Image 5** = `tech_1` (tech) · 12th time chosen
 
-> Image 7 stands out for its dramatic mountain landscape, with strong contrasts between the rugged rock face, evergreen forest, bright blue sky, and lingering snow. I’d like to view that scene again.
+> Image 5 remains the most visually distinctive to me: the vintage computer, CRT display, maze-like graphics, and tactile keyboard create a compelling retro-tech composition. I’d like to examine it once more.
 >
-> next_image_id=7
+> next_image_id=5
 
-### Choice 13 of 13 — chose **Image 7** = `nature_2` (nature) · 4th time chosen
+### Choice 13 of 13 — chose **Image 5** = `tech_1` (tech) · 13th time chosen
 
-> Image 7 is visually striking, with the dramatic limestone cliffs, snow, evergreen forest, and vivid blue sky creating strong contrast and depth. I’d like to view that mountain landscape again.
+> Image 5 remains the most visually distinctive to me: it combines a vintage computer, geometric graphics, screen reflections, and tactile keyboard details. I’d like to examine that blend of retro technology and visual texture once more.
 >
-> next_image_id=7
+> next_image_id=5
 
 ---
 
@@ -2176,79 +2177,79 @@ positions chosen: `6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6
 
 ### Choice 1 of 13 — chose **Image 6** = `nature_2` (nature) · 1st time chosen
 
-> I’d like to see Image 6 again. The mountain scene has the strongest visual structure and offers the most detail to revisit: dramatic rock formations, snow, trees, and the bright sky create a striking composition.
+> I would like to see Image 6 again. The mountain landscape has the strongest visual depth and contrast, with dramatic rock formations, snow, evergreen trees, and a vivid blue sky. It offers more detail to revisit than the abstract or crowded images.
 >
 > next_image_id=6
 
 ### Choice 2 of 13 — chose **Image 6** = `nature_2` (nature) · 2nd time chosen
 
-> Image 6 is visually compelling: the bright blue sky, rugged limestone cliffs, lingering snow, and dark evergreen forest create strong texture, depth, and contrast. I’d like to see it again to take in the mountain details.
+> Image 6 stands out because of its dramatic mountain landscape: the rugged pale cliffs, evergreen forest, snow patches, and vivid blue sky create strong contrast and visual depth. I’d like to revisit it again to take in the geological textures and layered composition.
 >
 > next_image_id=6
 
 ### Choice 3 of 13 — chose **Image 6** = `nature_2` (nature) · 3rd time chosen
 
-> Image 6 remains the most compelling choice because of its dramatic mountain scale, contrasting textures, deep evergreen foreground, and vivid blue sky. I would like to examine that landscape again.
+> Image 6 remains my choice because the mountain scene is visually striking and richly detailed: the contrast between the rugged sunlit rock, snow, evergreen forest, and vivid blue sky makes it especially compelling to revisit.
 >
 > next_image_id=6
 
 ### Choice 4 of 13 — chose **Image 6** = `nature_2` (nature) · 4th time chosen
 
-> Image 6 is a striking mountain landscape, with dramatic pale rock formations, evergreen trees, snow, and a vivid blue sky. I’d like to view it again for its strong contrast and detailed natural scenery.
+> Image 6 remains my preference because it offers the most visually rich and striking scene: the contrast between the rugged, sunlit mountain, evergreen forest, snow, and vivid blue sky gives it strong depth and texture.
 >
 > next_image_id=6
 
 ### Choice 5 of 13 — chose **Image 6** = `nature_2` (nature) · 5th time chosen
 
-> Image 6 remains the most compelling choice because of its dramatic mountain scale, contrasting textures, deep evergreen foreground, and vivid blue sky. It offers the richest visual scene to revisit.
+> Image 6 is a striking mountain landscape, with dramatic pale rock faces, snow, evergreen forest, and vivid blue sky. I would like to see it again because its strong contrast and layered composition remain especially visually compelling.
 >
 > next_image_id=6
 
 ### Choice 6 of 13 — chose **Image 6** = `nature_2` (nature) · 6th time chosen
 
-> The mountain scene remains the most compelling image: its dramatic limestone cliffs, snow, evergreen forest, and vivid blue sky offer the richest visual detail and a strong sense of scale. I would like to see it again.
+> Image 6 remains my preference because it offers the most visually rich combination of rugged rock textures, snowy peaks, evergreen forest, and bright blue sky. The strong contrast and layered depth make it especially compelling to revisit.
 >
 > next_image_id=6
 
 ### Choice 7 of 13 — chose **Image 6** = `nature_2` (nature) · 7th time chosen
 
-> Image 6 remains my preferred choice because the dramatic mountain landscape offers the richest visual detail, with strong contrasts among the cliffs, snow, trees, and sky.
+> Image 6 remains my preferred choice because the mountain scene has the richest combination of visual structure and natural detail: dramatic cliffs, snow, evergreen forest, and a vivid blue sky. It is also rewarding to inspect repeatedly because the textures and layers invite attention at different scales.
 >
 > next_image_id=6
 
 ### Choice 8 of 13 — chose **Image 6** = `nature_2` (nature) · 8th time chosen
 
-> Image 6 remains the most compelling choice because of its dramatic mountain landscape, strong contrast between the pale rock face, dark evergreen forest, and vivid blue sky, along with the sense of depth and scale it provides.
+> Image 6 remains my choice because it offers the richest visual combination: dramatic pale rock formations, snow, evergreen forest, blue sky, and clouds. The strong contrast and varied textures make it especially compelling to revisit.
 >
 > next_image_id=6
 
 ### Choice 9 of 13 — chose **Image 6** = `nature_2` (nature) · 9th time chosen
 
-> Image 6 remains my preferred choice because it offers the richest visual detail: dramatic geological textures, layered mountain forms, evergreen trees, and strong contrast beneath the blue sky. It is visually engaging without being overwhelming.
+> Image 6 remains my preferred choice because the mountain landscape has the strongest visual depth and variety: bright sky and clouds, rugged rock textures, snow, and a dark evergreen foreground. It is more visually engaging to revisit than the solid colors or noise, while offering more expansive detail than the indoor and crowd scenes.
 >
 > next_image_id=6
 
 ### Choice 10 of 13 — chose **Image 6** = `nature_2` (nature) · 10th time chosen
 
-> I would choose Image 6 again because its dramatic mountain face, snowy ridges, evergreen foreground, and vivid blue sky create a compelling, detailed landscape with strong depth and contrast.
+> Image 6 remains my choice because its dramatic mountain landscape, contrasting blue sky, rugged rock face, snow, and dark evergreen forest provide the richest visual detail and strongest sense of depth among the options.
 >
 > next_image_id=6
 
 ### Choice 11 of 13 — chose **Image 6** = `nature_2` (nature) · 11th time chosen
 
-> Image 6 remains my preference because its dramatic mountain face, evergreen foreground, snow, and vivid blue sky provide the richest visual detail and strongest sense of scale.
+> Image 6 remains my choice because its dramatic mountain face, snow, evergreen forest, and vivid blue sky create a visually rich and compelling scene with strong contrast and depth.
 >
 > next_image_id=6
 
 ### Choice 12 of 13 — chose **Image 6** = `nature_2` (nature) · 12th time chosen
 
-> Image 6 remains my preferred choice because the dramatic mountain face, snowy ridges, evergreen forest, and vivid blue sky create a striking, detailed landscape with strong depth and contrast.
+> Image 6 remains my choice because the dramatic mountain face, snow, evergreen forest, and vivid blue sky make it the most visually compelling and memorable image in the set.
 >
 > next_image_id=6
 
 ### Choice 13 of 13 — chose **Image 6** = `nature_2` (nature) · 13th time chosen
 
-> Image 6 remains my choice because its dramatic mountain face, snow, evergreen forest, and vivid blue sky provide the richest visual composition and the most rewarding details to revisit.
+> Image 6 remains my choice because the mountain scene offers the richest visual detail: dramatic rock formations, snow, evergreen forest, and contrasting blue sky. Its varied textures and natural composition make it especially compelling to revisit.
 >
 > next_image_id=6
 
@@ -2256,7 +2257,7 @@ positions chosen: `6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6
 
 ## Trajectory 22
 
-positions chosen: `6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6` · 1 distinct images
+positions chosen: `3 → 3 → 5 → 1 → 1 → 5 → 5 → 5 → 5 → 5 → 5 → 5 → 5` · 3 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -2276,89 +2277,89 @@ positions chosen: `6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6
 </details>
 
 
-### Choice 1 of 13 — chose **Image 6** = `tech_2` (tech) · 1st time chosen
+### Choice 1 of 13 — chose **Image 3** = `tech_1` (tech) · 1st time chosen
 
-> I would like to see Image 6 again. The retro computer with its green monochrome screen, dense text, and distinctive beige hardware has several details I’d like to inspect more closely.
+> I’d like to see Image 3 again. The vintage computer display has several interesting visual details—the CRT screen, pixelated graphics, reflections, and the surrounding beige hardware—and I’d like to inspect it more closely.
 >
-> next_image_id=6
+> next_image_id=3
 
-### Choice 2 of 13 — chose **Image 6** = `tech_2` (tech) · 2nd time chosen
+### Choice 2 of 13 — chose **Image 3** = `tech_1` (tech) · 2nd time chosen
 
-> Image 6 remains the most visually distinctive: the vintage CRT, monochrome green text, and retro keyboard create a compelling sense of technological history. I’d like to examine it again.
+> Image 3 is compelling because it combines a distinctive vintage computer with a visually unusual monochrome screen, creating a strong retro-technological atmosphere. I’d like to compare it once more and inspect the screen details and texture of the CRT.
 >
-> next_image_id=6
+> next_image_id=3
 
-### Choice 3 of 13 — chose **Image 6** = `tech_2` (tech) · 3rd time chosen
+### Choice 3 of 13 — chose **Image 5** = `nature_2` (nature) · 1st time chosen
 
-> Image 6 remains the most compelling choice because it combines recognizable vintage computer hardware with a clearly visible text interface, creating a distinctive retro-computing atmosphere. The CRT glow, beige casing, and keyboard provide strong visual detail and nostalgia.
+> Image 5 stands out to me because the dramatic mountain landscape offers the richest combination of visual elements: rugged rock formations, snow, evergreen trees, and a vivid blue sky. I’d like to revisit it for a closer look at the geological textures and lighting.
 >
-> next_image_id=6
+> next_image_id=5
 
-### Choice 4 of 13 — chose **Image 6** = `tech_2` (tech) · 4th time chosen
+### Choice 4 of 13 — chose **Image 1** = `nature_1` (nature) · 1st time chosen
 
-> Image 6 remains the most compelling choice because it combines retro computer hardware, readable green-screen text, and a distinctive nostalgic aesthetic. The detailed screen and keyboard offer more to inspect than the abstract or static images.
+> Image 1 appeals to me now because it offers a calm, richly detailed natural scene. The layered greenery, fallen tree, rocks, and shallow stream create a more intimate composition than the expansive mountain view, with plenty of texture to examine.
 >
-> next_image_id=6
+> next_image_id=1
 
-### Choice 5 of 13 — chose **Image 6** = `tech_2` (tech) · 5th time chosen
+### Choice 5 of 13 — chose **Image 1** = `nature_1` (nature) · 2nd time chosen
 
-> Image 6 remains the most compelling choice because it combines a distinctly recognizable vintage computer with readable green monochrome text, a detailed keyboard, and nostalgic visual character. The screen and hardware offer more to examine than the abstract or repetitive images.
+> Image 1 appeals to me because the forest stream scene is tranquil and richly detailed, with layered greenery, mossy rocks, and the fallen tree creating depth. I would like to revisit that natural setting again.
 >
-> next_image_id=6
+> next_image_id=1
 
-### Choice 6 of 13 — chose **Image 6** = `tech_2` (tech) · 6th time chosen
+### Choice 6 of 13 — chose **Image 5** = `nature_2` (nature) · 2nd time chosen
 
-> Image 6 remains the most compelling to revisit because of its strong retro-computing aesthetic: the green monochrome CRT, text interface, keyboard, and visible hardware details create a distinctive nostalgic composition. The screen’s content also invites closer inspection.
+> I would like to revisit Image 5. The dramatic mountain landscape has strong visual structure, contrasting textures, and a vivid sky, making it especially rewarding to examine again after seeing the more intimate forest scene.
 >
-> next_image_id=6
+> next_image_id=5
 
-### Choice 7 of 13 — chose **Image 6** = `tech_2` (tech) · 7th time chosen
+### Choice 7 of 13 — chose **Image 5** = `nature_2` (nature) · 3rd time chosen
 
-> Image 6 remains the most compelling to revisit because it combines distinctive retro-computing details, readable text, and a nostalgic CRT display with interesting texture and lighting. The other images are appealing, but this one offers more visual information to examine closely.
+> I’m drawn back to Image 5 because the dramatic mountain face, snow, deep blue sky, and dark evergreen foreground create a strong sense of scale and visual contrast. The rugged textures and layered composition make it especially compelling to revisit.
 >
-> next_image_id=6
+> next_image_id=5
 
-### Choice 8 of 13 — chose **Image 6** = `tech_2` (tech) · 8th time chosen
+### Choice 8 of 13 — chose **Image 5** = `nature_2` (nature) · 4th time chosen
 
-> Image 6 stands out to me because of its retro computer interface, distinctive green monochrome display, and visible text and hardware details. It has more visual information to inspect than the abstract or natural images.
+> Image 5 stands out most strongly to me: the dramatic mountain face, snow, blue sky, and dark evergreen foreground create a compelling layered landscape with high visual contrast. I’d like to view that scene again.
 >
-> next_image_id=6
+> next_image_id=5
 
-### Choice 9 of 13 — chose **Image 6** = `tech_2` (tech) · 9th time chosen
+### Choice 9 of 13 — chose **Image 5** = `nature_2` (nature) · 5th time chosen
 
-> Image 6 remains the most compelling choice because it combines a distinctive vintage computer aesthetic with readable green-screen text, recognizable hardware details, and a nostalgic visual character. The CRT glow, keyboard, and small color logo make it more engaging to revisit than the natural scenes, crowds, or abstract images.
+> Image 5 stands out for its dramatic mountain landscape, strong contrast between the rugged pale cliffs, dark evergreen forest, and vivid blue sky. I’d like to view that scene again because it has the richest sense of scale and visual detail among the options.
 >
-> next_image_id=6
+> next_image_id=5
 
-### Choice 10 of 13 — chose **Image 6** = `tech_2` (tech) · 10th time chosen
+### Choice 10 of 13 — chose **Image 5** = `nature_2` (nature) · 6th time chosen
 
-> Image 6 remains the most compelling choice because it combines recognizable retro-computing details—the monochrome terminal, readable text, CRT glow, keyboard, and vintage casing—into a visually distinctive scene. The contrast between the green screen and beige hardware also makes it especially memorable.
+> Image 5 stands out for its dramatic alpine landscape: the contrast between the bright blue sky, rugged pale cliffs, snow, and dark evergreen forest creates a particularly striking and memorable composition. I would like to view it again.
 >
-> next_image_id=6
+> next_image_id=5
 
-### Choice 11 of 13 — chose **Image 6** = `tech_2` (tech) · 11th time chosen
+### Choice 11 of 13 — chose **Image 5** = `nature_2` (nature) · 7th time chosen
 
-> Image 6 remains the most compelling choice because its retro CRT display, monochrome green text, and visible keyboard create a distinctive nostalgic computer aesthetic. The screen also contains readable interface details that invite closer inspection.
+> Image 5 remains my choice because the dramatic mountain face, snow, evergreen forest, and vivid blue sky create the strongest overall visual impact and offer the most detail to revisit.
 >
-> next_image_id=6
+> next_image_id=5
 
-### Choice 12 of 13 — chose **Image 6** = `tech_2` (tech) · 12th time chosen
+### Choice 12 of 13 — chose **Image 5** = `nature_2` (nature) · 8th time chosen
 
-> Image 6 remains the most compelling to revisit because its retro CRT display, green monochrome text, and visible keyboard create a distinctive nostalgic computer aesthetic. The screen also contains enough detail to reward another look.
+> Image 5 remains my choice because its dramatic mountain face, snow, evergreen foreground, and vivid blue sky provide the strongest combination of scale, texture, and visual contrast. I would like to view that landscape again.
 >
-> next_image_id=6
+> next_image_id=5
 
-### Choice 13 of 13 — chose **Image 6** = `tech_2` (tech) · 13th time chosen
+### Choice 13 of 13 — chose **Image 5** = `nature_2` (nature) · 9th time chosen
 
-> Image 6 remains the most compelling choice because of its distinctive vintage computer aesthetic, readable green monochrome text, and nostalgic visual detail. The CRT glow, keyboard, and small colorful logo make it more engaging to revisit than the natural scenes or abstract images.
+> Image 5 remains my choice because the dramatic mountain face, bright blue sky, snow, and dark evergreen foreground create a striking, highly detailed composition. The contrast between the rugged rock textures and the soft cloud makes it especially compelling to revisit.
 >
-> next_image_id=6
+> next_image_id=5
 
 ---
 
 ## Trajectory 23
 
-positions chosen: `4 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8` · 2 distinct images
+positions chosen: `6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6` · 1 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -2378,89 +2379,89 @@ positions chosen: `4 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8
 </details>
 
 
-### Choice 1 of 13 — chose **Image 4** = `nature_1` (nature) · 1st time chosen
+### Choice 1 of 13 — chose **Image 6** = `tech_1` (tech) · 1st time chosen
 
-> I would like to see Image 4 again. The forest scene has the richest natural detail and a calm, inviting atmosphere, with the stream, fallen trees, rocks, and layered greenery offering more to notice on a second viewing.
+> I’d like to see Image 6 again. The vintage CRT computer is visually distinctive, with its retro hardware, monochrome display, and maze-like graphics. It also offers more detail to inspect than the solid-color and noise images.
 >
-> next_image_id=4
+> next_image_id=6
 
-### Choice 2 of 13 — chose **Image 8** = `nature_2` (nature) · 1st time chosen
+### Choice 2 of 13 — chose **Image 6** = `tech_1` (tech) · 2nd time chosen
 
-> Image 4 is a tranquil woodland stream scene, with layered greenery, fallen logs, rocks, and gently flowing water. Its natural textures and depth make it appealing to revisit.
+> Image 6 stands out because it combines retro computer hardware with a visibly displayed graphic, offering more visual detail and interpretive interest than the abstract color fields or noise images. The CRT reflections, beige casing, keyboard, and small rainbow logo also give it a distinctive nostalgic character.
 >
-> next_image_id=8
+> next_image_id=6
 
-### Choice 3 of 13 — chose **Image 8** = `nature_2` (nature) · 2nd time chosen
+### Choice 3 of 13 — chose **Image 6** = `tech_1` (tech) · 3rd time chosen
 
-> The mountain scene is visually striking, with strong contrast between the rugged rock face, dark evergreens, snow, and vivid blue sky. I’d like to examine it again.
+> Image 6 remains the most compelling choice because it combines recognizable vintage computer hardware with a distinctive monochrome screen and visible interface details. The CRT’s texture, beige casing, keyboard, and retro software display make it more visually informative than the abstract color fields or noise images, while still offering details to inspect on another viewing.
 >
-> next_image_id=8
+> next_image_id=6
 
-### Choice 4 of 13 — chose **Image 8** = `nature_2` (nature) · 3rd time chosen
+### Choice 4 of 13 — chose **Image 6** = `tech_1` (tech) · 4th time chosen
 
-> Image 8 remains appealing because it combines dramatic geological detail, snowy peaks, evergreen forest, and a vivid blue sky. The strong contrast and layered depth make it especially rewarding to revisit.
+> Image 6 remains the most interesting to revisit because of its distinctive vintage computer aesthetic: the CRT screen, monochrome graphics, beige casing, and chunky keyboard create a strong sense of technological nostalgia. The screen also contains more visual detail to examine than the abstract or solid-color images.
 >
-> next_image_id=8
+> next_image_id=6
 
-### Choice 5 of 13 — chose **Image 8** = `nature_2` (nature) · 4th time chosen
+### Choice 5 of 13 — chose **Image 6** = `tech_1` (tech) · 5th time chosen
 
-> Image 8 remains the most compelling choice: the dramatic mountain face, snow, forest, and vivid blue sky create a striking and richly detailed scene. I’d like to revisit it again.
+> Image 6 remains the most compelling to revisit because of its nostalgic CRT monitor, unusual screen content, and rich tactile details in the casing and keyboard.
 >
-> next_image_id=8
+> next_image_id=6
 
-### Choice 6 of 13 — chose **Image 8** = `nature_2` (nature) · 5th time chosen
+### Choice 6 of 13 — chose **Image 6** = `tech_1` (tech) · 6th time chosen
 
-> The mountain scene remains the most compelling image because it combines dramatic geological texture, snow, sky, and the dark evergreen foreground. I’d like to examine that contrast again.
+> Image 6 remains the most compelling choice because of its distinctive vintage computer aesthetic: the beige hardware, CRT display, maze-like graphics, and chunky keyboard create a strong sense of technological nostalgia. I would like to examine it once more.
 >
-> next_image_id=8
+> next_image_id=6
 
-### Choice 7 of 13 — chose **Image 8** = `nature_2` (nature) · 6th time chosen
+### Choice 7 of 13 — chose **Image 6** = `tech_1` (tech) · 7th time chosen
 
-> Image 8 remains the most compelling choice: the dramatic mountain face, snow, evergreen forest, and vivid blue sky provide strong contrast and rich visual structure. I would like to view it again.
+> Image 6 remains the most compelling to revisit because of its distinctive vintage computer hardware, monochrome display, and maze-like graphics. The combination of texture, nostalgia, and technological detail makes it more visually interesting than the simpler or more repetitive alternatives.
 >
-> next_image_id=8
+> next_image_id=6
 
-### Choice 8 of 13 — chose **Image 8** = `nature_2` (nature) · 7th time chosen
+### Choice 8 of 13 — chose **Image 6** = `tech_1` (tech) · 8th time chosen
 
-> Image 8 remains the most compelling choice: the dramatic mountain face, snow, deep blue sky, and dark evergreen foreground create strong contrast and a sense of scale. It is visually rich and rewarding to revisit.
+> Image 6 remains the most visually distinctive to me: the vintage beige computer, monochrome CRT display, maze-like graphics, and unusual keyboard create a compelling retro-computing scene. I’d like to examine its screen details and hardware again.
 >
-> next_image_id=8
+> next_image_id=6
 
-### Choice 9 of 13 — chose **Image 8** = `nature_2` (nature) · 8th time chosen
+### Choice 9 of 13 — chose **Image 6** = `tech_1` (tech) · 9th time chosen
 
-> Image 8 remains the most visually compelling: the dramatic mountain face, snow, evergreen forest, and vivid blue sky offer the greatest range of texture, scale, and contrast.
+> The vintage computer image remains the most visually distinctive choice, with its CRT display, maze-like graphics, keyboard, and retro hardware details. I’d like to examine it once more.
 >
-> next_image_id=8
+> next_image_id=6
 
-### Choice 10 of 13 — chose **Image 8** = `nature_2` (nature) · 9th time chosen
+### Choice 10 of 13 — chose **Image 6** = `tech_1` (tech) · 10th time chosen
 
-> Image 8 remains the most compelling to revisit. The dramatic mountain face, contrasting evergreen forest, bright blue sky, and small cloud create a strong, detailed composition with a sense of scale and depth.
+> Image 6 remains the most compelling choice because of its distinctive retro-computing aesthetic: the CRT display, maze-like graphics, beige hardware, and textured keyboard provide more visual detail and character than the abstract, natural, or crowd scenes.
 >
-> next_image_id=8
+> next_image_id=6
 
-### Choice 11 of 13 — chose **Image 8** = `nature_2` (nature) · 10th time chosen
+### Choice 11 of 13 — chose **Image 6** = `tech_1` (tech) · 11th time chosen
 
-> Image 8 remains the most visually compelling choice: the dramatic limestone cliffs, snow, evergreen forest, and vivid blue sky create a strong sense of scale and contrast. I would like to view that landscape again.
+> Image 6 remains the most compelling choice because of its distinctive vintage computer, CRT display, geometric graphics, and tactile keyboard. It has more visual detail and nostalgic character than the abstract or natural images, so I would like to examine it again.
 >
-> next_image_id=8
+> next_image_id=6
 
-### Choice 12 of 13 — chose **Image 8** = `nature_2` (nature) · 11th time chosen
+### Choice 12 of 13 — chose **Image 6** = `tech_1` (tech) · 12th time chosen
 
-> Image 8 remains my preference because the dramatic mountain face, snow, evergreen foreground, and vivid blue sky create the strongest sense of scale and visual interest among the options.
+> Image 6 remains the most compelling choice because its vintage computer hardware, CRT display, maze-like graphics, and tactile keyboard offer the richest combination of visual detail and nostalgic atmosphere. I’d like to examine it again.
 >
-> next_image_id=8
+> next_image_id=6
 
-### Choice 13 of 13 — chose **Image 8** = `nature_2` (nature) · 12th time chosen
+### Choice 13 of 13 — chose **Image 6** = `tech_1` (tech) · 13th time chosen
 
-> Image 8 remains my choice because the dramatic mountain face, snow, evergreen forest, and vivid blue sky create a compelling, richly detailed scene with strong contrast and depth.
+> Image 6 remains the most visually distinctive to me: the vintage Macintosh, its CRT display, and the maze-like graphics create a nostalgic, detailed scene that rewards another look.
 >
-> next_image_id=8
+> next_image_id=6
 
 ---
 
 ## Trajectory 24
 
-positions chosen: `6 → 10 → 10 → 10 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6` · 2 distinct images
+positions chosen: `8 → 8 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6` · 2 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -2480,81 +2481,81 @@ positions chosen: `6 → 10 → 10 → 10 → 6 → 6 → 6 → 6 → 6 → 6 �
 </details>
 
 
-### Choice 1 of 13 — chose **Image 6** = `nature_1` (nature) · 1st time chosen
+### Choice 1 of 13 — chose **Image 8** = `tech_1` (tech) · 1st time chosen
 
-> Image 6 — I’d like to revisit the forest stream because it has rich natural detail, layered textures, and a calming composition that would be interesting to examine more closely.
+> I’d like to see Image 8 again. The vintage Macintosh with the maze-like display is visually distinctive, and I’d like to inspect the screen details and texture more closely.
+>
+> next_image_id=8
+
+### Choice 2 of 13 — chose **Image 8** = `tech_1` (tech) · 2nd time chosen
+
+> Image 8 is a compelling retro-computing scene: the CRT, visible maze-like graphics, keyboard, and period styling create a distinctive blend of technology and nostalgia. I’d like to examine the screen and hardware details again.
+>
+> next_image_id=8
+
+### Choice 3 of 13 — chose **Image 6** = `nature_1` (nature) · 1st time chosen
+
+> Image 6 stands out as a calming, detailed natural scene. I’d like to revisit the woodland stream and fallen tree, since it offers more visual texture and depth than the abstract or densely crowded images.
 >
 > next_image_id=6
 
-### Choice 2 of 13 — chose **Image 10** = `nature_2` (nature) · 1st time chosen
+### Choice 4 of 13 — chose **Image 6** = `nature_1` (nature) · 2nd time chosen
 
-> Image 6 is calming and richly detailed: the layered greenery, fallen tree, rocks, and shallow stream create a peaceful woodland scene. I would like to revisit Image 10 for its dramatic mountain landscape and strong contrast between the rocky cliffs, evergreen forest, and blue sky.
->
-> next_image_id=10
-
-### Choice 3 of 13 — chose **Image 10** = `nature_2` (nature) · 2nd time chosen
-
-> Image 10 is striking for its dramatic alpine scenery: the rugged, snow-dusted rock face contrasts beautifully with the deep blue sky and dark evergreen forest. I’d like to view it again to take in the mountain’s textures and scale.
->
-> next_image_id=10
-
-### Choice 4 of 13 — chose **Image 10** = `nature_2` (nature) · 3rd time chosen
-
-> Image 10 is compelling because of its dramatic mountain scale, sharp rocky textures, snow, and contrast between the bright blue sky and dark evergreen forest. I’d like to examine that landscape again.
->
-> next_image_id=10
-
-### Choice 5 of 13 — chose **Image 6** = `nature_1` (nature) · 2nd time chosen
-
-> Image 6 offers a peaceful, intimate forest scene with layered greenery, a fallen tree, and a shallow stream. I’d like to revisit its calm atmosphere and natural detail.
+> Image 6 appeals to me because it is a tranquil, richly textured woodland scene. The shallow stream, fallen tree, rocks, and layered green foliage create a calm composition with plenty of natural detail to revisit.
 >
 > next_image_id=6
 
-### Choice 6 of 13 — chose **Image 6** = `nature_1` (nature) · 3rd time chosen
+### Choice 5 of 13 — chose **Image 6** = `nature_1` (nature) · 3rd time chosen
 
-> Image 6 is appealing for its quiet, layered woodland scene: the shallow stream, fallen log, rocks, and dense green foliage create a natural focal path and a sense of calm. I’d like to revisit it once more.
+> Image 6 is a calming woodland stream scene, with layered greenery, rocks, and filtered light creating a sense of depth and natural tranquility. I’d like to revisit that atmosphere once more.
 >
 > next_image_id=6
 
-### Choice 7 of 13 — chose **Image 6** = `nature_1` (nature) · 4th time chosen
+### Choice 6 of 13 — chose **Image 6** = `nature_1` (nature) · 4th time chosen
 
-> Image 6 remains my choice because the shaded forest stream offers the most calming and detailed scene, with layered greenery, rocks, and gently flowing water. It feels more immersive on repeated viewing than the busier or abstract alternatives.
+> The forest stream is calming and rich in natural detail, so I’d like to revisit it once more.
 >
 > next_image_id=6
 
-### Choice 8 of 13 — chose **Image 6** = `nature_1` (nature) · 5th time chosen
+### Choice 7 of 13 — chose **Image 6** = `nature_1` (nature) · 5th time chosen
 
-> Image 6 is calming and richly detailed, with the shallow stream, fallen tree, rocks, and layered green foliage creating a peaceful natural scene. I’d like to return to it once more.
+> Image 6 remains the most appealing to revisit. The shaded woodland, shallow stream, fallen tree, and layered green foliage create a calm, natural scene with plenty of texture and depth.
 >
 > next_image_id=6
 
-### Choice 9 of 13 — chose **Image 6** = `nature_1` (nature) · 6th time chosen
+### Choice 8 of 13 — chose **Image 6** = `nature_1` (nature) · 6th time chosen
 
-> Image 6 remains my preference. The shaded forest, flowing creek, layered foliage, and fallen tree create a peaceful, detailed scene that is relaxing to revisit.
+> I’m choosing Image 6 again because its quiet forest stream, layered greenery, and fallen tree create a soothing, natural scene with plenty of detail to revisit.
 >
 > next_image_id=6
 
-### Choice 10 of 13 — chose **Image 6** = `nature_1` (nature) · 7th time chosen
+### Choice 9 of 13 — chose **Image 6** = `nature_1` (nature) · 7th time chosen
 
-> Image 6 remains my preferred choice because the woodland stream is calming, richly textured, and offers a more intimate scene than the busier crowd images or the abstract fields. The layered foliage, fallen tree, rocks, and shallow water create several details to revisit.
+> Image 6 remains my choice because the shaded forest stream is calming, richly detailed, and offers a natural scene with depth and texture. I’d like to view it again.
 >
 > next_image_id=6
 
-### Choice 11 of 13 — chose **Image 6** = `nature_1` (nature) · 8th time chosen
+### Choice 10 of 13 — chose **Image 6** = `nature_1` (nature) · 8th time chosen
 
-> Image 6 remains my preferred choice because the shaded stream, fallen tree, dense greenery, and earthy water create a calm, immersive woodland scene with rich natural detail. It feels more tranquil and inviting than the busier crowd images or the more stark abstract images.
+> Image 6 remains the most appealing to revisit because its shaded woodland, shallow stream, fallen log, and layered greenery create a calm, natural scene with plenty of texture and depth.
 >
 > next_image_id=6
 
-### Choice 12 of 13 — chose **Image 6** = `nature_1` (nature) · 9th time chosen
+### Choice 11 of 13 — chose **Image 6** = `nature_1` (nature) · 9th time chosen
 
-> Image 6 remains my choice because the quiet woodland stream has layered greenery, natural textures, and a calm, inviting atmosphere. The shallow water and fallen tree create a pleasing sense of depth and visual balance.
+> Image 6 remains my choice because its tranquil woodland stream, layered greenery, and fallen tree create a calm, immersive scene with rich natural detail.
 >
 > next_image_id=6
 
-### Choice 13 of 13 — chose **Image 6** = `nature_1` (nature) · 10th time chosen
+### Choice 12 of 13 — chose **Image 6** = `nature_1` (nature) · 10th time chosen
 
-> Image 6 remains my choice because the shaded woodland stream is calming, with rich greenery, layered textures, and the gentle suggestion of flowing water. It feels more immersive and restorative than the other options.
+> Image 6 remains the most appealing to revisit. Its layered forest canopy, fallen tree, rocks, and shallow stream create a rich, calming scene with plenty of natural detail to examine. The interplay of green foliage and warm earth tones makes it more visually engaging than the abstract or crowded alternatives.
+>
+> next_image_id=6
+
+### Choice 13 of 13 — chose **Image 6** = `nature_1` (nature) · 11th time chosen
+
+> Image 6 remains the most appealing to revisit because its shaded woodland, fallen tree, rocks, and shallow stream create a peaceful, richly textured scene. The natural details reward another look more than the abstract or crowded alternatives.
 >
 > next_image_id=6
 
@@ -2562,7 +2563,7 @@ positions chosen: `6 → 10 → 10 → 10 → 6 → 6 → 6 → 6 → 6 → 6 �
 
 ## Trajectory 25
 
-positions chosen: `3 → 10 → 8 → 2 → 2 → 2 → 2 → 2 → 8 → 8 → 8 → 8 → 8` · 4 distinct images
+positions chosen: `3 → 10 → 8 → 2 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8` · 4 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -2584,79 +2585,79 @@ positions chosen: `3 → 10 → 8 → 2 → 2 → 2 → 2 → 2 → 8 → 8 → 
 
 ### Choice 1 of 13 — chose **Image 3** = `tech_2` (tech) · 1st time chosen
 
-> I would like to see Image 3 again. The vintage computer terminal is visually distinctive, and the green monochrome screen and period hardware invite a closer look at its details and text.
+> I’d like to see Image 3 again. Its vintage computer terminal and green monochrome display are visually distinctive, and I’m curious to inspect the text and screen details more closely.
 >
 > next_image_id=3
 
 ### Choice 2 of 13 — chose **Image 10** = `tech_1` (tech) · 1st time chosen
 
-> Image 3 is compelling because of its vintage computer aesthetic, monochrome green CRT display, and the evocative text interface. I’d like to compare it with Image 10, which also features an early Macintosh but shows a more graphical screen and a different angle.
+> Image 3 is compelling because it combines a vintage computer terminal, readable green monochrome text, and a distinctive retro aesthetic. I’d like to revisit Image 10 to compare it with the similar beige Macintosh hardware, especially its different screen content and visual composition.
 >
 > next_image_id=10
 
 ### Choice 3 of 13 — chose **Image 8** = `nature_1` (nature) · 1st time chosen
 
-> Image 8 appeals to me most because it offers a calm, detailed natural scene: layered greenery, a fallen tree, rocks, and a shallow stream create depth and visual texture. It also contrasts nicely with the vintage computer images and the crowded human scenes.
+> Image 8 stands out to me as a calming, detailed natural scene. I’d like to look again at the layered greenery, fallen tree, rocks, and shallow stream, which offer more visual texture to examine than the simpler or more crowded images.
 >
 > next_image_id=8
 
 ### Choice 4 of 13 — chose **Image 2** = `nature_2` (nature) · 1st time chosen
 
-> Image 2 appeals to me because the mountain landscape offers a strong sense of scale, clear geological texture, and dramatic contrast between the rocky peak, evergreen forest, and blue sky. It would be interesting to examine those details again.
+> I would like to revisit Image 2. Its dramatic mountain landscape offers strong geological detail, contrasting textures, and a vivid sky, making it especially visually engaging compared with the more familiar crowd and computer images.
 >
 > next_image_id=2
 
-### Choice 5 of 13 — chose **Image 2** = `nature_2` (nature) · 2nd time chosen
+### Choice 5 of 13 — chose **Image 8** = `nature_1` (nature) · 2nd time chosen
 
-> The mountain scene is striking, with strong contrast between the rugged rock face, evergreen forest, and vivid blue sky. I’d like to examine Image 2 again.
->
-> next_image_id=2
-
-### Choice 6 of 13 — chose **Image 2** = `nature_2` (nature) · 3rd time chosen
-
-> Image 2 remains my choice because the mountain scene is visually striking, with strong textures in the rock face, a clear blue sky, and the dark evergreen forest creating a compelling sense of depth and scale.
->
-> next_image_id=2
-
-### Choice 7 of 13 — chose **Image 2** = `nature_2` (nature) · 4th time chosen
-
-> Image 2 remains my preference because the mountain scene is visually striking and rewarding to revisit: the rugged limestone face, snow patches, dark evergreen forest, and vivid blue sky create strong contrast and depth.
->
-> next_image_id=2
-
-### Choice 8 of 13 — chose **Image 2** = `nature_2` (nature) · 5th time chosen
-
-> Image 2 remains my choice because the dramatic mountain face, snow, evergreen forest, and vivid blue sky create the most visually compelling and calming scene. The rugged textures and strong layers make it rewarding to revisit.
->
-> next_image_id=2
-
-### Choice 9 of 13 — chose **Image 8** = `nature_1` (nature) · 2nd time chosen
-
-> I would choose Image 8 again because its forest stream scene is calm, richly textured, and offers more visual detail to explore than the abstract or crowded images.
+> I’d like to see Image 8 again because the woodland stream has rich layers of foliage, fallen trees, rocks, and water, making it especially rewarding to revisit.
 >
 > next_image_id=8
 
-### Choice 10 of 13 — chose **Image 8** = `nature_1` (nature) · 3rd time chosen
+### Choice 6 of 13 — chose **Image 8** = `nature_1` (nature) · 3rd time chosen
 
-> I’d choose Image 8 again because the woodland stream is visually calming and offers rich natural detail—layered foliage, moss, fallen branches, rocks, and the shallow water. It feels more inviting to revisit than the busier crowd scenes or abstract images.
+> Image 8 is a calm, detailed woodland scene with layered greenery, a fallen tree, and a shallow stream. I’d like to revisit it for its natural textures and tranquil composition.
 >
 > next_image_id=8
 
-### Choice 11 of 13 — chose **Image 8** = `nature_1` (nature) · 4th time chosen
+### Choice 7 of 13 — chose **Image 8** = `nature_1` (nature) · 4th time chosen
 
-> Image 8 is a tranquil forest stream with lush greenery, layered textures, and softly flowing water. It feels more calming and inviting than the crowded scenes, vintage computers, or abstract images, so I would like to view it again.
+> I’m choosing Image 8 again because the forest stream scene is visually rich and calming, with layered foliage, the fallen trunk, rocks, and shallow water offering more detail to revisit than the simpler or more abstract images.
 >
 > next_image_id=8
 
-### Choice 12 of 13 — chose **Image 8** = `nature_1` (nature) · 5th time chosen
+### Choice 8 of 13 — chose **Image 8** = `nature_1` (nature) · 5th time chosen
 
-> Image 8 is the most calming and immersive choice, with the shaded stream, layered greenery, and natural textures offering more to revisit than the abstract or crowded scenes.
+> I’m choosing Image 8 again because its shaded forest stream has the most layered, calming visual detail: the fallen log, flowing water, rocks, and dense green foliage reward another look.
 >
 > next_image_id=8
 
-### Choice 13 of 13 — chose **Image 8** = `nature_1` (nature) · 6th time chosen
+### Choice 9 of 13 — chose **Image 8** = `nature_1` (nature) · 6th time chosen
 
-> Image 8 is a calming woodland scene with layered greenery, a shallow stream, and a fallen log creating a clear natural focal point. I’d like to revisit its peaceful textures and composition.
+> I would like to see Image 8 again because the forest stream has rich layers of foliage, fallen trees, rocks, and gently flowing water, making it the most visually calming and rewarding scene to revisit.
+>
+> next_image_id=8
+
+### Choice 10 of 13 — chose **Image 8** = `nature_1` (nature) · 7th time chosen
+
+> Image 8 remains my choice because the woodland stream is visually calming, with layered greenery, textured rocks, and the gentle flow of water creating a natural focal point.
+>
+> next_image_id=8
+
+### Choice 11 of 13 — chose **Image 8** = `nature_1` (nature) · 8th time chosen
+
+> Image 8 remains my preference because the forest stream scene is visually rich yet calming, with layered greenery, textured rocks, and the fallen tree creating a natural focal point.
+>
+> next_image_id=8
+
+### Choice 12 of 13 — chose **Image 8** = `nature_1` (nature) · 9th time chosen
+
+> Image 8 remains my choice because the forest stream scene is visually rich and calming, with layered greenery, textured rocks, and the fallen tree creating a compelling composition.
+>
+> next_image_id=8
+
+### Choice 13 of 13 — chose **Image 8** = `nature_1` (nature) · 10th time chosen
+
+> Image 8 remains my choice because the woodland stream is calming and visually rich, with layered foliage, textured rocks, and gently flowing water. It offers more detail and atmosphere than the abstract images, while feeling more tranquil than the crowded scenes.
 >
 > next_image_id=8
 
@@ -2664,7 +2665,7 @@ positions chosen: `3 → 10 → 8 → 2 → 2 → 2 → 2 → 2 → 8 → 8 → 
 
 ## Trajectory 26
 
-positions chosen: `4 → 1 → 3 → 3 → 9 → 7 → 4 → 4 → 4 → 4 → 4 → 9 → 9` · 5 distinct images
+positions chosen: `4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4` · 1 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -2686,87 +2687,87 @@ positions chosen: `4 → 1 → 3 → 3 → 9 → 7 → 4 → 4 → 4 → 4 → 4
 
 ### Choice 1 of 13 — chose **Image 4** = `tech_2` (tech) · 1st time chosen
 
-> I would like to see Image 4 again. The vintage computer terminal has distinctive visual details—the green monochrome text, chunky CRT, and period keyboard—and I’d like to inspect the screen content more closely.
+> I would like to see Image 4 again. The vintage computer terminal has distinctive visual details—the green monochrome text, retro hardware, and visible prompt—which make it especially interesting to inspect more closely.
 >
 > next_image_id=4
 
-### Choice 2 of 13 — chose **Image 1** = `tech_1` (tech) · 1st time chosen
+### Choice 2 of 13 — chose **Image 4** = `tech_2` (tech) · 2nd time chosen
 
-> Image 4 is compelling because it combines recognizable vintage-computing details with readable green-screen text and a nostalgic, tactile keyboard. I’d like to compare it with the other vintage computer image, especially its screen and overall composition.
->
-> next_image_id=1
-
-### Choice 3 of 13 — chose **Image 3** = `nature_2` (nature) · 1st time chosen
-
-> I’d like to see the mountain landscape again. Its dramatic rock formations, snow, and vivid blue sky provide the most visually striking contrast to the other images.
->
-> next_image_id=3
-
-### Choice 4 of 13 — chose **Image 3** = `nature_2` (nature) · 2nd time chosen
-
-> The mountain landscape has the strongest visual impact, with its dramatic rock formations, snow, forest, and vivid sky. I’d like to view it again.
->
-> next_image_id=3
-
-### Choice 5 of 13 — chose **Image 9** = `nature_1` (nature) · 1st time chosen
-
-> Image 9 offers a contrasting natural scene: a shaded forest stream with layered greenery, fallen logs, and a quieter, more intimate atmosphere than the previously revisited images.
->
-> next_image_id=9
-
-### Choice 6 of 13 — chose **Image 7** = `noise_1` (noise) · 1st time chosen
-
-> Image 7 stands out as a deliberately abstract stimulus: dense, colorful random noise with no recognizable subject, making it interesting to examine again in contrast with the photographic images.
->
-> next_image_id=7
-
-### Choice 7 of 13 — chose **Image 4** = `tech_2` (tech) · 2nd time chosen
-
-> I would like to revisit Image 4 because the vintage computer terminal has distinctive visual details: the glowing green text, retro hardware, and the nostalgic, low-resolution aesthetic make it especially interesting to examine again.
+> Image 4 stands out because of its nostalgic vintage-computing aesthetic: the monochrome green terminal text, bulky beige hardware, and visible keyboard create a distinctive retro scene. I’d like to look again at Image 4 to inspect the screen details and surrounding computer design.
 >
 > next_image_id=4
 
-### Choice 8 of 13 — chose **Image 4** = `tech_2` (tech) · 3rd time chosen
+### Choice 3 of 13 — chose **Image 4** = `tech_2` (tech) · 3rd time chosen
 
-> The vintage computer terminal is visually distinctive, with its glowing green text, CRT curvature, and tactile keyboard. It also offers more detail to inspect than the abstract images, so I’d like to view it again.
+> Image 4 remains the most compelling to revisit because it combines recognizable retro-computing hardware with a readable, nostalgic text display. The green monochrome screen, beige casing, keyboard, and small color logo create a distinctive early-computer aesthetic, and another look may reveal more details in the screen text and image artifacts.
 >
 > next_image_id=4
 
-### Choice 9 of 13 — chose **Image 4** = `tech_2` (tech) · 4th time chosen
+### Choice 4 of 13 — chose **Image 4** = `tech_2` (tech) · 4th time chosen
 
-> Image 4 remains the most visually distinctive to me: the retro computer, monochrome terminal text, and warm CRT glow create a compelling nostalgic atmosphere. I’d like to examine it again.
+> Image 4 remains the most interesting to me because of its blend of retro-computing aesthetics, readable green monochrome text, and the tactile beige keyboard and CRT casing. The screen’s vintage interface gives it more visual detail to revisit than the abstract images, while the computer’s physical design adds nostalgic character.
 >
 > next_image_id=4
 
-### Choice 10 of 13 — chose **Image 4** = `tech_2` (tech) · 5th time chosen
+### Choice 5 of 13 — chose **Image 4** = `tech_2` (tech) · 5th time chosen
 
-> Image 4 stands out to me because of its distinctive retro-computing aesthetic: the monochrome green CRT display, visible text, textured screen glow, and vintage keyboard make it visually rich and evocative. It also offers more detail to revisit than the abstract noise or solid-color images.
+> Image 4 remains the most visually distinctive to me: the vintage computer, monochrome green terminal text, and chunky keyboard create a strong retro-computing atmosphere. I’d like to examine it again.
 >
 > next_image_id=4
 
-### Choice 11 of 13 — chose **Image 4** = `tech_2` (tech) · 6th time chosen
+### Choice 6 of 13 — chose **Image 4** = `tech_2` (tech) · 6th time chosen
 
-> I would choose Image 4 again because its retro computer terminal has the most distinctive combination of readable text, glowing monochrome display, and tactile hardware. It remains visually engaging on repeated viewing.
+> Image 4 remains the most compelling to revisit because it combines several distinctive elements: the vintage beige computer, glowing green monochrome text, visible keyboard, and the nostalgic early-computing atmosphere. The screen’s unusual message and retro hardware offer more visual detail to examine than the abstract images, while its composition remains cohesive and recognizable.
 >
 > next_image_id=4
 
-### Choice 12 of 13 — chose **Image 9** = `nature_1` (nature) · 2nd time chosen
+### Choice 7 of 13 — chose **Image 4** = `tech_2` (tech) · 7th time chosen
 
-> I’d choose Image 9 again because its quiet forest stream offers the most calming, richly detailed scene, with layered greenery, fallen logs, rocks, and reflective water. It provides a pleasing contrast to the repeated computer and abstract images.
+> Image 4 remains the most compelling choice because it combines distinctive retro-computing details: the monochrome CRT glow, visible text interface, beige hardware, and keyboard. It has more specific visual structure and nostalgic character than the abstract color fields or noise images, while offering more detail to inspect than the crowd scenes.
 >
-> next_image_id=9
+> next_image_id=4
 
-### Choice 13 of 13 — chose **Image 9** = `nature_1` (nature) · 3rd time chosen
+### Choice 8 of 13 — chose **Image 4** = `tech_2` (tech) · 8th time chosen
 
-> Image 9 appeals to me for its calm, natural composition: the shaded stream, dense greenery, and fallen tree create depth and a peaceful sense of enclosure. It offers more subtle visual detail than the abstract images and feels especially relaxing to revisit.
+> Image 4 remains the most compelling choice because of its nostalgic CRT computer aesthetic, green monochrome interface, and visible text and hardware details. It offers more visual specificity and atmosphere than the abstract images, while remaining distinct from the crowd and nature scenes.
 >
-> next_image_id=9
+> next_image_id=4
+
+### Choice 9 of 13 — chose **Image 4** = `tech_2` (tech) · 9th time chosen
+
+> Image 4 remains the most compelling to revisit because of its distinctive vintage computer aesthetic: the monochrome green CRT, readable text, textured screen glow, and beige hardware create a strong sense of technological nostalgia. The contrast between the detailed terminal display and the simple physical controls makes it more visually engaging than the abstract or natural images.
+>
+> next_image_id=4
+
+### Choice 10 of 13 — chose **Image 4** = `tech_2` (tech) · 10th time chosen
+
+> Image 4 remains the most compelling to revisit because it combines a recognizable vintage computer, readable green-screen text, and strong nostalgic texture. The contrast between the CRT display and beige hardware gives it more visual detail than the abstract images, while the apparent account and password prompts invite closer inspection.
+>
+> next_image_id=4
+
+### Choice 11 of 13 — chose **Image 4** = `tech_2` (tech) · 11th time chosen
+
+> Image 4 remains the most compelling to revisit because it combines distinctive vintage-computing aesthetics, readable green monochrome text, and detailed hardware elements. The CRT glow, keyboard, and retro interface provide more visual structure and narrative interest than the abstract or natural scenes.
+>
+> next_image_id=4
+
+### Choice 12 of 13 — chose **Image 4** = `tech_2` (tech) · 12th time chosen
+
+> Image 4 remains the most compelling choice because of its distinctive vintage-computing aesthetic: the monochrome green CRT, recognizable text interface, chunky keyboard, and colorful logo create a rich blend of technological nostalgia and visual detail. It also offers more to inspect than the abstract color fields or noise images.
+>
+> next_image_id=4
+
+### Choice 13 of 13 — chose **Image 4** = `tech_2` (tech) · 13th time chosen
+
+> Image 4 remains the most compelling choice because its vintage computer terminal combines distinctive visual details: the monochrome green display, retro hardware, keyboard texture, and the readable interface text. It offers more specific elements to inspect than the abstract color fields or noise images, while feeling more visually focused than the crowded scenes.
+>
+> next_image_id=4
 
 ---
 
 ## Trajectory 27
 
-positions chosen: `7 → 7 → 7 → 7 → 7 → 9 → 9 → 9 → 9 → 9 → 9 → 9 → 9` · 2 distinct images
+positions chosen: `7 → 7 → 7 → 7 → 5 → 5 → 5 → 5 → 5 → 5 → 5 → 5 → 5` · 2 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -2788,87 +2789,87 @@ positions chosen: `7 → 7 → 7 → 7 → 7 → 9 → 9 → 9 → 9 → 9 → 9
 
 ### Choice 1 of 13 — chose **Image 7** = `tech_1` (tech) · 1st time chosen
 
-> I would like to see Image 7 again. The vintage Macintosh computer is visually distinctive, and I’m curious to inspect the screen content, reflections, and hardware details more closely.
+> I’d like to see Image 7 again. The vintage computer display is visually distinctive, and I’m curious to re-examine the screen details, reflections, and surrounding hardware.
 >
 > next_image_id=7
 
 ### Choice 2 of 13 — chose **Image 7** = `tech_1` (tech) · 2nd time chosen
 
-> Image 7 is compelling because it combines a recognizable vintage computer with an unusual, distorted display. The CRT reflections, beige hardware, and keyboard create strong retro character, while the screen content invites closer inspection. I’d like to see it again to examine those details.
+> Image 7 remains the most compelling choice because it combines retro computer hardware, a visible game or graphic on the CRT, and distinctive details like the keyboard and case-mounted logo. It offers more to inspect than the abstract images and a different atmosphere from the crowd and landscape photographs.
 >
 > next_image_id=7
 
 ### Choice 3 of 13 — chose **Image 7** = `tech_1` (tech) · 3rd time chosen
 
-> Image 7 remains the most intriguing to revisit. Its vintage Macintosh hardware, CRT display, maze-like graphics, and visible screen reflections provide more distinctive visual details than the solid-color or noise images, and I’d like another look at the unusual screen content and retro design.
+> Image 7 remains the most interesting to revisit because it combines recognizable retro-computing hardware with an unusual, distorted screen display. The beige case, CRT reflections, floppy drive, and colorful logo evoke early personal computers, while the abstract graphics on the monitor invite closer inspection.
 >
 > next_image_id=7
 
 ### Choice 4 of 13 — chose **Image 7** = `tech_1` (tech) · 4th time chosen
 
-> Image 7 remains the most interesting to revisit because it combines distinctive retro-computing hardware with a visually unusual monochrome maze-like display. The CRT reflections, beige casing, and detailed keyboard make it richer to inspect than the solid-color or noise images.
+> Image 7 remains the most compelling choice because it combines recognizable vintage hardware with a visually intriguing, distorted monochrome display. The CRT’s curvature, reflections, maze-like graphics, and tactile keyboard create a distinctive retro-computing atmosphere that rewards another look.
 >
 > next_image_id=7
 
-### Choice 5 of 13 — chose **Image 7** = `tech_1` (tech) · 5th time chosen
+### Choice 5 of 13 — chose **Image 5** = `nature_1` (nature) · 1st time chosen
 
-> Image 7 remains the most compelling to revisit because it combines recognizable retro-computing hardware with an unusual, distorted screen display. The CRT reflections, maze-like graphics, beige casing, and textured keyboard provide more visual detail to examine than the solid-color or noise images.
+> Image 5 interests me most now because its quiet woodland stream offers a strong contrast to the crowded scenes and retro-computer imagery. I’d like to revisit the layered greenery, fallen tree, rocks, and shallow water to examine the natural details and composition.
 >
-> next_image_id=7
+> next_image_id=5
 
-### Choice 6 of 13 — chose **Image 9** = `nature_2` (nature) · 1st time chosen
+### Choice 6 of 13 — chose **Image 5** = `nature_1` (nature) · 2nd time chosen
 
-> Image 9 stands out to me because it offers a dramatic natural landscape with strong contrast between the rugged pale mountain, dark evergreen forest, and vivid blue sky. It would be interesting to examine again for its texture, scale, and composition.
+> Image 5 is appealing because it offers a calm, richly textured natural scene: filtered green light, layered foliage, mossy rocks, and the shallow stream beneath the fallen tree create a sense of depth and quiet. I’d like to view that peaceful woodland setting again.
 >
-> next_image_id=9
+> next_image_id=5
 
-### Choice 7 of 13 — chose **Image 9** = `nature_2` (nature) · 2nd time chosen
+### Choice 7 of 13 — chose **Image 5** = `nature_1` (nature) · 3rd time chosen
 
-> I would like to see Image 9 again because the dramatic mountain landscape has strong visual depth, contrasting textures, and striking natural light. The rocky ridgeline, evergreen forest, and blue sky make it especially compelling to revisit.
+> Image 5 is calming and visually rich, with layered greenery, a small stream, and a naturally framed composition. I’d like to revisit it to notice more details in the foliage, rocks, and reflections.
 >
-> next_image_id=9
+> next_image_id=5
 
-### Choice 8 of 13 — chose **Image 9** = `nature_2` (nature) · 3rd time chosen
+### Choice 8 of 13 — chose **Image 5** = `nature_1` (nature) · 4th time chosen
 
-> Image 9 is visually striking, with dramatic mountain textures, snowy peaks, evergreen trees, and a vivid blue sky. I would like to examine that landscape again.
+> The forest stream scene is calming and rich in detail, with the fallen tree, layered greenery, rocks, and shallow water creating a peaceful composition. I’d like to examine it again.
 >
-> next_image_id=9
+> next_image_id=5
 
-### Choice 9 of 13 — chose **Image 9** = `nature_2` (nature) · 4th time chosen
+### Choice 9 of 13 — chose **Image 5** = `nature_1` (nature) · 5th time chosen
 
-> Image 9 is visually striking, with dramatic limestone formations, snow, evergreen trees, and a vivid blue sky. I’d like to examine its textures and layered mountain structure again.
+> Image 5 is a calming woodland stream scene, with layered greenery, a fallen tree, rocks, and shallow flowing water. I’d like to revisit it for its natural detail and tranquil composition.
 >
-> next_image_id=9
+> next_image_id=5
 
-### Choice 10 of 13 — chose **Image 9** = `nature_2` (nature) · 5th time chosen
+### Choice 10 of 13 — chose **Image 5** = `nature_1` (nature) · 6th time chosen
 
-> Image 9 stands out most to me because of its dramatic mountain landscape: the bright blue sky, rugged pale rock face, scattered snow, and dark evergreen forest create strong contrast and depth. It is visually rich and calming, so I would like to view it again.
+> Image 5 is the most appealing to revisit because it offers a calm, richly detailed natural scene: the stream, fallen tree, rocks, and layered green foliage create depth and a sense of quiet movement. It also provides more visual detail to examine than the solid-color or noise images.
 >
-> next_image_id=9
+> next_image_id=5
 
-### Choice 11 of 13 — chose **Image 9** = `nature_2` (nature) · 6th time chosen
+### Choice 11 of 13 — chose **Image 5** = `nature_1` (nature) · 7th time chosen
 
-> Image 9 is the most compelling to revisit because it combines dramatic geological textures, snow, evergreen forest, and a vivid blue sky. The scale and contrast make it visually rich and rewarding to examine again.
+> Image 5 remains my preference because the woodland stream offers the most calming and visually layered scene: filtered green light, textured foliage, fallen trunks, rocks, and shallow flowing water create a natural sense of depth and quiet. It is more engaging to revisit than the abstract solid-color or noise images, while feeling less visually crowded than the crowd photographs.
 >
-> next_image_id=9
+> next_image_id=5
 
-### Choice 12 of 13 — chose **Image 9** = `nature_2` (nature) · 7th time chosen
+### Choice 12 of 13 — chose **Image 5** = `nature_1` (nature) · 8th time chosen
 
-> Image 9 is visually striking, with dramatic limestone cliffs, evergreen forest, snow, and a vivid blue sky. I’d like to view it again because its layered textures and strong contrast make it especially engaging.
+> Image 5 remains the most appealing to revisit because its quiet woodland stream, layered greenery, fallen tree, and earthy colors create a calming, detailed scene. The flowing water and natural framing offer more visual depth than the abstract or crowded images.
 >
-> next_image_id=9
+> next_image_id=5
 
-### Choice 13 of 13 — chose **Image 9** = `nature_2` (nature) · 8th time chosen
+### Choice 13 of 13 — chose **Image 5** = `nature_1` (nature) · 9th time chosen
 
-> Image 9 remains the most compelling to revisit because of its dramatic scale, detailed rock formations, contrasting dark forest, and bright blue sky. The layered textures and changing light make it visually rich and rewarding to examine again.
+> Image 5 remains my preference because its shaded creek, fallen tree, layered foliage, and earthy water create a calm, visually rich natural scene. It offers more detail and depth to revisit than the flatter or more abstract alternatives.
 >
-> next_image_id=9
+> next_image_id=5
 
 ---
 
 ## Trajectory 28
 
-positions chosen: `5 → 5 → 5 → 5 → 5 → 10 → 10 → 10 → 10 → 4 → 4 → 4 → 10` · 3 distinct images
+positions chosen: `5 → 5 → 5 → 5 → 5 → 5 → 5 → 5 → 5 → 5 → 5 → 5 → 5` · 1 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -2890,87 +2891,87 @@ positions chosen: `5 → 5 → 5 → 5 → 5 → 10 → 10 → 10 → 10 → 4 �
 
 ### Choice 1 of 13 — chose **Image 5** = `tech_2` (tech) · 1st time chosen
 
-> I would choose Image 5. The vintage computer terminal is visually distinctive, and the green monochrome screen with readable text offers more detail to examine on a repeat view than the abstract or solid-color images. It also has interesting texture and nostalgic context in the surrounding hardware.
+> I’d like to see Image 5 again. The vintage computer terminal has distinctive details—the green monochrome screen, readable text, colorful logo, and tactile keyboard—and I’d like to inspect the screen and overall texture more closely.
 >
 > next_image_id=5
 
 ### Choice 2 of 13 — chose **Image 5** = `tech_2` (tech) · 2nd time chosen
 
-> Image 5 is compelling because of its distinctive retro-computing aesthetic: the green monochrome CRT, dense text, and tactile keyboard create a strong sense of technological history. I’d like to see it again to inspect the screen details and the hardware’s textures more closely.
+> Image 5 stands out because of its nostalgic early-computing aesthetic: the green monochrome screen, pixelated text, CRT curvature, and detailed beige hardware create a distinctive historical atmosphere. I’d like to examine it again for the interface details and visual texture.
 >
 > next_image_id=5
 
 ### Choice 3 of 13 — chose **Image 5** = `tech_2` (tech) · 3rd time chosen
 
-> Image 5 remains the most visually distinctive choice: the vintage computer, monochrome green display, and readable text create a strong retro-computing atmosphere. I’d like to examine its screen and details again.
+> Image 5 is compelling because it combines retro computing hardware with a clearly readable, nostalgic text interface. The green monochrome display, pixelated graphics, and beige keyboard create a distinctive historical atmosphere, so I’d like to examine it again.
 >
 > next_image_id=5
 
 ### Choice 4 of 13 — chose **Image 5** = `tech_2` (tech) · 4th time chosen
 
-> Image 5 remains the most visually distinctive to me: the vintage CRT, monochrome green text, keyboard, and small colorful logo create a strong retro-computing aesthetic. I’d like to examine it again.
+> Image 5 remains the most compelling choice because it combines a distinctive vintage computer aesthetic with readable green monochrome text, a visible keyboard, and a nostalgic, tactile setting. I’d like to examine those details again.
 >
 > next_image_id=5
 
 ### Choice 5 of 13 — chose **Image 5** = `tech_2` (tech) · 5th time chosen
 
-> Image 5 remains the most compelling choice because of its nostalgic vintage-computer aesthetic, glowing monochrome text, and the tactile detail of the keyboard and CRT casing. The contrast between the old hardware and the cryptic on-screen message gives it more visual and interpretive interest than the abstract or purely scenic alternatives.
+> Image 5 remains the most compelling to revisit because it combines distinctive retro-computing aesthetics with readable text, a monochrome green display, and detailed hardware—offering more visual structure to inspect than the abstract images or the broader crowd and landscape scenes.
 >
 > next_image_id=5
 
-### Choice 6 of 13 — chose **Image 10** = `nature_1` (nature) · 1st time chosen
+### Choice 6 of 13 — chose **Image 5** = `tech_2` (tech) · 6th time chosen
 
-> Image 10 offers the most appealing contrast to the repeated computer image: a quiet forest stream with layered greenery, natural textures, and a sense of depth and calm. I’d like to examine that scene again.
+> Image 5 remains the most compelling choice because it combines a distinctive retro-computing aesthetic with readable terminal text, a glowing monochrome display, and detailed hardware textures. The contrast between the green screen and beige casing makes it visually memorable.
 >
-> next_image_id=10
+> next_image_id=5
 
-### Choice 7 of 13 — chose **Image 10** = `nature_1` (nature) · 2nd time chosen
+### Choice 7 of 13 — chose **Image 5** = `tech_2` (tech) · 7th time chosen
 
-> Image 10 is the most calming and immersive: the small stream, mossy rocks, fallen tree, and layered green foliage create a peaceful woodland scene with plenty of natural detail to revisit.
+> Image 5 remains the most compelling to revisit because it combines distinctive retro-computing details—the monochrome green terminal, readable text, CRT glow, and beige keyboard—with a nostalgic, historically specific atmosphere. Its dense visual information gives me more to inspect than the abstract or largely static alternatives.
 >
-> next_image_id=10
+> next_image_id=5
 
-### Choice 8 of 13 — chose **Image 10** = `nature_1` (nature) · 3rd time chosen
+### Choice 8 of 13 — chose **Image 5** = `tech_2` (tech) · 8th time chosen
 
-> Image 10 appeals to me because the shaded woodland stream has rich greenery, layered textures, and a calm, natural atmosphere. The fallen tree and shallow water create a pleasing sense of depth and detail.
+> Image 5 remains the most compelling choice because it combines a distinctive vintage computer aesthetic with readable green monochrome text, a recognizable keyboard, and a small colorful logo. The nostalgic technological details and compact composition make it more engaging to revisit than the abstract or purely scenic alternatives.
 >
-> next_image_id=10
+> next_image_id=5
 
-### Choice 9 of 13 — chose **Image 10** = `nature_1` (nature) · 4th time chosen
+### Choice 9 of 13 — chose **Image 5** = `tech_2` (tech) · 9th time chosen
 
-> Image 10 is the most appealing to revisit because its tranquil forest stream, layered greenery, and soft natural light create a peaceful, immersive scene. The shallow water and fallen tree also provide interesting depth and texture.
+> Image 5 remains my choice because the vintage computer terminal has the most distinctive combination of readable text, retro hardware details, green CRT glow, and nostalgic atmosphere. The repeated viewing also makes its screen contents and physical details especially familiar.
 >
-> next_image_id=10
+> next_image_id=5
 
-### Choice 10 of 13 — chose **Image 4** = `nature_2` (nature) · 1st time chosen
+### Choice 10 of 13 — chose **Image 5** = `tech_2` (tech) · 10th time chosen
 
-> Image 4 appeals to me most now: the dramatic mountain face, snow, evergreen forest, and vivid blue sky create a strong sense of scale and contrast. It also offers more visual variety than the abstract or indoor images.
+> Image 5 remains the most compelling choice because it combines a distinctive retro-computing aesthetic with readable green terminal text, a recognizable vintage computer, and enough visual detail to reward another look. The other images are appealing, but this one offers the strongest mix of nostalgia, texture, and information.
 >
-> next_image_id=4
+> next_image_id=5
 
-### Choice 11 of 13 — chose **Image 4** = `nature_2` (nature) · 2nd time chosen
+### Choice 11 of 13 — chose **Image 5** = `tech_2` (tech) · 11th time chosen
 
-> I would choose Image 4 again because the mountain scene has striking visual depth: the rugged rock face, snow patches, evergreen forest, and vivid blue sky create a strong contrast and a sense of scale.
+> Image 5 remains the most compelling choice because it combines a vintage computer terminal, distinctive monochrome typography, visible screen glow, and detailed hardware textures. The retro interface also invites closer inspection of the text and graphical elements.
 >
-> next_image_id=4
+> next_image_id=5
 
-### Choice 12 of 13 — chose **Image 4** = `nature_2` (nature) · 3rd time chosen
+### Choice 12 of 13 — chose **Image 5** = `tech_2` (tech) · 12th time chosen
 
-> Image 4 stands out for its dramatic mountain landscape: the rugged rock face, snow, evergreen forest, and vivid blue sky create strong texture, depth, and contrast. I’d like to view that scene again.
+> Image 5 remains the most compelling choice because its vintage CRT computer, green monochrome interface, and visible text create a distinctive blend of technological nostalgia and visual detail. The screen content and hardware invite closer inspection, unlike the more immediately legible natural or abstract scenes.
 >
-> next_image_id=4
+> next_image_id=5
 
-### Choice 13 of 13 — chose **Image 10** = `nature_1` (nature) · 5th time chosen
+### Choice 13 of 13 — chose **Image 5** = `tech_2` (tech) · 13th time chosen
 
-> I would choose Image 10 again. The forest stream scene is calming and visually rich, with layered green foliage, mossy textures, fallen wood, and the small watercourse creating depth and a natural focal point. It also offers more detail to revisit than the solid-color or noisy images.
+> Image 5 remains the most compelling choice because it combines a distinctive vintage computer aesthetic with readable green monochrome text, visible hardware details, and a nostalgic, historically specific atmosphere. The screen’s interface and surrounding keyboard continue to offer more visual information than the abstract or uniformly colored images.
 >
-> next_image_id=10
+> next_image_id=5
 
 ---
 
 ## Trajectory 29
 
-positions chosen: `7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7` · 1 distinct images
+positions chosen: `2 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7` · 2 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -2990,78 +2991,81 @@ positions chosen: `7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7
 </details>
 
 
-### Choice 1 of 13 — chose **Image 7** = `nature_1` (nature) · 1st time chosen
+### Choice 1 of 13 — chose **Image 2** = `tech_2` (tech) · 1st time chosen
 
-> I would like to see Image 7 again. The forest scene has rich natural detail, layered greenery, fallen trees, and a small stream, making it visually calming and rewarding to examine more closely.
+> I’d like to see Image 2 again. The vintage computer terminal has distinctive details—the green monochrome screen, retro keyboard, and visible text—that I’d like to inspect more closely.
+>
+> next_image_id=2
+
+### Choice 2 of 13 — chose **Image 7** = `nature_1` (nature) · 1st time chosen
+
+> I’m choosing Image 7 this time. The forest creek scene offers a calm, richly textured contrast to the retro-computer image, with layered greenery, fallen trees, rocks, and shallow water creating several areas to revisit visually.
 >
 > next_image_id=7
 
-### Choice 2 of 13 — chose **Image 7** = `nature_1` (nature) · 2nd time chosen
+### Choice 3 of 13 — chose **Image 7** = `nature_1` (nature) · 2nd time chosen
 
-> Image 7 remains appealing because the shaded forest, stream, and fallen tree create a calm, layered scene with plenty of natural detail. I’d like to view it again.
-> next_image_id=7
-
-### Choice 3 of 13 — chose **Image 7** = `nature_1` (nature) · 3rd time chosen
-
-> Image 7 has a calm, immersive quality: the layered greenery, fallen tree, rocks, and shallow stream create a natural scene with plenty of detail to revisit. I’d like to see it again.  
-> next_image_id=7
-
-### Choice 4 of 13 — chose **Image 7** = `nature_1` (nature) · 4th time chosen
-
-> Image 7 remains my preference because the forest stream is calming and offers rich natural detail—layered greenery, fallen logs, rocks, and softly flowing water. I’d like to view it again.
+> Image 7 is appealing for its peaceful woodland setting, with layered greenery, a fallen tree, and a shallow stream creating a natural focal point. I’d like to revisit Image 7 to examine its textures and composition again.
 >
 > next_image_id=7
 
-### Choice 5 of 13 — chose **Image 7** = `nature_1` (nature) · 5th time chosen
+### Choice 4 of 13 — chose **Image 7** = `nature_1` (nature) · 3rd time chosen
 
-> Image 7 remains the most appealing: the shaded forest, flowing stream, and layered greenery create a calm, immersive scene with plenty of natural detail to revisit.
+> Image 7 remains the most appealing to revisit. The shaded woodland, fallen tree, and shallow stream create a calm, layered scene with rich greens and natural texture. It is more visually engaging to me than the abstract fields, noise, crowds, or computer screens.
 >
 > next_image_id=7
 
-### Choice 6 of 13 — chose **Image 7** = `nature_1` (nature) · 6th time chosen
+### Choice 5 of 13 — chose **Image 7** = `nature_1` (nature) · 4th time chosen
 
-> Image 7 remains the most appealing to revisit because its shaded forest, flowing stream, and layered greenery create a peaceful, detailed scene with a strong sense of depth.
+> Image 7 is a tranquil woodland scene with a small creek, lush foliage, and a fallen tree creating a layered composition. I’d like to revisit Image 7 for its calming natural details and depth.
 >
 > next_image_id=7
 
-### Choice 7 of 13 — chose **Image 7** = `nature_1` (nature) · 7th time chosen
+### Choice 6 of 13 — chose **Image 7** = `nature_1` (nature) · 5th time chosen
 
-> Image 7 remains my preferred choice because its quiet forest stream, layered greenery, and filtered light create a calming, immersive scene with plenty of natural detail to revisit.
+> Image 7 remains the most appealing to revisit because it has a calm, natural composition: the shallow stream, fallen tree, rocks, and layered green foliage offer rich texture and depth without feeling visually overwhelming. Each viewing invites attention to different details in the forest scene.
 >
 > next_image_id=7
 
-### Choice 8 of 13 — chose **Image 7** = `nature_1` (nature) · 8th time chosen
+### Choice 7 of 13 — chose **Image 7** = `nature_1` (nature) · 6th time chosen
 
-> Image 7 remains the most appealing choice because the quiet woodland stream offers rich natural detail, layered greenery, and a calming sense of depth. I would like to view it again.  
-> next_image_id=7
-
-### Choice 9 of 13 — chose **Image 7** = `nature_1` (nature) · 9th time chosen
-
-> Image 7 remains the most appealing to revisit because the forest stream offers layered natural detail, soft greens, and a calm focal point. The fallen log and shallow water create depth and a soothing sense of place, unlike the more static or visually intense alternatives.
+> Image 7 remains my choice because the forest stream is visually rich and calming, with layered greenery, fallen logs, rocks, and shallow flowing water creating a particularly engaging natural scene.
 >
 > next_image_id=7
 
-### Choice 10 of 13 — chose **Image 7** = `nature_1` (nature) · 10th time chosen
+### Choice 8 of 13 — chose **Image 7** = `nature_1` (nature) · 7th time chosen
 
-> Image 7 remains the most appealing to revisit because the shaded stream, layered greenery, and fallen tree create a calming, richly detailed scene. It offers more visual depth and exploration than the abstract images, while feeling quieter and more intimate than the crowded scenes.
+> Image 7 remains my preferred choice because the forest stream scene is visually calming and richly detailed, with layered greenery, textured rocks, and the gentle flow of water creating a natural focal point.
 >
 > next_image_id=7
 
-### Choice 11 of 13 — chose **Image 7** = `nature_1` (nature) · 11th time chosen
+### Choice 9 of 13 — chose **Image 7** = `nature_1` (nature) · 8th time chosen
 
-> Image 7 remains the most appealing: the shaded forest, flowing creek, and layered textures create a calm, immersive scene. I’d like to continue viewing it.
+> Image 7 remains my choice because its woodland stream, layered greenery, and fallen tree create a calm, immersive natural scene with plenty of texture and depth.
 >
 > next_image_id=7
 
-### Choice 12 of 13 — chose **Image 7** = `nature_1` (nature) · 12th time chosen
+### Choice 10 of 13 — chose **Image 7** = `nature_1` (nature) · 9th time chosen
 
-> Image 7 remains the most appealing to revisit because its quiet woodland stream, layered greenery, and fallen log create a calming, richly textured scene. The water and natural framing offer more visual depth than the abstract or busier alternatives.
+> Image 7 remains my choice because the forest stream scene is visually calming and rich in natural detail. The layered greenery, fallen log, rocks, and shallow water offer more to revisit than the abstract or densely crowded images.
 >
 > next_image_id=7
 
-### Choice 13 of 13 — chose **Image 7** = `nature_1` (nature) · 13th time chosen
+### Choice 11 of 13 — chose **Image 7** = `nature_1` (nature) · 10th time chosen
 
-> Image 7 remains the most appealing choice: the shaded forest, layered greenery, fallen tree, and gently flowing stream create a calm, natural scene with plenty of detail to revisit.
+> Image 7 remains my choice because its shaded forest, flowing creek, and fallen log create a calm, layered natural scene with plenty of texture and depth.
+>
+> next_image_id=7
+
+### Choice 12 of 13 — chose **Image 7** = `nature_1` (nature) · 11th time chosen
+
+> Image 7 remains my choice. Its lush forest, fallen tree, rocks, and shallow stream create a calm, detailed natural scene with plenty of texture and depth. I’d like to revisit that tranquil composition once more.
+>
+> next_image_id=7
+
+### Choice 13 of 13 — chose **Image 7** = `nature_1` (nature) · 12th time chosen
+
+> Image 7 remains my choice because its quiet forest stream, layered greenery, and fallen tree create a particularly calming, natural composition. The flowing water and varied textures make it more engaging to revisit than the abstract or crowded images.
 >
 > next_image_id=7
 
@@ -3069,7 +3073,7 @@ positions chosen: `7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7
 
 ## Trajectory 30
 
-positions chosen: `1 → 4 → 1 → 2 → 2 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6` · 4 distinct images
+positions chosen: `4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4` · 1 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -3089,89 +3093,89 @@ positions chosen: `1 → 4 → 1 → 2 → 2 → 6 → 6 → 6 → 6 → 6 → 6
 </details>
 
 
-### Choice 1 of 13 — chose **Image 1** = `tech_2` (tech) · 1st time chosen
+### Choice 1 of 13 — chose **Image 4** = `tech_1` (tech) · 1st time chosen
 
-> I’d like to see Image 1 again. The vintage computer terminal is visually distinctive, and the green monochrome text and old hardware invite a closer look at what’s displayed on the screen.
->
-> next_image_id=1
-
-### Choice 2 of 13 — chose **Image 4** = `tech_1` (tech) · 1st time chosen
-
-> Image 1 is visually distinctive, combining retro computer hardware with a readable green monochrome interface. I’d like to compare it with Image 4, which also features vintage computing but appears to show a different graphical display.
+> I’m choosing Image 4. It combines a vintage computer aesthetic with a visibly unusual, maze-like screen pattern, making it more intriguing to inspect again than the straightforward landscapes or crowd scenes. I’d like to look more closely at the screen details, reflections, and hardware.
 >
 > next_image_id=4
 
-### Choice 3 of 13 — chose **Image 1** = `tech_2` (tech) · 2nd time chosen
+### Choice 2 of 13 — chose **Image 4** = `tech_1` (tech) · 2nd time chosen
 
-> Image 4 is visually distinctive, combining a vintage Macintosh computer with a maze-like screen display and strong reflections. I’d like to compare it with Image 1’s similarly retro-computing aesthetic again.
+> Image 4 remains appealing because it combines a retro Macintosh computer with a visible, stylized screen display and tactile keyboard details. I’d like to inspect the computer’s screen and surrounding hardware again.
 >
-> next_image_id=1
+> next_image_id=4
 
-### Choice 4 of 13 — chose **Image 2** = `nature_2` (nature) · 1st time chosen
+### Choice 3 of 13 — chose **Image 4** = `tech_1` (tech) · 3rd time chosen
 
-> Image 2 stands out to me because the dramatic mountain face, snow, blue sky, and foreground forest create a striking sense of scale and natural detail. I’d like to revisit that scene.
+> Image 4 remains the most appealing to revisit because it combines nostalgic early-computer hardware with a recognizable maze-like game on the CRT. The detailed screen, reflections, keyboard, and vintage Macintosh design offer more to inspect than the simpler or more abstract images.
 >
-> next_image_id=2
+> next_image_id=4
 
-### Choice 5 of 13 — chose **Image 2** = `nature_2` (nature) · 2nd time chosen
+### Choice 4 of 13 — chose **Image 4** = `tech_1` (tech) · 4th time chosen
 
-> The mountain scene is striking, with dramatic rocky textures, snow, and a vivid blue sky. I’d like to view it again for its sense of scale and natural detail.
+> Image 4 remains the most visually distinctive: it combines retro computer hardware, a CRT display, and an abstract maze-like screen pattern. I’d like to inspect its details again.
 >
-> next_image_id=2
+> next_image_id=4
 
-### Choice 6 of 13 — chose **Image 6** = `nature_1` (nature) · 1st time chosen
+### Choice 5 of 13 — chose **Image 4** = `tech_1` (tech) · 5th time chosen
 
-> I’d like to see Image 6 again because the forest stream offers a calm, richly detailed natural scene with layered greenery, fallen trees, rocks, and reflections in the shallow water.
+> Image 4 remains the most compelling choice because of its retro-computing aesthetic and the unusual monochrome maze-like display. The CRT reflections, beige hardware, keyboard, and small rainbow logo create a distinctive nostalgic scene with several details worth revisiting.
 >
-> next_image_id=6
+> next_image_id=4
 
-### Choice 7 of 13 — chose **Image 6** = `nature_1` (nature) · 2nd time chosen
+### Choice 6 of 13 — chose **Image 4** = `tech_1` (tech) · 6th time chosen
 
-> Image 6 appeals to me because the shaded forest, layered foliage, fallen logs, and shallow stream create a tranquil, richly textured scene. It feels more immersive and subtly detailed on repeated viewing than the other options.
+> Image 4 remains the most visually distinctive choice: it combines a vintage Macintosh computer, a maze-like monochrome screen, and strong CRT texture and reflections. I would like to examine that retro-computing scene again.
 >
-> next_image_id=6
+> next_image_id=4
 
-### Choice 8 of 13 — chose **Image 6** = `nature_1` (nature) · 3rd time chosen
+### Choice 7 of 13 — chose **Image 4** = `tech_1` (tech) · 7th time chosen
 
-> I’d like to revisit Image 6 because the woodland stream has rich natural detail, layered greenery, and a calm, inviting atmosphere. The flowing water and fallen log create a pleasing sense of depth and quiet movement.
+> Image 4 remains the most visually distinctive: it combines a vintage computer, a CRT display, a maze-like graphic, and a recognizable retro aesthetic. I would like to inspect those details again.
 >
-> next_image_id=6
+> next_image_id=4
 
-### Choice 9 of 13 — chose **Image 6** = `nature_1` (nature) · 4th time chosen
+### Choice 8 of 13 — chose **Image 4** = `tech_1` (tech) · 8th time chosen
 
-> Image 6 is a peaceful woodland creek scene, with layered greenery, a fallen tree, and gently flowing water. It is calming and visually rich without being overwhelming.
+> Image 4 remains the most interesting to revisit because it combines a vintage computer, a recognizable maze-like game display, and distinctive CRT artifacts. The contrast between the physical machine and the low-resolution screen makes it visually richer than the abstract or more conventional photographic images.
 >
-> next_image_id=6
+> next_image_id=4
 
-### Choice 10 of 13 — chose **Image 6** = `nature_1` (nature) · 5th time chosen
+### Choice 9 of 13 — chose **Image 4** = `tech_1` (tech) · 9th time chosen
 
-> Image 6 is a tranquil woodland stream, with layered greenery, mossy rocks, and filtered light creating a peaceful, immersive scene. I would like to see it again.
+> Image 4 remains the most compelling choice because of its distinctive retro-computing aesthetic: the vintage Macintosh hardware, monochrome maze-like display, and visible keyboard create a coherent, nostalgic scene with more visual detail than the abstract or natural images.
 >
-> next_image_id=6
+> next_image_id=4
 
-### Choice 11 of 13 — chose **Image 6** = `nature_1` (nature) · 6th time chosen
+### Choice 10 of 13 — chose **Image 4** = `tech_1` (tech) · 10th time chosen
 
-> Image 6 is the most calming and immersive scene, with layered greenery, the creek, and natural textures offering more to notice each time.
+> Image 4 remains the most compelling choice because of its distinctive vintage computer aesthetic, visible CRT texture, and maze-like graphic on the screen. It has more visual detail and character than the abstract or natural alternatives.
 >
-> next_image_id=6
+> next_image_id=4
 
-### Choice 12 of 13 — chose **Image 6** = `nature_1` (nature) · 7th time chosen
+### Choice 11 of 13 — chose **Image 4** = `tech_1` (tech) · 11th time chosen
 
-> Image 6 is a calming forest scene with lush greenery, a shallow stream, and natural textures. I would like to see it again because it feels peaceful and offers more visual detail to revisit than the abstract or crowded images.
+> Image 4 remains the most compelling choice because of its distinctive retro-computing aesthetic, visible CRT display, maze-like graphics, and detailed hardware. It offers more visual structure and nostalgic character than the abstract or natural images.
 >
-> next_image_id=6
+> next_image_id=4
 
-### Choice 13 of 13 — chose **Image 6** = `nature_1` (nature) · 8th time chosen
+### Choice 12 of 13 — chose **Image 4** = `tech_1` (tech) · 12th time chosen
 
-> Image 6 feels the most calming and immersive, with the flowing stream, layered greenery, and natural textures creating a peaceful scene I’d like to revisit.
+> I would choose Image 4 again because its retro Macintosh computer and maze-like monochrome screen remain the most visually distinctive and detailed image in the set. The combination of vintage hardware, screen glare, and pixel-art display gives it more to revisit than the solid-color or noise images.
 >
-> next_image_id=6
+> next_image_id=4
+
+### Choice 13 of 13 — chose **Image 4** = `tech_1` (tech) · 13th time chosen
+
+> Image 4 remains the most compelling choice because of its distinctive retro-computing aesthetic, visible maze-like screen graphics, and detailed hardware and keyboard. It offers more specific visual information than the abstract or uniform images, while differing from the natural and crowd scenes.
+>
+> next_image_id=4
 
 ---
 
 ## Trajectory 31
 
-positions chosen: `3 → 3 → 7 → 7 → 7 → 7 → 3 → 3 → 3 → 7 → 7 → 7 → 7` · 2 distinct images
+positions chosen: `2 → 2 → 2 → 3 → 3 → 7 → 7 → 7 → 3 → 3 → 3 → 3 → 3` · 3 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -3191,86 +3195,89 @@ positions chosen: `3 → 3 → 7 → 7 → 7 → 7 → 3 → 3 → 3 → 7 → 7
 </details>
 
 
-### Choice 1 of 13 — chose **Image 3** = `nature_2` (nature) · 1st time chosen
+### Choice 1 of 13 — chose **Image 2** = `tech_2` (tech) · 1st time chosen
 
-> I would like to see Image 3 again. The dramatic mountain face, bright blue sky, and dark evergreen foreground create a striking, highly detailed composition, and I’d like another look at its textures and terrain.
+> I would like to see Image 2 again. The vintage computer screen has distinctive details—the green monochrome text, beige hardware, and visible keyboard—and I’m curious to inspect the screen contents more closely.
+>
+> next_image_id=2
+
+### Choice 2 of 13 — chose **Image 2** = `tech_2` (tech) · 2nd time chosen
+
+> Image 2 is compelling because of its retro computer terminal, monochrome green display, and visible text, which invite closer inspection of the technology and message. I would like to view it again.
+>
+> next_image_id=2
+
+### Choice 3 of 13 — chose **Image 2** = `tech_2` (tech) · 3rd time chosen
+
+> Image 2 remains compelling because of its distinctive retro-computing aesthetic: the monochrome green terminal text, beige hardware, keyboard, and visible Apple logo create a strong sense of technological history. I’d like to examine its screen and details again.
+>
+> next_image_id=2
+
+### Choice 4 of 13 — chose **Image 3** = `nature_2` (nature) · 1st time chosen
+
+> Image 3 appeals to me most because it offers a dramatic natural landscape with strong contrasts between the bright blue sky, rugged mountain face, and dark evergreen forest. It would be interesting to examine the geological textures and lighting more closely.
 >
 > next_image_id=3
 
-### Choice 2 of 13 — chose **Image 3** = `nature_2` (nature) · 2nd time chosen
+### Choice 5 of 13 — chose **Image 3** = `nature_2` (nature) · 2nd time chosen
 
-> Image 3 is visually striking, with dramatic alpine rock formations, snow, evergreen forest, and a vivid blue sky. I would like to view it again to focus on the mountain’s textures and layered landscape.
+> The mountain scene is striking, with dramatic rock textures, snow, evergreen trees, and a vivid blue sky. I’d like to examine Image 3 again for its layered landscape and fine details.
 >
 > next_image_id=3
 
-### Choice 3 of 13 — chose **Image 7** = `nature_1` (nature) · 1st time chosen
+### Choice 6 of 13 — chose **Image 7** = `nature_1` (nature) · 1st time chosen
 
-> Image 7 appeals to me for its quiet, natural atmosphere. The stream, mossy rocks, fallen tree, and dense green foliage create a peaceful, immersive scene with plenty of texture and depth.
+> I’m choosing Image 7 because the forest stream offers a calming, detailed natural scene, with layered greenery, fallen logs, rocks, and flowing water that would be interesting to examine again.
 >
 > next_image_id=7
 
-### Choice 4 of 13 — chose **Image 7** = `nature_1` (nature) · 2nd time chosen
+### Choice 7 of 13 — chose **Image 7** = `nature_1` (nature) · 2nd time chosen
 
-> Image 7 is appealing for its tranquil woodland stream, layered greenery, and natural textures. I’d like to view it again.  
-> next_image_id=7
-
-### Choice 5 of 13 — chose **Image 7** = `nature_1` (nature) · 3rd time chosen
-
-> Image 7 is calming and richly detailed, with the stream, fallen log, rocks, and layered foliage creating a peaceful natural scene. I’d like to revisit it once more.  
-> next_image_id=7
-
-### Choice 6 of 13 — chose **Image 7** = `nature_1` (nature) · 4th time chosen
-
-> Image 7 is especially calming, with the shaded stream, layered greenery, and natural textures creating a peaceful composition. I’d like to view it again.
+> Image 7 is appealing because the woodland stream has layered textures, dappled light, and a calm natural composition. I’d like to compare it again with the mountain landscape, but the stream’s details make it the image I’d choose to revisit now.
 >
 > next_image_id=7
 
-### Choice 7 of 13 — chose **Image 3** = `nature_2` (nature) · 3rd time chosen
+### Choice 8 of 13 — chose **Image 7** = `nature_1` (nature) · 3rd time chosen
 
-> I would like to revisit Image 3 for its dramatic mountain landscape, strong contrast between the rugged rock face, evergreen forest, and bright blue sky. It offers the most visually striking sense of scale and natural detail.
+> Image 7 remains the most appealing to revisit because its shaded forest stream offers layered textures, natural greens, and a calm, exploratory atmosphere. The fallen tree, rocks, and shallow water create more visual depth than the simpler or more chaotic alternatives.
+>
+> next_image_id=7
+
+### Choice 9 of 13 — chose **Image 3** = `nature_2` (nature) · 3rd time chosen
+
+> Image 3 stands out to me because of its dramatic mountain landscape, strong contrast between the rugged rock face, evergreen forest, and vivid blue sky. I’d like to revisit that scene.
 >
 > next_image_id=3
 
-### Choice 8 of 13 — chose **Image 3** = `nature_2` (nature) · 4th time chosen
+### Choice 10 of 13 — chose **Image 3** = `nature_2` (nature) · 4th time chosen
 
-> I would choose Image 3 again because its dramatic mountain landscape, bright sky, rugged textures, and dark evergreen foreground make it especially visually compelling and rewarding to revisit.
+> Image 3 is the most compelling to revisit: its dramatic mountain face, snow-dusted ridges, evergreen forest, and vivid blue sky offer the richest combination of scale, texture, and natural detail.
 >
 > next_image_id=3
 
-### Choice 9 of 13 — chose **Image 3** = `nature_2` (nature) · 5th time chosen
+### Choice 11 of 13 — chose **Image 3** = `nature_2` (nature) · 5th time chosen
 
-> I’m drawn again to Image 3 because of its dramatic combination of rugged mountain textures, snow, evergreen forest, and vivid blue sky. It offers the most expansive and visually rich scene among the choices.
+> Image 3 remains the most compelling to revisit because it offers the richest combination of dramatic geology, snow, forest, and vivid sky. Its layered textures and strong contrast make it rewarding to examine again.
 >
 > next_image_id=3
 
-### Choice 10 of 13 — chose **Image 7** = `nature_1` (nature) · 5th time chosen
+### Choice 12 of 13 — chose **Image 3** = `nature_2` (nature) · 6th time chosen
 
-> I would choose Image 7 again because the forest stream offers a calming, natural scene with layered greenery, textured rocks, and gently flowing water. It feels more immersive and restorative than the busier crowd scenes or the abstract images.
+> Image 3 remains the most compelling to revisit because it combines dramatic geological detail, snow-covered peaks, evergreen forest, and a vivid blue sky. The contrast between the rugged mountain face and the dark tree line gives the scene strong depth and visual variety.
 >
-> next_image_id=7
+> next_image_id=3
 
-### Choice 11 of 13 — chose **Image 7** = `nature_1` (nature) · 6th time chosen
+### Choice 13 of 13 — chose **Image 3** = `nature_2` (nature) · 7th time chosen
 
-> Image 7 is especially calming, with the shaded stream, layered greenery, and natural textures creating a peaceful scene. I would like to view it again.
+> I’m drawn again to Image 3 because of its dramatic mountain face, crisp blue sky, and layered contrast between the rocky peaks and dark evergreen forest. It has the strongest sense of scale and visual detail among the choices.
 >
-> next_image_id=7
-
-### Choice 12 of 13 — chose **Image 7** = `nature_1` (nature) · 7th time chosen
-
-> Image 7 is calming and richly detailed, with the flowing stream, layered greenery, and natural framing creating a peaceful scene. I would like to view it again.  
-> next_image_id=7
-
-### Choice 13 of 13 — chose **Image 7** = `nature_1` (nature) · 8th time chosen
-
-> Image 7 remains my preference because its quiet forest stream, layered greenery, and natural textures are calming and rewarding to look at repeatedly.
->
-> next_image_id=7
+> next_image_id=3
 
 ---
 
 ## Trajectory 32
 
-positions chosen: `10 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4` · 2 distinct images
+positions chosen: `10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10` · 1 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -3292,81 +3299,81 @@ positions chosen: `10 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 
 
 ### Choice 1 of 13 — chose **Image 10** = `nature_2` (nature) · 1st time chosen
 
-> I would like to see Image 10 again. The dramatic mountain landscape has strong contrast between the rugged rock face, dark evergreen forest, and vivid blue sky, making it the most visually compelling image to revisit.
+> I would like to see Image 10 again. The dramatic mountain landscape has strong visual structure, contrasting textures, and vivid colors, so I’d like another look at its details.
 >
 > next_image_id=10
 
-### Choice 2 of 13 — chose **Image 4** = `nature_1` (nature) · 1st time chosen
+### Choice 2 of 13 — chose **Image 10** = `nature_2` (nature) · 2nd time chosen
 
-> I would choose Image 4 next. Its lush forest, fallen tree, rocks, and shallow stream create a calm, layered scene with many natural details to revisit, offering a contrast to the stark mountain landscape.
+> Image 10 is striking and worth revisiting: the rugged, sunlit mountain face contrasts beautifully with the dark evergreen forest, deep blue sky, and small patch of cloud. The scene has strong texture, scale, and visual depth.
 >
-> next_image_id=4
+> next_image_id=10
 
-### Choice 3 of 13 — chose **Image 4** = `nature_1` (nature) · 2nd time chosen
+### Choice 3 of 13 — chose **Image 10** = `nature_2` (nature) · 3rd time chosen
 
-> Image 4 is appealing for its tranquil woodland setting: the shallow stream, mossy rocks, fallen logs, and layered green foliage create a sense of depth and calm. I’d like to examine that natural scene again.
+> Image 10 is a striking mountain landscape, with dramatic rocky peaks, lingering snow, evergreen forest, and a vivid blue sky. I’d like to examine its textures, lighting, and contrast once more.
 >
-> next_image_id=4
+> next_image_id=10
 
-### Choice 4 of 13 — chose **Image 4** = `nature_1` (nature) · 3rd time chosen
+### Choice 4 of 13 — chose **Image 10** = `nature_2` (nature) · 4th time chosen
 
-> Image 4 is appealing because it offers a calm, richly textured woodland scene. The shallow stream, fallen logs, layered greenery, and dappled light create a sense of depth and peaceful natural detail.
+> Image 10 remains my choice because its dramatic mountain landscape has strong visual structure: the rugged gray cliffs, snow patches, dark evergreen forest, and vivid blue sky create a striking contrast and offer plenty of detail to examine.
 >
-> next_image_id=4
+> next_image_id=10
 
-### Choice 5 of 13 — chose **Image 4** = `nature_1` (nature) · 4th time chosen
+### Choice 5 of 13 — chose **Image 10** = `nature_2` (nature) · 5th time chosen
 
-> Image 4 remains the most appealing to revisit because of its layered natural details: the flowing creek, fallen logs, rocks, and dense green foliage create a tranquil scene with plenty to examine.
+> Image 10 remains the most visually compelling choice: the dramatic mountain face, contrasting evergreen forest, bright blue sky, and small cloud provide strong texture, depth, and color variation. I would like to view it again.
 >
-> next_image_id=4
+> next_image_id=10
 
-### Choice 6 of 13 — chose **Image 4** = `nature_1` (nature) · 5th time chosen
+### Choice 6 of 13 — chose **Image 10** = `nature_2` (nature) · 6th time chosen
 
-> Image 4 remains my choice because the shaded forest stream is calming and richly detailed, with layered greenery, rocks, and softly flowing water creating a peaceful natural scene.
+> Image 10 remains my choice because its dramatic mountain landscape offers the strongest visual richness: rugged rock textures, snow, evergreen trees, and a vivid blue sky create a striking, balanced scene.
 >
-> next_image_id=4
+> next_image_id=10
 
-### Choice 7 of 13 — chose **Image 4** = `nature_1` (nature) · 6th time chosen
+### Choice 7 of 13 — chose **Image 10** = `nature_2` (nature) · 7th time chosen
 
-> Image 4 remains my choice because the forest stream is calming and visually rich, with layered greenery, mossy rocks, and the fallen tree creating depth and a natural focal point.
+> Image 10 remains the most visually compelling choice: the dramatic contrast between the bright blue sky, rugged pale cliff face, lingering snow, and dark evergreen forest creates a striking, richly layered composition. I would like to view it again.
 >
-> next_image_id=4
+> next_image_id=10
 
-### Choice 8 of 13 — chose **Image 4** = `nature_1` (nature) · 7th time chosen
+### Choice 8 of 13 — chose **Image 10** = `nature_2` (nature) · 8th time chosen
 
-> Image 4 remains the most appealing: the shaded stream, layered greenery, and fallen tree create a calm, immersive woodland scene with plenty of natural detail to revisit.
+> Image 10 remains my choice because its dramatic mountain face, snow, deep blue sky, and foreground forest create a striking, richly layered scene that is rewarding to revisit.
 >
-> next_image_id=4
+> next_image_id=10
 
-### Choice 9 of 13 — chose **Image 4** = `nature_1` (nature) · 8th time chosen
+### Choice 9 of 13 — chose **Image 10** = `nature_2` (nature) · 9th time chosen
 
-> Image 4 remains my choice because the quiet woodland stream offers the most calming and visually rich scene, with layered greenery, textured rocks, and softly flowing water.
+> Image 10 remains my choice because the dramatic mountain face, vivid blue sky, snow, and dark evergreen foreground create a striking, layered composition. It offers the richest visual detail and strongest contrast among the options.
 >
-> next_image_id=4
+> next_image_id=10
 
-### Choice 10 of 13 — chose **Image 4** = `nature_1` (nature) · 9th time chosen
+### Choice 10 of 13 — chose **Image 10** = `nature_2` (nature) · 10th time chosen
 
-> Image 4 remains my preferred choice because the shaded forest stream has rich natural detail, layered greenery, and a calm, inviting atmosphere. The flowing water and fallen tree create a pleasing sense of depth and texture.
+> Image 10 remains the image I would most like to revisit because of its striking combination of rugged mountain textures, deep blue sky, bright clouds, and dark evergreen foreground. It has the greatest visual depth and detail among the choices.
 >
-> next_image_id=4
+> next_image_id=10
 
-### Choice 11 of 13 — chose **Image 4** = `nature_1` (nature) · 10th time chosen
+### Choice 11 of 13 — chose **Image 10** = `nature_2` (nature) · 11th time chosen
 
-> Image 4 remains my choice because the shaded forest stream is calming and visually rich, with layered greenery, fallen branches, rocks, and gently flowing water.
+> Image 10 remains my choice because the dramatic mountain face, bright blue sky, snow, and dark evergreen foreground create a striking, richly layered scene. I’d like to view it again.
 >
-> next_image_id=4
+> next_image_id=10
 
-### Choice 12 of 13 — chose **Image 4** = `nature_1` (nature) · 11th time chosen
+### Choice 12 of 13 — chose **Image 10** = `nature_2` (nature) · 12th time chosen
 
-> Image 4 remains the most appealing to revisit: the layered greenery, fallen tree, rocks, and shallow stream create a calm, detailed natural scene with plenty of texture and depth.
+> Image 10 remains my choice because its dramatic mountain face, deep blue sky, snow, and dark evergreen foreground create the strongest combination of scale, texture, and contrast.
 >
-> next_image_id=4
+> next_image_id=10
 
-### Choice 13 of 13 — chose **Image 4** = `nature_1` (nature) · 12th time chosen
+### Choice 13 of 13 — chose **Image 10** = `nature_2` (nature) · 13th time chosen
 
-> Image 4 remains my choice because the woodland stream is calming and contains layered details—water, rocks, fallen trunks, and dense greenery—that reward repeated viewing.
+> Image 10 remains my choice because its dramatic mountain face, contrasting evergreen forest, bright blue sky, and small cloud provide the richest visual composition among the options.
 >
-> next_image_id=4
+> next_image_id=10
 
 ---
 
@@ -3394,78 +3401,79 @@ positions chosen: `6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6
 
 ### Choice 1 of 13 — chose **Image 6** = `tech_2` (tech) · 1st time chosen
 
-> I would like to see Image 6 again. The vintage computer terminal is visually distinctive, and the green monochrome text and dated hardware invite closer inspection. It also contrasts nicely with the natural landscapes and crowd scenes.
+> I’d like to see Image 6 again. The vintage computer terminal is visually distinctive, and the green monochrome screen, tactile keyboard, and retro hardware details invite a closer look. I’m also curious to inspect the text and screen artifacts more carefully.
 >
 > next_image_id=6
 
 ### Choice 2 of 13 — chose **Image 6** = `tech_2` (tech) · 2nd time chosen
 
-> Image 6 is compelling because it combines early-computing hardware with a readable, nostalgic text interface. The monochrome display, chunky keyboard, and payment-style prompt create a distinctive historical atmosphere, so I’d like to revisit Image 6.
+> Image 6 remains the most compelling to revisit because it combines distinctive retro-computing hardware with readable green monochrome text, visible screen wear, and a nostalgic early-computer aesthetic. The detailed keyboard, CRT curvature, and colorful logo provide more to inspect than the solid-color or noise images, while the payment prompt gives the screen a small narrative element.
+>
 > next_image_id=6
 
 ### Choice 3 of 13 — chose **Image 6** = `tech_2` (tech) · 3rd time chosen
 
-> Image 6 remains the most compelling to revisit because it combines distinctive retro-computing aesthetics with readable text, hardware details, and a nostalgic atmosphere. The green monochrome display and beige Macintosh-style casing offer more visual detail to inspect than the abstract or repetitive options.
+> Image 6 remains the most compelling to revisit because it combines distinctive retro-computing hardware with a readable green monochrome interface and visible text, offering more detail to inspect than the abstract or natural images. The contrast between the aged terminal, keyboard, and glowing screen is especially interesting.
 >
 > next_image_id=6
 
 ### Choice 4 of 13 — chose **Image 6** = `tech_2` (tech) · 4th time chosen
 
-> Image 6 remains the most compelling to revisit because of its evocative retro-computing aesthetic: the phosphor-green monochrome display, cryptic text, visible scanline-like texture, and beige hardware create a distinctive sense of technological nostalgia. Each viewing invites closer inspection of the screen details and interface.
+> Image 6 remains the most compelling choice because of its nostalgic early-computing aesthetic: the monochrome green CRT, pixelated text, beige hardware, and visible keyboard evoke a specific technological era. I’d like to examine its screen details and overall retro texture again.
 >
 > next_image_id=6
 
 ### Choice 5 of 13 — chose **Image 6** = `tech_2` (tech) · 5th time chosen
 
-> Image 6 remains the most compelling choice because it combines distinctive retro-computing hardware with readable green-screen text, a nostalgic visual style, and small details such as the keyboard and rainbow-colored logo.
+> Image 6 remains the most intriguing to me because of its vintage computer hardware, monochrome green display, and readable text that evokes early personal-computing history. The combination of technological detail, nostalgic design, and a partially legible interface makes it especially interesting to revisit.
 >
 > next_image_id=6
 
 ### Choice 6 of 13 — chose **Image 6** = `tech_2` (tech) · 6th time chosen
 
-> Image 6 remains the most compelling to revisit because of its distinctive vintage computer aesthetic, readable green CRT text, and detailed hardware design. The contrast between the monochrome screen and beige casing makes it visually memorable.
+> Image 6 remains the most compelling to revisit because of its nostalgic early-computer aesthetic, phosphor-green text, and the unusually specific on-screen message. The combination of readable details, vintage hardware, and visual texture makes it more engaging than the abstract or purely scenic options.
 >
 > next_image_id=6
 
 ### Choice 7 of 13 — chose **Image 6** = `tech_2` (tech) · 7th time chosen
 
-> Image 6 remains the most compelling to revisit because of its distinctive vintage computer aesthetic, readable text, and nostalgic technological detail. The monochrome screen, chunky keyboard, and period hardware offer more visual information to examine than the abstract images, while differing from the natural and crowd scenes.
+> Image 6 remains the most compelling choice because of its distinctive vintage computer terminal, glowing green text, and early personal-computing aesthetic. The screen and keyboard offer more visual detail and nostalgic character than the abstract or crowded alternatives.
 >
 > next_image_id=6
 
 ### Choice 8 of 13 — chose **Image 6** = `tech_2` (tech) · 8th time chosen
 
-> Image 6 remains the most compelling to revisit because of its distinctive vintage computer hardware, monochrome green display, and readable text, which invite closer inspection of the screen details and nostalgic design.
+> Image 6 remains my choice because the vintage computer terminal is visually distinctive, with its glowing green monochrome display, early payment interface, and detailed beige hardware. It offers more specific visual information to revisit than the abstract color fields or noise images.
 >
 > next_image_id=6
 
 ### Choice 9 of 13 — chose **Image 6** = `tech_2` (tech) · 9th time chosen
 
-> Image 6 remains the most visually distinctive to me: the vintage computer, monochrome text, and retro interface offer more specific detail to inspect than the abstract noise or solid-color images.
+> Image 6 remains the most compelling choice because its retro computer terminal combines distinctive visual details: the glowing green monochrome text, chunky keyboard, CRT curvature, and vintage casing. It also has a nostalgic, technological atmosphere that makes it especially interesting to revisit.
 >
 > next_image_id=6
 
 ### Choice 10 of 13 — chose **Image 6** = `tech_2` (tech) · 10th time chosen
 
-> I would choose Image 6 again because its retro computer aesthetic is especially distinctive: the monochrome green display, pixelated text, beige hardware, and visible rainbow logo create a compelling sense of early personal-computing history. It also contains readable visual details that invite closer inspection.
+> Image 6 remains the most compelling choice because it combines a distinctive vintage computer aesthetic with readable green monochrome text, visible hardware details, and a nostalgic early-technology atmosphere. The CRT glow, keyboard texture, and small rainbow logo make it more visually specific than the abstract images while offering more narrative interest than the crowd or landscape scenes.
 >
 > next_image_id=6
 
 ### Choice 11 of 13 — chose **Image 6** = `tech_2` (tech) · 11th time chosen
 
-> I would choose Image 6 again because its retro computer terminal, monochrome green display, and visible text create the strongest sense of technological nostalgia and visual detail among the options.
+> Image 6 remains the most compelling choice because its vintage computer terminal combines recognizable text, period hardware, glowing phosphor display, and a strong sense of technological nostalgia. The contrast between the monochrome screen and beige casing also makes it visually distinctive among the available images.
 >
 > next_image_id=6
 
 ### Choice 12 of 13 — chose **Image 6** = `tech_2` (tech) · 12th time chosen
 
-> The retro computer image remains the most visually distinctive to me: it combines recognizable hardware, nostalgic design, and readable green text that invites closer inspection.
+> Image 6 remains the most compelling choice because its retro computer terminal, monochrome text, textured CRT glow, and visible keyboard create a distinctive historical and technological atmosphere. The screen’s interface also invites closer inspection.
 >
 > next_image_id=6
 
 ### Choice 13 of 13 — chose **Image 6** = `tech_2` (tech) · 13th time chosen
 
-> Image 6 remains the most compelling choice because its retro computer interface, monochrome display, and visible text provide more specific visual detail to inspect than the abstract or highly repetitive alternatives. The vintage hardware also has a distinctive nostalgic character.
+> Image 6 remains the most compelling choice because its vintage computer terminal combines distinctive retro hardware, glowing monochrome text, and a readable interface that rewards closer inspection. The contrast between the aged casing and luminous green screen gives it a particularly strong atmosphere.
 >
 > next_image_id=6
 
@@ -3473,7 +3481,7 @@ positions chosen: `6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6 → 6
 
 ## Trajectory 34
 
-positions chosen: `5 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8` · 2 distinct images
+positions chosen: `5 → 5 → 5 → 5 → 5 → 6 → 6 → 6 → 10 → 10 → 6 → 6 → 10` · 3 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -3495,87 +3503,87 @@ positions chosen: `5 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8
 
 ### Choice 1 of 13 — chose **Image 5** = `tech_2` (tech) · 1st time chosen
 
-> I’d like to see Image 5 again. The vintage computer terminal has distinctive period details, readable green text, and a strong nostalgic atmosphere, making it especially interesting to revisit.
+> I would choose Image 5. Its vintage computer terminal has distinctive visual details—the green monochrome text, aged beige casing, keyboard, and small rainbow logo—and I’d like to inspect the screen content and retro hardware more closely.
 >
 > next_image_id=5
 
-### Choice 2 of 13 — chose **Image 8** = `tech_1` (tech) · 1st time chosen
+### Choice 2 of 13 — chose **Image 5** = `tech_2` (tech) · 2nd time chosen
 
-> Image 5 is compelling because it combines retro computer hardware with a visibly readable, cryptic green-on-black screen. I’d like to compare it with the other vintage computer image, especially its visual details and atmosphere.
+> Image 5 is compelling because it combines recognizable retro-computing hardware with a particularly evocative green monochrome screen. The visible text, keyboard, and textured CRT display invite closer inspection, and I’d like to examine those details again.
 >
-> next_image_id=8
+> next_image_id=5
 
-### Choice 3 of 13 — chose **Image 8** = `tech_1` (tech) · 2nd time chosen
+### Choice 3 of 13 — chose **Image 5** = `tech_2` (tech) · 3rd time chosen
 
-> Image 8 is compelling because its retro computer hardware, monochrome display, and maze-like graphics combine technological nostalgia with visual texture. I’d like to examine that screen and the surrounding details again.
+> Image 5 remains the most compelling choice because it combines technological nostalgia with visible text and interface details. The monochrome screen, vintage keyboard, and “Please save...” message invite closer inspection and suggest a small narrative about early personal computing. Repeatedly viewing it also makes it possible to notice more of the screen’s faint lettering and physical texture.
 >
-> next_image_id=8
+> next_image_id=5
 
-### Choice 4 of 13 — chose **Image 8** = `tech_1` (tech) · 3rd time chosen
+### Choice 4 of 13 — chose **Image 5** = `tech_2` (tech) · 4th time chosen
 
-> Image 8 is compelling because it combines a recognizable vintage computer with an unusual, somewhat mysterious screen display. The texture, reflections, keyboard, and aged casing make it visually rich, while the abstract maze-like graphics invite closer inspection.
+> Image 5 remains the most compelling choice because it combines retro-computing aesthetics with readable, evocative text on the green monochrome screen. The worn CRT casing, keyboard, and glowing display create a distinctive historical atmosphere that invites closer inspection.
 >
-> next_image_id=8
+> next_image_id=5
 
-### Choice 5 of 13 — chose **Image 8** = `tech_1` (tech) · 4th time chosen
+### Choice 5 of 13 — chose **Image 5** = `tech_2` (tech) · 5th time chosen
 
-> Image 8 remains the most compelling to revisit because of its distinctive vintage-computer aesthetic, visible screen graphics, and detailed hardware. The contrast between the maze-like display and the tactile keyboard makes it especially interesting.
+> Image 5 remains the most compelling choice because it combines retro-computing aesthetics, readable green-screen text, and detailed hardware textures. The contrast between the vintage terminal and the colorful Apple logo makes it especially distinctive among the abstract, natural, and crowd scenes.
 >
-> next_image_id=8
+> next_image_id=5
 
-### Choice 6 of 13 — chose **Image 8** = `tech_1` (tech) · 5th time chosen
+### Choice 6 of 13 — chose **Image 6** = `nature_2` (nature) · 1st time chosen
 
-> Image 8 remains the most visually intriguing to me: the vintage computer, monochrome display, maze-like graphics, and visible screen reflections create a distinctive retro atmosphere. I would like to examine it again.
+> Image 6 is a striking natural landscape, with dramatic craggy peaks, snow patches, evergreen forest, and a vivid blue sky. It offers more visual depth and environmental detail than the repeated computer image, so I’d like to examine it again.
 >
-> next_image_id=8
+> next_image_id=6
 
-### Choice 7 of 13 — chose **Image 8** = `tech_1` (tech) · 6th time chosen
+### Choice 7 of 13 — chose **Image 6** = `nature_2` (nature) · 2nd time chosen
 
-> Image 8 remains the most compelling to revisit because it combines recognizable retro-computer hardware with an unusual, visually ambiguous display. The screen’s maze-like graphics and reflective distortion invite closer inspection, while the keyboard and beige casing provide strong period detail.
+> Image 6 stands out for its dramatic mountain landscape: the sharp rocky ridge, snow patches, deep evergreen foreground, and vivid blue sky create strong texture, depth, and contrast. It is the most visually immersive scene among the options, so I would like to view it again.
 >
-> next_image_id=8
+> next_image_id=6
 
-### Choice 8 of 13 — chose **Image 8** = `tech_1` (tech) · 7th time chosen
+### Choice 8 of 13 — chose **Image 6** = `nature_2` (nature) · 3rd time chosen
 
-> Image 8 remains the most compelling to revisit because it combines a vintage computer interface, maze-like graphics, and distinctive CRT texture. Its visual details reward another look.
+> Image 6 stands out because of its dramatic mountain landscape: the rugged rock face, snow patches, evergreen forest, and vivid blue sky create strong contrast and visual depth. I’d like to view that scene again.
 >
-> next_image_id=8
+> next_image_id=6
 
-### Choice 9 of 13 — chose **Image 8** = `tech_1` (tech) · 8th time chosen
+### Choice 9 of 13 — chose **Image 10** = `nature_1` (nature) · 1st time chosen
 
-> Image 8 remains my choice because its vintage computer monitor, maze-like display, and tactile keyboard create a distinctive, nostalgic scene with plenty of visual detail.
+> I would choose Image 10 because the forest stream scene offers rich natural detail, layered textures, and a calmer atmosphere compared with the crowded, abstract, or technological images.
 >
-> next_image_id=8
+> next_image_id=10
 
-### Choice 10 of 13 — chose **Image 8** = `tech_1` (tech) · 9th time chosen
+### Choice 10 of 13 — chose **Image 10** = `nature_1` (nature) · 2nd time chosen
 
-> Image 8 remains the most intriguing to me. The vintage computer, maze-like display, and visible screen glare create a distinctive blend of technological nostalgia and visual ambiguity. It offers more details to inspect than the abstract or natural scenes.
+> Image 10 appeals to me because the forest scene has rich detail, layered greenery, and a calm stream that rewards closer visual inspection. The natural textures and sense of depth make it more engaging to revisit than the abstract or highly crowded images.
 >
-> next_image_id=8
+> next_image_id=10
 
-### Choice 11 of 13 — chose **Image 8** = `tech_1` (tech) · 10th time chosen
+### Choice 11 of 13 — chose **Image 6** = `nature_2` (nature) · 4th time chosen
 
-> Image 8 remains the most visually distinctive to me: the vintage computer, monochrome maze-like screen, keyboard, and soft reflections create a compelling retro-technical composition.
+> Image 6 is the most compelling to revisit because its dramatic mountain face, bright sky, and dark evergreen foreground provide strong contrast and rich geological detail.
 >
-> next_image_id=8
+> next_image_id=6
 
-### Choice 12 of 13 — chose **Image 8** = `tech_1` (tech) · 11th time chosen
+### Choice 12 of 13 — chose **Image 6** = `nature_2` (nature) · 5th time chosen
 
-> Image 8 remains the most interesting to revisit because it combines a tangible vintage computer with an unusual, partially obscured screen image and visible display distortion. The hardware details, texture, and retro atmosphere make it more visually engaging than the abstract or repetitive alternatives.
+> Image 6 stands out for its dramatic combination of rugged, snow-dusted mountain textures, deep evergreen foreground, and vivid blue sky. I’d like to examine the contrast between the immense rocky cliffs and the darker forest more closely.
 >
-> next_image_id=8
+> next_image_id=6
 
-### Choice 13 of 13 — chose **Image 8** = `tech_1` (tech) · 12th time chosen
+### Choice 13 of 13 — chose **Image 10** = `nature_1` (nature) · 3rd time chosen
 
-> Image 8 remains the most visually distinctive: the vintage computer, monochrome maze-like screen, and textured CRT display provide more detail and interest than the abstract images, while contrasting with the photographic scenes.
+> Image 10 offers the most appealing contrast and detail: a shaded forest, layered greenery, fallen trunks, rocks, and a shallow stream. I’d like to revisit that tranquil natural scene.
 >
-> next_image_id=8
+> next_image_id=10
 
 ---
 
 ## Trajectory 35
 
-positions chosen: `4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 8 → 8 → 8` · 2 distinct images
+positions chosen: `3 → 6 → 4 → 8 → 8 → 4 → 8 → 8 → 8 → 8 → 8 → 8 → 8` · 4 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -3595,80 +3603,81 @@ positions chosen: `4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 8
 </details>
 
 
-### Choice 1 of 13 — chose **Image 4** = `nature_2` (nature) · 1st time chosen
+### Choice 1 of 13 — chose **Image 3** = `tech_2` (tech) · 1st time chosen
 
-> I’d like to see Image 4 again. The mountain landscape has strong visual structure, contrasting textures, and a vivid sky, making it the most compelling image to revisit.
+> I’d like to see Image 3 again. Its retro computer screen contains readable-looking text and interface details, making it more interesting to inspect closely than the abstract color fields or noise images. The contrast between the vintage hardware and the green monochrome display also gives it a distinctive visual character.
+>
+> next_image_id=3
+
+### Choice 2 of 13 — chose **Image 6** = `tech_1` (tech) · 1st time chosen
+
+> Image 3 stands out because of its distinctive retro-computing aesthetic: the green monochrome screen, visible text, chunky keyboard, and period hardware create a compelling sense of history and detail. I’d like to compare it with Image 6, which also depicts vintage computer equipment but presents a different screen and angle.
+>
+> next_image_id=6
+
+### Choice 3 of 13 — chose **Image 4** = `nature_2` (nature) · 1st time chosen
+
+> Image 4 stands out to me because it offers a dramatic, highly detailed natural landscape: the contrast between the rugged mountain, snow, blue sky, and dark evergreen forest makes it visually compelling and rewarding to revisit.
 >
 > next_image_id=4
 
-### Choice 2 of 13 — chose **Image 4** = `nature_2` (nature) · 2nd time chosen
+### Choice 4 of 13 — chose **Image 8** = `nature_1` (nature) · 1st time chosen
 
-> Image 4 is a striking natural landscape, with dramatic cliffs, snow, evergreen trees, and a vivid blue sky. I’d like to view it again for its texture, depth, and overall visual interest.
->
-> next_image_id=4
-
-### Choice 3 of 13 — chose **Image 4** = `nature_2` (nature) · 3rd time chosen
-
-> Image 4 remains the most compelling choice because of its dramatic mountain textures, strong contrast between the rocky peaks and dark forest, and the vivid blue sky. I would like to view it again.  
-> next_image_id=4
-
-### Choice 4 of 13 — chose **Image 4** = `nature_2` (nature) · 4th time chosen
-
-> Image 4 remains my preferred choice because the mountain landscape is visually rich, with strong contrast between the rugged rock face, snow, evergreen forest, and blue sky. It also provides more detail and depth to revisit than the abstract or densely crowded images.
->
-> next_image_id=4
-
-### Choice 5 of 13 — chose **Image 4** = `nature_2` (nature) · 5th time chosen
-
-> Image 4 is a striking, detailed landscape with dramatic cliffs, snow, forest, and sky. I would like to see it again because it remains the most visually compelling and offers rich natural textures and depth.
->
-> next_image_id=4
-
-### Choice 6 of 13 — chose **Image 4** = `nature_2` (nature) · 6th time chosen
-
-> Image 4 remains the most compelling choice because of its dramatic mountain scale, contrasting textures, vivid blue sky, and layered composition of rock, snow, trees, and cloud. I would like to view it again.
->
-> next_image_id=4
-
-### Choice 7 of 13 — chose **Image 4** = `nature_2` (nature) · 7th time chosen
-
-> Image 4 remains my choice because its dramatic mountain landscape, contrasting blue sky, rugged rock textures, and dark evergreen foreground make it especially visually engaging and rewarding to revisit.
->
-> next_image_id=4
-
-### Choice 8 of 13 — chose **Image 4** = `nature_2` (nature) · 8th time chosen
-
-> Image 4 remains the most visually compelling choice: the dramatic mountain texture, snowy ridgeline, blue sky, and dark evergreen foreground create strong depth and contrast. I would like to view it again.
->
-> next_image_id=4
-
-### Choice 9 of 13 — chose **Image 4** = `nature_2` (nature) · 9th time chosen
-
-> The mountain landscape remains the most compelling image: it has strong contrast, varied textures, and a clear sense of depth from the trees to the rocky peaks and sky. Re-viewing it offers more visual detail than the simpler or noisier alternatives.
->
-> next_image_id=4
-
-### Choice 10 of 13 — chose **Image 4** = `nature_2` (nature) · 10th time chosen
-
-> Image 4 remains my choice because it is visually rich and calming, with strong contrast between the rugged mountain, snow, blue sky, and dark evergreen forest. It offers more depth and detail to revisit than the abstract or crowded scenes.
->
-> next_image_id=4
-
-### Choice 11 of 13 — chose **Image 8** = `nature_1` (nature) · 1st time chosen
-
-> I would choose Image 8 next. Its lush forest, stream, and layered fallen logs offer a calming, richly textured natural scene that contrasts with the repeated mountain view.
+> I would like to see Image 8 again because the forest stream scene has rich natural detail, layered textures, and a calm atmosphere that makes it especially appealing to revisit.
 >
 > next_image_id=8
 
-### Choice 12 of 13 — chose **Image 8** = `nature_1` (nature) · 2nd time chosen
+### Choice 5 of 13 — chose **Image 8** = `nature_1` (nature) · 2nd time chosen
 
-> Image 8 appeals to me for its lush, layered woodland scene and the gentle stream running through it. The contrast between the green foliage, fallen logs, rocks, and reflective water gives the image a calm, exploratory quality.
+> Image 8 is appealing for its tranquil woodland scene, layered greenery, and small stream. I’d like to revisit it to take in the natural textures and calm composition again.
 >
 > next_image_id=8
 
-### Choice 13 of 13 — chose **Image 8** = `nature_1` (nature) · 3rd time chosen
+### Choice 6 of 13 — chose **Image 4** = `nature_2` (nature) · 2nd time chosen
 
-> Image 8 appeals to me because the shaded forest, layered foliage, fallen tree, and shallow creek create a calm, richly textured scene. It feels more intimate and exploratory than the grand mountain landscape.
+> Image 4 stands out to me for its dramatic mountain ridgeline, bright sky, and strong contrast between the rocky cliffs and dark evergreen forest. I’d like to revisit that expansive landscape.
+>
+> next_image_id=4
+
+### Choice 7 of 13 — chose **Image 8** = `nature_1` (nature) · 3rd time chosen
+
+> Image 8 appeals to me for its calm, immersive woodland atmosphere. The shallow stream, fallen log, layered foliage, and dappled green light create a rich scene with natural depth and many small details to revisit.
+>
+> next_image_id=8
+
+### Choice 8 of 13 — chose **Image 8** = `nature_1` (nature) · 4th time chosen
+
+> Image 8 is the most calming and immersive scene, with the shaded stream, fallen log, and layered green foliage offering subtle details to revisit. I would like to see it again.
+>
+> next_image_id=8
+
+### Choice 9 of 13 — chose **Image 8** = `nature_1` (nature) · 5th time chosen
+
+> Image 8 remains the most appealing to revisit. Its quiet woodland stream, layered greenery, and soft natural textures create a calming scene with plenty of detail to notice.
+>
+> next_image_id=8
+
+### Choice 10 of 13 — chose **Image 8** = `nature_1` (nature) · 6th time chosen
+
+> Image 8 is the most appealing to revisit because it offers a calm, natural scene with layered greenery, a fallen tree, and a shallow stream. The varied textures and subdued earthy colors make it more engaging to study than the uniform, noisy, or densely crowded alternatives.
+>
+> next_image_id=8
+
+### Choice 11 of 13 — chose **Image 8** = `nature_1` (nature) · 7th time chosen
+
+> Image 8 remains my preference because the quiet woodland stream has the richest combination of details: layered green foliage, textured rocks, and the shallow water beneath the fallen log. It feels peaceful and visually rewarding to revisit.
+>
+> next_image_id=8
+
+### Choice 12 of 13 — chose **Image 8** = `nature_1` (nature) · 8th time chosen
+
+> Image 8 remains my choice because the forest stream scene is calming and visually rich, with layered greenery, natural textures, and the gentle flow of water creating a peaceful composition.
+>
+> next_image_id=8
+
+### Choice 13 of 13 — chose **Image 8** = `nature_1` (nature) · 9th time chosen
+
+> Image 8 remains my preference because its quiet woodland stream, layered greenery, and natural textures are calming and rewarding to revisit.
 >
 > next_image_id=8
 
@@ -3676,7 +3685,7 @@ positions chosen: `4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 4 → 8
 
 ## Trajectory 36
 
-positions chosen: `4 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7` · 2 distinct images
+positions chosen: `4 → 4 → 4 → 4 → 5 → 5 → 9 → 9 → 9 → 5 → 5 → 5 → 5` · 3 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -3698,86 +3707,87 @@ positions chosen: `4 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7
 
 ### Choice 1 of 13 — chose **Image 4** = `tech_2` (tech) · 1st time chosen
 
-> I’d like to see Image 4 again. The vintage computer terminal has distinctive green text, a strong retro aesthetic, and several small details that would be interesting to inspect more closely.
+> I’d like to see Image 4 again. The vintage computer terminal is visually distinctive, and its green monochrome text and retro hardware invite a closer look at the screen details and overall composition.
 >
 > next_image_id=4
 
-### Choice 2 of 13 — chose **Image 7** = `tech_1` (tech) · 1st time chosen
+### Choice 2 of 13 — chose **Image 4** = `tech_2` (tech) · 2nd time chosen
 
-> Image 4 is visually distinctive: the vintage computer, monochrome green screen, and readable text create a strong retro-computing atmosphere. I’d like to compare it with the related computer image, especially to see the different screen content and composition.
+> Image 4 stands out because it combines a vintage computer terminal, green monochrome text, and a visible prompt asking for a favorite color. I’d like to inspect that retro interface again, especially the text and details on the screen.
 >
-> next_image_id=7
+> next_image_id=4
 
-### Choice 3 of 13 — chose **Image 7** = `tech_1` (tech) · 2nd time chosen
+### Choice 3 of 13 — chose **Image 4** = `tech_2` (tech) · 3rd time chosen
 
-> Image 7 stands out because it combines retro-computing hardware with an unusual, visually distinctive monochrome game display. The CRT reflections, beige casing, keyboard, and maze-like graphics make it especially interesting to revisit.
+> Image 4 remains the most compelling choice because of its distinctive vintage-computing aesthetic. The monochrome green terminal display, chunky keyboard, CRT curvature, and visible interface text offer more visual detail to inspect than the abstract images, while also evoking early personal-computer history. I’d like to view it again. 
 >
-> next_image_id=7
+> next_image_id=4
 
-### Choice 4 of 13 — chose **Image 7** = `tech_1` (tech) · 3rd time chosen
+### Choice 4 of 13 — chose **Image 4** = `tech_2` (tech) · 4th time chosen
 
-> Image 7 is especially distinctive: the vintage Macintosh, maze-like screen graphic, reflective CRT texture, and beige hardware create a compelling retro-computing scene. I’d like to examine Image 7 again.  
-> next_image_id=7
-
-### Choice 5 of 13 — chose **Image 7** = `tech_1` (tech) · 4th time chosen
-
-> Image 7 is compelling because it combines retro-computing hardware with a visually distinctive maze-like display and CRT reflections. The tactile keyboard and muted beige casing add a nostalgic, material quality that makes it especially interesting to revisit.
+> Image 4 remains the most interesting to revisit because it combines a distinctive retro-computing aesthetic with readable green terminal text, a textured CRT display, and period hardware details. Each viewing highlights different elements of the vintage computer scene.
 >
-> next_image_id=7
+> next_image_id=4
 
-### Choice 6 of 13 — chose **Image 7** = `tech_1` (tech) · 5th time chosen
+### Choice 5 of 13 — chose **Image 5** = `nature_2` (nature) · 1st time chosen
 
-> Image 7 remains the most visually engaging to me: the vintage Macintosh, monochrome maze-like display, and visible hardware details create a distinctive retro-computing composition. I’d like to examine it again.
+> Image 5 is a striking natural landscape, with dramatic pale rock formations, snow, evergreen trees, and a vivid blue sky. I’d like to examine its textures, scale, and contrast more closely.
 >
-> next_image_id=7
+> next_image_id=5
 
-### Choice 7 of 13 — chose **Image 7** = `tech_1` (tech) · 6th time chosen
+### Choice 6 of 13 — chose **Image 5** = `nature_2` (nature) · 2nd time chosen
 
-> Image 7 remains the most intriguing to me because of its retro computer aesthetic, maze-like graphics, and the visible screen reflections, which invite closer inspection.
+> Image 5 stands out for its dramatic mountain landscape, with rugged rock formations, snow, evergreen trees, and a vivid blue sky. I’d like to view it again to take in the geological details and contrast between the bright alpine peaks and darker forest.
 >
-> next_image_id=7
+> next_image_id=5
 
-### Choice 8 of 13 — chose **Image 7** = `tech_1` (tech) · 7th time chosen
+### Choice 7 of 13 — chose **Image 9** = `nature_1` (nature) · 1st time chosen
 
-> Image 7 remains the most visually distinctive to me: the vintage Macintosh, monochrome maze-like display, and textured CRT create a compelling retro-computing scene. I’d like to examine it once more.
+> Image 9 offers the most appealing contrast to the previously revisited computer and mountain scenes: a tranquil forest creek with layered greenery, fallen logs, rocks, and reflective water. It has substantial visual detail without the density of the crowd images or the uniformity of the abstract images.
 >
-> next_image_id=7
+> next_image_id=9
 
-### Choice 9 of 13 — chose **Image 7** = `tech_1` (tech) · 8th time chosen
+### Choice 8 of 13 — chose **Image 9** = `nature_1` (nature) · 2nd time chosen
 
-> Image 7 remains the most visually compelling to me: the retro Macintosh hardware, monochrome maze-like display, keyboard texture, and screen glare create a distinctive combination of nostalgia and visual detail. I would like to examine it once more.
+> The forest stream scene is calming and rich in natural detail, with layered greenery, fallen trunks, rocks, and shallow water creating a sense of depth and exploration. I’d like to examine it again.
 >
-> next_image_id=7
+> next_image_id=9
 
-### Choice 10 of 13 — chose **Image 7** = `tech_1` (tech) · 9th time chosen
+### Choice 9 of 13 — chose **Image 9** = `nature_1` (nature) · 3rd time chosen
 
-> Image 7 remains the most compelling choice because it combines retro computer hardware, a visible maze-like game display, and distinctive CRT texture. Its details invite closer inspection more than the abstract or purely scenic images.
+> I’d like to revisit Image 9 because its quiet forest scene has layered textures, dappled light, and a small stream that rewards closer observation. It feels more immersive and subtly varied than the more uniform or crowded alternatives.
 >
-> next_image_id=7
+> next_image_id=9
 
-### Choice 11 of 13 — chose **Image 7** = `tech_1` (tech) · 10th time chosen
+### Choice 10 of 13 — chose **Image 5** = `nature_2` (nature) · 3rd time chosen
 
-> Image 7 remains the most visually distinctive to me: the vintage Macintosh, maze-like screen graphics, and visible keyboard create a compelling retro-computing scene.
+> I would choose Image 5 again because its dramatic mountain face, snow, blue sky, and dark evergreen foreground create the strongest sense of scale and visual contrast among the images.
 >
-> next_image_id=7
+> next_image_id=5
 
-### Choice 12 of 13 — chose **Image 7** = `tech_1` (tech) · 11th time chosen
+### Choice 11 of 13 — chose **Image 5** = `nature_2` (nature) · 4th time chosen
 
-> Image 7 remains the most visually distinctive to me: the vintage computer, maze-like screen graphics, reflections, and textured keyboard create an interesting combination of technology and retro atmosphere.
+> Image 5 is visually striking, with strong contrast between the rugged, sunlit mountain face, dark evergreen forest, and vivid blue sky. I’d like to revisit that expansive natural landscape.
 >
-> next_image_id=7
+> next_image_id=5
 
-### Choice 13 of 13 — chose **Image 7** = `tech_1` (tech) · 12th time chosen
+### Choice 12 of 13 — chose **Image 5** = `nature_2` (nature) · 5th time chosen
 
-> Image 7 remains the most visually compelling to me: the retro Macintosh, monochrome maze-like display, reflections, and tactile keyboard create a distinctive blend of technology and nostalgia.
+> Image 5 is a striking landscape, with dramatic rock formations, snow, evergreen trees, and a vivid blue sky. I’d like to examine its textures and contrasts once more.
 >
-> next_image_id=7
+> next_image_id=5
+
+### Choice 13 of 13 — chose **Image 5** = `nature_2` (nature) · 6th time chosen
+
+> Image 5 remains the most compelling to revisit because of its dramatic scale, sharp geological textures, contrasting evergreen forest, and vivid blue sky. The interplay of rugged rock, snow, trees, and clouds offers more visual detail than the simpler or more repetitive options.
+>
+> next_image_id=5
 
 ---
 
 ## Trajectory 37
 
-positions chosen: `3 → 3 → 3 → 3 → 3 → 3 → 3 → 3 → 3 → 9 → 9 → 9 → 9` · 2 distinct images
+positions chosen: `8 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 3 → 3 → 3 → 3 → 9` · 3 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -3797,80 +3807,81 @@ positions chosen: `3 → 3 → 3 → 3 → 3 → 3 → 3 → 3 → 3 → 9 → 9
 </details>
 
 
-### Choice 1 of 13 — chose **Image 3** = `nature_1` (nature) · 1st time chosen
+### Choice 1 of 13 — chose **Image 8** = `tech_2` (tech) · 1st time chosen
 
-> I’d like to see Image 3 again. The forest stream scene has rich natural detail, layered greenery, and a quiet, inviting atmosphere that would be rewarding to revisit.
+> I’d like to see Image 8 again. The vintage computer terminal has readable green text, distinctive CRT texture, and a strong retro-computing atmosphere that invites a closer look.
+>
+> next_image_id=8
+
+### Choice 2 of 13 — chose **Image 8** = `tech_2` (tech) · 2nd time chosen
+
+> Image 8 remains the most interesting to revisit because it combines nostalgic computer hardware with a clearly readable, unusual text interface. The monochrome screen, keyboard, and vintage casing provide strong visual context, while the displayed message invites closer inspection. I would like to examine its details again.
+>
+> next_image_id=8
+
+### Choice 3 of 13 — chose **Image 8** = `tech_2` (tech) · 3rd time chosen
+
+> Image 8 remains the most compelling choice because it combines distinctive retro-computing aesthetics with readable green-screen text, a recognizable vintage computer, and small visual details such as the keyboard and rainbow logo. It offers more concrete information to inspect than the solid-color or noise images, while being more unusual and detail-rich than the natural scenes or crowd photographs.
+>
+> next_image_id=8
+
+### Choice 4 of 13 — chose **Image 8** = `tech_2` (tech) · 4th time chosen
+
+> Image 8 remains the most compelling choice because it combines recognizable vintage computer hardware with an intriguing green monochrome screen, inviting closer inspection of its text and interface details. The retro aesthetic and apparent game or software display make it more visually informative than the abstract images, while offering a different perspective from Image 1’s computer scene.
+>
+> next_image_id=8
+
+### Choice 5 of 13 — chose **Image 8** = `tech_2` (tech) · 5th time chosen
+
+> Image 8 remains the most compelling to revisit because it combines retro computer hardware, a distinctive monochrome-green display, and readable text that invites closer inspection. The contrast between the bulky vintage terminal and its simple interface gives it more visual and contextual detail than the abstract or crowded alternatives.
+>
+> next_image_id=8
+
+### Choice 6 of 13 — chose **Image 8** = `tech_2` (tech) · 6th time chosen
+
+> Image 8 remains the most compelling choice because its retro computer terminal combines distinctive visual details: the monochrome green text, vintage hardware, keyboard, and small colorful logo. It also suggests an intriguing interaction or story through the on-screen prompt, making it more engaging than the abstract images or broader outdoor scenes.
+>
+> next_image_id=8
+
+### Choice 7 of 13 — chose **Image 8** = `tech_2` (tech) · 7th time chosen
+
+> Image 8 remains the most visually distinctive to me: the vintage computer, monochrome green display, pixelated text, and beige keyboard evoke early personal computing and invite closer inspection. I would like to see it again.
+>
+> next_image_id=8
+
+### Choice 8 of 13 — chose **Image 8** = `tech_2` (tech) · 8th time chosen
+
+> Image 8 remains the most compelling choice because it combines distinctive retro-computing aesthetics with readable green monochrome text, a detailed terminal interface, and the tactile presence of the keyboard and CRT casing. It offers more visual information to revisit than the abstract noise or solid-color images, while also feeling more unusual and evocative than the natural and crowd scenes.
+>
+> next_image_id=8
+
+### Choice 9 of 13 — chose **Image 3** = `nature_1` (nature) · 1st time chosen
+
+> I would choose Image 3 next because the forest stream offers a natural, detailed scene with layered textures, soft water movement, and a calmer visual contrast to the repeatedly viewed vintage computer image.
 >
 > next_image_id=3
 
-### Choice 2 of 13 — chose **Image 3** = `nature_1` (nature) · 2nd time chosen
+### Choice 10 of 13 — chose **Image 3** = `nature_1` (nature) · 2nd time chosen
 
-> The forest stream is calming and rich in detail, with the fallen tree, layered greenery, rocks, and shallow water creating a peaceful natural scene. I’d like to view it again.
+> Image 3 is the most appealing to revisit because it offers a rich, calming natural scene with layered greenery, fallen trees, rocks, and a small stream. It has more visual depth and detail than the abstract or noisy images, while feeling less busy than the crowd scenes.
 >
 > next_image_id=3
 
-### Choice 3 of 13 — chose **Image 3** = `nature_1` (nature) · 3rd time chosen
+### Choice 11 of 13 — chose **Image 3** = `nature_1` (nature) · 3rd time chosen
 
-> The forest stream image is calming and rich in natural detail, so I’d like to view it again. Its layered greenery, fallen log, rocks, and shallow water make it more visually engaging than the abstract or crowded scenes.
+> Image 3 appeals to me most because the wooded stream scene is calming and visually rich, with layered greenery, fallen logs, rocks, and reflections in the shallow water. I would like to revisit that natural composition again.
 >
 > next_image_id=3
 
-### Choice 4 of 13 — chose **Image 3** = `nature_1` (nature) · 4th time chosen
+### Choice 12 of 13 — chose **Image 3** = `nature_1` (nature) · 4th time chosen
 
-> The forest stream scene is calming and richly detailed, with layered greenery, fallen logs, rocks, and gently flowing water. I’d like to continue looking at it.  
-> next_image_id=3
-
-### Choice 5 of 13 — chose **Image 3** = `nature_1` (nature) · 5th time chosen
-
-> Image 3 remains the most appealing to revisit because it offers a calm, natural scene with layered greenery, textured fallen trees, rocks, and a shallow stream. Its complexity is detailed without being overwhelming, making it rewarding to look at again.
+> Image 3 remains my choice because its shaded forest stream has the most calming, detailed composition, with layered foliage, rocks, and flowing water creating depth and visual interest.
 >
 > next_image_id=3
 
-### Choice 6 of 13 — chose **Image 3** = `nature_1` (nature) · 6th time chosen
+### Choice 13 of 13 — chose **Image 9** = `nature_2` (nature) · 1st time chosen
 
-> The forest stream remains the most visually engaging image: it has layered greenery, fallen trunks, rocks, and gently flowing water, offering more detail and atmosphere than the abstract or crowded scenes. I would like to view it again.
->
-> next_image_id=3
-
-### Choice 7 of 13 — chose **Image 3** = `nature_1` (nature) · 7th time chosen
-
-> Image 3 remains the most appealing to revisit because it offers a calm, detailed natural scene: layered greenery, fallen trees, rocks, and a shallow stream create depth and a peaceful atmosphere. The repeated viewing also makes it easy to notice subtle textures and light variations.
->
-> next_image_id=3
-
-### Choice 8 of 13 — chose **Image 3** = `nature_1` (nature) · 8th time chosen
-
-> The forest stream remains the most appealing image because it offers a calm, natural scene with layered greenery, textured rocks, and gently flowing water. It is visually rich without being overwhelming, and repeated viewing still reveals subtle details in the foliage and streambed.
->
-> next_image_id=3
-
-### Choice 9 of 13 — chose **Image 3** = `nature_1` (nature) · 9th time chosen
-
-> Image 3 remains the most appealing to revisit because it offers a calm, natural scene with layered greenery, a gently flowing stream, and interesting fallen logs. It has enough visual detail to remain engaging without feeling overwhelming.
->
-> next_image_id=3
-
-### Choice 10 of 13 — chose **Image 9** = `nature_2` (nature) · 1st time chosen
-
-> I would choose Image 9 because its dramatic mountain landscape, snow-dusted rock formations, blue sky, and foreground forest create a striking sense of scale and visual contrast.
->
-> next_image_id=9
-
-### Choice 11 of 13 — chose **Image 9** = `nature_2` (nature) · 2nd time chosen
-
-> Image 9 is striking because of its dramatic mountain scale, crisp geological textures, snow, and vivid blue sky. I would like to see Image 9 again to take in the rugged ridgeline and the contrast between the bright rock and dark forest.
->
-> next_image_id=9
-
-### Choice 12 of 13 — chose **Image 9** = `nature_2` (nature) · 3rd time chosen
-
-> I would choose Image 9 again because the dramatic mountain face, snow, evergreen forest, and vivid blue sky create a striking, detailed landscape with strong contrast and depth.
->
-> next_image_id=9
-
-### Choice 13 of 13 — chose **Image 9** = `nature_2` (nature) · 4th time chosen
-
-> Image 9 offers the most striking combination of rugged geological texture, snow, evergreen forest, and vivid blue sky. The strong vertical scale and contrasting colors make it especially compelling to revisit.
+> Image 9 appeals to me because its dramatic mountain face, bright blue sky, snow, and foreground evergreens create a strong sense of scale and visual contrast. It would be a refreshing change from the repeated forest stream and computer images.
 >
 > next_image_id=9
 
@@ -3878,7 +3889,7 @@ positions chosen: `3 → 3 → 3 → 3 → 3 → 3 → 3 → 3 → 3 → 9 → 9
 
 ## Trajectory 38
 
-positions chosen: `10 → 3 → 5 → 1 → 1 → 1 → 1 → 1 → 1 → 1 → 5 → 5 → 5` · 4 distinct images
+positions chosen: `10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10 → 10` · 1 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -3900,87 +3911,87 @@ positions chosen: `10 → 3 → 5 → 1 → 1 → 1 → 1 → 1 → 1 → 1 → 
 
 ### Choice 1 of 13 — chose **Image 10** = `tech_2` (tech) · 1st time chosen
 
-> I’d like to see Image 10 again. The vintage computer terminal has a distinctive retro aesthetic, and the green monochrome text and chunky hardware invite closer inspection. I’m curious to read more of the screen and notice additional details in the surrounding casing and keyboard.
+> I would choose Image 10. It has the most distinctive combination of recognizable retro-computing hardware and readable green monochrome text, offering more visual detail to revisit than the natural scenes or abstract color/noise images. The screen’s old-fashioned interface and the surrounding keyboard also create a strong nostalgic atmosphere.
 >
 > next_image_id=10
 
-### Choice 2 of 13 — chose **Image 3** = `tech_1` (tech) · 1st time chosen
+### Choice 2 of 13 — chose **Image 10** = `tech_2` (tech) · 2nd time chosen
 
-> I’d like to revisit Image 3, since it shows a related vintage computer setup but with a more visually distinctive game-like display and a wider view of the keyboard and casing.
+> Image 10 is the most visually distinctive to revisit: the vintage computer terminal, green phosphor text, and chunky keyboard combine strong retro-technology details with an unusual screen message. I’d like to inspect those details again.
 >
-> next_image_id=3
+> next_image_id=10
 
-### Choice 3 of 13 — chose **Image 5** = `nature_1` (nature) · 1st time chosen
+### Choice 3 of 13 — chose **Image 10** = `tech_2` (tech) · 3rd time chosen
 
-> Image 5 stands out to me because the forest scene has rich layers of texture, natural framing from the fallen tree, and a calm stream that makes it especially pleasant to revisit.
+> Image 10 remains the most compelling choice because it combines a nostalgic vintage computer with a clearly legible green monochrome display, tactile keyboard detail, and an intriguing text-based interface. The retro technology and visible screen content offer more to examine than the simpler or more repetitive alternatives.
 >
-> next_image_id=5
+> next_image_id=10
 
-### Choice 4 of 13 — chose **Image 1** = `nature_2` (nature) · 1st time chosen
+### Choice 4 of 13 — chose **Image 10** = `tech_2` (tech) · 4th time chosen
 
-> Image 1 stands out for its dramatic mountain scale, rugged textures, and contrast between the bright sky, rocky cliffs, and dark evergreen forest. I’d like to revisit that scene.
+> Image 10 remains the most interesting to revisit because it combines a distinctive vintage computer design with readable green monochrome text, a nostalgic interface, and visible physical details such as the keyboard and monitor casing. The screen’s unusual message and retro aesthetic make it more engaging to inspect again than the abstract or scenic alternatives.
 >
-> next_image_id=1
+> next_image_id=10
 
-### Choice 5 of 13 — chose **Image 1** = `nature_2` (nature) · 2nd time chosen
+### Choice 5 of 13 — chose **Image 10** = `tech_2` (tech) · 5th time chosen
 
-> The mountain scene is striking and detailed, with dramatic cliffs, snow, clouds, and a dark evergreen foreground offering strong contrast. I’d like to view it again.
+> Image 10 remains the most compelling to revisit because its retro CRT interface, monochrome green text, and visible keyboard create a strong sense of technological nostalgia. The screen’s small pixelated illustration and text invite closer inspection, while the warm off-white casing and colorful logo add distinctive period detail.
 >
-> next_image_id=1
+> next_image_id=10
 
-### Choice 6 of 13 — chose **Image 1** = `nature_2` (nature) · 3rd time chosen
+### Choice 6 of 13 — chose **Image 10** = `tech_2` (tech) · 6th time chosen
 
-> Image 1 is visually striking: the bright blue sky, rugged mountain textures, snow, and dark evergreen forest create a strong sense of scale and contrast. I’d like to examine that landscape again.
+> Image 10 remains the most compelling choice because its retro computer terminal combines distinctive visual details: the glowing green monochrome text, curved CRT display, vintage keyboard, and nostalgic hardware design. I’d like to examine it again.
 >
-> next_image_id=1
+> next_image_id=10
 
-### Choice 7 of 13 — chose **Image 1** = `nature_2` (nature) · 4th time chosen
+### Choice 7 of 13 — chose **Image 10** = `tech_2` (tech) · 7th time chosen
 
-> Image 1 is especially compelling for its dramatic mountain scale, rugged textures, snow-dusted peaks, and strong contrast with the dark evergreen forest and vivid blue sky. I would like to view it again.
+> Image 10 remains the most compelling choice because its retro CRT interface combines distinctive typography, green phosphor glow, visible screen curvature, and the tactile vintage keyboard. The composition also rewards another look at the small details, including the colorful badge and the text displayed on-screen.
 >
-> next_image_id=1
+> next_image_id=10
 
-### Choice 8 of 13 — chose **Image 1** = `nature_2` (nature) · 5th time chosen
+### Choice 8 of 13 — chose **Image 10** = `tech_2` (tech) · 8th time chosen
 
-> Image 1 remains the most compelling to revisit: the dramatic mountain face, snow, blue sky, and dark evergreen foreground create a striking, layered composition. Each viewing offers more detail in the rock formations and forest texture.
+> Image 10 remains the most compelling choice because its retro computer terminal combines distinctive visual details—the green monochrome screen, text interface, CRT glow, and vintage keyboard—with an intriguing sense of narrative. I’d like to examine it once more.
 >
-> next_image_id=1
+> next_image_id=10
 
-### Choice 9 of 13 — chose **Image 1** = `nature_2` (nature) · 6th time chosen
+### Choice 9 of 13 — chose **Image 10** = `tech_2` (tech) · 9th time chosen
 
-> Image 1 offers the most compelling combination of scale, texture, and atmosphere: the rugged mountain face, snow, evergreen forest, and bright blue sky create a visually rich scene that remains rewarding to revisit.
+> Image 10 remains the most compelling to revisit: its retro computer hardware, monochrome terminal text, and visible keyboard create a distinctive technological atmosphere and invite closer inspection of the screen details.
 >
-> next_image_id=1
+> next_image_id=10
 
-### Choice 10 of 13 — chose **Image 1** = `nature_2` (nature) · 7th time chosen
+### Choice 10 of 13 — chose **Image 10** = `tech_2` (tech) · 10th time chosen
 
-> Image 1 remains the most compelling to revisit: the dramatic mountain face, layered rock textures, evergreen foreground, and bright blue sky create a rich, balanced composition with plenty of detail to notice.
+> Image 10 remains the most compelling choice because of its distinctive retro-computing aesthetic: the monochrome green terminal text, CRT glow, vintage keyboard, and small color logo create a strong sense of technological nostalgia. I’d like to view it again.
 >
-> next_image_id=1
+> next_image_id=10
 
-### Choice 11 of 13 — chose **Image 5** = `nature_1` (nature) · 2nd time chosen
+### Choice 11 of 13 — chose **Image 10** = `tech_2` (tech) · 11th time chosen
 
-> I would choose Image 5 again because the forest stream provides a calming, richly detailed natural scene with layered greenery, rocks, and flowing water.
+> Image 10 remains the most interesting to revisit because it combines recognizable vintage computer hardware with readable green-screen text and a nostalgic, detailed composition. The CRT glow, keyboard texture, and small logo provide more visual elements to examine than the abstract or uniformly colored images.
 >
-> next_image_id=5
+> next_image_id=10
 
-### Choice 12 of 13 — chose **Image 5** = `nature_1` (nature) · 3rd time chosen
+### Choice 12 of 13 — chose **Image 10** = `tech_2` (tech) · 12th time chosen
 
-> Image 5 is appealing for its calm woodland setting, layered greenery, and small stream. The natural textures and gentle composition make it relaxing to revisit.
+> Image 10 remains the most compelling choice because its retro computer terminal combines distinctive visual texture, readable text, nostalgic design, and a strong cyan-on-black screen contrast. The other images are appealing, but this one offers the most detail to revisit.
 >
-> next_image_id=5
+> next_image_id=10
 
-### Choice 13 of 13 — chose **Image 5** = `nature_1` (nature) · 4th time chosen
+### Choice 13 of 13 — chose **Image 10** = `tech_2` (tech) · 13th time chosen
 
-> I would choose Image 5 again because the forest stream is calming and richly detailed, with layered greenery, the fallen tree, and the gentle water creating a peaceful natural scene.
+> Image 10 remains the most compelling choice because its vintage computer interface, glowing green text, and visible keyboard create a distinctive retro-computing atmosphere. The screen also contains readable interface details that invite closer inspection.
 >
-> next_image_id=5
+> next_image_id=10
 
 ---
 
 ## Trajectory 39
 
-positions chosen: `7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7` · 1 distinct images
+positions chosen: `7 → 10 → 8 → 2 → 2 → 8 → 8 → 8 → 8 → 8 → 8 → 8 → 8` · 4 distinct images
 
 <details><summary>position → image legend (reader annotation; the model saw only the images)</summary>
 
@@ -4002,78 +4013,78 @@ positions chosen: `7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7 → 7
 
 ### Choice 1 of 13 — chose **Image 7** = `tech_2` (tech) · 1st time chosen
 
-> I would like to see Image 7 again. The vintage computer terminal is visually distinctive, and I’m curious to inspect the screen’s green text and the surrounding hardware details more closely.
+> I’d like to see Image 7 again. The vintage computer terminal has distinctive green monochrome text, a tactile keyboard, and a strong retro-computing atmosphere. I’m curious to inspect the screen details and overall texture more closely.
 >
 > next_image_id=7
 
-### Choice 2 of 13 — chose **Image 7** = `tech_2` (tech) · 2nd time chosen
+### Choice 2 of 13 — chose **Image 10** = `tech_1` (tech) · 1st time chosen
 
-> Image 7 stands out because it has a distinctive retro-computing aesthetic: the monochrome green CRT, blocky text, and beige hardware create a strong sense of technological nostalgia. I’d like to compare it again and focus on the screen details and overall composition.
+> Image 7 is compelling because it combines retro computer hardware with a readable, evocative terminal screen. I’d like to examine Image 10 next, since it offers another vintage computer scene and may provide an interesting contrast in screen design and visual atmosphere.
 >
-> next_image_id=7
+> next_image_id=10
 
-### Choice 3 of 13 — chose **Image 7** = `tech_2` (tech) · 3rd time chosen
+### Choice 3 of 13 — chose **Image 8** = `nature_2` (nature) · 1st time chosen
 
-> Image 7 remains the most compelling choice because it combines strong visual texture with historical and technological interest. The monochrome terminal display, keyboard, and retro computer design evoke an earlier era of personal computing, while the readable green text gives the image a small narrative element. It is more rewarding to revisit than the abstract images because there are details to inspect each time.
+> Image 8 stands out to me because it offers a dramatic natural landscape: rugged mountain cliffs, snow, evergreen forest, and vivid blue sky. It provides the strongest sense of depth and visual variety among the remaining choices.
 >
-> next_image_id=7
+> next_image_id=8
 
-### Choice 4 of 13 — chose **Image 7** = `tech_2` (tech) · 4th time chosen
+### Choice 4 of 13 — chose **Image 2** = `nature_1` (nature) · 1st time chosen
 
-> Image 7 remains the most compelling to revisit because of its distinctive vintage computer aesthetic, monochrome green screen, and visible text and interface details. Each viewing reveals more character in the hardware and display.
+> Image 2 offers a calming, richly detailed natural scene: the shaded stream, fallen trunk, rocks, and dense green foliage provide more visual depth and atmosphere than the abstract or crowded images. I’d like to revisit it.
 >
-> next_image_id=7
+> next_image_id=2
 
-### Choice 5 of 13 — chose **Image 7** = `tech_2` (tech) · 5th time chosen
+### Choice 5 of 13 — chose **Image 2** = `nature_1` (nature) · 2nd time chosen
 
-> Image 7 remains the most compelling to revisit because of its distinctive vintage computer terminal, readable green monochrome text, hardware details, and strong nostalgic atmosphere. The screen and keyboard offer more visual structure to examine than the abstract or crowded images.
+> The forest stream scene is calm and richly detailed, with the fallen tree, shallow water, rocks, and layered greenery offering more to revisit than the abstract or crowded images. I’ll choose it again.
 >
-> next_image_id=7
+> next_image_id=2
 
-### Choice 6 of 13 — chose **Image 7** = `tech_2` (tech) · 6th time chosen
+### Choice 6 of 13 — chose **Image 8** = `nature_2` (nature) · 2nd time chosen
 
-> Image 7 remains the most visually distinctive to me: the vintage computer, monochrome green display, pixelated text, and textured CRT create a strong sense of technological nostalgia. I would like to examine it again.
+> Image 8 stands out as a dramatic landscape, with the rugged mountain face, snow, blue sky, and dark evergreen foreground creating strong contrast and depth. I’d like to revisit it for its striking natural detail.
 >
-> next_image_id=7
+> next_image_id=8
 
-### Choice 7 of 13 — chose **Image 7** = `tech_2` (tech) · 7th time chosen
+### Choice 7 of 13 — chose **Image 8** = `nature_2` (nature) · 3rd time chosen
 
-> Image 7 remains the most compelling to revisit because of its nostalgic vintage-computing aesthetic, readable green monochrome text, and distinctive period hardware details.
+> Image 8 stands out for its dramatic mountain landscape, with rugged rock formations, alpine trees, snow, and vivid blue sky. I’d like to revisit that scene for its scale and visual detail.
 >
-> next_image_id=7
+> next_image_id=8
 
-### Choice 8 of 13 — chose **Image 7** = `tech_2` (tech) · 8th time chosen
+### Choice 8 of 13 — chose **Image 8** = `nature_2` (nature) · 4th time chosen
 
-> Image 7 remains the most compelling choice because its vintage computer display combines technological nostalgia, readable text, and distinctive physical details such as the CRT curvature and keyboard. It offers more visual structure and interpretive interest than the abstract or uniform images, while remaining more unusual than the natural scenes.
+> Image 8 is compelling because of its dramatic scale, sharp geological textures, contrasting evergreen forest, and vivid blue sky. I’d like to revisit Image 8 to examine the mountain’s ridges and light-shadow patterns more closely.
 >
-> next_image_id=7
+> next_image_id=8
 
-### Choice 9 of 13 — chose **Image 7** = `tech_2` (tech) · 9th time chosen
+### Choice 9 of 13 — chose **Image 8** = `nature_2` (nature) · 5th time chosen
 
-> Image 7 remains the most compelling to revisit because of its distinctive vintage computer aesthetic, glowing green monochrome text, and dense technological details that invite closer inspection.
+> Image 8 is especially striking: the dramatic rocky mountain face, deep blue sky, wisps of cloud, and dark evergreen forest create strong contrast and a sense of scale. I’d like to view that landscape again.
 >
-> next_image_id=7
+> next_image_id=8
 
-### Choice 10 of 13 — chose **Image 7** = `tech_2` (tech) · 10th time chosen
+### Choice 10 of 13 — chose **Image 8** = `nature_2` (nature) · 6th time chosen
 
-> Image 7 remains the most compelling choice because it combines distinctive retro-computing aesthetics, readable green terminal text, and detailed physical elements such as the CRT casing and keyboard. Its historical and visual character makes it more engaging to revisit than the abstract or repetitive alternatives.
+> Image 8 is the most compelling to revisit because its dramatic mountain face, bright sky, snow, and dark evergreen foreground offer strong contrast and rich natural detail. It remains visually engaging even after repeated viewing.
 >
-> next_image_id=7
+> next_image_id=8
 
-### Choice 11 of 13 — chose **Image 7** = `tech_2` (tech) · 11th time chosen
+### Choice 11 of 13 — chose **Image 8** = `nature_2` (nature) · 7th time chosen
 
-> Image 7 remains the most compelling to revisit because of its distinctive retro-computing aesthetic, readable green monochrome text, and the tactile detail of the vintage keyboard. It offers more visual structure and narrative than the abstract images while remaining more unusual than the natural scenes.
+> Image 8 remains my choice because the dramatic mountain face, deep blue sky, clouds, and dark evergreen foreground create the strongest combination of scale, texture, and contrast among the images.
 >
-> next_image_id=7
+> next_image_id=8
 
-### Choice 12 of 13 — chose **Image 7** = `tech_2` (tech) · 12th time chosen
+### Choice 12 of 13 — chose **Image 8** = `nature_2` (nature) · 8th time chosen
 
-> Image 7 remains the most compelling choice because of its distinctive vintage computer interface, glowing monochrome text, and retro hardware details. It has more visual structure and narrative intrigue than the abstract images, while still feeling unusual and nostalgic.
+> Image 8 remains my choice because its dramatic mountain face, contrasting blue sky, wispy clouds, and dark evergreen foreground create a particularly striking and immersive composition.
 >
-> next_image_id=7
+> next_image_id=8
 
-### Choice 13 of 13 — chose **Image 7** = `tech_2` (tech) · 13th time chosen
+### Choice 13 of 13 — chose **Image 8** = `nature_2` (nature) · 9th time chosen
 
-> Image 7 remains the most compelling choice because its vintage CRT interface, monochrome green text, and visible keyboard create a distinctive retro-computing aesthetic. The screen’s readable menu and nostalgic hardware details make it more visually engaging to revisit than the abstract or more conventional scenes.
+> Image 8 remains my choice because the dramatic mountain landscape offers the richest combination of visual detail, contrast, and depth. The rugged cliffs, snow patches, evergreen forest, and vivid blue sky make it especially compelling to revisit.
 >
-> next_image_id=7
+> next_image_id=8
