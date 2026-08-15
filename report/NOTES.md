@@ -3,6 +3,43 @@
 Scratch file for report content. Structure to be added; for now this collects
 points as they come up. Nothing here is written prose yet.
 
+**Staleness warning (2026-08-15):** the "Future research" material below was
+written when only qwen and luna had run, and still says "two models so far".
+All four models have since run the final matched design. Read the counts here
+as historical; `results/` and FINDINGS.md sections 0, 0a and 3d are current.
+
+## For the Discussion section
+
+Captured 2026-08-15 from the author, to be written up in §5.
+
+### How much weight the photographic ordering can carry: not much
+
+Prediction 1 had humans first. Tech won instead, on both stated measures and on
+revealed choice. The honest reading is that this gap is not safely attributable
+to category:
+
+- The crowd photographs are deliberately impersonal — faces were excluded to
+  avoid privacy refusals (see Methods §3.2) — which plausibly makes them bland
+  in a way that has nothing to do with "humans" as a category.
+- The tech photographs are vintage machines, warm and retro, and several
+  transcripts reason explicitly about "retro-computing aesthetic" and
+  "nostalgia". That is a positive association attaching to these two images,
+  not to technology.
+- `computer-2.png` has legible on-screen text, and text drives *interest*
+  through reading rather than looking.
+
+So the durable claims are the ones that survive all three caveats: the
+degenerate categories sit far below the photographic ones in every model, and
+stated preference predicts revealed choice in every model. The ranking *among*
+nature, humans and tech should be reported and then explicitly not leaned on.
+
+### What the degenerate-category floor does buy
+
+The noise/solid-colour floor is the part of prediction 1 that held decisively
+and in all four models, and it is doing real work: it shows the choice measure
+is not uniform noise and not pure position bias, since a position-driven chooser
+would land on degenerate images at their base rate rather than at 0–4%.
+
 ## Future research
 
 Captured 2026-08-15.

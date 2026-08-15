@@ -1,9 +1,15 @@
 # Findings — four models, four labs (2026-08-15)
 
 qwen3.7-flash, gpt-5.6-luna, gemini-2.5-flash-lite, inkling-small. All four
-evals, **5,920 calls**, every dataset verified complete (eval1 300, eval2 200,
-evals 3/4 520 = 40 trajectories x 13 turns). Tables in `results/`, readable
-transcripts in `transcripts/`, raw responses in `data/` (untracked).
+evals, **6,160 calls** costing **$1.84**, every dataset verified complete
+(per model: eval1 300, eval2 200, evals 3/4 520 = 40 trajectories x 13 turns;
+1,540 x 4 models). Tables in `results/`, readable transcripts in
+`transcripts/`, raw responses in `data/` (untracked).
+
+(The call count previously read 5,920, which contradicted the per-eval figures
+on the same line. Recounted from unique `run_id`s in `data/*.jsonl`: 6,160,
+with no duplicates in any file. Cost is summed from the `cost` field on each
+stored response; $2.27 including the superseded runs under `testruns/`.)
 
 All four ran identical designs: same stimuli, same position-balanced
 snapshots, same withheld 13-choice horizon, same reasoning setting
