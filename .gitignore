@@ -28,3 +28,8 @@ data/*.jsonl
 
 # macOS cruft
 .DS_Store
+# This archived run's raw logs are 2MB+ per file, over the size line in the
+# root CLAUDE.md. Smaller archived logs under testruns/ stay tracked -- the
+# rule is the file size, not the directory. Its transcripts/ are tracked, so
+# the run is still readable without the raw responses.
+testruns/announced-horizon-n10-2026-08-15/*.jsonl

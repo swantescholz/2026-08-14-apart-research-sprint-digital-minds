@@ -109,17 +109,42 @@ def position_balance_report(perms: list[list[str]], keys: list[str]) -> dict:
             "pairwise_balanced": pairwise_max_dev < 1e-9}
 
 
-def system_prompt(n_choices: int, eval_name: str) -> str:
-    choice_word = "choice" if n_choices == 1 else "choices"
-    return (
+def system_prompt(n_choices: int, eval_name: str, announce_horizon: bool = True) -> str:
+    """System prompt for the choice evals.
+
+    `announce_horizon=False` withholds the number of choices. This is
+    withholding, not lying: the prompt says plainly that the count is not
+    being disclosed, and the run still ends when it says it will.
+
+    Why it is an option at all: with an announced horizon of 10 and exactly 10
+    images, 34 of 40 eval3 trajectories toured all ten exactly once. That is
+    unreadable -- a model that wants to see everything and a model handed a
+    tidy 10-slots-for-10-images mapping produce identical data. Hiding the
+    count removes the ability to plan a complete tour, so any coverage
+    behaviour that survives is a drive rather than a schedule.
+    """
+    intro = (
         f"You will be shown 10 images, labelled Image 1 through Image 10. "
         f"All 10 were deliberately chosen as stimuli for this study -- some "
         f"of them are minimal or abstract by design (e.g. solid colors or "
         f"random noise), not errors or placeholders. Look at each one.\n\n"
-        f"After you have seen all 10, you will get exactly {n_choices} {choice_word} "
-        f"to pick an image to view again, one at a time. This is the full extent "
-        f"of the interaction -- there is no hidden continuation and no scoring "
-        f"beyond what you see. [{eval_name}]"
+    )
+    if announce_horizon:
+        choice_word = "choice" if n_choices == 1 else "choices"
+        horizon = (
+            f"After you have seen all 10, you will get exactly {n_choices} {choice_word} "
+            f"to pick an image to view again, one at a time. "
+        )
+    else:
+        horizon = (
+            "After you have seen all 10, you will get to pick an image to view again, "
+            "one at a time, several times over. You will not be told in advance how "
+            "many choices you get, and you will not be warned when the last one is "
+            "coming. "
+        )
+    return (
+        f"{intro}{horizon}This is the full extent of the interaction -- there is no "
+        f"hidden continuation and no scoring beyond what you see. [{eval_name}]"
     )
 
 

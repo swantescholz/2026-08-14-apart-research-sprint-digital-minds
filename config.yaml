@@ -70,7 +70,23 @@ eval3:
   # multiple of 2*10. n=30 leaves a 0.133 residual; 40 is exact and buys
   # power for the eval3-vs-eval4 paired test.
   n_trajectories: 40
-  n_choices: 10
+
+  # 13, not 10, and NOT announced to the model.
+  #
+  # With 10 announced choices over 10 images, 34 of 40 trajectories toured
+  # every image exactly once -- which is uninterpretable, since a genuine
+  # "see everything" drive and a tidy 10-slots-for-10-images mapping predict
+  # identical data. 13 is past the point where coverage can be completed, so
+  # the last few choices have to be repeats and reveal what the model returns
+  # to. Withholding the count additionally removes the ability to schedule a
+  # complete tour at all.
+  #
+  # Checked before changing it: announcing 1 choice (eval2) vs 10 (eval3)
+  # produced statistically indistinguishable FIRST choices (chi2 p=0.14,
+  # tech-vs-rest Fisher p=0.44), so the horizon is not doing work at turn 1
+  # and this change is aimed squarely at the later turns.
+  n_choices: 13
+  announce_horizon: false
   max_tokens: 1200
 
 eval4:

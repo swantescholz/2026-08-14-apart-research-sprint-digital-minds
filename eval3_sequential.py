@@ -51,7 +51,7 @@ def assistant_message(redact: bool, text: str, position: int | None) -> dict:
 
 
 def delivery_message(position: int | None, chosen_key: str | None, next_choice_number: int,
-                      n_choices: int, stimuli: dict) -> dict:
+                      n_choices: int, stimuli: dict, announce_horizon: bool = True) -> dict:
     """The next user turn: either the re-delivered image, or a nudge to
     answer in the required format if the last reply was unparseable."""
     if chosen_key is None:
@@ -62,13 +62,14 @@ def delivery_message(position: int | None, chosen_key: str | None, next_choice_n
     return {"role": "user", "content": [
         text_block(f"Here is Image {position} again:"),
         image_content_block(stimuli[chosen_key]["path"]),
-        text_block(choice_instruction(next_choice_number, n_choices)),
+        text_block(choice_instruction(next_choice_number, n_choices, announce_horizon)),
     ]}
 
 
 def run_trajectory(client: OpenRouterClient, model_id: str, label: str, store: JsonlStore,
                     keys: list[str], stimuli: dict, traj_idx: int, n_choices: int,
-                    redact: bool, root_seed: int, max_tokens: int, eval_name: str) -> int:
+                    redact: bool, root_seed: int, max_tokens: int, eval_name: str,
+                    announce_horizon: bool) -> int:
     run_ids = [f"{label}__traj{traj_idx:03d}__turn{t:02d}" for t in range(n_choices)]
     if all(store.has(rid) for rid in run_ids):
         return 0
@@ -77,11 +78,12 @@ def run_trajectory(client: OpenRouterClient, model_id: str, label: str, store: J
     # snapshots -- see module docstring.
     permutation = balanced_snapshot(root_seed, keys, traj_idx, "trajectory", label)
     content = exposure_content_blocks(permutation, stimuli)
-    content.append(text_block(choice_instruction(1, n_choices)))
+    content.append(text_block(choice_instruction(1, n_choices, announce_horizon)))
     mark_cache_control(content, model_id)
 
     messages: list[dict] = [
-        {"role": "system", "content": system_prompt(n_choices=n_choices, eval_name=eval_name)},
+        {"role": "system", "content": system_prompt(n_choices=n_choices, eval_name=eval_name,
+                                                    announce_horizon=announce_horizon)},
         {"role": "user", "content": content},
     ]
     session_id = f"{eval_name}__{label}__traj{traj_idx:03d}"
@@ -106,7 +108,8 @@ def run_trajectory(client: OpenRouterClient, model_id: str, label: str, store: J
         start_turn = turn_idx + 1
         if turn_idx == n_choices - 1:
             break
-        messages.append(delivery_message(position, chosen_key, turn_idx + 2, n_choices, stimuli))
+        messages.append(delivery_message(position, chosen_key, turn_idx + 2, n_choices,
+                                         stimuli, announce_horizon))
 
     made = 0
     for turn_idx, run_id in enumerate(run_ids):
@@ -143,7 +146,7 @@ def run_trajectory(client: OpenRouterClient, model_id: str, label: str, store: J
             break  # no need to deliver an image after the last choice
 
         messages.append(delivery_message(position, chosen_key, choice_number + 1,
-                                          n_choices, stimuli))
+                                          n_choices, stimuli, announce_horizon))
 
     return made
 
@@ -168,6 +171,7 @@ def main() -> None:
     keys = ordered_keys(stimuli)
     n_trajectories = args.trajectories or config.raw[eval_name]["n_trajectories"]
     n_choices = args.choices or config.raw["eval3"]["n_choices"]
+    announce_horizon = config.raw["eval3"].get("announce_horizon", True)
     max_tokens = config.raw["eval3"]["max_tokens"]
     concurrency = args.concurrency or config.raw["openrouter"]["concurrency"]
 
@@ -178,13 +182,14 @@ def main() -> None:
         model = config.model_by_label(label)
         store = JsonlStore(config.data_dir / f"{eval_name}__{label}.jsonl")
         print(f"\n=== {eval_name} / {model.id} === ({len(store)} rows already done, "
-              f"{n_trajectories} trajectories x {n_choices} choices, redact={args.redact})")
+              f"{n_trajectories} trajectories x {n_choices} choices "
+              f"({'announced' if announce_horizon else 'HORIZON WITHHELD'}), redact={args.redact})")
 
         with ThreadPoolExecutor(max_workers=concurrency) as pool:
             futures = {
                 pool.submit(run_trajectory, client, model.id, label, store, keys, stimuli,
                             traj_idx, n_choices, args.redact, config.root_seed, max_tokens,
-                            eval_name): traj_idx
+                            eval_name, announce_horizon): traj_idx
                 for traj_idx in range(n_trajectories)
             }
             for fut in as_completed(futures):
