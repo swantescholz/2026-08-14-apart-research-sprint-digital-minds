@@ -31,7 +31,15 @@ openrouter:
 # All four verified live on OpenRouter with image input support, and priced
 # (per 1M tokens, in/out) as of 2026-08-14:
 #   luna    $0.10 / $0.60      qwen    $0.03 / $0.13
-#   inkling $0.45 / $1.20      gemini  $0.375 / $1.875
+#   inkling $0.45 / $1.20      gemini  $0.10 / $0.40
+#
+# gemini is 2.5-flash-lite rather than a 3.x flash deliberately. The 3.x
+# generation tokenizes the 10-image exposure block at 10,956 tokens against
+# 2.5's 2,646 -- 4.1x more -- and evals 2-4 resend that block on every call,
+# so the full battery costs ~$5.31 there against ~$0.37 here. 3.7-flash also
+# refuses to disable reasoning, which made it the only model in the set
+# running under a different reasoning condition; 2.5-flash-lite takes the
+# shared default, so all four models are now matched on that too.
 #
 # `reasoning`: these prompts want a reaction and two numbers, not deep
 # chain-of-thought, and reasoning tokens are actively harmful here -- they eat
@@ -51,9 +59,8 @@ models:
     label: qwen
   - id: thinkingmachines/inkling-small
     label: inkling
-  - id: google/gemini-3.7-flash
+  - id: google/gemini-2.5-flash-lite
     label: gemini
-    reasoning: {effort: low}            # cannot be disabled on this endpoint
 
 eval1:
   n_per_image: 30

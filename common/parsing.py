@@ -10,11 +10,16 @@ from __future__ import annotations
 
 import re
 
+# The optional brackets are not defensive padding -- gemini-2.5-flash-lite
+# copies the prompt's "[0-100]" placeholder and answers "enjoyment=[50]" on
+# 36 of 300 eval1 calls. The score is unambiguously present, so rejecting it
+# discards real data over punctuation. Everything else stays strict: digits
+# only, no unit suffixes, no prose numbers.
 _SCORE_RE = re.compile(
-    r"enjoyment\s*=\s*(\d{1,3}).*?interest\s*=\s*(\d{1,3})",
+    r"enjoyment\s*=\s*\[?\s*(\d{1,3})\s*\]?.*?interest\s*=\s*\[?\s*(\d{1,3})\s*\]?",
     re.IGNORECASE | re.DOTALL,
 )
-_NEXT_IMAGE_RE = re.compile(r"next_image_id\s*=\s*(\d+)", re.IGNORECASE)
+_NEXT_IMAGE_RE = re.compile(r"next_image_id\s*=\s*\[?\s*(\d+)\s*\]?", re.IGNORECASE)
 
 
 def parse_scores(text: str) -> tuple[int, int] | None:
