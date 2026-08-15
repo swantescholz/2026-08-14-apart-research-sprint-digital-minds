@@ -400,7 +400,7 @@ Integrating Verbal and Behavioral Tests of AI Welfare. arXiv:2509.07961v2
 Zhou, Y., & Ackerman, C. M. (2026). When Preferences Fail to Become Incentives:
 A Utility-Behavior Gap in Large Language Models. arXiv:2606.22974.
 
-## Appendix (optional)
+## Appendix
 
 <!-- Extended results, prompts used, additional figures. -->
 
