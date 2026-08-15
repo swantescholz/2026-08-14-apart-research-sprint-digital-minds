@@ -44,6 +44,9 @@ nearly all ten images to revisiting one or two. What a preference measurement
 finds therefore depends on how the conversation is structured, not on the model
 alone.
 
+*This work was done in a personal capacity and does not represent the views of
+my employer.*
+
 ## 1. Introduction
 
 <!--
