@@ -299,6 +299,17 @@ preference expression. Removing it doesn't remove the justification for
 perseverating (the counter-prediction's reasoning) — it removes the ability
 to systematically avoid repeats.
 
+**Over-claimed; see the report's §5.** The bookkeeping reading above is one
+interpretation, not something eval 4 establishes. A satiation account in which
+boredom is grounded in the memory of having experienced something predicts the
+same collapse, since redaction removes exactly that memory. Eval 4 does not
+separate the two. What it does rule out is satiation keyed to stimulus
+exposure — the chosen image is re-shown every turn, so under redaction the
+favourite sits in context ~11.8 times per trajectory and is still chosen. The
+user-turns-only design (section 3d) is harder on both readings: same words,
+same information, not in the model's own voice, and the tours collapsed
+anyway.
+
 **Both models, identical conditions** (13 choices, horizon withheld):
 
 | | qwen | luna |

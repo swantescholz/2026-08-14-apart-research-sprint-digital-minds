@@ -246,16 +246,34 @@ compacts its own history may behave quite differently from the same system
 evaluated with full transcripts, in a direction no one chose.
 
 **On interpretation.** The tempting reading of eval 3 is that a model "gets
-bored" of an image it has already seen. We want to be explicit that our data
-does not support that reading over a much flatter one. Coverage-seeking is
-functionally useful for almost any agent — it is what an efficient explorer
-does regardless of whether anything is experienced — and our eval 4 result
-actively favours the deflationary account: the drive disappears when the record
-of what has been seen disappears, which is what you would expect of a
-bookkeeping process and not obviously what you would expect of satiation. The
-same caution applies to the degenerate categories. "Noise and solid colours are
-boring" is a comfortable gloss on a floor that is equally well described
-without reference to experience at all.
+bored" of an image it has already seen. The flatter reading is bookkeeping:
+coverage-seeking is functionally useful for almost any agent, and is what an
+efficient explorer does whether or not anything is experienced. **Our design
+does not adjudicate between these**, and it is worth being precise about why,
+because eval 4 initially looks like it should. It does not: if satiation is
+grounded in the memory of having experienced something, then removing that
+memory removes the satiation, and eval 4's collapse is exactly what the
+boredom account predicts too. Both accounts survive it.
+
+Two things do narrow the field. First, satiation cannot be keyed to exposure to
+the stimulus itself. The chosen image is re-shown in every turn of both evals,
+so under redaction qwen's favourite sits in its context an average of 11.8
+times by the end of a trajectory — maximal repeated exposure — and it keeps
+choosing it. Whatever is or is not being exhausted, it is not the pixels.
+Second, and more awkwardly for both accounts, an intermediate design (A.2)
+quoted the model's own prior reasoning back inside a *user* turn: same words,
+same information, merely not in its own voice. Tours collapsed anyway, 30/40 to
+5/40. A satiation account keyed to the informational memory of having
+experienced something predicts tours should survive that, since the memory is
+fully legible. So does a bookkeeping account, which needs only the information.
+
+What the data actually pins down, then, is narrower and stranger than either
+gloss: the drive depends on the record being in the model's own voice, and not
+on stimulus exposure or on the information alone. We have no account of why
+first-person authorship should matter to a bookkeeping process, and we do not
+think "boredom" explains it either. The same caution applies to the degenerate
+categories — "noise and solid colours are boring" is a comfortable gloss on a
+floor that is equally well described without reference to experience at all.
 
 ### Limitations
 
