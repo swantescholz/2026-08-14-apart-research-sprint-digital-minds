@@ -387,6 +387,61 @@ def cross_eval_spearman(results_dir: Path, eval1_df: pd.DataFrame | None,
 
 # ------------------------------------------------------------- figures ----
 
+def cross_model_agreement(config, stimuli, results_dir, labels):
+    """Do the four labs rank the stimuli the same way?
+
+    Reported at BOTH units, because they are not the same claim and the
+    difference is easy to misread. Over the 5 categories, agreement looks
+    superb (enjoyment mean rho 0.950) -- but two of those five are the
+    degenerate floor every model puts last, so ranking five items where two
+    are near-unanimous is a soft test. Over the 10 individual images the same
+    measures give 0.911 and 0.910, which is the number to quote if only one is
+    quoted.
+    """
+    rows = []
+
+    def add(pivot, measure, unit):
+        cols = sorted(pivot.columns)
+        rs = {}
+        for a, b in itertools.combinations(cols, 2):
+            rs[(a, b)] = float(stats.spearmanr(pivot[a], pivot[b]).statistic)
+        if not rs:
+            return
+        worst = min(rs, key=rs.get)
+        rows.append({"measure": measure, "unit": unit, "n_items": len(pivot),
+                     "n_models": len(cols), "n_pairs": len(rs),
+                     "mean_rho": sum(rs.values()) / len(rs),
+                     "worst_rho": rs[worst],
+                     "worst_pair": f"{worst[0]}/{worst[1]}"})
+
+    img = pd.read_csv(results_dir / "eval1_by_image.csv")
+    cat = pd.read_csv(results_dir / "eval1_by_category.csv")
+    for col, measure in (("enjoyment_mean", "eval1 stated enjoyment"),
+                         ("interest_mean", "eval1 stated interest")):
+        add(img.pivot(index="image_key", columns="model_label", values=col), measure, "image")
+        add(cat.pivot(index="category", columns="model_label", values=col), measure, "category")
+
+    e2 = pd.read_csv(results_dir / "eval2_choice_by_image.csv")
+    add(e2.pivot(index="image_key", columns="model_label", values="share"),
+        "eval2 revealed choice", "image")
+    e2c = e2.groupby(["model_label", "category"])["share"].sum().reset_index()
+    add(e2c.pivot(index="category", columns="model_label", values="share"),
+        "eval2 revealed choice", "category")
+
+    ps_path = results_dir / "eval3_phase_shift.csv"
+    if ps_path.exists():
+        ps = pd.read_csv(ps_path)
+        for phase, measure in (("coverage", "eval3 coverage (turns 1-10)"),
+                               ("repeats", "eval3 late phase (turns 11-13)")):
+            sub = ps[ps.phase == phase]
+            if not sub.empty:
+                add(sub.pivot(index="category", columns="model_label", values="share"),
+                    measure, "category")
+
+    if rows:
+        save_csv(pd.DataFrame(rows), results_dir, "cross_model_agreement")
+
+
 def repeat_phase_check(config, stimuli, results_dir, labels):
     """How forced are the turn 11-13 repeats, really?
 
@@ -566,6 +621,7 @@ def main() -> None:
     labels = sorted(e2["model_label"].unique()) if not e2.empty else []
     if labels:
         repeat_phase_check(config, stimuli, results_dir, labels)
+        cross_model_agreement(config, stimuli, results_dir, labels)
         fig_phase_shift(config, stimuli, results_dir, labels)
         if (results_dir / "eval3_switching_rate.csv").exists():
             fig_redaction(results_dir, labels)

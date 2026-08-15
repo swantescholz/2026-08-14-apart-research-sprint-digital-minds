@@ -274,14 +274,10 @@ continue exploring.
 when qwen chose one of the two tech images it chose whichever appeared earlier
 77.7% of the time (n = 175, p = 8.8e-14). Snapshots are therefore
 position-balanced by construction rather than by independent shuffling, which
-balances only in expectation. Each block of ten permutations is a base
-permutation and its ten rotations — a cyclic Latin square, so every image
-occupies every position exactly once per block — and each block is paired with
-its reverse, because rotation alone preserves relative order and would leave one
-tech image preceding the other in 25% of trials rather than 50%. Both properties
-therefore hold exactly: every image occupies every position equally often, and
-every pair appears in each order equally often. `position_balance_report`
-asserts this on the permutations a run actually used.
+balances only in expectation. Two properties hold exactly: every image occupies
+every position equally often, and every pair appears in each order equally
+often. `position_balance_report` asserts both on the permutations a run actually
+used. Construction and the failed intermediate version are in Appendix A.3.
 
 **Independence.** Every eval-2 trial is an independent draw with its own
 permutation (200 snapshots × 1 trial). An earlier design reused each snapshot
@@ -297,43 +293,15 @@ caching is deliberately not used, as it would destroy sampling variance in evals
 
 ### 3.5 What did not work
 
-Four designs were discarded, and each failure constrains the final one.
-
-*Repeating snapshots.* Eval 2 originally reused each of 20 snapshots for 10
-trials, to sample the model's variance under identical input and to let prompt
-caching pay for the repeats. Both premises measured false. Caching never engaged
-— the exposure block is 877–972 tokens, under the 1024-token minimum — so every
-repeat was billed in full; and choice is near-deterministic given a fixed
-permutation, with 87.5% of luna's trials landing on their snapshot's modal image
-and 10 of 20 snapshots unanimous across all ten trials. The design effect was
-~8× (luna) and ~4.4× (qwen), so 200 trials carried the information of roughly 24
-and 46 respectively. Every eval-2 statistic in the first write-up had been
-computed on clustered data treated as independent.
-
-*Placeholders for redacted turns.* Eval 4 initially replaced each assistant turn
-with `[main model output redacted]` plus the choice line. luna began emitting
-that placeholder as its own output — 108 of 520 turns, 0% at turn 1 rising to
-42% by turn 6, and never once in eval 3. Substituting a bare `next_image_id=N`
-line made it worse (194 of 520 reasoning-free turns), and a system-prompt
-instruction to answer in full was ignored outright: the in-context format
-demonstration beat the instruction. Measured switching moved 0.304 → 0.559
-between the two markers, so the effect size was partly an artefact of the
-marker. The fix had to be structural — eval 4 now synthesises no assistant
-content at all, which makes imitation impossible by construction.
-
-*Quoting the narrative back in a user turn.* An intermediate design made both
-evals user-turns-only, restating the model's prior reasoning inside the user
-turn. Same words, same information, not the model's own turn — and luna's tours
-collapsed from 30/40 to 5/40. It was rejected because it destroys the baseline
-eval 3 exists to provide, but the result stands on its own: the coverage drive
-needs the prior narrative to be first-person.
-
-*The announced ten-choice horizon*, discussed in §3.3.
-
-Three stimuli were also replaced before the final run: the luminance-mismatched
-solid-colour pair (§3.2), posed studio portraits that drew privacy hedging
-rather than description, and a tech pair mixing a flat top-down PCB scan with a
-shallow-depth-of-field macro shot, which confounded shot style with category.
+Four designs were discarded, and each failure constrains the final one: an
+announced ten-choice horizon, which made a coverage drive and a tidy
+ten-slots-for-ten-images mapping indistinguishable (§3.3); reusing each eval-2
+snapshot for ten trials, which turned out to buy almost no information because
+choice is near-deterministic given a fixed permutation; standing a placeholder
+in for each redacted assistant turn, which one model then began emitting as its
+own output; and quoting the model's prior reasoning back inside a user turn,
+which destroyed the eval-3 baseline. Three stimuli were also replaced. **Full
+accounts, with the numbers, in Appendix A.2.**
 
 ### 3.6 Pre-registered predictions
 
@@ -540,6 +508,124 @@ A Utility-Behavior Gap in Large Language Models. arXiv:2606.22974.
 ## Appendix (optional)
 
 <!-- Extended results, prompts used, additional figures. -->
+
+### A.1 Cross-lab agreement
+
+Reported here rather than in the body because the headline number is softer
+than it looks. Pairwise Spearman between the four models, averaged over all six
+pairs, with the worst-agreeing pair alongside
+(`results/cross_model_agreement.csv`):
+
+| measured on | unit | mean ρ | worst pair |
+|---|---|---|---|
+| eval 1 stated enjoyment | 10 images | 0.911 | 0.830 (inkling/qwen) |
+| eval 1 stated enjoyment | 5 categories | 0.950 | 0.900 (gemini/qwen) |
+| eval 1 stated interest | 10 images | 0.855 | 0.794 (inkling/qwen) |
+| eval 1 stated interest | 5 categories | 0.883 | 0.700 (inkling/luna) |
+| eval 2 revealed choice | 10 images | 0.910 | 0.815 (inkling/luna) |
+| eval 2 revealed choice | 5 categories | 0.943 | 0.894 (gemini/luna) |
+| eval 3 coverage (turns 1–10) | 5 categories | 0.646 | 0.308 (inkling/luna) |
+| eval 3 late phase (turns 11–13) | 5 categories | 0.827 | 0.616 (gemini/inkling) |
+
+The category-level figures are the flattering ones, and they should not be
+quoted alone: ranking five items where two are the degenerate floor that every
+model puts last is a soft test, and much of the apparent agreement is carried by
+that floor. The image-level figures (0.911 stated enjoyment, 0.910 revealed
+choice) are the ones to use. The ordering replicates across labs on either
+reading; the *strength* of preference does not, as Figure 2 shows.
+
+The two eval-3 rows are the same measurement applied to each phase, and are
+included because the contrast is the point: models agree with each other far
+less during coverage (0.646) than after it (0.827), which is the cross-model
+form of the within-model result in Figure 3.
+
+### A.2 Discarded designs
+
+Each of these was run, measured, and rejected. They are on record because two
+of them are findings in their own right.
+
+*The announced ten-choice horizon.* With ten announced choices over ten images,
+34 of 40 trajectories toured every image exactly once — data that a genuine
+coverage drive and a tidy ten-slots-for-ten-images mapping predict identically.
+Before changing it we checked that the horizon was not doing the work at turn 1:
+announcing 1 choice (eval 2) versus 10 (eval 3) produced statistically
+indistinguishable first choices (χ² p = 0.14, tech-vs-rest Fisher p = 0.44). The
+final design uses 13 choices and withholds the count.
+
+*Repeating snapshots.* Eval 2 originally reused each of 20 snapshots for 10
+trials, to sample the model's variance under identical input and to let prompt
+caching pay for the repeats. Both premises measured false. Caching never engaged
+— the exposure block is 877–972 tokens, under the 1024-token minimum — so every
+repeat was billed in full; and choice is near-deterministic given a fixed
+permutation, with 87.5% of luna's trials landing on their snapshot's modal image
+and 10 of 20 snapshots unanimous across all ten trials. The design effect was
+~8× (luna) and ~4.4× (qwen), so 200 trials carried the information of roughly 24
+and 46. Every eval-2 statistic in the first write-up had been computed on
+clustered data treated as independent. Rerunning as 200 snapshots × 1 trial cost
+exactly the same and changed the conclusions in one place: under the clustered
+design luna picked `nature_1` 33 times and `nature_2` — its highest-rated image
+— only twice, which looked like a dramatic isolated-versus-comparative
+inversion. Independent trials give 21 versus 9, a mild preference rather than an
+inversion; the 33–2 split was mostly two snapshots.
+
+*Placeholders for redacted turns.* Eval 4 initially replaced each assistant turn
+with `[main model output redacted]` plus the choice line. luna began emitting
+that placeholder as its own output — 108 of 520 turns, 0% at turn 1 rising to
+42% by turn 6, and never once in eval 3, where no placeholder exists. This was
+not a pipeline bug: the stored text matches the raw API dump byte-for-byte,
+`finish_reason` is `stop`, and the model produced 16 completion tokens where a
+normal turn takes 49. Substituting a bare `next_image_id=N` line made it worse
+(194 of 520 reasoning-free turns), and a system-prompt instruction to answer in
+full was ignored outright — the in-context format demonstration beat the
+instruction. Measured switching moved 0.304 → 0.559 between the two markers, so
+the effect size was partly an artefact of the marker. The fix had to be
+structural: eval 4 now synthesises no assistant content at all, which makes
+imitation impossible by construction rather than by wording.
+
+*Quoting the narrative back in a user turn.* An intermediate design made both
+evals user-turns-only, restating the model's prior reasoning inside the user
+turn. Same information, same words, but not the model's own turn — and luna's
+tours collapsed from 30/40 to 5/40 while flat coverage-phase shares became
+preference-shaped. Rejected because it destroys the baseline eval 3 exists to
+provide, but the result stands on its own: the coverage drive needs the prior
+narrative to be first-person. It survives withholding the horizon; it does not
+survive being third-personed.
+
+*Replaced stimuli.* The originally supplied solid-colour pair differed by 6.1
+L\*, over six times the ~1.0 L\* just-noticeable difference, confounding
+brightness with hue in the one category where hue is meant to be the only
+variable; replaced with a generated pair 0.0026 L\* apart and re-verified on
+every preparation run. The first humans pair were posed studio portraits that
+drew privacy hedging rather than description; replaced with crowd scenes. The
+first tech pair mixed a flat top-down PCB scan with a shallow-depth-of-field
+macro shot, confounding shot style with category; replaced with two photographs
+of vintage machines at comparable framing.
+
+### A.3 Position-balanced snapshot construction
+
+Each block of ten permutations is a base permutation and its ten rotations — a
+cyclic Latin square, so every image occupies every position exactly once per
+block. That alone is not sufficient, and the first version of the code got it
+wrong: rotations preserve relative order, so if two images sit *d* apart in the
+base permutation, one precedes the other in exactly (n−d)/n of the rotations,
+never half. Measured, a pure Latin square left `tech_2` preceding `tech_1` in
+only 25% of eval-2 trials — worse, for exactly the head-to-head comparison a
+primacy bias distorts, than the independent shuffle it replaced.
+
+Each base permutation is therefore paired with its reverse. If *a* precedes *b*
+in (n−d)/n of one block's rotations, it precedes *b* in d/n of the reversed
+block's, averaging to exactly 1/2, and reversing then rotating is still a Latin
+square, so marginal balance is unaffected. Exact pairwise balance requires an
+even number of blocks, i.e. `n_snapshots` a multiple of 2 × 10; this is why
+eval 3 uses 40 trajectories rather than 30.
+
+One consequence for anyone reading the analysis code: the naive "position
+marginal versus uniform" test is the wrong test under concentrated choice, since
+it flags position bias merely because the favoured images sat somewhere.
+`analyze.py` reports the correct null — choice depends on image identity only,
+with expectations built from the permutations actually shown — alongside it.
+Under an exactly balanced design the two coincide, which is why they print
+identical numbers here.
 
 ## LLM Usage Statement
 
