@@ -317,6 +317,33 @@ stated preference of either kind predicts revealed choice.
 
 <!-- Natural next steps. Draw from report/NOTES.md. -->
 
+*What shape must the record take?* This is the direct follow-up to §5 and the
+one we would run first. We know three points in the space: a verbatim
+first-person assistant turn sustains touring (eval 3), no assistant turn at all
+collapses it (eval 4), and the same words third-personed into a user turn also
+collapse it (A.2). Two factors are tangled there — **authorship** (whose turn
+the record occupies) and **fidelity** (verbatim, summarised, or the bare fact of
+the choice) — and the obvious experiment crosses them.
+
+The decisive cheap cell is a first-person assistant turn containing only "I
+chose Image 7", with no reasoning. If touring returns, the effect is the
+assistant-turn slot; if it does not, it is the content, and authorship is
+incidental. Our discarded placeholder runs (A.2) accidentally sampled that
+ladder and it came out monotone in luna's switching rate — 0.115 with no
+assistant turn, 0.304 with a contentless placeholder, 0.559 with a bare id
+line, 1.000 with real reasoning — but those middle rungs are contaminated,
+because the model imitated the placeholder and imitating turns switch more than
+normal ones (0.481 vs 0.253). The ladder is a reason to run the clean version,
+not a result.
+
+Two further cells matter. Recording the choice in **both** turns tests whether
+the effect is redundant or whether the assistant slot is doing something the
+user turn cannot. And a **summarised** record — the model's reasoning
+compressed to a clause rather than deleted or quoted whole — is the
+deployment-relevant one, since production context management summarises far
+more often than it deletes. If a summary sustains the drive, the safety concern
+in §5 mostly dissolves; if it behaves like deletion, it sharpens considerably.
+
 *Other modalities.* Audio and video are the obvious extensions, and both are
 closer to the animal preference-test analogue than static images, since
 duration becomes a measure in its own right — how long a model elects to keep
