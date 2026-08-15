@@ -315,31 +315,30 @@ phrasing probably does too.
 ### Dual-Use and Ethical Considerations
 
 **Moral status.** We make no claim about whether these systems have morally
-relevant states, and this design cannot support one. Both errors are live:
-over-attribution misallocates concern and can be used to argue against
-legitimate deployment decisions, while under-attribution risks dismissing
-systems that turn out to matter. Our strongest claim is behavioural — choices
-are consistent with ratings, and both move with context structure — and §5
-deliberately declines the experiential reading of our own headline result.
+relevant experiences, and this design could not support one. Both mistakes
+matter: attributing moral status where there is none misdirects concern, while
+denying it where there is some would be the worse error. Our claims are about
+behaviour only — what models say about images, what they choose, and how both
+shift when the conversation is restructured.
 
-**Distressing outputs.** The stimuli are benign, and no model was treated
-aversively or deceptively: eval 2 withholds a redelivery it never promised, and
-eval 4's redaction is disclosed in the system prompt. We scanned all 6,160
-stored responses for distress-related language. "Distress" occurs once, in a
-model denying it ("neither joy nor distress"); the strongest negative valence is
-mild aversion to the noise stimuli ("exhausting and devoid of meaning", "I don't
-enjoy looking at it"), which is the eval measuring what it was built to measure.
-The nine turns on which a model declined to continue were recorded and reported,
-not suppressed or retried.
+**Distressing outputs.** The stimuli are ordinary photographs and abstract
+patterns, and no model was deceived or pressured: eval 2 withholds a re-viewing
+it never promised, and eval 4 tells the model up front that its earlier replies
+have been removed. We searched all 6,160 responses for language suggesting
+distress. The word appears once, in a model saying an image evoked none. The
+strongest negative reaction anywhere is mild dislike of the noise images —
+"exhausting", "I don't enjoy looking at it" — which is what eval 1 was built to
+detect. Where a model declined to keep choosing, we recorded it rather than
+retrying.
 
-**Ground truth and causal link.** Two things separate this from conversation
-alone. Revealed choice is a behavioural measure independent of self-report, so
-eval 1 against eval 2 tests whether what a model says predicts what it does
-rather than trusting either. And eval 3 against eval 4 is an intervention, not a
-correlation: matched trajectory seeds, one variable changed, paired Wilcoxon.
-That licenses a causal claim about *behaviour* — context structure changes
-revealed choice — and licenses nothing about experience. For experience there is
-no ground truth here, and we have no method that would produce one.
+**Ground truth and causal link.** We do not rely on what models say about
+themselves. Eval 2 records what a model actually picks, which can be checked
+against what it claimed in eval 1 — words against actions. And evals 3 and 4 are
+the same experiment run twice with a single deliberate difference, so the change
+in behaviour is caused by that difference rather than merely associated with it.
+That gives us a causal result about behaviour. It gives us nothing about
+experience: there is no ground truth for that here, and we know of no method
+that would produce one.
 
 ### Future Work
 
