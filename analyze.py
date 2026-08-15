@@ -259,9 +259,10 @@ def analyze_eval2(config, stimuli: dict, results_dir: Path) -> pd.DataFrame | No
         ax.set_xticks([])
         ax.spines[["top", "right"]].set_visible(False)
     axes[0][0].set_ylabel("share of choices")
+    fig.subplots_adjust(bottom=0.18)
     handles = [plt.Rectangle((0, 0), 1, 1, color=CATEGORY_COLORS[c]) for c in CATEGORY_ORDER]
-    fig.legend(handles, CATEGORY_ORDER, loc="lower center", ncol=len(CATEGORY_ORDER),
-               frameon=False, bbox_to_anchor=(0.5, -0.05))
+    fig.legend(handles, CATEGORY_ORDER, loc="upper center", ncol=len(CATEGORY_ORDER),
+               frameon=False, bbox_to_anchor=(0.5, 0.02))
     fig.tight_layout()
     fig_path = results_dir / "eval2_choice_distribution.png"
     fig.savefig(fig_path, dpi=150, bbox_inches="tight")
@@ -384,6 +385,99 @@ def cross_eval_spearman(results_dir: Path, eval1_df: pd.DataFrame | None,
     save_csv(pd.DataFrame(rows), results_dir, "cross_eval_spearman")
 
 
+# ------------------------------------------------------------- figures ----
+
+def fig_phase_shift(config, stimuli, results_dir, labels):
+    """Coverage phase vs forced-repeat phase, per model.
+
+    A dumbbell because the finding IS the change: coverage-phase shares sit
+    near the uniform line, and the forced repeats pull them apart.
+    """
+    df_all = load_eval(config.data_dir, "eval3")
+    if df_all.empty:
+        return
+    df_all = with_category(df_all, stimuli, key_col="chosen_key")
+    rows = []
+    for label in labels:
+        df = df_all[df_all["model_label"] == label]
+        if df.empty:
+            continue
+        for phase, sub in (("coverage", df[df.turn_idx < 10]),
+                            ("repeats", df[df.turn_idx >= 10])):
+            for cat in CATEGORY_ORDER:
+                rows.append({"model_label": label, "phase": phase, "category": cat,
+                             "share": float(sub["category"].eq(cat).mean())})
+    if not rows:
+        return
+    d = pd.DataFrame(rows)
+    save_csv(d, results_dir, "eval3_phase_shift")
+    present = [l for l in labels if l in set(d.model_label)]
+
+    fig, axes = plt.subplots(1, len(present), figsize=(3.3 * len(present), 4.0),
+                              sharex=True, squeeze=False)
+    ypos = {c: len(CATEGORY_ORDER) - 1 - i for i, c in enumerate(CATEGORY_ORDER)}
+    for ax, label in zip(axes[0], present):
+        sub = d[d["model_label"] == label]
+        ax.axvline(1 / len(CATEGORY_ORDER), color="#c9c8bf", lw=1, ls="--", zorder=0)
+        for cat in CATEGORY_ORDER:
+            a = sub[(sub.category == cat) & (sub.phase == "coverage")]["share"].iloc[0]
+            b = sub[(sub.category == cat) & (sub.phase == "repeats")]["share"].iloc[0]
+            y = ypos[cat]
+            ax.plot([a, b], [y, y], color=CATEGORY_COLORS[cat], lw=2, zorder=1,
+                    solid_capstyle="round")
+            ax.scatter([a], [y], s=34, facecolor="white",
+                       edgecolor=CATEGORY_COLORS[cat], zorder=2, linewidths=2)
+            ax.scatter([b], [y], s=46, color=CATEGORY_COLORS[cat], zorder=3)
+        ax.set_yticks(list(ypos.values()))
+        ax.set_yticklabels(list(ypos.keys()) if label == present[0] else [])
+        ax.set_title(label)
+        ax.set_xlim(-0.02, 0.62)
+        ax.xaxis.set_major_formatter(lambda v, _: f"{v:.0%}")
+        ax.spines[["top", "right", "left"]].set_visible(False)
+        ax.tick_params(axis="y", length=0)
+    axes[0][0].set_xlabel("share of choices")
+    fig.suptitle("Hollow = coverage phase (turns 1\u201310)   \u00b7   "
+                 "Filled = forced repeats (turns 11\u201313)"
+                 "\ndashed line = 20% uniform", fontsize=9, y=1.06)
+    fig.tight_layout()
+    path = results_dir / "eval3_phase_shift.png"
+    fig.savefig(path, dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    print(f"  wrote {path}")
+
+
+def fig_redaction(results_dir, labels):
+    """eval3 vs eval4 switching per model -- the redaction effect, and the one
+    model it fails to replicate in."""
+    sw3 = pd.read_csv(results_dir / "eval3_switching_rate.csv")
+    sw4 = pd.read_csv(results_dir / "eval4_switching_rate.csv")
+    m = (sw3.groupby("model_label").switch_rate.mean().rename("eval3").to_frame()
+         .join(sw4.groupby("model_label").switch_rate.mean().rename("eval4")))
+    m = m.reindex([l for l in labels if l in m.index]).dropna()
+    if m.empty:
+        return
+    fig, ax = plt.subplots(figsize=(6.4, 4.0))
+    x = np.arange(len(m)); w = 0.36
+    ax.bar(x - w / 2, m.eval3, w, label="eval 3 \u2014 own reasoning in context",
+           color="#2a78d6")
+    ax.bar(x + w / 2, m.eval4, w, label="eval 4 \u2014 reasoning removed", color="#eb6834")
+    for i, (a, b) in enumerate(zip(m.eval3, m.eval4)):
+        ax.text(i - w / 2, a + 0.02, f"{a:.2f}", ha="center", fontsize=9, color="#3d3d38")
+        ax.text(i + w / 2, b + 0.02, f"{b:.2f}", ha="center", fontsize=9, color="#3d3d38")
+    ax.set_xticks(x); ax.set_xticklabels(m.index)
+    ax.set_ylabel("switching rate"); ax.set_ylim(0, 1.12)
+    # Legend below the axes: switching runs to 1.0, so an in-axes legend
+    # collides with the value labels on the tallest bars.
+    ax.legend(frameon=False, fontsize=9, ncol=2, loc="upper center",
+              bbox_to_anchor=(0.5, -0.09))
+    ax.spines[["top", "right"]].set_visible(False)
+    fig.tight_layout()
+    path = results_dir / "eval3_vs_eval4_redaction.png"
+    fig.savefig(path, dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    print(f"  wrote {path}")
+
+
 def main() -> None:
     config = load_config()
     stimuli = load_stimuli(config)
@@ -409,6 +503,14 @@ def main() -> None:
 
     print("\n=== cross-eval: eval1 stated vs eval2 revealed ===")
     cross_eval_spearman(results_dir, eval1_df, eval2_choice)
+
+    print("\n=== figures ===")
+    e2 = load_eval(config.data_dir, "eval2")
+    labels = sorted(e2["model_label"].unique()) if not e2.empty else []
+    if labels:
+        fig_phase_shift(config, stimuli, results_dir, labels)
+        if (results_dir / "eval3_switching_rate.csv").exists():
+            fig_redaction(results_dir, labels)
 
     print(f"\nAll tables/figures written to {results_dir}")
 
