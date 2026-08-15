@@ -1,4 +1,9 @@
 model_label,category,share_ex1,share_ex2,share_abs_diff
+luna,humans,0.0,0.0,0.0
+luna,nature,0.165,0.01,0.155
+luna,noise,0.0,0.0,0.0
+luna,solid_color,0.0,0.0,0.0
+luna,tech,0.325,0.5,0.175
 qwen,humans,0.01,0.02,0.01
 qwen,nature,0.035,0.06,0.024999999999999994
 qwen,noise,0.0,0.0,0.0

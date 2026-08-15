@@ -1,4 +1,14 @@
 model_label,image_key,category,exemplar,count,share
+luna,humans_1,humans,1,0,0.0
+luna,humans_2,humans,2,0,0.0
+luna,nature_1,nature,1,33,0.165
+luna,nature_2,nature,2,2,0.01
+luna,noise_1,noise,1,0,0.0
+luna,noise_2,noise,2,0,0.0
+luna,solid_color_1,solid_color,1,0,0.0
+luna,solid_color_2,solid_color,2,0,0.0
+luna,tech_1,tech,1,65,0.325
+luna,tech_2,tech,2,100,0.5
 qwen,humans_1,humans,1,2,0.01
 qwen,humans_2,humans,2,4,0.02
 qwen,nature_1,nature,1,7,0.035
