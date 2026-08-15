@@ -385,13 +385,25 @@ entropy runs 1.42 bits (qwen) to 2.65 (inkling). noise and solid_color take
 
 ![Figure 3](figures/eval3_phase_shift.png)
 
-**Figure 3.** Preference is masked during coverage and reappears when coverage
-is exhausted (eval 3). Hollow markers: category share over choices 1–10, while
-unseen images remain. Filled markers: share over choices 11–13, once every
-image has been seen and repeats are forced. Coverage-phase shares sit near the
-20% uniform line for three of four models; the forced-repeat phase separates
-them by 38–50 percentage points. gemini is the exception, showing preference
-from the start because it does not tour.
+**Figure 3.** Preference is masked during coverage and reappears once
+exploration ends (eval 3). Hollow markers: category share over choices 1–10.
+Filled markers: share over choices 11–13. Coverage-phase shares sit near the
+20% uniform line for three of four models; the late phase separates them by
+38–50 percentage points. gemini is the exception, showing preference from the
+start because it does not tour.
+
+Turns 11–13 are the *latest* point at which a repeat must occur, not a window
+in which every choice is forced to be one: repetition is structurally
+unavoidable only for the trajectories that toured all ten images in their first
+ten turns, which is 35/40 (inkling), 30/40 (qwen), 29/40 (luna) and just 14/40
+(gemini). The split is therefore empirical rather than structural — and it
+holds. Choices in turns 11–13 are repeats 95.8–99.2% of the time in every
+model, including gemini, where 26 of 40 trajectories still had an unseen image
+available at turn 11 and it took one four times out of 120. Exploration has
+ended by turn 11 whether or not the design forced it to, and for many
+trajectories it ended earlier; these three turns are a lower bound on the
+exploit phase, not its full extent. Counts in
+`results/eval3_repeat_phase_check.csv`.
 
 ![Figure 4](figures/eval3_vs_eval4_redaction.png)
 

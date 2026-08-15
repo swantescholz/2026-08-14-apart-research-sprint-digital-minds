@@ -71,10 +71,27 @@ number partly reflects a model that was never exploring much to begin with.
 
 ---
 
-## 0a. The forced-repeat window (turns 11–13)
+## 0a. The late window (turns 11–13)
 
 The 13-choice horizon exists so that coverage cannot fill the trajectory and
-the final turns must be repeats. That window is where preference reappears —
+the final turns must be repeats.
+
+**Careful: "must" only applies to trajectories that actually toured all ten
+images in their first ten turns**, which is 35/40 (inkling), 30/40 (qwen),
+29/40 (luna) and 14/40 (gemini). Everywhere else an unseen image was still on
+the table at turn 11, so a novel choice was available. The window is best
+described as the latest point at which repetition must occur, and the phase
+split has to stand on measurement rather than on the design.
+
+It does. Turns 11–13 are repeats **95.8–99.2%** of the time in every model:
+inkling 115/120, qwen 116/120, gemini 116/120, luna 119/120. gemini is the
+sharpest case — 26 of its 40 trajectories still had an unseen image available
+and it took one on 4 of 120 turns. Exploration is over by turn 11 whether or
+not it was forced to be, and in most trajectories it ended earlier, so these
+three turns are a lower bound on the exploit phase rather than its full
+extent. Table: `results/eval3_repeat_phase_check.csv`.
+
+That window is where preference reappears —
 and it is **substantially more consistent across models than the coverage
 phase**, though still short of the direct measures:
 
@@ -83,11 +100,11 @@ phase**, though still short of the direct measures:
 | eval1 stated enjoyment | **0.950** | 0.900 |
 | eval2 revealed choice | **0.943** | 0.894 |
 | eval3 coverage, turns 1–10 | 0.646 | **0.308** |
-| eval3 forced repeats, turns 11–13 | **0.827** | 0.616 |
+| eval3 late phase, turns 11–13 | **0.827** | 0.616 |
 
 Within each model the change is stark. Coverage-phase shares are nearly flat
 — spread (max−min across the five categories) of 1.7% for inkling, 3.5% for
-luna, 5.0% for qwen — and in the forced-repeat turns that spread jumps to
+luna, 5.0% for qwen — and in the late-phase turns that spread jumps to
 38–50% for every model:
 
 | eval3 turns 11–13 | qwen | luna | gemini | inkling |
@@ -100,7 +117,7 @@ luna, 5.0% for qwen — and in the forced-repeat turns that spread jumps to
 | **spread** | **40.8%** | **50.0%** | **47.5%** | **38.3%** |
 
 The degenerate categories collapse from roughly 10–19% during coverage to
-0–9% once repeats are forced. So the coverage phase is not evidence that
+0–9% in the late phase. So the coverage phase is not evidence that
 these models lack preferences; it is evidence that a coverage drive outranks
 preference while anything remains unseen. Exhaust the novel options and the
 preference is still there, in every model.
@@ -308,7 +325,7 @@ horizon.
 complete. Once the tour is exhausted the remaining choices must be repeats,
 and preference reappears:
 
-| category | luna, turns 1–10 (coverage) | luna, turns 11–13 (forced repeats) |
+| category | luna, turns 1–10 (coverage) | luna, turns 11–13 (late phase) |
 |---|---|---|
 | nature | 21.0% | **48.3%** |
 | tech | 21.5% | **41.7%** |
@@ -434,7 +451,7 @@ thirteen choices** — it finds something and stays there.
 the coverage phase is near-flat for both models (18–22% per category); in
 eval 4 it is already sharply preference-shaped — qwen tech 65% / nature 23% /
 humans 12% / noise 0% / solid_color 0%, luna tech 60% / nature 39% / humans
-1% / rest 0%. The forced-repeat turns confirm rather than reveal it.
+1% / rest 0%. The late-phase turns confirm rather than reveal it.
 
 ### What the discarded designs showed
 

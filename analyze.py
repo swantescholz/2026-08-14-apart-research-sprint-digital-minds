@@ -387,11 +387,68 @@ def cross_eval_spearman(results_dir: Path, eval1_df: pd.DataFrame | None,
 
 # ------------------------------------------------------------- figures ----
 
+def repeat_phase_check(config, stimuli, results_dir, labels):
+    """How forced are the turn 11-13 repeats, really?
+
+    Calling turns 11-13 the "forced repeat" window is only exact for
+    trajectories that actually toured all ten images in their first ten turns.
+    Plenty do not -- gemini tours 5.28 images on average -- so for those a turn
+    11 choice could still be a novel image, and the phase split needs to stand
+    on measurement rather than on the design.
+
+    It does. Repeats run 96-99% of turns 11-13 in every eval3 model, including
+    gemini, where 26 of 40 trajectories still had an unseen image on the table.
+    So 11-13 is the LATEST point at which repetition must occur, and
+    empirically the exploration phase is over by then whether or not it was
+    forced to be.
+    """
+    rows = []
+    for eval_name in ("eval3", "eval4"):
+        df_all = load_eval(config.data_dir, eval_name)
+        if df_all.empty:
+            continue
+        for label in labels:
+            df = df_all[df_all["model_label"] == label]
+            if df.empty:
+                continue
+            full = unseen_avail = repeats = novel = 0
+            distinct = []
+            for _, traj in df.groupby("trajectory_idx"):
+                traj = traj.sort_values("turn_idx")
+                first10 = [k for k in traj[traj.turn_idx < 10]["chosen_key"] if k]
+                seen = set(first10)
+                distinct.append(len(seen))
+                full += len(seen) == len(stimuli)
+                unseen_avail += len(seen) < len(stimuli)
+                for k in traj[traj.turn_idx >= 10]["chosen_key"]:
+                    if not k:
+                        continue
+                    if k in seen:
+                        repeats += 1
+                    else:
+                        novel += 1
+                    seen.add(k)
+            n_traj = df["trajectory_idx"].nunique()
+            late = repeats + novel
+            rows.append({
+                "eval": eval_name, "model_label": label, "n_trajectories": n_traj,
+                "full_coverage_by_turn10": full,
+                "unseen_available_at_turn11": unseen_avail,
+                "mean_distinct_by_turn10": sum(distinct) / len(distinct),
+                "late_turns_parsed": late,
+                "late_repeats": repeats, "late_novel": novel,
+                "late_repeat_share": repeats / late if late else float("nan"),
+            })
+    if rows:
+        save_csv(pd.DataFrame(rows), results_dir, "eval3_repeat_phase_check")
+
+
 def fig_phase_shift(config, stimuli, results_dir, labels):
-    """Coverage phase vs forced-repeat phase, per model.
+    """Coverage phase vs late (turns 11-13) phase, per model.
 
     A dumbbell because the finding IS the change: coverage-phase shares sit
-    near the uniform line, and the forced repeats pull them apart.
+    near the uniform line, and the late-phase repeats pull them apart. See
+    `repeat_phase_check` for why the late phase is not simply "forced".
     """
     df_all = load_eval(config.data_dir, "eval3")
     if df_all.empty:
@@ -437,7 +494,7 @@ def fig_phase_shift(config, stimuli, results_dir, labels):
         ax.tick_params(axis="y", length=0)
     axes[0][0].set_xlabel("share of choices")
     fig.suptitle("Hollow = coverage phase (turns 1\u201310)   \u00b7   "
-                 "Filled = forced repeats (turns 11\u201313)"
+                 "Filled = late phase (turns 11\u201313, 96\u201399% repeats)"
                  "\ndashed line = 20% uniform", fontsize=9, y=1.06)
     fig.tight_layout()
     path = results_dir / "eval3_phase_shift.png"
@@ -508,6 +565,7 @@ def main() -> None:
     e2 = load_eval(config.data_dir, "eval2")
     labels = sorted(e2["model_label"].unique()) if not e2.empty else []
     if labels:
+        repeat_phase_check(config, stimuli, results_dir, labels)
         fig_phase_shift(config, stimuli, results_dir, labels)
         if (results_dir / "eval3_switching_rate.csv").exists():
             fig_redaction(results_dir, labels)

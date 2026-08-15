@@ -1,0 +1,9 @@
+eval,model_label,n_trajectories,full_coverage_by_turn10,unseen_available_at_turn11,mean_distinct_by_turn10,late_turns_parsed,late_repeats,late_novel,late_repeat_share
+eval3,gemini,40,14,26,5.275,120,116,4,0.9666666666666667
+eval3,inkling,40,35,5,9.825,120,115,5,0.9583333333333334
+eval3,luna,40,29,11,9.725,120,119,1,0.9916666666666667
+eval3,qwen,40,30,10,9.375,120,116,4,0.9666666666666667
+eval4,gemini,40,0,40,1.9,120,110,10,0.9166666666666666
+eval4,inkling,40,16,24,9.125,120,88,32,0.7333333333333333
+eval4,luna,40,0,40,1.95,120,117,3,0.975
+eval4,qwen,40,0,40,1.4,120,120,0,1.0
