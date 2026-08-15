@@ -23,6 +23,27 @@
   Write this LAST -- it should reflect final results, not the initial plan.
 -->
 
+Do vision-language models have preferences about what they look at? We measure
+stated and revealed preference over ten images — five categories with two
+exemplars each, including random noise and solid colour as degenerate controls
+— in four models from four labs, across four evaluations, 6,160 API calls.
+
+They do. Stated ratings predict revealed choice in every model (Spearman
+ρ = 0.57–0.98), and the degenerate categories take 0–4% of 200 single
+choices: photographs are chosen, minimal and random images are not. This is not
+a preference for complexity — random noise is the most complex stimulus in the
+set by any pixel-level measure, and among the least chosen.
+
+Preference is not the only thing governing choice.
+Given repeated choices, models tour: while anything remains unseen, category
+shares flatten to near-uniform and the preference visible elsewhere disappears,
+returning only once exploration is exhausted. That drive depends on the model
+retaining its own prior turns. Remove them from context — a routine
+context-management operation — and three of four models collapse from touring
+nearly all ten images to revisiting one or two. What a preference measurement
+finds therefore depends on how the conversation is structured, not on the model
+alone.
+
 ## 1. Introduction
 
 <!--
@@ -31,11 +52,34 @@
   Then an explicit contributions list.
 -->
 
+If AI systems turn out to warrant moral consideration, an early practical
+question is what they would rather be given: which inputs they seek out, and
+which they avoid. Work on this question has so far been text-based — tasks,
+statements, described outcomes (§2). Nothing has asked a model which *image* it
+would rather look at again.
+
+The gap matters for two reasons. A growing share of what these systems process
+is not text, so a preference measure covering only text covers less of the
+input each year. And images permit a design text makes awkward: the thing rated
+and the thing chosen can be the same act — looking at the image — which removes
+the instrumental step separating preference from behaviour in earlier work
+(Zhou and Ackerman, 2026).
+
+The sequential version of that design opens a second question. A model choosing
+repeatedly accumulates a record of what it has already seen and what it said
+about it. Whether that record changes what it chooses next is a question about
+preference measurement, and also a question about deployed systems, which
+routinely compact their own histories.
+
 **Our main contributions are:**
 
-1.
-2.
-3.
+1. We extend preference elicitation from text to images, measuring stated
+   ratings and revealed choice over the same ten stimuli in four models from
+   four labs.
+2. We show that manipulating the chat history — removing the model's own prior
+   turns while holding the images and its recorded choices constant —
+   substantially changes revealed image preference, in a way that ordinary
+   context management would reproduce.
 
 ## 2. Related Work
 
