@@ -2,6 +2,9 @@
 
 Apart Research sprint, Digital Minds, 2026-08-14.
 
+Report: *Out of Sight, Out of Mind: Image Preferences in Vision-Language
+Models* (`report/REPORT.md`).
+
 Does an LLM show structured preferences over visual stimuli, and does what it
 *says* it prefers match what it *chooses* when given a real choice? Four evals,
 4 models from 4 labs, via OpenRouter.

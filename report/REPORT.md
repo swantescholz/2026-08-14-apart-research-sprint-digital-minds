@@ -12,7 +12,7 @@
     - At least one figure strongly encouraged; number and caption everything.
 -->
 
-# PROJECT TITLE
+# Out of Sight, Out of Mind: Image Preferences in Vision-Language Models
 
 <!-- Authors + affiliations go in the Doc's table, not here. -->
 
