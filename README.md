@@ -94,15 +94,17 @@ python eval2_single_choice.py  --models luna qwen inkling gemini
 python eval3_sequential.py     --models luna qwen inkling gemini
 python eval3_sequential.py     --models luna qwen inkling gemini --redact   # = eval 4
 python analyze.py
+python make_stimulus_grid.py     # the stimulus-set figure for the report
 ```
 
 Each runner writes a readable Markdown transcript of its own run to
 `transcripts/<eval>__<model>.md` as it finishes -- what the model was shown,
 what it actually said, and what that got parsed into. `make_transcripts.py`
 regenerates them from existing logs (`--data-dir` / `--out` point it at an
-archived run under `testruns/`). The raw `data/*.jsonl` is the record of
-record; the transcripts are the version meant for reading, and are tracked in
-git where the bulky JSONL is not.
+archived run under `testruns/`). Both `data/` and `transcripts/` are tracked.
+Since the 2026-08-15 data loss the dependency runs the other way too: the
+transcripts are what `data/` was rebuilt from, so they are the more primary
+record, not just the readable one.
 
 Every script is resumable: raw API responses are appended to
 `data/<eval>__<model>.jsonl` as they arrive, keyed by a stable run id, and a

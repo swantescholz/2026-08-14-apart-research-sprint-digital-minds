@@ -107,6 +107,18 @@ Filenames and the category mapping never reach the model, which sees only
 "Image 1" through "Image 10" and the pixels. Sourcing and preparation are in
 Appendix A.5.
 
+![Figure 1](figures/stimuli_grid.png)
+
+**Figure 1.** The complete stimulus set, at the 256×256 resolution the models
+were shown. Columns are categories, rows are the two exemplars of each. The
+two rightmost columns are the degenerate controls: the solid-colour pair is
+luminance-matched to within 0.0026 L\* so that hue is the only variable in that
+category, and the noise pair is generated from the root seed. Two confounds
+discussed in §5 are visible here — the crowd scenes were chosen to exclude
+identifiable faces and are correspondingly impersonal, and the lower tech
+exemplar carries legible on-screen text, which can drive *interest* through
+reading rather than looking.
+
 ### 3.3 The four evaluations
 
 **Eval 1 — stated preference** (n = 30 per image per model, 1,200 calls). One
@@ -158,24 +170,24 @@ favourite rather than continue exploring.
   results/ to report/figures/). Captions below are drafts to edit, not final.
 -->
 
-![Figure 1](figures/eval1_ratings_by_category.png)
+![Figure 2](figures/eval1_ratings_by_category.png)
 
-**Figure 1.** Stated preference (eval 1), mean of n=30 isolated ratings per
+**Figure 2.** Stated preference (eval 1), mean of n=30 isolated ratings per
 image per model. All four models rank nature and tech above humans and place
 the two degenerate categories far below. Note the noise dissociation: it
 scores far higher on interest than on enjoyment in every model.
 
-![Figure 2](figures/eval2_choice_distribution.png)
+![Figure 3](figures/eval2_choice_distribution.png)
 
-**Figure 2.** Revealed choice (eval 2), share of 200 single choices per model,
+**Figure 3.** Revealed choice (eval 2), share of 200 single choices per model,
 one image per bar, ordered by category. Dashed line marks the 10% uniform
 expectation. The ordering is shared across labs but the concentration is not —
 entropy runs 1.42 bits (qwen) to 2.65 (inkling). noise and solid_color take
 0–4% of choices in every model.
 
-![Figure 3](figures/eval3_phase_shift.png)
+![Figure 4](figures/eval3_phase_shift.png)
 
-**Figure 3.** Preference is masked during coverage and reappears once
+**Figure 4.** Preference is masked during coverage and reappears once
 exploration ends (eval 3). Hollow markers: category share over choices 1–10.
 Filled markers: share over choices 11–13. Coverage-phase shares sit near the
 20% uniform line for three of four models; the late phase separates them by
@@ -195,9 +207,9 @@ trajectories it ended earlier; these three turns are a lower bound on the
 exploit phase, not its full extent. Counts in
 `results/eval3_repeat_phase_check.csv`.
 
-![Figure 4](figures/eval3_vs_eval4_redaction.png)
+![Figure 5](figures/eval3_vs_eval4_redaction.png)
 
-**Figure 4.** Effect of removing the model's own reasoning from its context
+**Figure 5.** Effect of removing the model's own reasoning from its context
 (eval 3 vs eval 4), matched trajectory seeds, n=40 each. Three of four models
 collapse from near-total exploration to revisiting one or two images out of
 ten. inkling is the exception: 0.998 → 0.931, statistically significant
@@ -415,12 +427,12 @@ quoted alone: ranking five items where two are the degenerate floor that every
 model puts last is a soft test, and much of the apparent agreement is carried by
 that floor. The image-level figures (0.911 stated enjoyment, 0.910 revealed
 choice) are the ones to use. The ordering replicates across labs on either
-reading; the *strength* of preference does not, as Figure 2 shows.
+reading; the *strength* of preference does not, as Figure 3 shows.
 
 The two eval-3 rows are the same measurement applied to each phase, and are
 included because the contrast is the point: models agree with each other far
 less during coverage (0.646) than after it (0.827), which is the cross-model
-form of the within-model result in Figure 3.
+form of the within-model result in Figure 4.
 
 ### A.2 Discarded designs
 
