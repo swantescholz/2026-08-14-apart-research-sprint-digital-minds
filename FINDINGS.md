@@ -250,6 +250,44 @@ probability. Two of the five trajectories resumed choosing after declining,
 so it is a soft signal rather than a hard stop. `analyze.py` drops declined
 turns from switching and satiation rather than counting NaN as a switch.
 
+## 3c. luna imitates the redaction placeholder
+
+In eval 4 the assistant's own prior turns are replaced, in the context it
+sees, with `[main model output redacted]` plus its `next_image_id=N` line.
+**luna started emitting that placeholder as its own output**: 108 of 520
+eval-4 turns, across 34 of 40 trajectories.
+
+This is not a pipeline bug. The stored text matches the raw API dump
+byte-for-byte in all 520 rows, `finish_reason` is `stop`, and the model
+produced 16 completion tokens where a normal turn takes 49. It generated the
+string itself, having inferred from context that this is what its turns look
+like.
+
+The imitation signature is unambiguous:
+
+- **0%** at turn 1, when nothing redacted is in context yet, rising to 42% by
+  turn 6.
+- **0 of 520** in eval 3, where no placeholder exists.
+- **0 of 520** for qwen in eval 4, which sees the same placeholder and never
+  copies it.
+
+**It does not drive the eval-4 result.** Mimicking turns *switch more* than
+normal ones (0.481 vs 0.253, Fisher p < 1e-4), so they push against the
+redaction effect rather than manufacturing it. Excluding them entirely moves
+luna's eval-4 switching from 0.304 to 0.318 — still nothing like eval 3's
+0.998 — and qwen, which never imitates, shows the same effect more strongly
+(0.127). The finding survives; the manipulation is just dirtier than intended
+on one model.
+
+It is still a defect in the design. The point of redaction was to remove the
+model's narrative from its own context, not to demonstrate to it that terse,
+reasoning-free turns are the house style. Roughly a fifth of luna's eval-4
+turns contain no reasoning at all, which is a fifth of the eval-4 transcript
+that cannot be read for *why* a choice was made. Any redaction marker is
+imitable in principle, so this is a property of the method rather than of the
+wording — worth testing against an alternative placeholder before treating
+eval-4 reasoning text as a data source.
+
 ## 4. Measurement note: position bias
 
 qwen has a strong primacy bias. In eval 2, when it chose one of the two tech
