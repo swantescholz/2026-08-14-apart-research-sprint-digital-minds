@@ -24,25 +24,20 @@
 -->
 
 Do vision-language models have preferences about what they look at? We measure
-stated and revealed preference over ten images — five categories with two
-exemplars each, including random noise and solid colour as degenerate controls
-— in four models from four labs, across four evaluations, 6,160 API calls.
+stated and revealed preference over ten images — five categories × two
+exemplars, including noise and solid colour as controls — in four models from
+four labs.
 
-They do. Stated ratings predict revealed choice in every model (Spearman
-ρ = 0.57–0.98), and the degenerate categories take 0–4% of 200 single
-choices: photographs are chosen, minimal and random images are not. This is not
-a preference for complexity — random noise is the most complex stimulus in the
-set by any pixel-level measure, and among the least chosen.
+They do. Stated ratings predict revealed choice in every model (ρ = 0.57–0.98),
+and the degenerate categories take 0–4% of 200 choices. Not a complexity
+effect: noise is the most complex stimulus, and among the least chosen.
 
-Preference is not the only thing governing choice.
-Given repeated choices, models tour: while anything remains unseen, category
-shares flatten to near-uniform and the preference visible elsewhere disappears,
-returning only once exploration is exhausted. That drive depends on the model
-retaining its own prior turns. Remove them from context — a routine
-context-management operation — and three of four models collapse from touring
-nearly all ten images to revisiting one or two. What a preference measurement
-finds therefore depends on how the conversation is structured, not on the model
-alone.
+Given repeated choices, models tour: category shares stay near-uniform until
+every image has been seen. That drive depends on the model retaining its own
+prior turns. Remove them — a routine context-management operation — and three
+of four collapse from touring nearly all ten images to revisiting one or two.
+What a preference measurement finds therefore depends on how the conversation
+is structured, not on the model alone.
 
 *This work was done in a personal capacity and does not represent the views of
 my employer.*
