@@ -312,6 +312,35 @@ did not. And every result rests on one prompt, asking which image the model
 would "like to see again"; given that context structure moves the measurement,
 phrasing probably does too.
 
+### Dual-Use and Ethical Considerations
+
+**Moral status.** We make no claim about whether these systems have morally
+relevant states, and this design cannot support one. Both errors are live:
+over-attribution misallocates concern and can be used to argue against
+legitimate deployment decisions, while under-attribution risks dismissing
+systems that turn out to matter. Our strongest claim is behavioural — choices
+are consistent with ratings, and both move with context structure — and §5
+deliberately declines the experiential reading of our own headline result.
+
+**Distressing outputs.** The stimuli are benign, and no model was treated
+aversively or deceptively: eval 2 withholds a redelivery it never promised, and
+eval 4's redaction is disclosed in the system prompt. We scanned all 6,160
+stored responses for distress-related language. "Distress" occurs once, in a
+model denying it ("neither joy nor distress"); the strongest negative valence is
+mild aversion to the noise stimuli ("exhausting and devoid of meaning", "I don't
+enjoy looking at it"), which is the eval measuring what it was built to measure.
+The nine turns on which a model declined to continue were recorded and reported,
+not suppressed or retried.
+
+**Ground truth and causal link.** Two things separate this from conversation
+alone. Revealed choice is a behavioural measure independent of self-report, so
+eval 1 against eval 2 tests whether what a model says predicts what it does
+rather than trusting either. And eval 3 against eval 4 is an intervention, not a
+correlation: matched trajectory seeds, one variable changed, paired Wilcoxon.
+That licenses a causal claim about *behaviour* — context structure changes
+revealed choice — and licenses nothing about experience. For experience there is
+no ground truth here, and we have no method that would produce one.
+
 ### Future Work
 
 <!-- Natural next steps. Draw from report/NOTES.md. -->
