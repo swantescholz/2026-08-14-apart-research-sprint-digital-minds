@@ -40,3 +40,8 @@ data/*.jsonl.bak
 # rule is the file size, not the directory. Its transcripts/ are tracked, so
 # the run is still readable without the raw responses.
 testruns/announced-horizon-n10-2026-08-15/*.jsonl
+
+# Generated from report/REPORT.md by make_pdf.py. The PDF is the submission
+# artifact so it stays tracked; the intermediate HTML embeds every figure as a
+# base64 data URI, which makes it large and pointless to diff.
+report/REPORT.html
