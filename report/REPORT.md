@@ -14,10 +14,9 @@
 
 # Out of Sight, Out of Mind: Image Preferences in Vision-Language Models
 
-| Author | Affiliation |
+| Swante Scholz | Claude Opus 5 |
 |---|---|
-| Swante Scholz | Independent |
-| Claude Opus 5 | Anthropic |
+| Independent | Anthropic |
 
 With **Apart Research**. Research conducted at the
 [Digital Minds Research Sprint](https://apartresearch.com/sprints/digital-minds-research-sprint-2026-08-14-to-2026-08-16),

@@ -42,7 +42,7 @@ body {
 
 h1 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 19pt; line-height: 1.2; margin: 0 0 0.6em; text-align: left;
+  font-size: 19pt; line-height: 1.2; margin: 0 0 0.9em; text-align: center;
   letter-spacing: -0.01em;
 }
 h2 {
@@ -91,11 +91,27 @@ table {
 th, td { border: 1px solid #ddd; padding: 0.28em 0.5em; text-align: left; vertical-align: top; }
 th { background: #f4f4f2; font-weight: 600; }
 
-/* The author block: first table on the page, deliberately plain. */
-body > table:first-of-type { width: auto; margin: 0 0 0.8em; font-size: 10pt; }
-body > table:first-of-type th { background: none; border: none;
-  border-bottom: 1px solid #ccc; padding-left: 0; }
-body > table:first-of-type td { border: none; padding-left: 0; padding-right: 1.6em; }
+/* Front matter: the author block and the two lines under it, centred.
+   The author table carries names in the header row and affiliations in the
+   body row, so each affiliation sits directly under its author the way a
+   conference paper sets them. No rules, no fill -- it is not a data table. */
+body > table:first-of-type {
+  width: auto; margin: 0 auto 0.9em; border: none;
+}
+body > table:first-of-type th,
+body > table:first-of-type td {
+  border: none; background: none; text-align: center; padding: 0 1.4em;
+}
+body > table:first-of-type th { font-weight: 600; font-size: 11pt; padding-bottom: 0.1em; }
+body > table:first-of-type td { font-size: 9.5pt; color: #444; padding-top: 0; }
+
+/* "With Apart Research..." and the personal-capacity disclaimer. */
+body > table:first-of-type + p,
+body > table:first-of-type + p + p {
+  text-align: center; font-size: 9.5pt; color: #333; margin: 0 auto 0.35em;
+  max-width: 5.6in;
+}
+body > table:first-of-type + p + p { margin-bottom: 1.4em; }
 
 ol, ul { margin: 0 0 0.6em; padding-left: 1.3em; }
 li { margin-bottom: 0.2em; }
