@@ -23,6 +23,9 @@ With **Apart Research**. Research conducted at the
 [Digital Minds Research Sprint](https://apartresearch.com/sprints/digital-minds-research-sprint-2026-08-14-to-2026-08-16),
 August 2026.
 
+*This work was done in a personal capacity and does not represent the views of
+my employer.*
+
 ## Abstract
 
 <!--
@@ -45,9 +48,6 @@ prior turns. Remove them — a routine context-management operation — and thre
 of four collapse from touring nearly all ten images to revisiting one or two.
 What a preference measurement finds therefore depends on how the conversation
 is structured, not on the model alone.
-
-*This work was done in a personal capacity and does not represent the views of
-my employer.*
 
 ## 1. Introduction
 
